@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{24cd691c-d6a2-458b-8400-cd02cb8e8d37}">
+		<property name="assetPath">
+			<value>SFX/Percussion Instruments/Melodic/Xylophone/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{05bcfa70-f336-4a24-8b08-ecb8085fa4bc}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{7343d8a2-98f8-4fa0-ab55-47a3cc402cf8}">
 		<property name="assetPath">
-			<value>SFX/Percussion Instruments/Reyong/reyong-07.ogg</value>
+			<value>SFX/Percussion Instruments/Melodic/Reyong/reyong-07.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

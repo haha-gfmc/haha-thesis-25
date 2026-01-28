@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{89e6689a-a30d-40a6-8599-5c438d692a8d}">
+		<property name="assetPath">
+			<value>SFX/Percussion Instruments/Melodic/Tuned Gong/tunedGong-07.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{05bcfa70-f336-4a24-8b08-ecb8085fa4bc}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{156e741c-8b06-4c33-a20c-f4e44f8a249e}">
+		<property name="assetPath">
+			<value>SFX/Percussion Instruments/Melodic/Xylophone/xylophone-14.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{05bcfa70-f336-4a24-8b08-ecb8085fa4bc}</destination>
+		</relationship>
+	</object>
+</objects>

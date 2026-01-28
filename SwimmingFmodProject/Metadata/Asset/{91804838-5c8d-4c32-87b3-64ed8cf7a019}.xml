@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="EncodableAsset" id="{91804838-5c8d-4c32-87b3-64ed8cf7a019}">
 		<property name="assetPath">
-			<value>SFX/Percussion Instruments/FM Freaks/</value>
+			<value>SFX/Percussion Instruments/Melodic/FM Freaks/</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{05bcfa70-f336-4a24-8b08-ecb8085fa4bc}</destination>

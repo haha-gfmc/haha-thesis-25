@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{96003731-f7c8-4142-a28c-c961617b2787}">
+		<property name="assetPath">
+			<value>SFX/Percussion Instruments/Atonal/Various/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{05bcfa70-f336-4a24-8b08-ecb8085fa4bc}</destination>
+		</relationship>
+	</object>
+</objects>

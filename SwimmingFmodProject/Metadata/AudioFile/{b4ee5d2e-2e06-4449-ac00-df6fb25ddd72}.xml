@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{b4ee5d2e-2e06-4449-ac00-df6fb25ddd72}">
 		<property name="assetPath">
-			<value>SFX/Percussion Instruments/Bell Computer/bellComputer-01.ogg</value>
+			<value>SFX/Percussion Instruments/Melodic/Bell Computer/bellComputer-01.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

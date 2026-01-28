@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{befd9770-aefe-4513-80d1-ed7238afb0f8}">
 		<property name="assetPath">
-			<value>SFX/Percussion Instruments/Metabell/metabell-13.ogg</value>
+			<value>SFX/Percussion Instruments/Melodic/Metabell/metabell-13.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

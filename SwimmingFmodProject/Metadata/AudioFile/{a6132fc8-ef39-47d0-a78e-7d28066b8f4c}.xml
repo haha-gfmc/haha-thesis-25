@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{a6132fc8-ef39-47d0-a78e-7d28066b8f4c}">
 		<property name="assetPath">
-			<value>SFX/Percussion Instruments/Glockenspiel/glockenspiel-07.ogg</value>
+			<value>SFX/Percussion Instruments/Melodic/Glockenspiel_Digital/glockenspiel-07.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

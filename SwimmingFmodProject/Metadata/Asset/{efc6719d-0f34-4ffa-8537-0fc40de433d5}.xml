@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="EncodableAsset" id="{efc6719d-0f34-4ffa-8537-0fc40de433d5}">
 		<property name="assetPath">
-			<value>SFX/Percussion Instruments/Drumset/</value>
+			<value>SFX/Percussion Instruments/Atonal/Drumset_Digital/</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{05bcfa70-f336-4a24-8b08-ecb8085fa4bc}</destination>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{884a2c43-8c3d-479b-9b35-a48073cc5b79}">
 		<property name="assetPath">
-			<value>SFX/Percussion Instruments/Pluck/pluck-05.ogg</value>
+			<value>SFX/Percussion Instruments/Melodic/Pluck/pluck-05.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

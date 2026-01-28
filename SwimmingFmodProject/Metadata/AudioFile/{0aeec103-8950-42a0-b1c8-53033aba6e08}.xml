@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{0aeec103-8950-42a0-b1c8-53033aba6e08}">
+		<property name="assetPath">
+			<value>SFX/Percussion Instruments/Atonal/Triangle/triangle-01.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.004625850340136</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{05bcfa70-f336-4a24-8b08-ecb8085fa4bc}</destination>
+		</relationship>
+	</object>
+</objects>

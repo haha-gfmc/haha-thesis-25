@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{ba35b3c1-f9a3-47fd-8ec4-303b68b66658}">
 		<property name="assetPath">
-			<value>SFX/Percussion Instruments/Drumset/drumMisc-01.ogg</value>
+			<value>SFX/Percussion Instruments/Atonal/Drumset_Digital/drumMisc-01.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

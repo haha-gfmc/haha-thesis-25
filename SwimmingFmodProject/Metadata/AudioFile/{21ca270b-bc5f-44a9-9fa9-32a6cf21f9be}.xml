@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{21ca270b-bc5f-44a9-9fa9-32a6cf21f9be}">
 		<property name="assetPath">
-			<value>SFX/Percussion Instruments/Stab/stab-07.ogg</value>
+			<value>SFX/Percussion Instruments/Melodic/Stab/stab-07.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

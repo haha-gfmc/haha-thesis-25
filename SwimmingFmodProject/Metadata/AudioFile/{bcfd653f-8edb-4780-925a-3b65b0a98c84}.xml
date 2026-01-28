@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{bcfd653f-8edb-4780-925a-3b65b0a98c84}">
 		<property name="assetPath">
-			<value>SFX/Percussion Instruments/Xylo/xylo-03.ogg</value>
+			<value>SFX/Percussion Instruments/Melodic/Xylo/xylo-03.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

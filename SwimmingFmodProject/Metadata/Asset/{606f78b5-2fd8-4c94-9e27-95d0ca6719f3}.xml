@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{606f78b5-2fd8-4c94-9e27-95d0ca6719f3}">
+		<property name="assetPath">
+			<value>SFX/Percussion Instruments/Melodic/Tuned Gong/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{05bcfa70-f336-4a24-8b08-ecb8085fa4bc}</destination>
+		</relationship>
+	</object>
+</objects>

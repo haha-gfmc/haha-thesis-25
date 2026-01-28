@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{8c6b93a5-ba21-4745-a63d-6d29ad3d9bd3}">
 		<property name="assetPath">
-			<value>SFX/Percussion Instruments/FM Freaks/fmFreaks-14.ogg</value>
+			<value>SFX/Percussion Instruments/Melodic/FM Freaks/fmFreaks-14.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
