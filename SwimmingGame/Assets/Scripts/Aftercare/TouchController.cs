@@ -14,7 +14,6 @@ public class TouchController : MonoBehaviour
     public Quaternion rotationOffset; // offset the rotation after timing normal
     public bool lockRotation = false;
     public bool isMoving = true;
-    public bool isMovingAround;
     public Vector2 moveXZ;
 
     public float rotationDampFactor = 1.0f; // public variable to control how much to dampen rotation
@@ -23,27 +22,22 @@ public class TouchController : MonoBehaviour
     private Vector3 targetPosition;
     public Quaternion initialRotation;
     private Vector2 movementVector;
+
     private bool isUsingGamepad;
-    public float maxCircularMotionSpeed;
-    public float minCircularMotionSpeed;
-    public float maxCircularMotionRadius;
-    public float minCircularMotionRadius;
-    [SerializeField]
-    private float circularMotionSpeed;
-    [SerializeField]
-    private float circularMotionRadius;
 
     public BoxCollider boundingBox; // bounding box for movement
-    private float handTime = 2f;
     private Vector3 initialPosition; 
+
+    private void Awake()
+    {
+        initialRotation = Quaternion.identity;
+        Debug.Log("Awake - Transform rotation: " + transform.rotation.eulerAngles + ", InitialRotation: " + initialRotation.eulerAngles);
+    }
 
     private void Start()
     {
-        circularMotionRadius = Random.Range(minCircularMotionRadius, maxCircularMotionRadius); 
-        circularMotionSpeed = Random.Range(minCircularMotionSpeed, maxCircularMotionSpeed); 
         playerInput = FindObjectOfType<PlayerInput>();
         targetPosition = transform.position;
-        initialRotation = transform.rotation;
         initialPosition = transform.position;
     }
 
@@ -63,10 +57,6 @@ public class TouchController : MonoBehaviour
         if (isMoving)
         {
             Moving();
-        }
-        if (isMovingAround)
-        {
-            MoveAround();
         }
         HandlingInput();
         AdjustPositionAndRotation();
@@ -102,7 +92,7 @@ public class TouchController : MonoBehaviour
         }
 
         // lerp the character to the target position
-        transform.position = Vector3.Lerp(transform.position, targetPosition, lerpSpeed * Time.fixedDeltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.fixedDeltaTime);
     }
 
     Vector3 ClampToBoundingBox(Vector3 target)
@@ -142,6 +132,7 @@ public class TouchController : MonoBehaviour
         }
     }
 
+    // adjust the character's Y position and rotation based on the sex partner below
     void AdjustPositionAndRotation()
     {
         RaycastHit hit;
@@ -161,37 +152,4 @@ public class TouchController : MonoBehaviour
             }
         }
     }
-
-void MoveAround()
-{
-    handTime -= Time.fixedDeltaTime;
-    // Change radius, speed, and direction every 2 seconds
-    if (handTime <= 0f)
-    {
-        circularMotionRadius = Random.Range(minCircularMotionRadius, maxCircularMotionRadius); 
-        circularMotionSpeed = Random.Range(minCircularMotionSpeed, maxCircularMotionSpeed); 
-        circularMotionSpeed *= Random.value > 0.5f ? 1 : -1; // Randomly reverse direction
-        handTime = Random.Range(1f,4f); // Reset the timer
-    }
-
-    float angle = Time.time * circularMotionSpeed;
-    float x = Mathf.Cos(angle) * circularMotionRadius;
-    float z = Mathf.Sin(angle) * circularMotionRadius;
-
-    Vector3 circularPosition = new Vector3(x, 0, z);
-    Vector3 potentialTargetPosition = transform.position + circularPosition;
-
-    // Check if the potential target position is too far from the initial position
-    if (Vector3.Distance(potentialTargetPosition, initialPosition) > circularMotionRadius * 2)
-    {
-        // Move towards the initial position while keeping the circular motion
-        targetPosition = Vector3.Lerp(potentialTargetPosition, initialPosition, Time.fixedDeltaTime * lerpSpeed);
-    }
-    else
-    {
-        targetPosition = potentialTargetPosition;
-    }
-    transform.position = Vector3.Lerp(transform.position, targetPosition, lerpSpeed * Time.fixedDeltaTime);
-}
-
 }
