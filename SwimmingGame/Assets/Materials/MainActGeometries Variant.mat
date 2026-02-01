@@ -28,7 +28,7 @@ Material:
     m_Floats:
     - _Amplitude: 0.005
     - _AngleOffsetSpeed: 3
-    - _CellDensity: 1
+    - _CellDensity: 7.34
     m_Colors:
     - _Albedo: {r: 0.54350096, g: 0.66666657, b: 0.17400414, a: 0}
     - _Metalic_Smoothness: {r: 0, g: 0, b: 0, a: 0}
