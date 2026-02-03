@@ -14,36 +14,45 @@ public class TouchController : MonoBehaviour
     public Quaternion rotationOffset; // offset the rotation after timing normal
     public bool lockRotation = false;
     public bool isMoving = true;
-    public bool isMovingAround;
-    public Vector2 moveXZ;
+    [HideInInspector]public Vector2 moveXZ;
+    public Transform handParentTransform;
+    
+    [Header("Startup Rotation")]
+    public float initialRotationLerpSpeed = 10f;
+    public float initialRotationAngleThreshold = 0.5f; // degrees difference when startup lerp finished
+    private bool initialLerpDone = false;
+    public Vector3 handParentInitialRotation;
+    
+    [Header("Rotation Clamps (degrees)")]
+    public bool enableRotationClamp = false;
+    public Vector3 minEulerClamp = new Vector3(-90f, -180f, -90f);
+    public Vector3 maxEulerClamp = new Vector3(90f, 180f, 90f);
 
     public float rotationDampFactor = 1.0f; // public variable to control how much to dampen rotation
 
     private PlayerInput playerInput;
     private Vector3 targetPosition;
-    public Quaternion initialRotation;
+    [HideInInspector]public Quaternion initialRotation;
     private Vector2 movementVector;
-    private bool isUsingGamepad;
-    public float maxCircularMotionSpeed;
-    public float minCircularMotionSpeed;
-    public float maxCircularMotionRadius;
-    public float minCircularMotionRadius;
-    [SerializeField]
-    private float circularMotionSpeed;
-    [SerializeField]
-    private float circularMotionRadius;
 
-    public BoxCollider boundingBox; // bounding box for movement
-    private float handTime = 2f;
+    private bool isUsingGamepad;
+    [HideInInspector] public BoxCollider boundingBox; // bounding box for movement
     private Vector3 initialPosition; 
+
+    private void Awake()
+    {
+
+        if (handParentTransform != null)
+        {
+            //handParentTransform.rotation = Quaternion.Euler(handParentInitialRotation);
+        }
+        initialRotation = transform.rotation;
+    }
 
     private void Start()
     {
-        circularMotionRadius = Random.Range(minCircularMotionRadius, maxCircularMotionRadius); 
-        circularMotionSpeed = Random.Range(minCircularMotionSpeed, maxCircularMotionSpeed); 
         playerInput = FindObjectOfType<PlayerInput>();
         targetPosition = transform.position;
-        initialRotation = transform.rotation;
         initialPosition = transform.position;
     }
 
@@ -64,12 +73,13 @@ public class TouchController : MonoBehaviour
         {
             Moving();
         }
-        if (isMovingAround)
-        {
-            MoveAround();
-        }
         HandlingInput();
         AdjustPositionAndRotation();
+    }
+
+    public void SetHandParentTransform(Transform handParent)
+    {
+        handParentTransform = handParent;
     }
 
     void HandlingInput()
@@ -102,7 +112,7 @@ public class TouchController : MonoBehaviour
         }
 
         // lerp the character to the target position
-        transform.position = Vector3.Lerp(transform.position, targetPosition, lerpSpeed * Time.fixedDeltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.fixedDeltaTime);
     }
 
     Vector3 ClampToBoundingBox(Vector3 target)
@@ -142,6 +152,7 @@ public class TouchController : MonoBehaviour
         }
     }
 
+    // adjust the hand's Y position and rotation based on the sex partner mesh below
     void AdjustPositionAndRotation()
     {
         RaycastHit hit;
@@ -150,48 +161,66 @@ public class TouchController : MonoBehaviour
         if (Physics.Raycast(new Vector3(transform.position.x, 100f, transform.position.z), Vector3.down, out hit, Mathf.Infinity, sexPartnerMask))
         {
             // set Y position to the top of the hit object
-            Vector3 positionTarget = new Vector3(transform.position.x, hit.point.y + yOffset, transform.position.z);
-            transform.position = Vector3.Lerp(transform.position, positionTarget, yLerpSpeed * Time.fixedDeltaTime);
+            float targetY = hit.point.y + yOffset;
+            transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, targetY, yLerpSpeed * Time.fixedDeltaTime), transform.position.z);
             if (!lockRotation)
             {
-                // Calculate the rotation offset based on the initial rotation
-                Quaternion targetRotation = Quaternion.FromToRotation(Vector3.right, hit.normal) * initialRotation * rotationOffset;
-                targetRotation = Quaternion.Lerp(Quaternion.identity, targetRotation, targetRotationDamp);
-                transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationDampFactor * Time.fixedDeltaTime);
+                // During startup: quickly lerp to the rotation offset relative to the initial rotation
+                if (!initialLerpDone)
+                {
+                    Quaternion startupTarget = initialRotation * rotationOffset;
+                    transform.rotation = Quaternion.Lerp(transform.rotation, startupTarget, initialRotationLerpSpeed * Time.fixedDeltaTime);
+                    if (Quaternion.Angle(transform.rotation, startupTarget) < initialRotationAngleThreshold)
+                    {
+                        initialLerpDone = true;
+                        transform.rotation = startupTarget; // snap to exact target when close
+                    }
+                    // if clamps enabled, clamp the current rotation once we've reached it
+                    if (initialLerpDone && enableRotationClamp)
+                    {
+                        transform.rotation = ClampRotation(transform.rotation);
+                    }
+                }
+                else
+                {
+                    // After startup: orient to surface normal + offsets, then smooth toward it
+                    Quaternion targetRotation = Quaternion.FromToRotation(Vector3.up, hit.normal) * initialRotation * rotationOffset;
+                    targetRotation = Quaternion.Lerp(Quaternion.identity, targetRotation, targetRotationDamp);
+                    Quaternion newRot = Quaternion.Lerp(transform.rotation, targetRotation, rotationDampFactor * Time.fixedDeltaTime);
+                    if (enableRotationClamp)
+                    {
+                        // Calculate the rotation delta (change) from current to new
+                        Quaternion delta = Quaternion.Inverse(transform.rotation) * newRot;
+                        // Clamp the delta's euler angles
+                        delta = ClampRotation(delta);
+                        newRot = transform.rotation * delta;
+                    }
+                    transform.rotation = newRot;
+                }
             }
         }
     }
 
-void MoveAround()
-{
-    handTime -= Time.fixedDeltaTime;
-    // Change radius, speed, and direction every 2 seconds
-    if (handTime <= 0f)
+    // Clamp a quaternion's euler angles (degrees)
+    private Quaternion ClampRotation(Quaternion q)
     {
-        circularMotionRadius = Random.Range(minCircularMotionRadius, maxCircularMotionRadius); 
-        circularMotionSpeed = Random.Range(minCircularMotionSpeed, maxCircularMotionSpeed); 
-        circularMotionSpeed *= Random.value > 0.5f ? 1 : -1; // Randomly reverse direction
-        handTime = Random.Range(1f,4f); // Reset the timer
+        Vector3 e = q.eulerAngles;
+        e.x = NormalizeAngle(e.x);
+        e.y = NormalizeAngle(e.y);
+        e.z = NormalizeAngle(e.z);
+
+        e.x = Mathf.Clamp(e.x, minEulerClamp.x, maxEulerClamp.x);
+        e.y = Mathf.Clamp(e.y, minEulerClamp.y, maxEulerClamp.y);
+        e.z = Mathf.Clamp(e.z, minEulerClamp.z, maxEulerClamp.z);
+
+        return Quaternion.Euler(e);
     }
-
-    float angle = Time.time * circularMotionSpeed;
-    float x = Mathf.Cos(angle) * circularMotionRadius;
-    float z = Mathf.Sin(angle) * circularMotionRadius;
-
-    Vector3 circularPosition = new Vector3(x, 0, z);
-    Vector3 potentialTargetPosition = transform.position + circularPosition;
-
-    // Check if the potential target position is too far from the initial position
-    if (Vector3.Distance(potentialTargetPosition, initialPosition) > circularMotionRadius * 2)
+    // normalize is only useful if there is an euler angle wrap-around from 360 to 0
+    // guess its not really useful in our case but ill leave it here anyway
+    private float NormalizeAngle(float angle)
     {
-        // Move towards the initial position while keeping the circular motion
-        targetPosition = Vector3.Lerp(potentialTargetPosition, initialPosition, Time.fixedDeltaTime * lerpSpeed);
+        angle = (angle + 180f) % 360f;
+        if (angle < 0f) angle += 360f;
+        return angle - 180f;
     }
-    else
-    {
-        targetPosition = potentialTargetPosition;
-    }
-    transform.position = Vector3.Lerp(transform.position, targetPosition, lerpSpeed * Time.fixedDeltaTime);
-}
-
 }
