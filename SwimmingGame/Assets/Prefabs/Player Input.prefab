@@ -899,9 +899,17 @@ MonoBehaviour:
     leftMotorIntensity: 0
     rightMotorIntensity: 0.15
     rumbleType: 2
-  - name: Harmonizing
-    leftMotorIntensity: 0.15
+  - name: Singing Right
+    leftMotorIntensity: 0
+    rightMotorIntensity: 0.15
+    rumbleType: 2
+  - name: Singing Left
+    leftMotorIntensity: 0.1
     rightMotorIntensity: 0
+    rumbleType: 2
+  - name: Harmonizing
+    leftMotorIntensity: 0.2
+    rightMotorIntensity: 0.2
     rumbleType: 2
   - name: Picking Dialogue
     leftMotorIntensity: 0.4
@@ -941,5 +949,5 @@ MonoBehaviour:
     rumbleType: 2
   - name: In Cuddle Zone
     leftMotorIntensity: 0.05
-    rightMotorIntensity: 0.15
+    rightMotorIntensity: 0.3
     rumbleType: 2

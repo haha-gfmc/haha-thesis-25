@@ -13,6 +13,14 @@ public class CuddleGameManager : MonoBehaviour
 
     public float controllerDeadZone=0.1f;
 
+    private float timer;
+
+    private void Update()
+    {
+        timer+=Time.unscaledDeltaTime;
+        Rumble.AddRumble("Start Menu",(Mathf.Sin(timer*Mathf.PI/2f)+1)*.3f/2f+.3f);
+    }
+
     // for proof of concept, can change later
     public void UpdateDialogueText(string detectedOption)
     {
