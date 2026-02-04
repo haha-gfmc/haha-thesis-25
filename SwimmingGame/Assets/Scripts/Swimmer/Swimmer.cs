@@ -300,6 +300,11 @@ public class Swimmer : MonoBehaviour
         }
 
 
+        if (canMove && (playerInput.movingForward || playerInput.movingBackward))
+        {
+            //Rumble.AddRumble("Cruising",Mathf.Clamp((prevVelocity.magnitude-1f)/(coastingSpeed-1f),0f,1f));
+            Rumble.AddRumble("Cruising");
+        }
     }
 
     void DashInput(Directions d){
@@ -308,6 +313,7 @@ public class Swimmer : MonoBehaviour
             dashTimer=Mathf.Clamp(dashTimer,dashCooldownTime,dashCooldownTime*maxDashes);
             dashTimer-=dashCooldownTime;
             savedDashDirection=Directions.NULL;
+            Rumble.AddRumbleWithTimeOut("Dash",1f,.25f);
         }
     }
 
@@ -328,6 +334,7 @@ public class Swimmer : MonoBehaviour
                     OverrideRotation(Quaternion.LookRotation(-transform.forward,transform.up));
                     prevPressedBackTimer=maxKickbackPressingTime;
                     swimmerSound.KickBack();
+                    Rumble.AddRumbleWithTimeOut("Swimming Stroke",1f,.25f);
                 }else{
                     prevPressedBackTimer=0f;
                     pressedBackTimer=maxKickbackPressingTime;
@@ -530,6 +537,7 @@ public class Swimmer : MonoBehaviour
             if(boostTimer>boostTime && boostTimer-Time.fixedDeltaTime<=boostTime){
                 playerVelocity+=transform.forward*boostSpeed;
                 BoostAnimation();
+                Rumble.AddRumbleWithTimeOut("Swimming Stroke",1f,.25f);
                 //swimmerSound.Stride();
             }
         }

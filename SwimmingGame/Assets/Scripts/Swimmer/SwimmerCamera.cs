@@ -223,8 +223,10 @@ public class SwimmerCamera : MonoBehaviour
         float currentBaseFOV=baseFov+(boostFov-baseFov)*mod;
         if(swimmer.IsCoasting()){
             currentBaseFOV=slowFov;
+            //Rumble.AddRumble("Cruising",(targetFov-baseFov)/(currentBaseFOV-baseFov));
         }
         targetFov=Mathf.Lerp(targetFov,currentBaseFOV,boostEffectRestoreSpeed*Time.deltaTime);
+        
 
         if(hasChromaticAberration){
             chromaticAberration.intensity.value=Mathf.Lerp(chromaticAberration.intensity.value,
@@ -255,6 +257,11 @@ public class SwimmerCamera : MonoBehaviour
             restoreDampingTrigger=false;
             Debug.Log("restore damping");
         }
+
+        // if(swimmer.IsCoasting() || swimmer.IsSwimmingBackwards())
+        // {
+        //     Rumble.AddRumble("Cruising",1f);
+        // }
 
     }
 

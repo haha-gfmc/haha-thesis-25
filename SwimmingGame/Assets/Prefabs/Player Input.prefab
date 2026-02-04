@@ -951,3 +951,15 @@ MonoBehaviour:
     leftMotorIntensity: 0.05
     rightMotorIntensity: 0.3
     rumbleType: 2
+  - name: Swimming Stroke
+    leftMotorIntensity: 0.4
+    rightMotorIntensity: 0.1
+    rumbleType: 2
+  - name: Dash
+    leftMotorIntensity: 0.1
+    rightMotorIntensity: 0.4
+    rumbleType: 2
+  - name: Cruising
+    leftMotorIntensity: 0.005
+    rightMotorIntensity: 0.1
+    rumbleType: 2
