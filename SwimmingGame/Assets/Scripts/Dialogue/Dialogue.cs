@@ -309,6 +309,7 @@ public class Dialogue : MonoBehaviour
                                     if (singingTimer >= singingRequiredLength)
                                     {
                                         PickChoice(currentChoiceIndex);
+                                        Rumble.AddRumbleWithTimeOut("Picking Dialogue",1f,.5f);
                                     }
                                 }
                             }
@@ -910,7 +911,8 @@ public class Dialogue : MonoBehaviour
 
             currentCharacterIndex = 0;
 
-            Rumble.AddRumble("Advancing Dialogue");
+            //RN this happens even if advancing thru nothing dialogue (maybe this is ok)
+            Rumble.AddRumbleWithTimeOut("Advancing Dialogue",1f,.5f);
         }
     }
 

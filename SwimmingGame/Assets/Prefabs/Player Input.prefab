@@ -908,8 +908,8 @@ MonoBehaviour:
     rightMotorIntensity: 0
     rumbleType: 2
   - name: Advancing Dialogue
-    leftMotorIntensity: 0.5
-    rightMotorIntensity: 1
+    leftMotorIntensity: 0.01
+    rightMotorIntensity: 0.02
     rumbleType: 2
   - name: Inhaling
     leftMotorIntensity: 1
