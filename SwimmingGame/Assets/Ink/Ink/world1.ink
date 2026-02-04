@@ -1400,7 +1400,7 @@ You have a certain... sullen air.
 MC: Sullen?
 Teacher: Yes. Broody.
 MC: ...
-I guess I found it mysterious.
+Teacher: I guess I found it mysterious.
 MC: ...
 Teacher: What about you?
 +   [Your straight- forwardness.]
