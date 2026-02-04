@@ -96,17 +96,19 @@ public class Rumble : MonoBehaviour
 
     public static void AddRumbleWithTimeOut(float leftMotorIntensity=-1f,float rightMotorIntensity=-1f,float modifier = 1f, float time=1f,bool isFadingOut=true)
     {
-        fadingOut=isFadingOut;
-        if (leftMotorIntensity != -1f)
-        {
-            timedLeftMotorIntensity=leftMotorIntensity*modifier;
+        if(leftMotorIntensity*modifier>timedLeftMotorIntensity || rightMotorIntensity*modifier>timedRightMotorIntensity || time>timer){
+            fadingOut=isFadingOut;
+            if (leftMotorIntensity != -1f)
+            {
+                timedLeftMotorIntensity=leftMotorIntensity*modifier;
+            }
+            if (rightMotorIntensity != -1f)
+            {
+                timedRightMotorIntensity=rightMotorIntensity*modifier;
+            }
+            timeout=time;
+            timer=timeout;
         }
-        if (rightMotorIntensity != -1f)
-        {
-            timedRightMotorIntensity=rightMotorIntensity*modifier;
-        }
-        timeout=time;
-        timer=timeout;
     }
 
     public static void AddRumbleWithTimeOut(string nameOfAction,float modifier = 1f, float time=1f,bool isFadingOut=true)
@@ -120,17 +122,19 @@ public class Rumble : MonoBehaviour
                 rightMotorIntensity=setting.rightMotorIntensity;
             }
         }
-        fadingOut=isFadingOut;
-        if (leftMotorIntensity != -1f)
-        {
-            timedLeftMotorIntensity=leftMotorIntensity*modifier;
+        if(leftMotorIntensity*modifier>timedLeftMotorIntensity || rightMotorIntensity*modifier>timedRightMotorIntensity || time>timer){
+            fadingOut=isFadingOut;
+            if (leftMotorIntensity != -1f)
+            {
+                timedLeftMotorIntensity=leftMotorIntensity*modifier;
+            }
+            if (rightMotorIntensity != -1f)
+            {
+                timedRightMotorIntensity=rightMotorIntensity*modifier;
+            }
+            timeout=time;
+            timer=timeout;
         }
-        if (rightMotorIntensity != -1f)
-        {
-            timedRightMotorIntensity=rightMotorIntensity*modifier;
-        }
-        timeout=time;
-        timer=timeout;
     }
 
     public static void ResetRumble(){

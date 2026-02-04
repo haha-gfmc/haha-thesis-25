@@ -34,6 +34,8 @@ EXTERNAL playInstance(path, name, volume)
 EXTERNAL setInstanceParameter(name, parameterName, parameterValue, ignoreSeekSpeed)
 EXTERNAL setInstanceVolume(name, volume)
 EXTERNAL stopInstance(name, release)
+EXTERNAL addRumbleWithTimeout(leftMotorIntensity,rightMotorIntensity,modifier,time)
+EXTERNAL addSavedRumbleWithTimeout(rumbleName,modifier,time,isFadingOut)
 
 VAR world=0
 

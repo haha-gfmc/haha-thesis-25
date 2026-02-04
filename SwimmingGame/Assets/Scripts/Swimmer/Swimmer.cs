@@ -302,7 +302,6 @@ public class Swimmer : MonoBehaviour
 
         if (canMove && (playerInput.movingForward || playerInput.movingBackward))
         {
-            //Rumble.AddRumble("Cruising",Mathf.Clamp((prevVelocity.magnitude-1f)/(coastingSpeed-1f),0f,1f));
             Rumble.AddRumble("Cruising");
         }
     }

@@ -1136,6 +1136,15 @@ public class Dialogue : MonoBehaviour
         {
             Sound.StopInstance(name, release);
         }); 
+        story.BindExternalFunction("addRumbleWithTimeout", (float leftMotorIntensity, float rightMotorIntensity, float modifier,float time) =>
+        {
+            Rumble.AddRumbleWithTimeOut(leftMotorIntensity,rightMotorIntensity,modifier,time);
+        }); 
+        story.BindExternalFunction("addSavedRumbleWithTimeout", (string rumbleName, float modifier,float time,bool isFadingOut) =>
+        {
+            Rumble.AddRumbleWithTimeOut(rumbleName,modifier,time,isFadingOut);
+        }); 
+
         /* Template
         story.BindExternalFunction("FUNCTIONNAME", () =>
         {

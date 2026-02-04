@@ -221,9 +221,6 @@ public class SwimmerSinging : Singing
             wheelRect.rotation=Quaternion.Lerp(wheelRect.rotation,Quaternion.Euler(rot),colorLerpValue*Time.deltaTime);
 
             if(singing){
-                // float k=((float)Mathf.Clamp(keyIndex,2,12)-2f)/((float)keys.Count-5f);       //Different rumble types if singing up or low
-                // Gamepad.current.SetMotorSpeeds(leftRumbleSinging*singingVolume*(1-k),rightRumbleSinging*singingVolume*k);
-                Debug.Log(Mathf.Cos(singingAngle*Mathf.PI));
                 //Rumble.AddRumble("Singing",singingVolume);
                 Rumble.AddRumble("Singing Left",singingVolume*(Mathf.Cos(singingAngle*Mathf.PI)+1)/2);
                 Rumble.AddRumble("Singing Right",singingVolume*(1-Mathf.Cos(singingAngle*Mathf.PI)+1)/2);

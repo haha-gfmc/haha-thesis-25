@@ -50,6 +50,7 @@ VAR talkedToThisCoralnet=false
         ~changeDesire("<br>Read more coralnet.")
 }
 ~ activateBorder("coral",true)
+~ addRumbleWithTimeout(1,1,1,0.5)
 ->->
 
 === coralnetEnd ===
@@ -763,11 +764,13 @@ Coralnet: motif: my entanglement
 > it was in the back of our music hall. 
 > we were practicing a song for the end-of-season.
 ~ setInstanceParameter("Main Act Ambiance", "intensity", 0, false)
+~ addRumbleWithTimeout(1,1,1,0.5)
 > we felt a tugging from underneath our skin, in the middle top of our back.
 > who did you do it with?
 > it was my singing partner. not my lover, but someone i've always been deeply intimate with.
 > and after the tugging?
 ~ setInstanceParameter("Main Act Ambiance", "intensity", 1, false)
+~ addRumbleWithTimeout(1,1,1,0.5)
 > first, there was a burning sensation. 
 > then it started to come out.. and it felt cold as ice.
 ~ setInstanceParameter("Main Act Ambiance", "intensity", 2, false)
@@ -775,20 +778,27 @@ Coralnet: motif: my entanglement
 > it was neither tail nor fin nor antenna. it was a tendril of sorts. 
 ~ setInstanceParameter("Main Act Ambiance", "intensity", 3, false)
 > it was long, and sinewy, and soft.
-
+~ addRumbleWithTimeout(1,1,1,0.5)
 > there was a beautiful burst of smaller wriggling tendrils at the end of it, like a flower.
 > and what did you do with it?
 ~ setInstanceParameter("Main Act Ambiance", "intensity", 4, false)
 > at first we merely sensed our surroundings
 > the organ felt even more sensitive than the inside of my mouth. which is very sensitive.
+~ addRumbleWithTimeout(1,1,1,1)
 > then we started feeling each other. we brushed ourselves and we made knots of our bodies.
 ~ setInstanceParameter("Main Act Ambiance", "intensity", 5, false)
+~ addRumbleWithTimeout(1,1,1,0.75)
 > we tugged and let go. we became one with the current.
+~ addRumbleWithTimeout(1,1,1,1)
 > we became stickier. it was more difficult to separate each other.
+~ addRumbleWithTimeout(1,1,1,0.75)
 > our organs were the same color and we couldn't tell which was whose
 ~ setInstanceParameter("Main Act Ambiance", "intensity", 6, false)
+~ addRumbleWithTimeout(1,1,1,1)
 > and how did it feel?
+~ addRumbleWithTimeout(1,1,1,0.75)
 > initiator, how did it feel? was it pleasurable?
+~ addRumbleWithTimeout(1,1,1,0.5)
 > i wish this happened to me
 > initiator, tell us how it was.
 ~ setInstanceParameter("Main Act Ambiance", "intensity", 7, false)
@@ -828,6 +838,7 @@ VAR awkwardnessLevel=3
 ~ libraryOpen=true
 ~ fadeIn(1)
 ~ playOneShot("event:/Non-Diagetic SFX/Wipe With Note - Short",0.5)
+~ addRumbleWithTimeout(1,1,1,3)
 Teacher: Sounds amazing, doesn't it? #speed:fast
 MC: Huh?
 Teacher: The entanglement. \\pauseYou were reading about it just now, right? Have you done it yet?
