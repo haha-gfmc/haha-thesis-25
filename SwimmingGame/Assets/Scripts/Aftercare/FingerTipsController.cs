@@ -176,6 +176,8 @@ public class FingerTipsController : MonoBehaviour
                 cuddleDialogue.SelectingChoice(i);
             }
 
+            if(cuddleDialogue.story.currentChoices.Count>0 && cuddleDialogue.currentChoiceIndex!=-1) Rumble.AddRumble("In Cuddle Zone");
+
         }
         if (hitColliders.Length == 0){
             for (int j = 0; j < lightBeamFollow.Length; j++)

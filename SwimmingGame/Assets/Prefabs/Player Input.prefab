@@ -904,7 +904,7 @@ MonoBehaviour:
     rightMotorIntensity: 0
     rumbleType: 2
   - name: Picking Dialogue
-    leftMotorIntensity: 0.2
+    leftMotorIntensity: 0.4
     rightMotorIntensity: 0
     rumbleType: 2
   - name: Advancing Dialogue
@@ -938,4 +938,8 @@ MonoBehaviour:
   - name: Climax Intensity
     leftMotorIntensity: 1
     rightMotorIntensity: 1
+    rumbleType: 2
+  - name: In Cuddle Zone
+    leftMotorIntensity: 0.05
+    rightMotorIntensity: 0.15
     rumbleType: 2
