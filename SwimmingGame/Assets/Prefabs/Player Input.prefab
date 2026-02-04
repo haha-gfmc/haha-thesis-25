@@ -931,3 +931,11 @@ MonoBehaviour:
     leftMotorIntensity: 0.015
     rightMotorIntensity: 0.025
     rumbleType: 2
+  - name: Base Climax
+    leftMotorIntensity: 0.015
+    rightMotorIntensity: 0.025
+    rumbleType: 2
+  - name: Climax Intensity
+    leftMotorIntensity: 1
+    rightMotorIntensity: 1
+    rumbleType: 2

@@ -101,6 +101,8 @@ public class RubbingGameManager : MonoBehaviour
             {
                 levelLoaded = true;
                 levelLoader.LoadLevel();
+                Sound.StopInstance("Underwater Ambiance", true);
+                Sound.PlayOneShotVolume("event:/Non-Diagetic SFX/Climax End",1f);
             }
             climaxCameraManager.isClimaxCompleted = true;
         }
