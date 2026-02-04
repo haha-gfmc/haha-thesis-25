@@ -58,7 +58,10 @@
 	</object>
 	<object class="EventAutomatableProperties" id="{543234bd-531e-4dd1-93d5-da428731dee5}">
 		<property name="maxVoices">
-			<value>5</value>
+			<value>10</value>
+		</property>
+		<property name="voiceStealing">
+			<value>1</value>
 		</property>
 	</object>
 	<object class="MarkerTrack" id="{6330f3b0-f802-4be3-9777-a0486d2ad039}" />
@@ -218,7 +221,7 @@
 	<object class="MixerBusPanner" id="{89d35288-2166-469b-9cb4-8b64f737bb79}" />
 	<object class="GainEffect" id="{113b0e01-68ba-4b9c-af72-b3bb022f2b4f}">
 		<property name="gain">
-			<value>3</value>
+			<value>6.5</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{62a328d8-b872-4a94-b2dd-a9fbdd376630}</destination>
@@ -261,7 +264,7 @@
 			<value>gain</value>
 		</property>
 		<property name="amount">
-			<value>6</value>
+			<value>13</value>
 		</property>
 	</object>
 	<object class="RandomizerModulator" id="{678d7a14-6723-4a89-9d39-112633b9a00a}">

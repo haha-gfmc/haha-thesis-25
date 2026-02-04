@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rustleSound: event:/Overworld/Rustle/Reyong
   pitch: 1
-  volume: 1
+  volume: 0.2
   minimumSingingDistance: 10
   sprites:
   - {fileID: -1367588401, guid: 2797fae739baf7c47a09a06e36eb4ec8, type: 3}

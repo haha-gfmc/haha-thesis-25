@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8172113648449816229
+--- !u!114 &-1025564588192076602
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,13 +20,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: brain-coral-76.83_0 Variant 4
+  m_Name: BritishSolider 1 Variant
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_Parent: {fileID: 2100000, guid: 0ee145f7357e7674fa0f43a1b95c6129, type: 2}
+  m_Parent: {fileID: 2100000, guid: 9f10e994d0937fe4da551263c89f446c, type: 2}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _EMISSION
-  - _NORMALMAP
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -40,16 +38,16 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: c5c605f479787c741874db91343eb2c4, type: 3}
+        m_Texture: {fileID: 2800000, guid: d3d301f97e2c00446a33beee5b3ee208, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c5c605f479787c741874db91343eb2c4, type: 3}
+        m_Texture: {fileID: 2800000, guid: d3d301f97e2c00446a33beee5b3ee208, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _BaseColor: {r: 0.78440017, g: 0.7124915, b: 0.8238993, a: 1}
-    - _Color: {r: 0.78440017, g: 0.7124915, b: 0.8238993, a: 1}
+    - _BaseColor: {r: 0.47798735, g: 0.26003712, b: 0.4428341, a: 1}
+    - _Color: {r: 0.4779873, g: 0.2600371, b: 0.44283408, a: 1}
   m_BuildTextureStacks: []

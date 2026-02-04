@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4bb27ffc92fb964e94be9804d8b0a23, type: 3}
   m_Name: Tumor Data 1
   m_EditorClassIdentifier: 
-  rustleSound: event:/Overworld/Rustle/Plastic
+  rustleSound: event:/Overworld/Rustle/Daf
   pitch: 1
-  volume: 1
+  volume: 0.5
   minimumSingingDistance: 10
   sprites:
   - {fileID: -959456270, guid: 8b364b45e0210e245b28278bc231f90e, type: 3}
