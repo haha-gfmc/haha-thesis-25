@@ -104,6 +104,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoadScene.unity
     guid: 4602713047d7e164b9dd67d7b97c22ab
+  - enabled: 1
+    path: Assets/Scenes/Menus/Showcase Mode Setup.unity
+    guid: d66c55e1fb091d240804bb32fcd06bdf
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7,
       type: 2}

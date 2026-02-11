@@ -45,6 +45,8 @@ public class Menu : MonoBehaviour
     private float[] currentButtonsAnimationTimes;
     private TMP_Text[][] buttonsText;
     private int buttonIndex=0;
+    [Tooltip("If true, gray out buttons when inactive")]
+    public bool neutralize=false;
 
     [Header("Animation Values")]
 
@@ -94,6 +96,7 @@ public class Menu : MonoBehaviour
 
     public Animator canvasAnimator;
 
+
     // Start is called before the first frame update
     public void Start()
     {
@@ -130,6 +133,18 @@ public class Menu : MonoBehaviour
 
     }
 
+    // // Just making every button gray to show it's not active anymore, but without hiding it
+    // public void Neutralize()
+    // {
+    //     for(int i=0;i<currentButtons.Length;i++){            
+    //         Color c=textButtonIdleColor;
+    //         for(int k=0;k<buttonsText[i].Length;k++){
+    //                 buttonsText[i][k].color=c;
+    //         }
+    //     }
+    //     Debug.Log("neutralized!");
+    // }
+
     // Update is called once per frame
     public virtual void Update()
     {
@@ -137,6 +152,10 @@ public class Menu : MonoBehaviour
         {
             NavigateButtons();
             CheckButtons();
+            ShowButtons();
+        }else if (neutralize && canvasObject.activeInHierarchy)
+        {
+            buttonIndex=-1;
             ShowButtons();
         }
 
@@ -649,6 +668,11 @@ public class Menu : MonoBehaviour
         }
 
         fadingOutCanvas=false;
+
+        if (buttonIndex == -1)
+        {
+            buttonIndex=0;
+        }
 
     }
 
