@@ -55,7 +55,7 @@ Material:
     - _Fullscreen_SrcAlphaBlend: 1
     - _Fullscreen_SrcColorBlend: 5
     - _Magnification: 0
-    - _PulseTime: 0.8091641
+    - _PulseTime: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Size: 0

@@ -8,13 +8,16 @@ public class RespawnTrigger : MonoBehaviour
 
     public bool triggered;
 
+    private Swimmer swimmer;
+
     void Start(){
         if (origin==null) origin=transform;
+        swimmer=FindObjectOfType<Swimmer>();
     }
 
     void Update(){
         if(triggered){
-            FindObjectOfType<Swimmer>().respawnTransform=transform;
+            swimmer.respawnTransform=transform;
             triggered=false;
         }
     }
