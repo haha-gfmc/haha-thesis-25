@@ -61,7 +61,10 @@ public class CopySpriteValues : MonoBehaviour
             }
 
             if(copyHue){
-                spriteRenderer.material.color=spriteToCopy.material.color;
+                if(spriteRenderer.material.HasFloat("_Hue_Offset")){
+                    spriteRenderer.material.SetFloat("_Hue_Offset",spriteToCopy.material.GetFloat("_Hue_Offset"));
+                }
+                else spriteRenderer.material.color=spriteToCopy.material.color;
             }
 
             if(copyColor){
