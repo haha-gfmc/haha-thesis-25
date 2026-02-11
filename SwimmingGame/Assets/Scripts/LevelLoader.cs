@@ -61,6 +61,8 @@ public class LevelLoader : MonoBehaviour
     [HideInInspector]
     public bool loadingLevel=false;
 
+    private string currentSceneName;
+
     void Start()
     {
         if (loadingImage != null)
@@ -83,6 +85,8 @@ public class LevelLoader : MonoBehaviour
         }
         blinkDuration = 0f;
         playerInput = FindObjectOfType<PlayerInput>();
+
+        currentSceneName=SceneManager.GetActiveScene().name;
     }
 
     void Update()
@@ -144,7 +148,7 @@ public class LevelLoader : MonoBehaviour
         }
 
         // Showcase Reset Logic
-        if (ResetManager.reset)
+        if (ResetManager.reset && currentSceneName!="GameStart")
         {
             if (!playerInput.noInput)
             {
