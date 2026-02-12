@@ -27,6 +27,8 @@ public class Fish : NPCOverworld
 
     private Animator playerAnimator;
 
+    public bool boopable=true;
+
     void Start(){
         swimmerSinging=FindObjectOfType<SwimmerSinging>();
         playerAnimator=player.GetComponent<Animator>();
@@ -154,12 +156,14 @@ public class Fish : NPCOverworld
     }
 
     void OnCollisionEnter(Collision other){
-        if(other.gameObject.tag=="Player"){
-            Debug.Log("Boop player");
-            ChangeMovementBehavior(MovementBehavior.RunFromPlayer);
-            awayFromPlayerTimer=0f;
-            closeToPlayerTimer=0f;
-            Sound.Play3DOneShotVolume(boopSound,1f,transform,"",0,pitch);
+        if(boopable){
+            if(other.gameObject.tag=="Player"){
+                Debug.Log("Boop player");
+                ChangeMovementBehavior(MovementBehavior.RunFromPlayer);
+                awayFromPlayerTimer=0f;
+                closeToPlayerTimer=0f;
+                Sound.Play3DOneShotVolume(boopSound,1f,transform,"",0,pitch);
+            }
         }
     }
 

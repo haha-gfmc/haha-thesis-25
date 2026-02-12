@@ -7,3 +7,9 @@ public class SpriteCollection: ScriptableObject
 {
     public Sprite[] sprites;
 }
+
+[System.Serializable]
+public class SpriteList
+{
+    public Sprite[] sprites;
+}

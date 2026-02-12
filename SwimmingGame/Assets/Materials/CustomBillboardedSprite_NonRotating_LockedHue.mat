@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CustomBillboardedSprite_NonRotating
+  m_Name: CustomBillboardedSprite_NonRotating_LockedHue
   m_Shader: {fileID: -6465566751694194690, guid: 85b795874bebeff47b0555dadabfbbe8,
     type: 3}
   m_Parent: {fileID: 2100000, guid: 06b0b0fbd51205d4d9ad292736e1a4ca, type: 2}
@@ -40,8 +40,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _AverageAmount: 0
+    - _HueMaxOffset: 0
     - _LockYAxis: 1
-    - _RandomizeHue: 1
+    - _RandomizeHue: 0
     - _RotateCamera: 0
     m_Colors: []
   m_BuildTextureStacks: []

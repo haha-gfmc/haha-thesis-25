@@ -168,6 +168,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minDistance: 10
+  maxDistance: -1
+  resizeFactor: 1
 --- !u!1 &5867124048622790340
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,13 +198,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5867124048622790340}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2066594163889528028}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!212 &7303767532875828662
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -308,6 +310,7 @@ MonoBehaviour:
   - {fileID: -554425280, guid: 57907f922995a2c4aa149ce70f8efc26, type: 3}
   - {fileID: -871177737, guid: 57907f922995a2c4aa149ce70f8efc26, type: 3}
   - {fileID: -411850773, guid: 57907f922995a2c4aa149ce70f8efc26, type: 3}
+  matchMusic: 0
 --- !u!1 &6148165101311944334
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,6 +441,7 @@ MonoBehaviour:
   forceDialogue: 0
   sitting: 0
   stopToTalk: 1
+  animateSwimming: 1
   acceleration: 1
   maxVelocity: 4
   deceleration: 0.75
@@ -463,6 +467,7 @@ MonoBehaviour:
   maxLeaderDistance: 5
   boopSound: event:/Overworld/Fish/Boop
   pitch: 1
+  boopable: 1
 --- !u!114 &3602468536409785038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,6 +482,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floatPeriod: 5
   floatIntensity: 0.02
+  matchMusic: 0
+  offset: -1
+  ignoreTimeDilation: 0
 --- !u!95 &684944152157683655
 Animator:
   serializedVersion: 5

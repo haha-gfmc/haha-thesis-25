@@ -6,7 +6,6 @@ using UnityEngine.U2D.Animation;
 public class MigrationNPC : MonoBehaviour
 {
     public float strokeFrequencyVariance=0.2f;
-    public RuntimeAnimatorController [] animators;
     public SpriteLibraryAsset[] spriteLibraryAssets;
 
     public float maxDistance;
@@ -18,18 +17,17 @@ public class MigrationNPC : MonoBehaviour
     public GameObject particleSystem;
     public float particleSystemLikeliness=0.2f;
 
-    void Start()
+    public virtual void Start()
     {
         SpriteRenderer spriteRenderer=GetComponentInChildren<SpriteRenderer>();
         //spriteRenderer.material.color=Color.HSVToRGB(Random.Range(0f,1f),33f/255f,1f);
         NPCOverworld npcOverworld=GetComponentInChildren<NPCOverworld>();
         npcOverworld.strokeFrequency=npcOverworld.strokeFrequency+Random.Range(-strokeFrequencyVariance,strokeFrequencyVariance);
-        //GetComponent<Animator>().runtimeAnimatorController=animators[Random.Range(0,animators.Length)];
         GetComponentInChildren<SpriteLibrary>().spriteLibraryAsset=spriteLibraryAssets[Random.Range(0,spriteLibraryAssets.Length)];
         float s=Random.Range(0.9f,1.5f);
         spriteRenderer.transform.localScale=Vector3.one*s;
 
-        if(Random.Range(0f,1f)<=particleSystemLikeliness){
+        if(particleSystem!=null && Random.Range(0f,1f)<=particleSystemLikeliness){
             particleSystem.SetActive(true);
         }
     }
