@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.Utilities;
@@ -56,6 +57,8 @@ public class Migration : MonoBehaviour
     public float targetFocalLength=100f;
     public Image blurOverlay;
     public float blurOverlayTargetAlpha=.4f;
+    public StudioEventEmitter music;
+    public float currentMultiplier=2f;
 
     void Start()
     {
@@ -140,6 +143,31 @@ public class Migration : MonoBehaviour
         }
 
         float distance;
+        float tempCurrentForce=currentForce;
+
+        if (blurWhenCloseToOrigin)
+        {
+            distance=Vector3.Distance(swimmer.transform.position,origin.position);
+            float val=(minOriginDistance-distance)/minOriginDistance;
+            val=Mathf.Clamp(val,0f,1f);
+            Color c=blurOverlay.color;
+            if (distance < minOriginDistance)
+            {
+                depthOfField.focalLength.value=1f+(targetFocalLength-1f)*val;
+                Debug.Log("distance too small");
+                c.a=blurOverlayTargetAlpha*val;
+                music.EventInstance.setParameterByName("currentIntensity",val);
+                tempCurrentForce=tempCurrentForce*(1f+(currentMultiplier-1f)*val);
+            }
+            else
+            {
+                depthOfField.focalLength.value=1f;
+                Debug.Log("distance too big");
+                c.a=0f;
+                music.EventInstance.setParameterByName("currentIntensity",0f);
+            }
+            blurOverlay.color=c;
+        }
 
         if(activatedMovement && waitTimer>waitTime){
             //Current pushing swimmer
@@ -157,30 +185,10 @@ public class Migration : MonoBehaviour
                 Vector3 current=migrationNodes[nodeIndex+1].position-swimmer.transform.position;
                 Vector3 velocityToCurrent=Vector3.Project(swimmerVelocity,current);
                 if(velocityToCurrent.normalized==-current.normalized || velocityToCurrent.magnitude<maxCurrentSpeed){
-                    swimmer.Boost(current.normalized*currentForce*Time.deltaTime);
+                    swimmer.Boost(current.normalized*tempCurrentForce*Time.deltaTime);
                 }
             }
         }
-
-        if (blurWhenCloseToOrigin)
-        {
-            distance=Vector3.Distance(swimmer.transform.position,origin.position);
-            Color c=blurOverlay.color;
-            if (distance < minOriginDistance)
-            {
-                depthOfField.focalLength.value=1f+(targetFocalLength-1f)*(minOriginDistance-distance)/minOriginDistance;
-                Debug.Log("distance too small");
-                c.a=blurOverlayTargetAlpha*(minOriginDistance-distance)/minOriginDistance;
-            }
-            else
-            {
-                depthOfField.focalLength.value=1f;
-                Debug.Log("distance too big");
-                c.a=0f;
-            }
-            blurOverlay.color=c;
-        }
-
 
     }
 
