@@ -51,6 +51,7 @@ public class Migration : MonoBehaviour
     [Header("Blur Effect")]
     public bool blurWhenCloseToOrigin=true;
     public Transform origin;
+    public Transform originPrev;
     private VolumeProfile profile;
     private DepthOfField depthOfField;
     private float minOriginDistance;
@@ -59,6 +60,9 @@ public class Migration : MonoBehaviour
     public float blurOverlayTargetAlpha=.4f;
     public StudioEventEmitter music;
     public float currentMultiplier=2f;
+    public float blurLerpValue=1f;
+    private float blurValue=0f;
+
 
     void Start()
     {
@@ -147,14 +151,55 @@ public class Migration : MonoBehaviour
 
         if (blurWhenCloseToOrigin)
         {
-            distance=Vector3.Distance(swimmer.transform.position,origin.position);
-            float val=(minOriginDistance-distance)/minOriginDistance;
-            val=Mathf.Clamp(val,0f,1f);
-            Color c=blurOverlay.color;
-            if (distance < minOriginDistance)
+            //origin=migrationGenerator.origin;
+            int originIndex=-1;
+            
+            for(int i = migrationGenerator.path.Length-1; i >=0 ; i--)
             {
+                if (migrationGenerator.path[migrationGenerator.closestIndex] == migrationGenerator.path[i])
+                {
+                    origin=migrationGenerator.path[i];
+                    originIndex=i;
+                    break;
+                }
+                if (origin == migrationGenerator.path[i])
+                {
+                    originIndex=i;
+                    break;
+                }
+            }
+            if (originIndex > 0)
+            {
+                originPrev=migrationGenerator.path[originIndex-1];
+            }
+            Transform originNext=origin;
+            if (originIndex < migrationGenerator.path.Length - 1)
+            {
+                originNext=migrationGenerator.path[originIndex+1];
+            }
+
+            // distance=Vector3.Distance(swimmer.transform.position,originPrev.position);
+
+            // distance=Vector3.Distance(swimmer.transform.position,originPrev.position);
+            // float val=(minOriginDistance-distance)/minOriginDistance;
+
+            //float val=Vector3.Distance(originPrev.position,swimmer.transform.position)/Vector3.Distance(originPrev.position,origin.position);
+
+            float val=(Vector3.Distance(origin.position,swimmer.transform.position)+Vector3.Distance(originNext.position,swimmer.transform.position))/Vector3.Distance(origin.position,originNext.position);
+
+            //Debug.Log(val);
+
+            val=Mathf.Clamp(val,0f,3f);
+
+            Color c=blurOverlay.color;
+
+            blurValue=Mathf.Lerp(blurValue,val,blurLerpValue*Time.unscaledDeltaTime);
+
+            //if (val<1f)
+            if(blurValue>2f)
+            {
+                val=Mathf.Clamp(blurValue-2f,0f,1f);
                 depthOfField.focalLength.value=1f+(targetFocalLength-1f)*val;
-                Debug.Log("distance too small");
                 c.a=blurOverlayTargetAlpha*val;
                 music.EventInstance.setParameterByName("currentIntensity",val);
                 tempCurrentForce=tempCurrentForce*(1f+(currentMultiplier-1f)*val);
@@ -162,11 +207,12 @@ public class Migration : MonoBehaviour
             else
             {
                 depthOfField.focalLength.value=1f;
-                Debug.Log("distance too big");
                 c.a=0f;
                 music.EventInstance.setParameterByName("currentIntensity",0f);
             }
             blurOverlay.color=c;
+
+            
         }
 
         if(activatedMovement && waitTimer>waitTime){
