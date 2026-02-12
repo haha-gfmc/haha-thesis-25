@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.Utilities;
 using UnityEngine.Rendering;
@@ -46,6 +47,15 @@ public class Migration : MonoBehaviour
     [Range(0f, 1f)]
     public float ambientValue;
 
+    [Header("Blur Effect")]
+    public bool blurWhenCloseToOrigin=true;
+    public Transform origin;
+    private VolumeProfile profile;
+    private DepthOfField depthOfField;
+    private float minOriginDistance;
+    public float targetFocalLength=100f;
+    public Image blurOverlay;
+    public float blurOverlayTargetAlpha=.4f;
 
     void Start()
     {
@@ -69,6 +79,14 @@ public class Migration : MonoBehaviour
 
         swimmer=FindObjectOfType<Swimmer>();
 
+        if(volume.profile.TryGet<DepthOfField>(out depthOfField))
+        {
+            minOriginDistance=Vector3.Distance(swimmer.transform.position,origin.position);
+        }
+        else
+        {
+            Debug.Log("couldn't get depth of field");
+        }
     }
 
     void Update()
@@ -121,12 +139,14 @@ public class Migration : MonoBehaviour
             activatedMovement=true; 
         }
 
+        float distance;
+
         if(activatedMovement && waitTimer>waitTime){
             //Current pushing swimmer
             float minDistance=1000f;
             int nodeIndex=0;
             for(var i=0;i<migrationNodes.Length;i++){
-                float distance=Vector3.Distance(swimmer.transform.position,migrationNodes[i].position);
+                distance=Vector3.Distance(swimmer.transform.position,migrationNodes[i].position);
                 if(distance<minDistance){
                     minDistance=distance;
                     nodeIndex=i;
@@ -142,6 +162,31 @@ public class Migration : MonoBehaviour
             }
         }
 
+        if (blurWhenCloseToOrigin)
+        {
+            distance=Vector3.Distance(swimmer.transform.position,origin.position);
+            Color c=blurOverlay.color;
+            if (distance < minOriginDistance)
+            {
+                depthOfField.focalLength.value=1f+(targetFocalLength-1f)*(minOriginDistance-distance)/minOriginDistance;
+                Debug.Log("distance too small");
+                c.a=blurOverlayTargetAlpha*(minOriginDistance-distance)/minOriginDistance;
+            }
+            else
+            {
+                depthOfField.focalLength.value=1f;
+                Debug.Log("distance too big");
+                c.a=0f;
+            }
+            blurOverlay.color=c;
+        }
+
+
+    }
+
+    void OnDestroy()
+    {
+        depthOfField.focalLength.value=1f;
     }
 
 }
