@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Video;
 using TMPro;
 
 public class LevelLoader : MonoBehaviour
@@ -15,7 +16,7 @@ public class LevelLoader : MonoBehaviour
     public string destinationScene;
     [Header("Load level after countdown")]
     public bool countdown;
-    public float countdownTime = 5f;  // Public variable to set the countdown time in seconds
+    public float countdownTime = 5f;  
     [Header("Load level after entering trigger volume")]
     public bool trigger;
     [Header("Load level after pressing P")]
@@ -41,13 +42,18 @@ public class LevelLoader : MonoBehaviour
     public bool waitForFadeOut=false;
 
     [Header("Showcase Reset Settings")]
+    public RawImage trailerRawImage;
+    public VideoPlayer trailerVideoPlayer;
+    
+    public bool playTrailerAfterInactive;
+    private bool isTrailerPlaying;
     public int resetCountdownTime = 10; // Time to start the on-screen countdown
     public int onScreenCountdownTime = 3; // Time to show countdown UI
-    public GameObject countdownUI; // GameObject containing the UI canvas and TextMeshPro
-    public TextMeshProUGUI countdownText; // TextMeshPro component to display the countdown
+    public GameObject countdownUI; 
+    public TextMeshProUGUI countdownText;
 
-    private float idleTimer = 0f;
-    private bool isCountingDown = false; // Flag to track if countdown is active
+    [SerializeField]private float idleTimer = 0f;
+    private bool isCountingDown = false; 
 
     public Animator blink;
     private float blinkDuration;
@@ -56,7 +62,7 @@ public class LevelLoader : MonoBehaviour
     //public bool showcaseReset=false;
     private PlayerInput playerInput;
 
-    private bool isGameStartSceneLoaded = false; // Flag to track if GameStart scene is already loaded
+    private bool isGameStartSceneLoaded = false; 
 
     [HideInInspector]
     public bool loadingLevel=false;
@@ -148,59 +154,56 @@ public class LevelLoader : MonoBehaviour
         }
 
         // Showcase Reset Logic
-        if (ResetManager.reset && currentSceneName!="GameStart")
+        if (ResetManager.reset)
         {
             if (!playerInput.noInput)
             {
+                idleTimer = 0f;
 
-                idleTimer = 0f; // Reset the idle timer if input is detected
                 if (isCountingDown)
                 {
-                    isBlinkingOut=true;
+                    isBlinkingOut = true;
                     if (blink != null)
                     {
-                        blink.SetBool("Blink", true); 
+                        blink.SetBool("Blink", true);
                         isBlinking = true;
                     }
-                    StartCoroutine(StopCountdownCoroutine()); // Stop the countdown if it was active
+                    StartCoroutine(StopCountdownCoroutine());
                 }
             }
             else
             {
-                idleTimer += deltaTime; // Increment the idle timer if no input is detected
+                idleTimer += deltaTime;
 
                 if (idleTimer >= resetCountdownTime + onScreenCountdownTime)
                 {
-                    
-                    StartCoroutine(ResetShowcaseCoroutine()); // Perform the reset action
+                    StartCoroutine(ResetShowcaseCoroutine());
                 }
                 else if (idleTimer >= resetCountdownTime && !isCountingDown)
                 {
-
-                    // Trigger the blinking animation
                     if (blink != null)
                     {
                         blink.SetBool("Blink", true);
-                        isBlinking = true; // Set the blinking flag to true
+                        isBlinking = true;
                     }
                 }
             }
         }
-        if (isBlinking){
-            blinkDuration += deltaTime; // Increment the blink duration
-            if (blinkDuration >= 0.2f) 
+        // If current scene is GameStart
+        if (currentSceneName == "GameStart"){
+            if (!playerInput.noInput)
             {
-                isBlinking = false; // Reset the blinking flag
-                if (blink != null)
-                blink.SetBool("Blink", false);
-                blinkDuration = 0f;
-                if(!isBlinkingOut){
-                StartCountdown(); // Start the countdown UI
+                idleTimer = 0f;
+                if (isTrailerPlaying)
+                    StopTrailerVideo();
+            }
+            else
+            {
+                idleTimer += deltaTime;
+                if (idleTimer >= resetCountdownTime && !isTrailerPlaying)
+                {
+                    PlayTrailerVideo();
                 }
-                else{
-                    isBlinkingOut = false; // Reset the blinking out flag
-                }
-
             }
         }
     }
@@ -351,6 +354,31 @@ public class LevelLoader : MonoBehaviour
             yield return null; // Wait for the next frame
         }
         operation.allowSceneActivation = true; // Activate the scene
+    }
+    void PlayTrailerVideo()
+    {
+        if (trailerRawImage == null || trailerVideoPlayer == null)
+        {
+            return;
+        }
+        trailerRawImage.enabled = true;
+        //Reset tralier video player
+        trailerVideoPlayer.Stop();
+        trailerVideoPlayer.time = 0;
+        trailerVideoPlayer.frame = 0;
+        trailerVideoPlayer.Play();
+        isTrailerPlaying = true;
+    }
+
+    void StopTrailerVideo()
+    {   
+        if (trailerRawImage == null || trailerVideoPlayer == null)
+            return;
+        trailerRawImage.enabled = false;
+        trailerVideoPlayer.Pause();
+        trailerVideoPlayer.time = 0;
+        trailerVideoPlayer.frame = 0;
+        isTrailerPlaying = false; 
     }
 
 }
