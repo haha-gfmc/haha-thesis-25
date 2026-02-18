@@ -1260,7 +1260,7 @@ Teacher: Just a few more strokes... # time: 3
 -> npcStart1 ->
 Teacher: Here we are.
 MC: Yes.
-~ loadLevel("Foreplay 1")
+~ loadLevel("Foreplay 1 - 1")
 -> npcEnd ->
 ->END
 
