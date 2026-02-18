@@ -53,6 +53,8 @@ VAR talkedToThisCoralnet=false
 ~ addRumbleWithTimeout(1,1,1,0.5)
 ->->
 
+VAR removedLibraryEntranceBlock=false
+
 === coralnetEnd ===
 ~pauseTutorial(false)
 { npcsTalkedTo > 2:
@@ -62,6 +64,11 @@ VAR talkedToThisCoralnet=false
 ~ restoreNPCsVolume()
 ~ restoreSwimmingVolume()
 ~ activateBorder("coral",false)
+{ removedLibraryEntranceBlock==false:
+    ~triggerMetamorphosisObject("Roadblock - Library Entrance")
+    ~removedLibraryEntranceBlock=true
+    ~ overrideRotationWithSpeed("Roadblock - Library Entrance",1.5)
+}
 -> END
 
 === coralnetAddedAnswer ===

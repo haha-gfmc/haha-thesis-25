@@ -36,6 +36,7 @@ EXTERNAL setInstanceVolume(name, volume)
 EXTERNAL stopInstance(name, release)
 EXTERNAL addRumbleWithTimeout(leftMotorIntensity,rightMotorIntensity,modifier,time)
 EXTERNAL addSavedRumbleWithTimeout(rumbleName,modifier,time,isFadingOut)
+EXTERNAL triggerMetamorphosisObject(name)
 
 VAR world=0
 

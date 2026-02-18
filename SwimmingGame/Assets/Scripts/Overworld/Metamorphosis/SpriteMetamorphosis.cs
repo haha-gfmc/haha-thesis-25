@@ -61,6 +61,12 @@ public class SpriteMetamorphosis : Metamorphosis
     IEnumerator MetamorphosisCoroutine()
     {
         yield return new WaitForSeconds(delayTime);
+        SpriteAnimator spriteAnimator;
+        spriteRenderer.TryGetComponent<SpriteAnimator>(out spriteAnimator);
+        if(spriteAnimator!=null) spriteAnimator.enabled=false;
+        Animator animator;
+        spriteRenderer.TryGetComponent<Animator>(out animator);
+        if(animator!=null) animator.enabled=false;
         if(soundToPlay!="") Sound.Play3DOneShotVolume(soundToPlay, 1f, transform);
         while (frameNumber < sprites.Length)
         {
@@ -68,9 +74,11 @@ public class SpriteMetamorphosis : Metamorphosis
             yield return new WaitForSeconds(frameDuration);
             frameNumber++;
         }
-        GameObject g = Instantiate(product, transform.position, transform.rotation, transform.parent);
-        g.transform.localScale = transform.localScale;
-        g.transform.position=gameObject.transform.position;
+        if(product!=null){
+            GameObject g = Instantiate(product, transform.position, transform.rotation, transform.parent);
+            g.transform.localScale = transform.localScale;
+            g.transform.position=gameObject.transform.position;
+        }
         Destroy(gameObject);
     }
 

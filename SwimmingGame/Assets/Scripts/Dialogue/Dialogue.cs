@@ -1115,6 +1115,10 @@ public class Dialogue : MonoBehaviour
         {
             TriggerMetamorphosis();
         });
+        story.BindExternalFunction("triggerMetamorphosisObject", (string name) =>
+        {
+            TriggerMetamorphosis(name);
+        });
         // Play Sound Effect
         story.BindExternalFunction("playOneShot", (string path, float volume) =>
         {
@@ -1413,15 +1417,26 @@ public class Dialogue : MonoBehaviour
         if (sb != null) sb.ActivateBorder(name, b);
     }
 
-    void TriggerMetamorphosis()
+    void TriggerMetamorphosis(string targetName="")
     {
-        if (npcInterlocutor != null)
+        GameObject obj=null;
+        if (name != null)
         {
-            Metamorphosis[] metamorphoses = npcInterlocutor.GetComponentsInChildren<Metamorphosis>();
+            obj = gameManager.FindObject(targetName);
+        }else if (npcInterlocutor != null){
+            obj=npcInterlocutor.gameObject;
+        }
+        if (obj!=null)
+        {
+            Metamorphosis[] metamorphoses = obj.GetComponentsInChildren<Metamorphosis>();
             foreach (Metamorphosis m in metamorphoses)
             {
                 m.TriggerMetamorphosis();
             }
+        }
+        else
+        {
+            Debug.LogWarning("Tried metamorphosis but failed");
         }
     }
 
