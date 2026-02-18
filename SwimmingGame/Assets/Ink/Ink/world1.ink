@@ -68,6 +68,8 @@ VAR removedLibraryEntranceBlock=false
     ~triggerMetamorphosisObject("Roadblock - Library Entrance")
     ~removedLibraryEntranceBlock=true
     ~ overrideRotationWithSpeed("Roadblock - Library Entrance",1.5)
+    ~ playOneShot("event:/Non-Diagetic SFX/Wipe With Note - Short",0.5)
+    ~ addRumbleWithTimeout(0.5,0.5,1,1)
 }
 -> END
 
@@ -1180,6 +1182,8 @@ Teacher: I know a trick for getting rid of these.
 ~fadeOut(1)
 Let's see... I'm focusing my psychic powers...
 ~ pause(2)
+~ playOneShot("event:/Non-Diagetic SFX/Wipe With Note - Short",0.5)
+~ addRumbleWithTimeout(0.5,0.5,1,1)
 // SOUND CUE: OPENING PORTAL (MAYBE ALSO IN LIBRARY)
 ~ switchObject("Coral - Edge Tunnel",true)
 ~ switchObject("Roadblock - Edge",false)
@@ -1252,13 +1256,21 @@ Teacher: Just a few more strokes... # time: 3
 ~ nextBrain()
 ->END
 
+=== teacherArrivedEdge2 ===
+-> npcStart1 ->
+Teacher: Here we are.
+MC: Yes.
+~ loadLevel("Foreplay 1")
+-> npcEnd ->
+->END
+
 // MC and Teacher harmonize then sit and talk
 === teacherAtEdge1 ===
 ~stopSinging()
 Teacher: It's nice here, isn't it?
-MC: Yeah. I was actually here just now.
+MC: Yes. I was actually here just now.
 Teacher: Oh, haha, wait, really?
-MC: Yeah.
+MC: Yes.
 Teacher: That makes sense. I can picture you hanging out here.
 ~pause(2)
 Teacher: Do you usually come by -- #speed:fast # ambient # time:0.25
@@ -1273,11 +1285,11 @@ Teacher: I feel really attracted to you.
     MC: Ok. Thanks.
     Teacher: ...
 +   [Me too.]
-    MC: Yeah, me too.
+    MC: Yes, me too.
     Teacher: That's good to know, haha.
     Teacher: I mean, I thought so.
 +   [I know.]
-    MC: Yeah. I could tell. I guess.
+    MC: Yes. I could tell. I guess.
     MC: That's cool.
     Teacher: ...Right. You're welcome.
 - MC: How do we get started?
@@ -1335,7 +1347,7 @@ MC: WAIT, stop!!! # time: 3 # speed:fast
 ~stopSinging()
 MC: Sorry, \\pausethat was... #speed: slow
 Teacher: Are you okay? #speed: slow
-MC: Yeah, \\pauseI guess I just didn't expect it to feel that way.
+MC: Yes, \\pauseI guess I just didn't expect it to feel that way.
 Teacher: Did it hurt?
 MC: No.
 MC: It was just something I've never felt before.
@@ -1404,7 +1416,7 @@ Teacher: And that climax... Did you expect it to just fall off like that?
 +   [Yeah.]
     MC: It felt kind of natural.. to me. Like it was leading up to it? It made sense.
     Teacher: Maybe.
-     MC: Yeah.
+     MC: Yes.
 +   [No.]
     MC: No! Does that mean we can't do it again?
     Teacher: Haha, no, I think it grows back.
