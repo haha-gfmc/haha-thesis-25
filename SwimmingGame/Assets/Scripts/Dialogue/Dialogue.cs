@@ -1420,7 +1420,7 @@ public class Dialogue : MonoBehaviour
     void TriggerMetamorphosis(string targetName="")
     {
         GameObject obj=null;
-        if (name != null)
+        if (targetName != "")
         {
             obj = gameManager.FindObject(targetName);
         }else if (npcInterlocutor != null){
