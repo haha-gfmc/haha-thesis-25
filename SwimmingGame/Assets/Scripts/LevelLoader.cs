@@ -378,7 +378,13 @@ public class LevelLoader : MonoBehaviour
         trailerVideoPlayer.Pause();
         trailerVideoPlayer.time = 0;
         trailerVideoPlayer.frame = 0;
-        isTrailerPlaying = false; 
+        isTrailerPlaying = false;
+        
+        if (blink != null)
+        {
+            blink.SetBool("Blink", false);
+            isBlinking = false;
+        }
     }
 
 }
