@@ -26,7 +26,7 @@ public class FingerTipsController : MonoBehaviour
 
     private CuddleDialogue cuddleDialogue;
 
-    private float changeTimer=0f;
+    public float changeTimer=0f;
     private float prevInputAngle;
     public float maxNoChangeTime=0.5f;
 
@@ -57,7 +57,6 @@ public class FingerTipsController : MonoBehaviour
         }
         changeTimer += Time.deltaTime;
 
-        caressing = false;
     }
 
     void FixedUpdate()
@@ -118,6 +117,7 @@ public class FingerTipsController : MonoBehaviour
             inputAngle=0f;
             velocity *= dampingFactor; // Apply damping
             inputTimer += Time.fixedDeltaTime; // increment timer when no input
+            caressing = false;
         }
 
         

@@ -62,7 +62,7 @@ public class CuddleDialogue : Dialogue
     void LateUpdate(){
         if (caressing)
         {
-            caressTimer += Time.deltaTime*selectingIntensity;
+            caressTimer += Time.unscaledDeltaTime*selectingIntensity;
             Rumble.AddRumble("Picking Dialogue",caressTimer/caressRequiredLength);
             Rumble.AddRumble("Singing",caressTimer/caressRequiredLength);
         }
