@@ -67,6 +67,8 @@ public class Tutorial : MonoBehaviour
 
         if(index<tutorialParts.Length){
             TutorialPart currentTutorialPart=tutorialParts[index];
+            icons=currentTutorialPart.canvasParent.GetComponentsInChildren<TutorializationIcon>();
+            tMPro=currentTutorialPart.canvasParent.GetComponentInChildren<TMP_Text>();
 
             if(!currentTutorialPart.active){
                 if(currentTutorialPart.triggerZone!=null && currentTutorialPart.triggerZone==enteredTrigger){

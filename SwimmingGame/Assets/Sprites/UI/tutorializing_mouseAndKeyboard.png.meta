@@ -1,0 +1,1262 @@
+fileFormatVersion: 2
+guid: 731ab808a5dc8e940af31fe3995a1a4d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 798
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e62d1668387b834a9808be516c76fb1
+      internalID: 1684830968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_1
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 798
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee43f90f61b1c7044b87a7d1c852221b
+      internalID: 834840744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_2
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 798
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f321f0474cc64b24eb8ae7cc64080478
+      internalID: 953823607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_3
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 798
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5799b4459bdad47bf77baa32c18cda
+      internalID: 689327807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_4
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 798
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d9fec9bf13ab440aef2fe790454ae6
+      internalID: 826160126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_5
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 798
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43068d3b6e6821041b0ab940ccf34237
+      internalID: -1277059165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_6
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 798
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347f2aedf77cd084c8e1d0d9e7c67233
+      internalID: 354322138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_7
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 798
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6577a22054daae34099a5f94b7d81b3d
+      internalID: 2036753656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 665
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe926f55e926b904ba24e2aff64390ba
+      internalID: 1038242533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_9
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 665
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63eb6e5c954ffcf478b63d959d14671c
+      internalID: 967571029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_10
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 665
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d3967082ad80242a4dd696dfb0d658
+      internalID: -1682559831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_11
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 665
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 565b48814f6c86f48bf2f44c0dec3fdc
+      internalID: 103740677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_12
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 665
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79805f7b03260b4d9792cd25395ad4a
+      internalID: -1737534988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_13
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 665
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25bd9d6e55e7f02489f84d237a754eaa
+      internalID: 1155138376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_14
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 665
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74375795898bb4c48b795279c36285b5
+      internalID: 1617636271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_15
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 665
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 144ae4f755d726c4cb1bc34d29c2660c
+      internalID: 1748276134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 532
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b5bed87de61b8459e8ac8c8134a8d5
+      internalID: 824653841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_17
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 532
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd40cc1a0cee7dc498de682859c346df
+      internalID: 1719470820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_18
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 532
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cbd97bcf2a521d43915f809cab4c237
+      internalID: -670392473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_19
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 532
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36372dd52250dd1459e78a940ff2f45a
+      internalID: 122078740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_20
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 532
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8755ed497103bb4f9f9ccad67576737
+      internalID: 1900304693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_21
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 532
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab0069411f41624694796b369d28c00
+      internalID: 353753772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_22
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 532
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab72eb64c68ef2418f1f20f7029f9c2
+      internalID: 1316548072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_23
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 532
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e1c960e2f04da47a7db7658c8e5173
+      internalID: -407794571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 399
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 477fb2ea36b830745bae7c10ba2e82e2
+      internalID: -1793008707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_25
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 399
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aca61770837d2d4585d1d00c2b3c54c
+      internalID: 168621863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_26
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 399
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a39b505f01fe8ac43a4a6ea8b838f615
+      internalID: 268804110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_27
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 399
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e8a575fdfcd9b46bbd7153dd14be34
+      internalID: 1393513246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_28
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 399
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a425b3b5f60e80a48b402811a197057b
+      internalID: 804870311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_29
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 399
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fedb99131dfaf9a46a36bcc6f82715a6
+      internalID: -1124036365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_30
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 399
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f6876c139614a4a8d132917ce37ac4
+      internalID: 1140412887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_31
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 399
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb42519f0ea6044b99bd3cf301347b5
+      internalID: -1571493083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 266
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c90e2cae3548aca4b928cd1223d92797
+      internalID: -1037574470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_33
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 266
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34abdcebdced364d8f7a889766edff4
+      internalID: 655118566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_34
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 266
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1676fbb432a243243b53f24b0a39960d
+      internalID: 1094522529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_35
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 266
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f9aa575530b36543aa1225df68a0813
+      internalID: -701623776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_36
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 266
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 269c9e8d93fa208478f909564bd844c4
+      internalID: 1617457364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_37
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 266
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c494805ff043c749bf3f74e920390bb
+      internalID: -660589181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_38
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 266
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bee6ca7d276e934da5ff0cbaf1a9f53
+      internalID: 1722418915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_39
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 266
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3e608f3b8e9ee458831f2a4e757e78
+      internalID: 1385738567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 133
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f5af0b85e47bdb42bcb392962a9d023
+      internalID: 712532716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_41
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 133
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 435204cb4628b3747a1ae8e9e0a86ebf
+      internalID: 316081845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_42
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 133
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b854e6646ff08ac458ee77ea07bbb3b5
+      internalID: -1526603056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_43
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 133
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ed08ee0386d7947b8b25d64c581a77
+      internalID: 1710877023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_44
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 133
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a655ffbdd7464d445aff304ddec2c380
+      internalID: -661141293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_45
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 133
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18be762aaa6cc8d49951bc234c37efde
+      internalID: -2006234562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_46
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 133
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb8609d8b1aec841b7898186ffc7673
+      internalID: -1532043469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_47
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 133
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c36e92aa9699041bcf629ea1976c82
+      internalID: -830053089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b90cc7761125e4043a4394c2251781d8
+      internalID: -482418557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_49
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1530d513150ab45b4704fcbfaac5f4
+      internalID: 1437696137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tutorializing_mouseAndKeyboard_50
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 135
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed09a79a5442b74097ed2fe8c359a4c
+      internalID: 943550136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a1aa55bfa84065544aa6f55f705424ee
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tutorializing_mouseAndKeyboard_0: 1684830968
+      tutorializing_mouseAndKeyboard_1: 834840744
+      tutorializing_mouseAndKeyboard_10: -1682559831
+      tutorializing_mouseAndKeyboard_11: 103740677
+      tutorializing_mouseAndKeyboard_12: -1737534988
+      tutorializing_mouseAndKeyboard_13: 1155138376
+      tutorializing_mouseAndKeyboard_14: 1617636271
+      tutorializing_mouseAndKeyboard_15: 1748276134
+      tutorializing_mouseAndKeyboard_16: 824653841
+      tutorializing_mouseAndKeyboard_17: 1719470820
+      tutorializing_mouseAndKeyboard_18: -670392473
+      tutorializing_mouseAndKeyboard_19: 122078740
+      tutorializing_mouseAndKeyboard_2: 953823607
+      tutorializing_mouseAndKeyboard_20: 1900304693
+      tutorializing_mouseAndKeyboard_21: 353753772
+      tutorializing_mouseAndKeyboard_22: 1316548072
+      tutorializing_mouseAndKeyboard_23: -407794571
+      tutorializing_mouseAndKeyboard_24: -1793008707
+      tutorializing_mouseAndKeyboard_25: 168621863
+      tutorializing_mouseAndKeyboard_26: 268804110
+      tutorializing_mouseAndKeyboard_27: 1393513246
+      tutorializing_mouseAndKeyboard_28: 804870311
+      tutorializing_mouseAndKeyboard_29: -1124036365
+      tutorializing_mouseAndKeyboard_3: 689327807
+      tutorializing_mouseAndKeyboard_30: 1140412887
+      tutorializing_mouseAndKeyboard_31: -1571493083
+      tutorializing_mouseAndKeyboard_32: -1037574470
+      tutorializing_mouseAndKeyboard_33: 655118566
+      tutorializing_mouseAndKeyboard_34: 1094522529
+      tutorializing_mouseAndKeyboard_35: -701623776
+      tutorializing_mouseAndKeyboard_36: 1617457364
+      tutorializing_mouseAndKeyboard_37: -660589181
+      tutorializing_mouseAndKeyboard_38: 1722418915
+      tutorializing_mouseAndKeyboard_39: 1385738567
+      tutorializing_mouseAndKeyboard_4: 826160126
+      tutorializing_mouseAndKeyboard_40: 712532716
+      tutorializing_mouseAndKeyboard_41: 316081845
+      tutorializing_mouseAndKeyboard_42: -1526603056
+      tutorializing_mouseAndKeyboard_43: 1710877023
+      tutorializing_mouseAndKeyboard_44: -661141293
+      tutorializing_mouseAndKeyboard_45: -2006234562
+      tutorializing_mouseAndKeyboard_46: -1532043469
+      tutorializing_mouseAndKeyboard_47: -830053089
+      tutorializing_mouseAndKeyboard_48: -482418557
+      tutorializing_mouseAndKeyboard_49: 1437696137
+      tutorializing_mouseAndKeyboard_5: -1277059165
+      tutorializing_mouseAndKeyboard_50: 943550136
+      tutorializing_mouseAndKeyboard_6: 354322138
+      tutorializing_mouseAndKeyboard_7: 2036753656
+      tutorializing_mouseAndKeyboard_8: 1038242533
+      tutorializing_mouseAndKeyboard_9: 967571029
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

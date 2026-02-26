@@ -22,14 +22,19 @@ public class TutorializationIcon : MonoBehaviour
     public int[] inputNums;
 
     public bool isButton=true;
+    public bool isValue=false;
     public bool isJoystick=false;
 
     private Image image;
     private PlayerInput playerInput;
 
     public RectTransform joystick;
+    public RectTransform keyboardKey;
+    private Vector2 keyboardKeyOgPosition;
+
     private Vector2 joystickInitialPosition;
     public float joystickRadius;
+    public float keyboardKeyDisplacement=8f;
 
     public bool ignoreYAxisInverted=false;
 
@@ -49,16 +54,24 @@ public class TutorializationIcon : MonoBehaviour
         playerInput=FindObjectOfType<PlayerInput>();
         if(isJoystick) joystickInitialPosition=joystick.anchoredPosition;
         tutorial=FindObjectOfType<Tutorial>();
+
+        if (keyboardKey != null)
+        {
+            keyboardKeyOgPosition=keyboardKey.anchoredPosition;
+        }
     }
 
     void Update()
     {
         masterOpacity=tutorial.opacity;
 
-        if(isButton){
+        if(isButton || isValue){
             active=false;
             foreach(int inputNum in inputNums){
-                if((bool)playerInput.values[inputNum]){
+                if(isButton && (bool)playerInput.values[inputNum]){
+                    active=true;
+                    break;
+                }else if(isValue && (float)playerInput.values[inputNum]!=0f){
                     active=true;
                     break;
                 }
@@ -100,9 +113,17 @@ public class TutorializationIcon : MonoBehaviour
                 tutorial.currentlyUsed=true;
                 sprites=activeSprites;
                 image.color=new Color(1f,1f,1f,0.5f*masterOpacity);
+                if (keyboardKey != null)
+                {
+                    keyboardKey.anchoredPosition=keyboardKeyOgPosition+new Vector2(0f,-keyboardKeyDisplacement);
+                }
             }else{
                 sprites=idleSprites;
                 image.color=new Color(1f,1f,1f,1f*masterOpacity);
+                if (keyboardKey != null)
+                {
+                    keyboardKey.anchoredPosition=keyboardKeyOgPosition;
+                }
             }
         }
 

@@ -126,7 +126,7 @@ public class Intro : MonoBehaviour
             if(!prevSwimmerCamOn){
                 FindObjectOfType<Swimmer>().canMove=true;
                 
-                tutorial.GoToTutorialPart(3);
+                tutorial.GoToTutorialPart(4);
                 Vector2 pos=singingWheel.anchoredPosition;
                 pos.x=0;
                 singingWheel.anchoredPosition=pos;
