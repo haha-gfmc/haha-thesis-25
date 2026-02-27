@@ -1593,6 +1593,9 @@ Let me know if you need any help.
 { npcsTalkedTo > 2:
     ~ finishTutorialPart(11)
 }
+{ talkedToReceptionist==false:
+    ~ switchObject("singingTraces Guide", false)
+}
 ~continueSinging()
 {
     - desireStep==0:

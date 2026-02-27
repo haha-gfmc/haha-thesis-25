@@ -3081,7 +3081,7 @@
     "m_DefaultRefNameVersion": 1,
     "m_RefNameGeneratedByDisplayName": "HueOffset",
     "m_DefaultReferenceName": "_HueOffset",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_Hue_Offset",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
