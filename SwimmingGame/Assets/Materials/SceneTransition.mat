@@ -67,7 +67,7 @@ Material:
     - _DecalMeshBiasType: 0
     - _DecalMeshDepthBias: 0
     - _DecalMeshViewBias: 0
-    - _DissolveAmount: 0.056275796
+    - _DissolveAmount: 0.87400836
     - _DrawOrder: 0
     - _Fullscreen_AlphaBlendOperation: 0
     - _Fullscreen_BlendMode: 1
