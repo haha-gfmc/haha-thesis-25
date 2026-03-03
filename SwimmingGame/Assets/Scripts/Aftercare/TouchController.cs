@@ -39,6 +39,10 @@ public class TouchController : MonoBehaviour
     [HideInInspector] public BoxCollider boundingBox; // bounding box for movement
     private Vector3 initialPosition; 
 
+    // clamp reference: captures orientation at end of startup lerp
+    private Quaternion clampReferenceRotation = Quaternion.identity;
+    private bool clampReferenceSet = false;
+
     private void Awake()
     {
 
@@ -174,6 +178,12 @@ public class TouchController : MonoBehaviour
                     {
                         initialLerpDone = true;
                         transform.rotation = startupTarget; // snap to exact target when close
+                        // once initial lerp is finished we capture this orientation as the clamp baseline
+                        if (enableRotationClamp && !clampReferenceSet)
+                        {
+                            clampReferenceRotation = transform.rotation;
+                            clampReferenceSet = true;
+                        }
                     }
                     // if clamps enabled, clamp the current rotation once we've reached it
                     if (initialLerpDone && enableRotationClamp)
@@ -189,31 +199,51 @@ public class TouchController : MonoBehaviour
                     Quaternion newRot = Quaternion.Lerp(transform.rotation, targetRotation, rotationDampFactor * Time.fixedDeltaTime);
                     if (enableRotationClamp)
                     {
-                        // Calculate the rotation delta (change) from current to new
-                        Quaternion delta = Quaternion.Inverse(transform.rotation) * newRot;
-                        // Clamp the delta's euler angles
-                        delta = ClampRotation(delta);
-                        newRot = transform.rotation * delta;
+                        newRot = ClampRotation(newRot);
                     }
                     transform.rotation = newRot;
                 }
             }
+            // apply clamp after all lerping to guarantee final orientation stays within bounds
+            if (enableRotationClamp)
+            {
+                transform.rotation = ClampRotation(transform.rotation);
+            }
         }
     }
 
-    // Clamp a quaternion's euler angles (degrees)
+    // Clamp a quaternion's euler angles (degrees).
     private Quaternion ClampRotation(Quaternion q)
     {
-        Vector3 e = q.eulerAngles;
-        e.x = NormalizeAngle(e.x);
-        e.y = NormalizeAngle(e.y);
-        e.z = NormalizeAngle(e.z);
+        if (clampReferenceSet)
+        {
+            // compute rotation relative to baseline
+            Quaternion relative = Quaternion.Inverse(clampReferenceRotation) * q;
+            Vector3 e = relative.eulerAngles;
+            e.x = NormalizeAngle(e.x);
+            e.y = NormalizeAngle(e.y);
+            e.z = NormalizeAngle(e.z);
 
-        e.x = Mathf.Clamp(e.x, minEulerClamp.x, maxEulerClamp.x);
-        e.y = Mathf.Clamp(e.y, minEulerClamp.y, maxEulerClamp.y);
-        e.z = Mathf.Clamp(e.z, minEulerClamp.z, maxEulerClamp.z);
+            e.x = Mathf.Clamp(e.x, minEulerClamp.x, maxEulerClamp.x);
+            e.y = Mathf.Clamp(e.y, minEulerClamp.y, maxEulerClamp.y);
+            e.z = Mathf.Clamp(e.z, minEulerClamp.z, maxEulerClamp.z);
 
-        return Quaternion.Euler(e);
+            Quaternion clampedRel = Quaternion.Euler(e);
+            return clampReferenceRotation * clampedRel;
+        }
+        else
+        {
+            Vector3 e = q.eulerAngles;
+            e.x = NormalizeAngle(e.x);
+            e.y = NormalizeAngle(e.y);
+            e.z = NormalizeAngle(e.z);
+
+            e.x = Mathf.Clamp(e.x, minEulerClamp.x, maxEulerClamp.x);
+            e.y = Mathf.Clamp(e.y, minEulerClamp.y, maxEulerClamp.y);
+            e.z = Mathf.Clamp(e.z, minEulerClamp.z, maxEulerClamp.z);
+
+            return Quaternion.Euler(e);
+        }
     }
     // normalize is only useful if there is an euler angle wrap-around from 360 to 0
     // guess its not really useful in our case but ill leave it here anyway
