@@ -1267,6 +1267,7 @@ MC: Yes.
 // MC and Teacher harmonize then sit and talk
 === teacherAtEdge1 ===
 ~stopSinging()
+// ~pauseTutorial(true)
 Teacher: It's nice here, isn't it?
 MC: Yes. I was actually here just now.
 Teacher: Oh, haha, wait, really?
@@ -1305,6 +1306,7 @@ Teacher: Maybe we should try just harmonizing for a while? Like they say on the 
 MC: Ok. Let's do it.
 Teacher: You can take the lead.
 ~ nextBrain()
+// ~pauseTutorial(false)
 -> END
 // Teacher and MC harmonize a few times
 
