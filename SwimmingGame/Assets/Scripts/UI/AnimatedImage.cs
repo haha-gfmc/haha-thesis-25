@@ -19,8 +19,10 @@ public class AnimatedImage : MonoBehaviour
     private float pulseTimer=0f;
     public float pulseRotationIntensity=0f;
     public float pulseOpacityIntensity=0f;
+    public float pulseScaleIntensity;
     private Vector3 initialRotation;
     private float initialOpacity;
+    private Vector3 initialScale;
     
     public bool ignoreTimeDilation;
 
@@ -33,6 +35,7 @@ public class AnimatedImage : MonoBehaviour
         }
         initialOpacity=image.color.a;
         pulseTimer=Random.Range(0f,pulsePeriod);
+        initialScale=rect.localScale;
     }
 
     void Update()
@@ -58,6 +61,10 @@ public class AnimatedImage : MonoBehaviour
             Color c=image.color;
             c.a=initialOpacity-Mathf.Sin(pulseTimer*Mathf.PI*2f/pulsePeriod)*pulseOpacityIntensity;
             image.color=c;
+        }
+        if(pulseScaleIntensity!=0f){
+            Vector3 s=initialScale+initialScale*Mathf.Sin(pulseTimer*Mathf.PI*2f/pulsePeriod)*pulseScaleIntensity;
+            rect.localScale=s;
         }
     }
 }

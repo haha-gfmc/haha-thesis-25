@@ -700,6 +700,11 @@ public class Dialogue : MonoBehaviour
 
     public void StartDialogue(TextAsset textAsset = null, string knotName = "", NPCOverworld interlocutor = null)
     {
+        if (inDialogue)
+        {
+            EndDialogue();
+        }
+
         SetDialogueBubble("standard");
         npcInterlocutor = interlocutor;
 

@@ -64,7 +64,14 @@ public class Intro : MonoBehaviour
 
     private Swimmer swimmer;
 
-    
+    [Header("Showcase Only Stuff")]
+
+    private int prevShowcaseProgress=0;    
+    public Canvas staticCanvas;
+    public GameObject[] showcaseTeleportLocations;
+    [Tooltip("To deactivate")]
+    public GameObject[] nonShowcaseDialogueTriggers; 
+    public float showcaseTransitionTime=2f;
     
 
     void Start()
@@ -151,7 +158,41 @@ public class Intro : MonoBehaviour
         prevSwimmerCamOn=swimmerCamOn;
 
         if(swimmerCamOn) Throb();
+
+        if (PlayerPrefs.GetInt("showcaseMode") == 1)
+        {
+            if ((int)dialogue.story.variablesState["showcaseProgress"] != prevShowcaseProgress)
+            {
+                prevShowcaseProgress=(int)dialogue.story.variablesState["showcaseProgress"];
+                StartCoroutine(ShowcaseTeleport());
+            }
+
+            for(var i = 0; i < nonShowcaseDialogueTriggers.Length; i++)
+            {
+                if(nonShowcaseDialogueTriggers[i]!=null) nonShowcaseDialogueTriggers[i].SetActive(false);
+                if(showcaseTeleportLocations[i]!=null) showcaseTeleportLocations[i].SetActive(true);
+            }
+        }
+        else
+        {
+            for(var i = 0; i < nonShowcaseDialogueTriggers.Length; i++)
+            {
+                if(nonShowcaseDialogueTriggers[i]!=null) nonShowcaseDialogueTriggers[i].SetActive(true);
+                if(showcaseTeleportLocations[i]!=null) showcaseTeleportLocations[i].SetActive(false);
+            }
+        }
     }
+
+    IEnumerator ShowcaseTeleport()
+    {
+        staticCanvas.gameObject.SetActive(true);
+        Sound.PlayInstance("event:/Ambience/introNoise","Intro Noise",1f);
+        yield return new WaitForSeconds(showcaseTransitionTime);
+        swimmer.Transport(showcaseTeleportLocations[prevShowcaseProgress].transform.position,0f);  
+        staticCanvas.gameObject.SetActive(false);
+        Sound.StopInstance("Intro Noise");
+    }
+
     public int GetIntensity()
 {
     if (dialogue != null && dialogue.story != null)
@@ -167,7 +208,7 @@ public class Intro : MonoBehaviour
         yield return new WaitForSeconds(8f);    // U CAN ADJUST THIS 
 
 
-        dialogue.EndDialogue();
+        //dialogue.EndDialogue();
         cutsceneDirector.Play();         // START CUTSCENE
     }
 

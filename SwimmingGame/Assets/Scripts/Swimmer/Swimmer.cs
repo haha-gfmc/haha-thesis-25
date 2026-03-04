@@ -911,18 +911,22 @@ public class Swimmer : MonoBehaviour
         swimmerTrails.visible=visible;
     }
 
-    public void Transport(Vector3 position){
+    public void Transport(Vector3 position,float fadeInTime=1f){
         transform.position=position;
+        body.position=transform.position;
+        Physics.SyncTransforms();
+        swimmerCamera.ResetCamera();
+        FindObjectOfType<LevelLoader>().FadeIn(fadeInTime);
     }
 
-    public void Transport(Vector3 position,Quaternion rotation){
+    public void Transport(Vector3 position,Quaternion rotation,float fadeInTime=1f){
         transform.position=position;
         transform.rotation=rotation;
         body.position=transform.position;
         body.rotation=transform.rotation;
         Physics.SyncTransforms();
         swimmerCamera.ResetCamera();
-        FindObjectOfType<LevelLoader>().FadeIn(1f);
+        FindObjectOfType<LevelLoader>().FadeIn(fadeInTime);
     }
 
     IEnumerator WakeUp(float time){
