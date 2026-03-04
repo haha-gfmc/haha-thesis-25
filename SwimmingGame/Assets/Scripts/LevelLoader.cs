@@ -154,7 +154,7 @@ public class LevelLoader : MonoBehaviour
         }
 
         // Showcase Reset Logic
-        if (ResetManager.reset)
+        if (ResetManager.reset && currentSceneName != "GameStart")
         {
             if (!playerInput.noInput)
             {
