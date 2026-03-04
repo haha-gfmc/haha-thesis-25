@@ -165,7 +165,7 @@ public class LevelLoader : MonoBehaviour
                     isBlinkingOut = true;
                     if (blink != null)
                     {
-                        blink.SetBool("Blink", true);
+                        blink.SetTrigger("BlinkTrigger");
                         isBlinking = true;
                     }
                     StartCoroutine(StopCountdownCoroutine());
@@ -183,9 +183,10 @@ public class LevelLoader : MonoBehaviour
                 {
                     if (blink != null)
                     {
-                        blink.SetBool("Blink", true);
+                        blink.SetTrigger("BlinkTrigger");
                         isBlinking = true;
                     }
+                    StartCountdown();
                 }
             }
         }
@@ -212,6 +213,8 @@ public class LevelLoader : MonoBehaviour
     {
         isCountingDown = true;
         countdownUI.SetActive(true); // Activate the countdown UI
+        blink.SetBool("Blink", false);
+        isBlinking = false;
         StartCoroutine(CountdownCoroutine());
     }
 
@@ -243,7 +246,7 @@ public class LevelLoader : MonoBehaviour
             isBlinkingOut=true;
             if (blink != null)
             {
-                blink.SetBool("Blink", true);
+                blink.SetTrigger("BlinkTrigger");
                 isBlinking = true; // Set the blinking flag to true
             }
             yield return new WaitForSeconds(0.2f); 
