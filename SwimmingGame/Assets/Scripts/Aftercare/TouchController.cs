@@ -1,22 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class TouchController : MonoBehaviour
 {
+    [Header("Hand Position Settings")]
+    public Transform handParentTransform;
+    public bool enableHandMovement = true;
     public float moveSpeed = 5f;
     public LayerMask sexPartnerMask;
     public float lerpSpeed = 1.0f; // the lerping speed for XZ movement
     public float yLerpSpeed = 1.0f; // the lerping speed for Y matching movement
     public float yOffset = 1.0f; // offset of the character from the top of touching objects
-    public float targetRotationDamp;
-    public float rotationLerpDamp; 
-    public Quaternion rotationOffset; // offset the rotation after timing normal
-    public bool lockRotation = false;
-    public bool isMoving = true;
+
     [HideInInspector]public Vector2 moveXZ;
-    public Transform handParentTransform;
-    
+
+    [Header("Right Stick Caress Settings")]
+    private bool enableCaress = false;
+    public float caressSpeed = 5f;
+    public float caressLerpSpeed = 1.0f;
+    [SerializeField] private Vector3 clampCircleCenter;
+    public float boundingCircleRadius = 1.0f;
     [Header("Startup Rotation")]
     public float initialRotationLerpSpeed = 10f;
     public float initialRotationAngleThreshold = 0.5f; // degrees difference when startup lerp finished
@@ -24,6 +30,11 @@ public class TouchController : MonoBehaviour
     public Vector3 handParentInitialRotation;
     
     [Header("Rotation Clamps (degrees)")]
+    public float targetRotationDamp;
+    public float rotationLerpDamp; 
+    public Quaternion rotationOffset; // offset the rotation after timing normal
+    public bool lockRotation = false;
+
     public bool enableRotationClamp = false;
     public Vector3 minEulerClamp = new Vector3(-90f, -180f, -90f);
     public Vector3 maxEulerClamp = new Vector3(90f, 180f, 90f);
@@ -42,6 +53,7 @@ public class TouchController : MonoBehaviour
     // clamp reference: captures orientation at end of startup lerp
     private Quaternion clampReferenceRotation = Quaternion.identity;
     private bool clampReferenceSet = false;
+    public Vector3 handMoveVector;
 
     private void Awake()
     {
@@ -60,24 +72,23 @@ public class TouchController : MonoBehaviour
         initialPosition = transform.position;
     }
 
+
+
     private void FixedUpdate()
     {
-        // handle input change
-        if (playerInput.currentControlScheme == "Gamepad")
+        handMoveVector = Vector3.zero; 
+        if (initialLerpDone && !enableCaress)
         {
-            isUsingGamepad = true;
+            StartCoroutine(EnableCaressCoroutine());
         }
-        else
-        {
-            isUsingGamepad = false;
-            ConvertMovementInput(playerInput.movingForward, playerInput.movingBackward, playerInput.movingLeft, playerInput.movingRight);
-        }
-
-        if (isMoving)
+        if (enableHandMovement)
         {
             Moving();
         }
-        HandlingInput();
+        if (enableCaress)
+        {
+            Caressing();
+        }
         AdjustPositionAndRotation();
     }
 
@@ -86,25 +97,30 @@ public class TouchController : MonoBehaviour
         handParentTransform = handParent;
     }
 
-    void HandlingInput()
+    private IEnumerator EnableCaressCoroutine()
     {
-        // using keyboard
-        if (!isUsingGamepad)
-        {
-            moveXZ.x = -movementVector.y;
-            moveXZ.y = movementVector.x;
-        }
-        // using gamepad
-        else
-        {
-            moveXZ.x = playerInput.look.x;
-            moveXZ.y = -playerInput.look.y;
-        }
+        clampCircleCenter = transform.position; 
+        yield return new WaitForSeconds(.5f);
+        enableCaress = true;
     }
 
     // handle movement of the character around
     void Moving()
     {
+        // handle input change
+        if (playerInput.currentControlScheme == "Gamepad")
+        {
+            isUsingGamepad = true;
+            moveXZ.x = playerInput.look.x;
+            moveXZ.y = -playerInput.look.y;
+        }
+        else
+        {
+            isUsingGamepad = false;
+            ConvertMovementInput(playerInput.movingForward, playerInput.movingBackward, playerInput.movingLeft, playerInput.movingRight);
+            moveXZ.x = movementVector.x;
+            moveXZ.y = -movementVector.y;
+        }
         // calculate the target position based on input
         Vector3 move = new Vector3(moveXZ.x, 0, moveXZ.y) * moveSpeed * Time.fixedDeltaTime;
         targetPosition = transform.position + move;
@@ -117,6 +133,39 @@ public class TouchController : MonoBehaviour
 
         // lerp the character to the target position
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.fixedDeltaTime);
+        handMoveVector = move;
+    }
+
+    void Caressing()
+    {
+        float moveX = isUsingGamepad ? playerInput.rotation.x : playerInput.look.x;
+        float moveY = isUsingGamepad ? -playerInput.rotation.y : -playerInput.look.y;
+        // calculate the target position based on input
+        Vector3 move = new Vector3(moveX, 0, moveY) * caressSpeed * Time.fixedDeltaTime;
+        targetPosition = ClampToBoundingCircle(transform.position + move);
+        // lerp the character to the target position
+        transform.position = Vector3.Lerp(transform.position, targetPosition, caressLerpSpeed * Time.fixedDeltaTime);
+    }
+
+    Vector3 ClampToBoundingCircle(Vector3 target)
+    {
+        if (handMoveVector.magnitude > 0.01f)
+        {
+            Debug.Log("Reset Caress Center");
+            clampCircleCenter = transform.position; 
+        }
+        else
+        {
+            Debug.Log("Same Caress Center");
+        }
+        // Clamp the Hand's position to the bounding circle around the clampCircleCenter
+        Vector3 direction = new Vector3(target.x - clampCircleCenter.x, 0, target.z - clampCircleCenter.z);
+        direction = direction.normalized;
+        if (direction.magnitude > boundingCircleRadius)
+        {
+            direction = direction.normalized * boundingCircleRadius;
+        }
+        return new Vector3(clampCircleCenter.x + direction.x, target.y, clampCircleCenter.z + direction.z);
     }
 
     Vector3 ClampToBoundingBox(Vector3 target)
@@ -144,10 +193,10 @@ public class TouchController : MonoBehaviour
         movementVector.y = 0f;
 
         // Determine movement direction based on input
-        if (movingForward) { movementVector.x += 1; }
-        if (movingBackward) { movementVector.x -= 1; }
-        if (movingLeft) { movementVector.y += 1; }
-        if (movingRight) { movementVector.y -= 1; }
+        if (movingForward) { movementVector.y -= 1; }
+        if (movingBackward) { movementVector.y += 1; }
+        if (movingLeft) { movementVector.x -= 1; }
+        if (movingRight) { movementVector.x += 1; }
 
         // Normalize the vector only if it has a non-zero length
         if (movementVector.magnitude > 1f)
