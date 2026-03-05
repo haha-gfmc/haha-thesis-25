@@ -18,10 +18,10 @@ public class TouchController : MonoBehaviour
     [HideInInspector]public Vector2 moveXZ;
 
     [Header("Right Stick Caress Settings")]
-    private bool enableCaress = false;
+    public bool enableCaress = false;
     public float caressSpeed = 5f;
     public float caressLerpSpeed = 1.0f;
-    [SerializeField] private Vector3 clampCircleCenter;
+    private Vector3 clampCircleCenter;
     public float boundingCircleRadius = 1.0f;
     [Header("Startup Rotation")]
     public float initialRotationLerpSpeed = 10f;

@@ -66,7 +66,10 @@ public class CuddleCameraManager : MonoBehaviour
         if (shotIndex != prevShotIndex)
         {
             if (blink != null)
+            {
                 blink.SetBool("Blink", true); // Trigger blink animation
+                StartCoroutine(DisableCaressDuringBlink());
+            }
 
             blinkDuration += Time.deltaTime;
             Debug.Log("Blink Duration: " + blinkDuration);
@@ -125,6 +128,13 @@ public class CuddleCameraManager : MonoBehaviour
         {
             ApplyHeadBob();
         }
+    }
+
+    private IEnumerator DisableCaressDuringBlink()
+    {
+        handController.enableCaress = false;
+        yield return new WaitForSeconds(0.5f); 
+        handController.enableCaress = true;
     }
 
     public void SetActiveElements(int index)
