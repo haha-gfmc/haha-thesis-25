@@ -102,6 +102,7 @@ Material:
     - _Add: 0.6
     - _AlphaClip: 0
     - _AlphaToMask: 0
+    - _Amplitude: 5.5
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
@@ -119,14 +120,15 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _NoiseValue: 0.01
+    - _NoiseScale: 500
+    - _NoiseValue: 0.019965852
     - _Normal: 9.79
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Saturation: 0.8
+    - _Saturation: 0.8113389
     - _ShiftingSpeedX: 0.02
     - _ShiftingSpeedY: 0.27
     - _Smoothness: 0.6
@@ -139,8 +141,8 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.7529412, g: 0.78431374, b: 0.44313726, a: 0.95686275}
-    - _Emission: {r: 0.34509805, g: 0.3882353, b: 0.33333334, a: 0}
+    - _Color: {r: 0.72714835, g: 0.79654026, b: 0.4180046, a: 0.95686275}
+    - _Emission: {r: 0.3822164, g: 0.38955948, b: 0.339771, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tiling: {r: 0.2, g: 1, b: 0, a: 0}
