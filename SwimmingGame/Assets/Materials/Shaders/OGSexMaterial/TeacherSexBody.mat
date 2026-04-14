@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MCSexHead
+  m_Name: TeacherSexBody
   m_Shader: {fileID: -6465566751694194690, guid: 7e5b5d24d78efec43b8cf1f8ed969faf,
     type: 3}
   m_Parent: {fileID: 0}
@@ -38,7 +38,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Albedo:
-        m_Texture: {fileID: 2800000, guid: fcb84e0537d106c4391db401a1f060b8, type: 3}
+        m_Texture: {fileID: 2800000, guid: e52407faf31fd1b40b36ab92cc8dbb38, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -102,13 +102,13 @@ Material:
     - _Add: 0.6
     - _AlphaClip: 0
     - _AlphaToMask: 0
-    - _Amplitude: 5.5
+    - _Amplitude: 16.99
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _Contrast: 20
+    - _Contrast: 50
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
@@ -121,14 +121,14 @@ Material:
     - _GlossyReflections: 0
     - _Metallic: 0
     - _NoiseScale: 500
-    - _NoiseValue: 0.019965852
+    - _NoiseValue: 0.08
     - _Normal: 9.79
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Saturation: 0.8113389
+    - _Saturation: 1.4
     - _ShiftingSpeedX: 0.02
     - _ShiftingSpeedY: 0.27
     - _Smoothness: 0.6
@@ -141,8 +141,8 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.72714835, g: 0.79654026, b: 0.4180046, a: 0.95686275}
-    - _Emission: {r: 0.3822164, g: 0.38955948, b: 0.339771, a: 0}
+    - _Color: {r: 0.4745098, g: 0.59607846, b: 0.90588236, a: 0}
+    - _Emission: {r: 0.7372549, g: 0.65882355, b: 0.20392157, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tiling: {r: 0.2, g: 1, b: 0, a: 0}
