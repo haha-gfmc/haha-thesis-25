@@ -234,6 +234,7 @@ public class Tutorial : MonoBehaviour
         DeactivateTutorialPart(index);
         index=i;
         tutorialParts[index].done=false;
+        Debug.Log("Repeating tutorial part "+index);
     }
 
     void DeactivateTutorialPart(int i){

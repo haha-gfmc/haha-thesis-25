@@ -1044,6 +1044,10 @@ public class Dialogue : MonoBehaviour
         {
             GoToTutorialPart(i);
         });
+        story.BindExternalFunction("forceTutorialPart", (int i) =>
+        {
+            FindObjectOfType<Tutorial>().RepeatTutorialPart(i);
+        });
         story.BindExternalFunction("switchObject", (string name, bool b) =>
         {
             SwitchObject(name, b);
