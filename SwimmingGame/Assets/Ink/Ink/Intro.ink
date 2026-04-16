@@ -10,18 +10,35 @@ VAR showcaseProgress=0
 // maybe something like... i've noticed this thing inside of me 
 // or sth growing out of me 
 
+=== intro01 ===
+~ stopSinging()
+~ forceTutorialPart(3)
+Ex: So, \\pauseI'm leaving. # time: 3
+~ intensity=1
+~ pause(2)
+MC: What? # time: 3
+~ continueSinging()
+~ nextBrain()
+~ forceTutorialPart(2)
+-> END
+
+=== intro02 ===
+~ stopSinging()
+~ forceTutorialPart(3)
+Where are you going? # time: 3
+Ex: To the surface. # time: 3
+MC: I.. # time: 3
+Can I come with you? # time: 3
+~ forceTutorialPart(2)
+~ continueSinging()
+~ nextBrain()
+-> END
 
 // Main character is swimming in the dark. As the conversation progresses, they begin to see two sexual organs entangling. They have the faces of the Protagonist and the Ex as heads. The faces are obscured until the end of the conversation.
 === intro1 ===
 ~ stopSinging()
-~ finishTutorialPart(2)
-Ex: So, \\pauseI'm leaving. # time: 3
-~ intensity=1
-MC: What? # time: 3
-Where are you going? # time: 3
-Ex: To the surface. # time: 3
-MC: I.. # time: 3
-Could I come with you? # time: 3
+~ forceTutorialPart(3)
+MC: I said can I come with you?
 ~ loadInt("showcaseMode")
 { showcaseMode==1:
     Ex: I don't think you would survive it.  # time: 3
