@@ -24228,8 +24228,8 @@ MonoBehaviour:
   meterDecaySpeed: 5
   intensityToReach: 6
   statesToCycleThrough: 10
-  minTimeBeforeStateChange: 15
-  maxTimeBeforeStateChange: 30
+  minTimeBeforeStateChange: 20
+  maxTimeBeforeStateChange: 40
   distanceMeter: 0
   entanglementMeter: 0
   speedMeter: 0
