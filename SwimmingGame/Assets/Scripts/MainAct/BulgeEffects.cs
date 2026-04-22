@@ -115,7 +115,6 @@ public class BulgeEffect : MonoBehaviour
         // handle the shrinking process of the rope
         if (isFinishedBulging)
         {
-            Debug.Log("Shrinking");
             isBulgingLocked = true;
 
             // Shrink the head back to its original size 
@@ -157,7 +156,6 @@ public class BulgeEffect : MonoBehaviour
     // Reset the pulseTime and all the flags
     private void Reset()
     {
-        Debug.Log("Stop Pulse");
         pulseTime = -1f; // Deactivate the pulse
 
         isPulseStarted = false; // Reset the pulse trigger

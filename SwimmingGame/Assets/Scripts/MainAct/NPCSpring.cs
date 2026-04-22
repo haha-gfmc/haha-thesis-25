@@ -11,6 +11,10 @@ public class NPCSpring : SexSpring
     public float minDistanceFromPlayer=1f;
     [Tooltip("Max distance before stopping to move")]
     public float maxDistanceFromPlayer=5f;
+    [Tooltip("When following player, go towards player + this distance to not run into head.")]
+    public float playerOrbitingDistance=3f;
+    private Vector3 targetOffset;
+
     [Tooltip("Time to inhale for.")]
     public float inhaleLength=1f;
 
@@ -63,6 +67,8 @@ public class NPCSpring : SexSpring
         SpringStart();
 
         GetMovementValues(movementBehavior);
+
+        targetOffset=new Vector3();
     }
 
     void Update()
@@ -124,6 +130,14 @@ public class NPCSpring : SexSpring
         maxDistanceFromPlayer=values.maxDistanceFromPlayer;
         inhaleLength=values.inhaleLength;
         turnSpeed=values.turnSpeed;
+        if (values.accelerationMultiplier != 0f)
+        {
+            accelerationMultiplier=values.accelerationMultiplier;
+        }
+        else
+        {
+            accelerationMultiplier=1f;
+        }
         TimeVariance();
     }
 
@@ -224,8 +238,8 @@ public class NPCSpring : SexSpring
     void FollowTarget(Transform target){    
         float inhaleTime=Time.time-inhaleStartTime;
         float distanceFromPlayer=Vector3.Distance(target.position,characterRb.position);
-        targetLocation=target.position;
-        if(!isExhaling){
+        targetLocation=target.position+targetOffset;
+        if(isInhaling || (!isExhaling && timeSinceExhale>=currentTimeBetweenBreaths/2f)){
             TurnTowards(targetLocation,turnSpeed);
         }
         if(!isInhaling && !isExhaling){
@@ -240,6 +254,15 @@ public class NPCSpring : SexSpring
         }else if(isInhaling){
             if(inhaleTime>=inhaleLength){
                 StartExhaling();
+                // Add random offset when following player so we don't ram straight into the head
+                if (movementBehavior == MovementBehavior.FollowPlayer)
+                {
+                    targetOffset=new Vector3(Random.Range(-1f,1f),Random.Range(-1f,1f),Random.Range(-1f,1f)).normalized*playerOrbitingDistance;
+                }
+                else
+                {
+                    targetOffset=Vector3.zero;
+                }
             }
         }
     }
@@ -355,6 +378,8 @@ public struct SpringMovementValues{
     public float turnSpeed;
     [Tooltip("Time before turning, applicable if look at player or looking around")]
     public float turningTime;
+    [Tooltip("Multiply acceleration by this much.")]
+    public float accelerationMultiplier;
 
 }
 

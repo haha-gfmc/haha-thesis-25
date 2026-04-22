@@ -12,6 +12,8 @@ public class SexSpring : MonoBehaviour
     public float minExhaleTime = 0f;
     public float acceleration = 80f;
     [HideInInspector]
+    public float accelerationMultiplier=1f;
+    [HideInInspector]
     public float inhaleTimeModifier=1f; //This value determines how fast we are inhaling
     public float drag = 0.7f;
     public float turnSpeed = 0.7f; // speed at which the character turns
@@ -88,7 +90,7 @@ public class SexSpring : MonoBehaviour
 
         exhaleTimeLeft = Mathf.Clamp(inhaleTime / maxInhaleTime, minExhaleTime, maxExhaleTime);
 
-        exhaleForce = Mathf.Clamp(inhaleTime / maxInhaleTime, 0, 1) * acceleration;
+        exhaleForce = Mathf.Clamp(inhaleTime / maxInhaleTime, 0, 1) * acceleration * accelerationMultiplier;
 
         // Ensure a minimum movement force
         exhaleForce = Mathf.Max(exhaleForce, minimumExhaleForce);
