@@ -21,41 +21,45 @@ public class TeacherSexAI : NPCSexAI
                 }
                 break;
             case MovementBehavior.Wander:
-                if(distanceMeter>=50f || timeSinceStateChange>=maxTimeBeforeStateChange*1.5f){
+                if(distanceMeter>=50f || timeSinceStateChange>=maxTimeBeforeStateChange){
                     //Start follow player when player gets close
                     ChangeState(MovementBehavior.FollowPlayer);
                 }
                 break;
             case MovementBehavior.FollowPlayer:
-                if(entanglementMeter>=100f || (timeSinceStateChange>=maxTimeBeforeStateChange && distanceMeter<=10f)){
-                    //Increase intensity the more entangled
-                    ChangeIntensity(1);
-                }else if(speedMeter>=50f && npcSpring.currentIntensity<=4f){
-                    //Run away and lower intensity if moving too fast
-                    ChangeIntensity(-1);
-                    if(npcSpring.currentIntensity<=0){
-                        ChangeState(MovementBehavior.RunFromPlayer);
+                if(timeSinceStateChange>=minTimeBeforeStateChange){
+                    if(entanglementMeter>=100f || (timeSinceStateChange>=maxTimeBeforeStateChange)){
+                        //Increase intensity the more entangled
+                        ChangeIntensity(1);
+                    }else if(speedMeter>=50f && npcSpring.currentIntensity<=4f){
+                        //Run away and lower intensity if moving too fast
+                        ChangeIntensity(-1);
+                        //if(npcSpring.currentIntensity<=0){
+                            ChangeState(MovementBehavior.RunFromPlayer);
+                        //}
                     }
                 }
                 break;
             case MovementBehavior.RunFromPlayer:
-                if(entanglementMeter>=100f || timeSinceStateChange>=maxTimeBeforeStateChange || 
-                    npcSpring.currentIntensity>=3f){
-                    //Go back to following and increase intensity a lot if entangled
-                    if(npcSpring.currentIntensity<=2){
-                        ChangeIntensity(2);
-                    }
-                    ChangeState(MovementBehavior.FollowPlayer);
-                }else if(distanceMeter>=100f && timeSinceStateChange>=minTimeBeforeStateChange){
-                    ChangeIntensity(1);
-                    // Follow/Run if player is very close
-                    if(npcSpring.currentIntensity>=2f){
-                        ChangeState(MovementBehavior.FollowThenRun);
+                if(timeSinceStateChange>=minTimeBeforeStateChange){
+                    if(entanglementMeter>=100f || timeSinceStateChange>=maxTimeBeforeStateChange || 
+                        npcSpring.currentIntensity>=3f){
+                        //Go back to following and increase intensity a lot if entangled
+                        if(npcSpring.currentIntensity<=2){
+                            ChangeIntensity(2);
+                        }
+                        ChangeState(MovementBehavior.FollowPlayer);
+                    }else if(distanceMeter>=100f){
+                        ChangeIntensity(1);
+                        // Follow/Run if player is very close
+                        if(npcSpring.currentIntensity>=2f){
+                            ChangeState(MovementBehavior.FollowThenRun);
+                        }
                     }
                 }
                 break;
             case MovementBehavior.FollowThenRun:
-                if(entanglementMeter>=100f || timeSinceStateChange>=maxTimeBeforeStateChange){
+                if(timeSinceStateChange>=minTimeBeforeStateChange && (entanglementMeter>=100f || timeSinceStateChange>=maxTimeBeforeStateChange)){
                     // Increase intensity the more entangled
                     ChangeIntensity(1);
                 }

@@ -9121,6 +9121,8 @@ MonoBehaviour:
   maxExhaleTime: 0.3
   minExhaleTime: 0
   acceleration: 60
+  accelerationMultiplier: 1
+  inhaleTimeModifier: 1
   drag: 0.7
   turnSpeed: 0.7
   tiltAngle: 45
@@ -9130,8 +9132,11 @@ MonoBehaviour:
   isExhaling: 0
   isInhaling: 0
   inhaleScale: {x: 1.6, y: 1.6, z: 1.2}
+  minimumExhaleForce: 0.5
+  minimumMovementForce: 10
   playerCamera: {fileID: 8260862210090603618}
   virtualCamera: {fileID: 5105933983185695244}
+  organAnimator: {fileID: 0}
   defaultCameraLerpSpeed: 4
   quickCameraLerpSpeed: 10
   defaultCameraDistance: 5
@@ -9139,6 +9144,7 @@ MonoBehaviour:
   ZoomInCameraDistance: 4
   shakeAmplitude: 0.8
   lockCamera: 1
+  canMove: 1
 --- !u!54 &9030319129572335863
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -24033,6 +24039,8 @@ MonoBehaviour:
   maxExhaleTime: 0.3
   minExhaleTime: 0
   acceleration: 60
+  accelerationMultiplier: 1
+  inhaleTimeModifier: 1
   drag: 0.7
   turnSpeed: 2
   tiltAngle: 45
@@ -24042,9 +24050,12 @@ MonoBehaviour:
   isExhaling: 0
   isInhaling: 0
   inhaleScale: {x: 1, y: 1, z: 0.7}
+  minimumExhaleForce: 0.5
+  minimumMovementForce: 10
   timeBetweenBreaths: 2
   minDistanceFromPlayer: 1
   maxDistanceFromPlayer: 5
+  playerOrbitingDistance: 3
   inhaleLength: 1
   targetDistance: 5
   turningTime: 1
@@ -24064,6 +24075,7 @@ MonoBehaviour:
     inhaleLength: 1
     turnSpeed: 2
     turningTime: 0
+    accelerationMultiplier: 0
   - movementBehavior: 4
     intensity: 0
     timeBetweenBreaths: 1
@@ -24072,6 +24084,7 @@ MonoBehaviour:
     inhaleLength: 0.5
     turnSpeed: 4
     turningTime: 0
+    accelerationMultiplier: 0
   - movementBehavior: 7
     intensity: 0
     timeBetweenBreaths: 4
@@ -24080,6 +24093,7 @@ MonoBehaviour:
     inhaleLength: 0.5
     turnSpeed: 2
     turningTime: 0
+    accelerationMultiplier: 0
   - movementBehavior: 3
     intensity: 0
     timeBetweenBreaths: 2
@@ -24088,6 +24102,7 @@ MonoBehaviour:
     inhaleLength: 0.5
     turnSpeed: 1.5
     turningTime: 0
+    accelerationMultiplier: 0
   - movementBehavior: 3
     intensity: 1
     timeBetweenBreaths: 1.75
@@ -24096,6 +24111,7 @@ MonoBehaviour:
     inhaleLength: 0.75
     turnSpeed: 2
     turningTime: 0
+    accelerationMultiplier: 0
   - movementBehavior: 3
     intensity: 2
     timeBetweenBreaths: 1.5
@@ -24104,23 +24120,35 @@ MonoBehaviour:
     inhaleLength: 0.5
     turnSpeed: 2
     turningTime: 0
+    accelerationMultiplier: 0
   - movementBehavior: 3
     intensity: 3
     timeBetweenBreaths: 1
     minDistanceFromPlayer: 0.5
     maxDistanceFromPlayer: 7
-    inhaleLength: 1
-    turnSpeed: 4
-    turningTime: 0
-  - movementBehavior: 3
-    intensity: 4
-    timeBetweenBreaths: 0.5
-    minDistanceFromPlayer: 0.5
-    maxDistanceFromPlayer: 10
-    inhaleLength: 1
+    inhaleLength: 0.5
     turnSpeed: 6
     turningTime: 0
-  - movementBehavior: 6
+    accelerationMultiplier: 2
+  - movementBehavior: 3
+    intensity: 4
+    timeBetweenBreaths: 0.25
+    minDistanceFromPlayer: 0
+    maxDistanceFromPlayer: 20
+    inhaleLength: 0.25
+    turnSpeed: 10
+    turningTime: 0
+    accelerationMultiplier: 10
+  - movementBehavior: 3
+    intensity: 5
+    timeBetweenBreaths: 0.25
+    minDistanceFromPlayer: 0
+    maxDistanceFromPlayer: 5
+    inhaleLength: 0.25
+    turnSpeed: 10
+    turningTime: 0
+    accelerationMultiplier: 12
+  - movementBehavior: 7
     intensity: 0
     timeBetweenBreaths: 2
     minDistanceFromPlayer: 1
@@ -24128,7 +24156,8 @@ MonoBehaviour:
     inhaleLength: 0.5
     turnSpeed: 1.5
     turningTime: 0
-  - movementBehavior: 6
+    accelerationMultiplier: 0
+  - movementBehavior: 7
     intensity: 1
     timeBetweenBreaths: 1.75
     minDistanceFromPlayer: 1
@@ -24136,30 +24165,43 @@ MonoBehaviour:
     inhaleLength: 0.75
     turnSpeed: 2
     turningTime: 0
-  - movementBehavior: 6
+    accelerationMultiplier: 0
+  - movementBehavior: 7
     intensity: 2
     timeBetweenBreaths: 1.5
     minDistanceFromPlayer: 1
-    maxDistanceFromPlayer: 5
+    maxDistanceFromPlayer: 10
     inhaleLength: 0.5
     turnSpeed: 2
     turningTime: 0
-  - movementBehavior: 6
+    accelerationMultiplier: 0
+  - movementBehavior: 7
     intensity: 3
     timeBetweenBreaths: 1
-    minDistanceFromPlayer: 1
-    maxDistanceFromPlayer: 5
-    inhaleLength: 0.5
-    turnSpeed: 4
-    turningTime: 0
-  - movementBehavior: 6
-    intensity: 4
-    timeBetweenBreaths: 0.5
-    minDistanceFromPlayer: 0.5
-    maxDistanceFromPlayer: 5
+    minDistanceFromPlayer: 0
+    maxDistanceFromPlayer: 20
     inhaleLength: 0.5
     turnSpeed: 6
     turningTime: 0
+    accelerationMultiplier: 2
+  - movementBehavior: 7
+    intensity: 5
+    timeBetweenBreaths: 0.25
+    minDistanceFromPlayer: 0
+    maxDistanceFromPlayer: 30
+    inhaleLength: 0.25
+    turnSpeed: 10
+    turningTime: 0
+    accelerationMultiplier: 12
+  - movementBehavior: 7
+    intensity: 4
+    timeBetweenBreaths: 0.25
+    minDistanceFromPlayer: 0.5
+    maxDistanceFromPlayer: 5
+    inhaleLength: 0.25
+    turnSpeed: 10
+    turningTime: 0
+    accelerationMultiplier: 10
   currentTarget: {fileID: 2555582981725533036}
 --- !u!114 &7341938950252715341
 MonoBehaviour:
@@ -24184,9 +24226,9 @@ MonoBehaviour:
   speedMaxTreshold: 12
   meterGrowthSpeed: 10
   meterDecaySpeed: 5
-  intensityToReach: 5
+  intensityToReach: 6
   statesToCycleThrough: 10
-  minTimeBeforeStateChange: 4
+  minTimeBeforeStateChange: 15
   maxTimeBeforeStateChange: 30
   distanceMeter: 0
   entanglementMeter: 0
@@ -33606,6 +33648,7 @@ MonoBehaviour:
   currentGroupIndex: 0
   targetObject: {fileID: 3805463008741026566}
   thirdPersonCamera: {fileID: 2699393120695155340}
+  bodyCollider: {fileID: 0}
   springController: {fileID: 6111291147139974288}
 --- !u!65 &641793281206503136
 BoxCollider:
@@ -39416,6 +39459,7 @@ MonoBehaviour:
   pixelLineMaxStretch: 3
   pixelLineMinSpeed: 1
   pixelLineMaxSpeed: 3
+  visible: 1
 --- !u!1 &8656460249477666909
 GameObject:
   m_ObjectHideFlags: 0
@@ -42345,6 +42389,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5107d69c9572924d98e177b619355d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  springController: {fileID: 0}
+  levelLoader: {fileID: 0}
+  overlay: {fileID: 0}
+  lerpSpeed: 10
+  endTriggered: 0
 --- !u!4 &4868209861368332828 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4920028869110172314, guid: 186867500bd7e5d458e7b16ffc87f0d6,
