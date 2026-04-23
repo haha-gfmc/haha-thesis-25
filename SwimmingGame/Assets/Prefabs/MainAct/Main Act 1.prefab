@@ -37934,8 +37934,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraRoot: {fileID: 6734663523669441923}
-  sensitivity: 100
-  rotationSmoothTime: 0.3
+  sensitivity: 200
+  rotationSmoothTime: 0.66
   cameraLocked: 0
 --- !u!1 &8097912253855637621
 GameObject:
