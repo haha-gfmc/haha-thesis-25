@@ -9172,9 +9172,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &9161307062242634572
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -17577,7 +17577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   simulateWhenInvisible: 1
   m_Backend: 1
-  substeps: 2
+  substeps: 4
   maxStepsPerFrame: 1
   synchronization: 1
   parameters:
@@ -24327,9 +24327,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &5019211142416370628
 CapsuleCollider:
   m_ObjectHideFlags: 0
