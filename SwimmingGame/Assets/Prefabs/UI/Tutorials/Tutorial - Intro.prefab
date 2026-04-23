@@ -98,6 +98,7 @@ MonoBehaviour:
   active: 0
   inputNums: 0400000005000000
   isButton: 0
+  isValue: 0
   isJoystick: 0
   joystick: {fileID: 0}
   keyboardKey: {fileID: 0}
@@ -318,6 +319,7 @@ MonoBehaviour:
   active: 0
   inputNums: 0d000000
   isButton: 1
+  isValue: 0
   isJoystick: 0
   joystick: {fileID: 0}
   keyboardKey: {fileID: 2025979721850016835}
@@ -392,7 +394,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Press the \nEAST BUTTON to Interact."
+  m_text: "Press the EAST BUTTON \nto advance dialogue."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e464691ed957e964c9883c2eb065f706, type: 2}
   m_sharedMaterial: {fileID: 6772388661375904925, guid: e464691ed957e964c9883c2eb065f706,
@@ -601,6 +603,7 @@ MonoBehaviour:
   active: 0
   inputNums: 06000000
   isButton: 1
+  isValue: 0
   isJoystick: 0
   joystick: {fileID: 0}
   keyboardKey: {fileID: 8784189160297130456}
@@ -921,6 +924,7 @@ MonoBehaviour:
   active: 0
   inputNums: 08000000090000000a0000000b000000
   isButton: 1
+  isValue: 0
   isJoystick: 0
   joystick: {fileID: 0}
   keyboardKey: {fileID: 0}
@@ -1240,6 +1244,7 @@ MonoBehaviour:
   active: 0
   inputNums: 07000000
   isButton: 1
+  isValue: 0
   isJoystick: 0
   joystick: {fileID: 0}
   keyboardKey: {fileID: 0}
@@ -1429,6 +1434,7 @@ MonoBehaviour:
   active: 0
   inputNums: 0400000005000000
   isButton: 0
+  isValue: 0
   isJoystick: 1
   joystick: {fileID: 4346323554509311287}
   keyboardKey: {fileID: 0}
@@ -1786,6 +1792,7 @@ MonoBehaviour:
   active: 0
   inputNums: 0400000005000000
   isButton: 0
+  isValue: 0
   isJoystick: 1
   joystick: {fileID: 6853594916363547065}
   keyboardKey: {fileID: 0}
@@ -1900,6 +1907,7 @@ MonoBehaviour:
   active: 0
   inputNums: 0400000005000000
   isButton: 0
+  isValue: 0
   isJoystick: 1
   joystick: {fileID: 762258013481774415}
   keyboardKey: {fileID: 0}
@@ -2556,6 +2564,7 @@ MonoBehaviour:
   active: 0
   inputNums: 0400000005000000
   isButton: 0
+  isValue: 0
   isJoystick: 1
   joystick: {fileID: 4488425775714293287}
   keyboardKey: {fileID: 0}
@@ -2778,6 +2787,7 @@ MonoBehaviour:
   active: 0
   inputNums: 0400000005000000
   isButton: 0
+  isValue: 0
   isJoystick: 0
   joystick: {fileID: 0}
   keyboardKey: {fileID: 0}
@@ -2888,6 +2898,7 @@ MonoBehaviour:
   active: 0
   inputNums: 0400000005000000
   isButton: 0
+  isValue: 0
   isJoystick: 0
   joystick: {fileID: 0}
   keyboardKey: {fileID: 0}
@@ -3031,6 +3042,7 @@ MonoBehaviour:
   active: 0
   inputNums: 0d000000
   isButton: 1
+  isValue: 0
   isJoystick: 0
   joystick: {fileID: 0}
   keyboardKey: {fileID: 0}
@@ -3313,6 +3325,7 @@ MonoBehaviour:
   active: 0
   inputNums: 0400000005000000
   isButton: 0
+  isValue: 0
   isJoystick: 0
   joystick: {fileID: 0}
   keyboardKey: {fileID: 0}
@@ -3593,6 +3606,7 @@ MonoBehaviour:
   active: 0
   inputNums: 06000000
   isButton: 1
+  isValue: 0
   isJoystick: 0
   joystick: {fileID: 0}
   keyboardKey: {fileID: 0}
@@ -3742,7 +3756,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press X to Interact.
+  m_text: Press X to advance dialogue.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e464691ed957e964c9883c2eb065f706, type: 2}
   m_sharedMaterial: {fileID: 6772388661375904925, guid: e464691ed957e964c9883c2eb065f706,
@@ -3988,6 +4002,7 @@ MonoBehaviour:
   active: 0
   inputNums: 0f000000
   isButton: 1
+  isValue: 0
   isJoystick: 0
   joystick: {fileID: 0}
   keyboardKey: {fileID: 0}
@@ -4247,6 +4262,7 @@ MonoBehaviour:
   active: 0
   inputNums: 0f000000
   isButton: 1
+  isValue: 0
   isJoystick: 0
   joystick: {fileID: 0}
   keyboardKey: {fileID: 0}
@@ -4357,6 +4373,7 @@ MonoBehaviour:
   active: 0
   inputNums: 0400000005000000
   isButton: 0
+  isValue: 0
   isJoystick: 0
   joystick: {fileID: 0}
   keyboardKey: {fileID: 0}
