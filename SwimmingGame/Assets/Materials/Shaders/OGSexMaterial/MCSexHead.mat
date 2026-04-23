@@ -53,9 +53,9 @@ Material:
     m_Floats:
     - _Contrast: 20
     - _GlobalLightingAmount: 2
-    - _Saturation: 1
-    - _ShiftingSpeedY: -0.27
+    - _Saturation: 0.8
+    - _ShiftingSpeedY: 0.27
     m_Colors:
-    - _Color: {r: 0.29803923, g: 1, b: 0, a: 0.95686275}
-    - _Emission: {r: 1, g: 0.4117647, b: 0.44705883, a: 0}
+    - _Color: {r: 0.7529412, g: 0.78431374, b: 0.44313726, a: 0.95686275}
+    - _Emission: {r: 0.34509805, g: 0.3882353, b: 0.33333334, a: 0}
   m_BuildTextureStacks: []

@@ -130,7 +130,7 @@ public class BulgeEffect : MonoBehaviour
     {
         if (pulseTime < 0) return; // Skip if no active pulse
 
-        for (int i = 0; i < rope.elements.Count; i++)
+        for (int i = 1; i < (rope.elements.Count-1); i++)
         {
             var element = rope.elements[i];
             int particleIndex = element.particle2;
