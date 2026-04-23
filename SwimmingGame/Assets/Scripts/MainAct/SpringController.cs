@@ -23,6 +23,11 @@ public class SpringController : SexSpring
     public float ZoomOutCameraDistance;
     public float ZoomInCameraDistance;
     public float shakeAmplitude = 0.2f; 
+    public float shakeFrequency=3f;
+    public NoiseSettings cameraNoiseSettings;
+    private float ogShakeAmplitude, ogShakeFrequency;
+    private NoiseSettings ogCameraNoiseSettings;
+    private CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin;
     public bool lockCamera;
 
     public bool canMove = true; // Flag to enable/disable movement
@@ -49,6 +54,11 @@ public class SpringController : SexSpring
         thirdPersonFollow = virtualCamera.GetCinemachineComponent<Cinemachine3rdPersonFollow>();
 
         chargingInstance = RuntimeManager.CreateInstance("event:/Sex/Charge");
+
+        cinemachineBasicMultiChannelPerlin = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        ogShakeAmplitude=cinemachineBasicMultiChannelPerlin.m_AmplitudeGain;
+        ogShakeFrequency=cinemachineBasicMultiChannelPerlin.m_FrequencyGain;
+        ogCameraNoiseSettings=cinemachineBasicMultiChannelPerlin.m_NoiseProfile;
     }
 
     private void Update()
@@ -111,7 +121,7 @@ public class SpringController : SexSpring
 
         if (isShaking)
         {
-            InhaleCameraFeedback(shakeAmplitude);
+            InhaleCameraFeedback(shakeAmplitude,shakeFrequency,cameraNoiseSettings);
             if (isAligningWithCamera) // If not zooming out
             {
                 cameraDistance = 0;
@@ -119,7 +129,7 @@ public class SpringController : SexSpring
         }
         else
         {
-            InhaleCameraFeedback(0f);
+            InhaleCameraFeedback(ogShakeAmplitude,ogShakeFrequency,ogCameraNoiseSettings);
             if (isAligningWithCamera) // If not zooming out
             {
                 cameraDistance = 1;
@@ -189,11 +199,12 @@ public class SpringController : SexSpring
         }
     }
 
-    void InhaleCameraFeedback(float intensity)
+    void InhaleCameraFeedback(float amplitude, float frequency, NoiseSettings noiseSettings)
     {
         // Shake and zoom in camera
-        CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-        cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = intensity;
+        cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = amplitude;
+        cinemachineBasicMultiChannelPerlin.m_FrequencyGain = frequency;
+        cinemachineBasicMultiChannelPerlin.m_NoiseProfile=noiseSettings;
     }
 
     void LerpCameraDistance()
