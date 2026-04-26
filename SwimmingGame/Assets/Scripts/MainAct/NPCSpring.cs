@@ -58,6 +58,10 @@ public class NPCSpring : SexSpring
     public SpringMovementValues[] springMovementValues;
     public Transform currentTarget;
 
+    [Header("Animation")]
+    public Animator organAnimator;
+    private bool justExhaled;
+
 
 
 
@@ -84,7 +88,14 @@ public class NPCSpring : SexSpring
         }
         Swim();
 
+        UpdateAnimator();
+
         SpringFixedUpdate();
+
+        if (!justExhaled)
+        {
+            justExhaled = isExhaling;
+        }
 
         prevMovementBehavior=movementBehavior;
         prevIntensity=currentIntensity;
@@ -360,6 +371,19 @@ public class NPCSpring : SexSpring
         }
         
         return colliding;
+    }
+    void UpdateAnimator()
+    {
+        if (organAnimator == null) return;
+
+        organAnimator.SetBool("Inhaling", isInhaling);
+        organAnimator.SetBool("Exhaling", isExhaling);
+
+        if (isInhaling && justExhaled)
+        {
+            organAnimator.SetFloat("Blend", Random.Range(0f, 1f));
+            justExhaled = false;
+        }
     }
 
 }
