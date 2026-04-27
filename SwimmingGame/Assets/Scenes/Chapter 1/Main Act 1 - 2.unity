@@ -10968,13 +10968,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 8461937543862393904}
-  maxInhaleTime: 2
+  maxInhaleTime: 1.5
   maxExhaleTime: 0.3
   minExhaleTime: 0
-  acceleration: 30
+  acceleration: 45
   accelerationMultiplier: 1
   inhaleTimeModifier: 1
-  drag: 1
+  drag: 0.7
   turnSpeed: 2
   tiltAngle: 45
   movementVelocityThreshold: 0
@@ -13419,7 +13419,7 @@ MonoBehaviour:
   maxInhaleTime: 2
   maxExhaleTime: 0.3
   minExhaleTime: 0
-  acceleration: 30
+  acceleration: 35
   accelerationMultiplier: 1
   inhaleTimeModifier: 1
   drag: 1
