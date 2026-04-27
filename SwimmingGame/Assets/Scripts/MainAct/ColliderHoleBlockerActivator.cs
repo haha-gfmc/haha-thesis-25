@@ -24,7 +24,7 @@ public class ColliderHoleBlockerActivator : MonoBehaviour
         if (distance > distanceThreshold)
         {
             gameObject.GetComponent<SphereCollider>().enabled = true;
-            gameObject.GetComponent<ObiCollider>().enabled = true;
+            //gameObject.GetComponent<ObiCollider>().enabled = true;
         }
     }
 }

@@ -158,10 +158,13 @@ Material:
     - _ToggleDetailTexture: 0
     - _ToggleFresnel: 0
     - _ToggleGlobalLightEffect: 0
+    - _UseClipping: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ClipPlaneNormal: {r: 1, g: -0.00000023841852, b: 0, a: 0}
+    - _ClipPlanePosition: {r: -32.246826, g: 3.2327995, b: -0.5087118, a: 0}
     - _Color: {r: 0.6156863, g: 0.65882355, b: 0.67058825, a: 0}
     - _Emission: {r: 0.35686275, g: 0.42352942, b: 0.62352943, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
