@@ -92,6 +92,7 @@ public class ClimaxEffectManager : MonoBehaviour
         meanDistance = rubbingGameManager.meanDistance;
         HandleParticleSystem();
         HandleBloomIntensity();
+        HandleExcitementLevels();
         //HandleDirectionalLight();
         //HandleFogColor();
         //HandleBulgePulse();
@@ -115,22 +116,14 @@ public class ClimaxEffectManager : MonoBehaviour
 
     private void HandleExcitementLevels()
     {
+        if (sexMaterialManager == null) return;
+
+        float normalizedExcitement = Mathf.Clamp01(entanglementMeter);
+
         for (int i = 0; i < sexMaterialManager.excitementLevels.Count; i++)
         {
-            if (entanglementMeter > entanglementMeterThreshold)
-            {
-                // Normalize excitement level change from threshold to 100
-                float normalizedExcitement = Mathf.InverseLerp(entanglementMeterThreshold, 100f, entanglementMeter);
-                sexMaterialManager.excitementLevels[i] = Mathf.Lerp(originalExcitementLevels[i], 1f, normalizedExcitement);
-            }
-            else
-            {
-                // Increase excitement level slowly below threshold
-                float slowIncrease = Mathf.InverseLerp(0f, entanglementMeterThreshold, entanglementMeter);
-                sexMaterialManager.excitementLevels[i] = Mathf.Lerp(originalExcitementLevels[i], 1f, slowIncrease);
-            }
+            sexMaterialManager.excitementLevels[i] = normalizedExcitement;
         }
-
     }
 
     private void HandleBloomIntensity()
