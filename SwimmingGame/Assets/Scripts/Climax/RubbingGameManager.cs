@@ -12,9 +12,6 @@ public class RubbingGameManager : MonoBehaviour
     public LevelLoader levelLoader;
     public ObiRope ropeA;
     public ObiRope ropeB;
-    public ObiRope ropeC;
-    public ObiRope ropeD;
-    public ObiRope ropeE;
     public GameObject MCClimaxhead;
     public ClimaxCameraManager climaxCameraManager;
 
@@ -41,26 +38,40 @@ public class RubbingGameManager : MonoBehaviour
     public Rigidbody playerBody;
 
     public bool moveOnAfterThresholdReached = false;
-    public bool orgy;
     public float ropeMoveOnThreshold;
     private bool levelLoaded;
 
     private ObiParticleAttachment[] obiParticleAttachmentA;
     private ObiParticleAttachment[] obiParticleAttachmentB;
-    private ObiParticleAttachment[] obiParticleAttachmentC;
-    private ObiParticleAttachment[] obiParticleAttachmentD;
-    private ObiParticleAttachment[] obiParticleAttachmentE;
+
+
+    [Header("Animators")]
+
+    public string inhalingParameter = "Inhaling";
+    public string exhalingParameter = "Exhaling";
+    public string blendParameter = "Blend";
+
+    public float movementInputThreshold = 0.05f;
+    public float exhaleDuration = 0.35f;
+    public float blendLerpSpeed = 8f;
+    public List<Animator> playerAnimators = new List<Animator>();
+
+    public List<Animator> npcAnimators = new List<Animator>();
+
+    public Rigidbody npcBody;
+    public float npcBodyVelocity;
+
+    private bool playerWasMovingInput;
+    private bool npcWasMovingInput;
+
+    private float playerExhaleTimer;
+    private float npcExhaleTimer;
 
     private void Start()
     {
         startCounting = false;
         obiParticleAttachmentA = ropeA.GetComponents<ObiParticleAttachment>();
         obiParticleAttachmentB = ropeB.GetComponents<ObiParticleAttachment>();
-        if(orgy){
-            obiParticleAttachmentC = ropeC.GetComponents<ObiParticleAttachment>();
-            obiParticleAttachmentD = ropeD.GetComponents<ObiParticleAttachment>();
-            obiParticleAttachmentE = ropeE.GetComponents<ObiParticleAttachment>();
-        }
 
     }
 
@@ -68,7 +79,10 @@ public class RubbingGameManager : MonoBehaviour
     {
         // Calculate distances
         headToHeadDistance = Vector3.Distance(npcHead.position, playerHead.position);
-        playerBodyVelocity = playerBody.velocity.magnitude;
+        playerBodyVelocity = playerBody != null ? playerBody.velocity.magnitude : 0f;
+        npcBodyVelocity = npcBody != null ? npcBody.velocity.magnitude : 0f;
+
+        HandleBreathingAnimation();
 
         // Get the mean distance from ropeMeanDistance
         meanDistance = GetMeanDistance();
@@ -137,11 +151,6 @@ public class RubbingGameManager : MonoBehaviour
         {
             obiParticleAttachmentA[i].enabled = false;
             obiParticleAttachmentB[i].enabled = false;
-            if(orgy){
-                obiParticleAttachmentC[i].enabled = false;
-                obiParticleAttachmentD[i].enabled = false;
-                obiParticleAttachmentE[i].enabled = false;
-            }
         }
 
     }
@@ -149,5 +158,82 @@ public class RubbingGameManager : MonoBehaviour
     public void MoveOn()
     {
 
+    }
+
+    private void HandleBreathingAnimation()
+    {
+        HandleBreathing(
+            playerBodyVelocity,
+            playerAnimators,
+            ref playerWasMovingInput,
+            ref playerExhaleTimer
+        );
+
+        HandleBreathing(
+            npcBodyVelocity,
+            npcAnimators,
+            ref npcWasMovingInput,
+            ref npcExhaleTimer
+        );
+    }
+
+private void HandleBreathing(
+    float velocity,
+    List<Animator> targetAnimators,
+    ref bool wasMovingInput,
+    ref float exhaleTimer
+)
+{
+    bool hasMovementInput = velocity > movementInputThreshold;
+
+    if (hasMovementInput)
+    {
+        exhaleTimer = 0f;
+        SetBreathingState(targetAnimators, true, false, 1f);
+    }
+    else
+    {
+        if (wasMovingInput)
+        {
+            exhaleTimer = exhaleDuration;
+        }
+
+        if (exhaleTimer > 0f)
+        {
+            exhaleTimer -= Time.deltaTime;
+            SetBreathingState(targetAnimators, false, true, 0.5f);
+        }
+        else
+        {
+            SetBreathingState(targetAnimators, false, false, 0f);
+        }
+    }
+
+    wasMovingInput = hasMovementInput;
+}
+
+    private void SetBreathingState(
+        List<Animator> targetAnimators,
+        bool inhaling,
+        bool exhaling,
+        float targetBlend
+    )
+    {
+        foreach (Animator animator in targetAnimators)
+        {
+            if (animator == null) continue;
+
+            animator.SetBool(inhalingParameter, inhaling);
+            animator.SetBool(exhalingParameter, exhaling);
+
+            float currentBlend = animator.GetFloat(blendParameter);
+            float newBlend = Mathf.Lerp(
+                currentBlend,
+                targetBlend,
+                blendLerpSpeed * Time.deltaTime
+            );
+
+            animator.SetFloat(blendParameter, newBlend);
+        }
     }
 }

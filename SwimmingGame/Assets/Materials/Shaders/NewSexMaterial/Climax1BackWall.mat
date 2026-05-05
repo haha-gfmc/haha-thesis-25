@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2510952305840726072
+--- !u!114 &-1624747405704516287
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TeacherSexBody
-  m_Shader: {fileID: -6465566751694194690, guid: 7e5b5d24d78efec43b8cf1f8ed969faf,
+  m_Name: Climax1BackWall
+  m_Shader: {fileID: -6465566751694194690, guid: 6e259c1161872a1458813db1730f5960,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -37,10 +37,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Albedo:
-        m_Texture: {fileID: 2800000, guid: e52407faf31fd1b40b36ab92cc8dbb38, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -58,18 +54,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailTexture:
-        m_Texture: {fileID: 2800000, guid: e67c964f4f073834eb5505dc6a105079, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailTexture2:
-        m_Texture: {fileID: 2800000, guid: 6ed7052cea7a85e42a8abec636d01ad9, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailTextureMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -93,10 +77,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_4d5da60f3de24554b3c7a1cf8cebf0c7_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: aaa2aa98d22ff6d4e935070a161a5eb5, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -115,60 +95,64 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Add: 0.6
     - _AlphaClip: 0
     - _AlphaToMask: 0
-    - _Amplitude: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _Contrast: 50
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
+    - _EmissionStrength: 4.2
     - _EnvironmentReflections: 1
-    - _Fresnel_Power: 2
-    - _GlobalLightingAmount: 2
+    - _FlowSpeed: 0.2
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _GlowThreshold: 0.36
+    - _InterlaceOffset: 0.2
     - _Metallic: 0
-    - _NoiseScale: 500
-    - _NoiseValue: 0.01
-    - _Normal: 9.79
+    - _NormalStrength: 0.2
     - _OcclusionStrength: 1
+    - _PaletteSteps: 1
     - _Parallax: 0.005
+    - _Pixelate: 715.98
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Saturation: 1.4
-    - _ShiftingSpeedX: 0.02
-    - _ShiftingSpeedY: 0.27
-    - _Smoothness: 0.6
+    - _ScalineDensity: 0.39
+    - _ScalineStrength: 0.59
+    - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
+    - _StripeDistort: 0.7
+    - _StripeScale: 1.13
+    - _StripeWidth: 6.26
     - _Surface: 0
-    - _ToggleDetailTexture: 0
-    - _ToggleFresnel: 0
-    - _ToggleGlobalLightEffect: 0
-    - _UseClipping: 0
+    - _Tiling: 0.07
+    - _Warp1Strength: 0.2
+    - _Warp2Strength: 0.1
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _ClipPlaneNormal: {r: 1, g: -0.00000023841852, b: 0, a: 0}
-    - _ClipPlanePosition: {r: -32.246826, g: 3.2327995, b: -0.5087118, a: 0}
-    - _Color: {r: 0.6156863, g: 0.65882355, b: 0.67058825, a: 0}
-    - _Emission: {r: 0.35686275, g: 0.42352942, b: 0.62352943, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Dark: {r: 0.0029071267, g: 0.81508523, b: 0.9245283, a: 0}
+    - _Edge: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Fresnel_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Glow: {r: 1, g: 1, b: 1, a: 0}
+    - _Main: {r: 1, g: 1, b: 1, a: 0}
+    - _OffsetA: {r: 0, g: 0, b: 0, a: 0}
+    - _OffsetB: {r: 8, g: 1, b: 0, a: 0}
+    - _OffsetC: {r: 5, g: 2, b: 0, a: 0}
+    - _OffsetD: {r: 3, g: 4, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Tiling: {r: 0.2, g: 1, b: 0, a: 0}
+    - _Tilling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
