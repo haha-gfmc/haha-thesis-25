@@ -44,13 +44,13 @@ public abstract class SexMaterialControllerBase : MonoBehaviour
 
     protected void BeginBlock()
     {
-        if (targetRenderer != null)
+        if (UsingNormalRenderer())
             targetRenderer.GetPropertyBlock(block, materialIndex);
     }
 
     protected void EndBlock()
     {
-        if (targetRenderer != null)
+        if (UsingNormalRenderer())
             targetRenderer.SetPropertyBlock(block, materialIndex);
     }
 
@@ -62,7 +62,7 @@ public abstract class SexMaterialControllerBase : MonoBehaviour
             return v == 0f ? fallback : v;
         }
 
-        if (UsingObiRopeRenderer())
+        if (UsingObiRopeRenderer() && runtimeObiMaterial.HasProperty(id))
             return runtimeObiMaterial.GetFloat(id);
 
         return fallback;
@@ -76,7 +76,7 @@ public abstract class SexMaterialControllerBase : MonoBehaviour
             return c == Color.clear ? fallback : c;
         }
 
-        if (UsingObiRopeRenderer())
+        if (UsingObiRopeRenderer() && runtimeObiMaterial.HasProperty(id))
             return runtimeObiMaterial.GetColor(id);
 
         return fallback;
@@ -91,7 +91,7 @@ public abstract class SexMaterialControllerBase : MonoBehaviour
             return new Vector2(v.x, v.y);
         }
 
-        if (UsingObiRopeRenderer())
+        if (UsingObiRopeRenderer() && runtimeObiMaterial.HasProperty(id))
         {
             Vector4 v = runtimeObiMaterial.GetVector(id);
             return new Vector2(v.x, v.y);
@@ -105,7 +105,7 @@ public abstract class SexMaterialControllerBase : MonoBehaviour
         if (UsingNormalRenderer())
             block.SetFloat(id, value);
 
-        if (UsingObiRopeRenderer())
+        if (UsingObiRopeRenderer() && runtimeObiMaterial.HasProperty(id))
             runtimeObiMaterial.SetFloat(id, value);
     }
 
@@ -114,7 +114,7 @@ public abstract class SexMaterialControllerBase : MonoBehaviour
         if (UsingNormalRenderer())
             block.SetColor(id, value);
 
-        if (UsingObiRopeRenderer())
+        if (UsingObiRopeRenderer() && runtimeObiMaterial.HasProperty(id))
             runtimeObiMaterial.SetColor(id, value);
     }
 
@@ -123,7 +123,7 @@ public abstract class SexMaterialControllerBase : MonoBehaviour
         if (UsingNormalRenderer())
             block.SetVector(id, value);
 
-        if (UsingObiRopeRenderer())
+        if (UsingObiRopeRenderer() && runtimeObiMaterial.HasProperty(id))
             runtimeObiMaterial.SetVector(id, value);
     }
 

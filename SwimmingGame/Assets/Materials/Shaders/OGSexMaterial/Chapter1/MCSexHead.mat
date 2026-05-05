@@ -55,8 +55,9 @@ Material:
     - _GlobalLightingAmount: 2
     - _Saturation: 0.8
     - _ShiftingSpeedY: 0.27
+    - _ToggleFresnel: 1
     m_Colors:
     - _Color: {r: 0.7529412, g: 0.78431374, b: 0.44313726, a: 0.95686275}
     - _Emission: {r: 0.34509805, g: 0.3882353, b: 0.33333334, a: 0}
-    - _Fresnel_Color: {r: 0.9433962, g: 0.6081641, b: 0.6081641, a: 1}
+    - _Fresnel_Color: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

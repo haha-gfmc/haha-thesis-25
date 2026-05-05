@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class SexBodyMaterialController : SexMaterialControllerBase
 {
-
     [Header("Default")]
     public Color defaultColor = Color.white;
     public Color defaultEmission = Color.black;
@@ -41,61 +40,34 @@ public class SexBodyMaterialController : SexMaterialControllerBase
     private static readonly int NormalID = Shader.PropertyToID("_Normal");
     private static readonly int AddID = Shader.PropertyToID("_Add");
 
-    private void Awake()
+    protected override void Awake()
     {
-        block = new MaterialPropertyBlock();
+        base.Awake();
     }
 
-public override void SetExcitement(float excitement, float lerpSpeed)
-{
-    if (!UsingNormalRenderer() && !UsingObiRopeRenderer()) return;
-    if (block == null) block = new MaterialPropertyBlock();
-
-    float t = Mathf.Clamp01(excitement);
-    float dt = lerpSpeed * Time.deltaTime;
-
-    BeginBlock();
-
-    SetColor(ColorID, Color.Lerp(GetColor(ColorID, defaultColor), Color.Lerp(defaultColor, excitedColor, t), dt));
-    SetColor(EmissionID, Color.Lerp(GetColor(EmissionID, defaultEmission), Color.Lerp(defaultEmission, excitedEmission, t), dt));
-
-    SetFloat(ShiftingSpeedXID, Mathf.Lerp(GetFloat(ShiftingSpeedXID, defaultShiftingSpeedX), Mathf.Lerp(defaultShiftingSpeedX, excitedShiftingSpeedX, t), dt));
-    SetFloat(ShiftingSpeedYID, Mathf.Lerp(GetFloat(ShiftingSpeedYID, defaultShiftingSpeedY), Mathf.Lerp(defaultShiftingSpeedY, excitedShiftingSpeedY, t), dt));
-    SetVector2(TilingID, Vector2.Lerp(GetVector2(TilingID, defaultTiling), Vector2.Lerp(defaultTiling, excitedTiling, t), dt));
-
-    SetFloat(NoiseValueID, Mathf.Lerp(GetFloat(NoiseValueID, defaultNoiseValue), Mathf.Lerp(defaultNoiseValue, excitedNoiseValue, t), dt));
-    SetFloat(ContrastID, Mathf.Lerp(GetFloat(ContrastID, defaultContrast), Mathf.Lerp(defaultContrast, excitedContrast, t), dt));
-    SetFloat(SaturationID, Mathf.Lerp(GetFloat(SaturationID, defaultSaturation), Mathf.Lerp(defaultSaturation, excitedSaturation, t), dt));
-    SetFloat(SmoothnessID, Mathf.Lerp(GetFloat(SmoothnessID, defaultSmoothness), Mathf.Lerp(defaultSmoothness, excitedSmoothness, t), dt));
-    SetFloat(NormalID, Mathf.Lerp(GetFloat(NormalID, defaultNormal), Mathf.Lerp(defaultNormal, excitedNormal, t), dt));
-    SetFloat(AddID, Mathf.Lerp(GetFloat(AddID, defaultAdd), Mathf.Lerp(defaultAdd, excitedAdd, t), dt));
-
-    EndBlock();
-}
-
-    private float GetCurrentFloat(int id, float fallback)
+    public override void SetExcitement(float excitement, float lerpSpeed)
     {
-        return block.GetFloat(id) == 0f ? fallback : block.GetFloat(id);
-    }
+        if (!UsingNormalRenderer() && !UsingObiRopeRenderer()) return;
 
-    private Color GetCurrentColor(int id, Color fallback)
-    {
-        Color c = block.GetColor(id);
-        return c == Color.clear ? fallback : c;
-    }
+        float t = Mathf.Clamp01(excitement);
+        float dt = lerpSpeed * Time.deltaTime;
 
-    private Vector2 GetCurrentVector2(int id, Vector2 fallback)
-    {
-        Vector4 v = block.GetVector(id);
-        if (v == Vector4.zero) return fallback;
-        return new Vector2(v.x, v.y);
-    }
+        BeginBlock();
 
-    private void OnDisable()
-    {
-        if (targetRenderer != null)
-        {
-            targetRenderer.SetPropertyBlock(null, materialIndex);
-        }
+        SetColor(ColorID, Color.Lerp(GetColor(ColorID, defaultColor), Color.Lerp(defaultColor, excitedColor, t), dt));
+        SetColor(EmissionID, Color.Lerp(GetColor(EmissionID, defaultEmission), Color.Lerp(defaultEmission, excitedEmission, t), dt));
+
+        SetFloat(ShiftingSpeedXID, Mathf.Lerp(GetFloat(ShiftingSpeedXID, defaultShiftingSpeedX), Mathf.Lerp(defaultShiftingSpeedX, excitedShiftingSpeedX, t), dt));
+        SetFloat(ShiftingSpeedYID, Mathf.Lerp(GetFloat(ShiftingSpeedYID, defaultShiftingSpeedY), Mathf.Lerp(defaultShiftingSpeedY, excitedShiftingSpeedY, t), dt));
+        SetVector2(TilingID, Vector2.Lerp(GetVector2(TilingID, defaultTiling), Vector2.Lerp(defaultTiling, excitedTiling, t), dt));
+
+        SetFloat(NoiseValueID, Mathf.Lerp(GetFloat(NoiseValueID, defaultNoiseValue), Mathf.Lerp(defaultNoiseValue, excitedNoiseValue, t), dt));
+        SetFloat(ContrastID, Mathf.Lerp(GetFloat(ContrastID, defaultContrast), Mathf.Lerp(defaultContrast, excitedContrast, t), dt));
+        SetFloat(SaturationID, Mathf.Lerp(GetFloat(SaturationID, defaultSaturation), Mathf.Lerp(defaultSaturation, excitedSaturation, t), dt));
+        SetFloat(SmoothnessID, Mathf.Lerp(GetFloat(SmoothnessID, defaultSmoothness), Mathf.Lerp(defaultSmoothness, excitedSmoothness, t), dt));
+        SetFloat(NormalID, Mathf.Lerp(GetFloat(NormalID, defaultNormal), Mathf.Lerp(defaultNormal, excitedNormal, t), dt));
+        SetFloat(AddID, Mathf.Lerp(GetFloat(AddID, defaultAdd), Mathf.Lerp(defaultAdd, excitedAdd, t), dt));
+
+        EndBlock();
     }
 }
