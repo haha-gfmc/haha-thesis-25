@@ -64,7 +64,7 @@ MC: Hold on..
 ~ swimmerCamOn=true
 ~ changeDialogueView(2)
 MC: Don't leave me behind! #speed: fast
-~ changeDesire("\nFollow \nthem.")
+~ changeDesire("<br>Follow <br>them.")
 ~ pauseTutorial(false)
 ~ finishTutorialPart(3)
 -> END
