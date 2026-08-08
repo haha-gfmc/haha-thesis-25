@@ -2188,10 +2188,10 @@ RectTransform:
   - {fileID: 3919314941211469015}
   m_Father: {fileID: 801063975000004019}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 458, y: -456}
-  m_SizeDelta: {x: 949, y: 96}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -503.5, y: 83}
+  m_SizeDelta: {x: 950, y: 94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6888909792489929012
 CanvasRenderer:
@@ -5372,6 +5372,7 @@ MonoBehaviour:
   pulsePeriod: 0
   pulseRotationIntensity: 0
   pulseOpacityIntensity: 0
+  pulseScaleIntensity: 0
   ignoreTimeDilation: 0
 --- !u!1 &2679814962514278956
 GameObject:
@@ -8757,6 +8758,7 @@ MonoBehaviour:
   pulsePeriod: 0
   pulseRotationIntensity: 0
   pulseOpacityIntensity: 0
+  pulseScaleIntensity: 0
   ignoreTimeDilation: 0
 --- !u!1 &5036427254122558193
 GameObject:
@@ -10552,6 +10554,7 @@ MonoBehaviour:
   pulsePeriod: 12
   pulseRotationIntensity: 0
   pulseOpacityIntensity: 0.36
+  pulseScaleIntensity: 0
   ignoreTimeDilation: 0
 --- !u!1 &6232526978403585923
 GameObject:
@@ -13181,6 +13184,7 @@ MonoBehaviour:
   pulsePeriod: 12
   pulseRotationIntensity: 0
   pulseOpacityIntensity: 0.36
+  pulseScaleIntensity: 0
   ignoreTimeDilation: 0
 --- !u!1 &7626654733881314635
 GameObject:
@@ -13818,6 +13822,7 @@ MonoBehaviour:
   pulsePeriod: 16
   pulseRotationIntensity: 0
   pulseOpacityIntensity: 0.2
+  pulseScaleIntensity: 0
   ignoreTimeDilation: 0
 --- !u!1 &7922902130486817713
 GameObject:
@@ -14868,6 +14873,7 @@ MonoBehaviour:
   pulsePeriod: 0
   pulseRotationIntensity: 0
   pulseOpacityIntensity: 0
+  pulseScaleIntensity: 0
   ignoreTimeDilation: 0
 --- !u!114 &2664765037105586030
 MonoBehaviour:
