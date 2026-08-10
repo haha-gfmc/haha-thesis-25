@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TeacherSexBody
+  m_Name: MCSexSpiral
   m_Shader: {fileID: -6465566751694194690, guid: 7e5b5d24d78efec43b8cf1f8ed969faf,
     type: 3}
   m_Parent: {fileID: 0}
@@ -38,7 +38,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Albedo:
-        m_Texture: {fileID: 2800000, guid: e52407faf31fd1b40b36ab92cc8dbb38, type: 3}
+        m_Texture: {fileID: 2800000, guid: fcb84e0537d106c4391db401a1f060b8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -62,15 +62,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailTexture:
-        m_Texture: {fileID: 2800000, guid: 5a4181c67e69de947a17d38b0df89e25, type: 3}
+        m_Texture: {fileID: 2800000, guid: 10fbe236175e6c748816f0b7d86e764c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailTexture2:
-        m_Texture: {fileID: 2800000, guid: 6ed7052cea7a85e42a8abec636d01ad9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3e46614ff66ce3f4bbc677882c17e238, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailTextureMask:
-        m_Texture: {fileID: 2800000, guid: 84d9afeb14511374dba2f714d866e987, type: 3}
+        m_Texture: {fileID: 2800000, guid: deac4c5697240f04e9177baa3b4aaf71, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -124,7 +124,7 @@ Material:
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _Contrast: 50
+    - _Contrast: 20
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
@@ -133,7 +133,7 @@ Material:
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _Fresnel_Power: 2
-    - _GlobalLightingAmount: 2
+    - _GlobalLightingAmount: 3
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -146,7 +146,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Saturation: 1.4
+    - _Saturation: 0.8
     - _ShiftingSpeedX: 0.02
     - _ShiftingSpeedY: 0.27
     - _Smoothness: 0.6
@@ -163,12 +163,12 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _ClipPlaneNormal: {r: 1, g: -0.00000023841852, b: 0, a: 0}
-    - _ClipPlanePosition: {r: -32.246826, g: 3.2327995, b: -0.5087118, a: 0}
-    - _Color: {r: 0.67058825, g: 0.6500628, b: 0.6156863, a: 0}
-    - _Emission: {r: 0.35686275, g: 0.42352942, b: 0.62352943, a: 0}
+    - _ClipPlaneNormal: {r: -1, g: -0.00000023841852, b: 0, a: 0}
+    - _ClipPlanePosition: {r: 25.923706, g: 3.2327938, b: -0.508708, a: 0}
+    - _Color: {r: 0.7529412, g: 0.78431374, b: 0.44313726, a: 0.95686275}
+    - _Emission: {r: 0.34509805, g: 0.3882353, b: 0.33333334, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Fresnel_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Fresnel_Color: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Tiling: {r: 0.2, g: 1, b: 0, a: 0}
+    - _Tiling: {r: 2, g: 2, b: 0, a: 0}
   m_BuildTextureStacks: []
