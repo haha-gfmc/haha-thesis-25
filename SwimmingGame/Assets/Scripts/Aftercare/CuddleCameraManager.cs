@@ -33,7 +33,6 @@ public class CuddleCameraManager : MonoBehaviour
     private int prevShotIndex;
     private Animator blink;
     private float blinkDuration;
-    public LightBeamFollow lightBeamFollow;
 
     void Start()
     {

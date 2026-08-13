@@ -5,7 +5,10 @@ using UnityEngine;
 public class ThirdPersonCamera : MonoBehaviour
 {
     public Transform cameraRoot;
-    public float sensitivity = 100f;  // sensitivity for looking around
+    public float keyboardMouseMouseSensitivity = 100f;  
+    public float keyboardMouseLookSensitivity = 100f;  
+    public float gamepadMouseSensitivity = 100f;  
+    public float gamepadLookSensitivity = 100f;      
     public float rotationSmoothTime = 0.1f;
     public bool cameraLocked;
 
@@ -31,13 +34,33 @@ public class ThirdPersonCamera : MonoBehaviour
 
     void HandleMouseLook()
     {
+        float mouseX = 0f;
+        float mouseY = 0f;
+        float lookX = 0f;
+        float lookY = 0f;
         // Get mouse input
-        float mouseX = playerInput.rotation.x * sensitivity * Time.fixedDeltaTime;
-        float mouseY = -playerInput.rotation.y * sensitivity * Time.fixedDeltaTime;
+        if (playerInput.currentControlScheme == "Keyboard&Mouse")
+        {
+            mouseX = playerInput.rotation.x * keyboardMouseMouseSensitivity * Time.fixedDeltaTime;
+            mouseY = -playerInput.rotation.y * keyboardMouseMouseSensitivity * Time.fixedDeltaTime;
+        }
+        else if (playerInput.currentControlScheme == "Gamepad")
+        {
+            mouseX = playerInput.rotation.x * gamepadMouseSensitivity * Time.fixedDeltaTime;
+            mouseY = -playerInput.rotation.y * gamepadMouseSensitivity * Time.fixedDeltaTime;
+        }
 
         // Get look input
-        float lookX = playerInput.look.x * sensitivity * Time.fixedDeltaTime;
-        float lookY = -playerInput.look.y * sensitivity * Time.fixedDeltaTime;
+        if (playerInput.currentControlScheme == "Keyboard&Mouse")
+        {
+            lookX = playerInput.look.x * keyboardMouseLookSensitivity * Time.fixedDeltaTime;
+            lookY = -playerInput.look.y * keyboardMouseLookSensitivity * Time.fixedDeltaTime;
+        }
+        else if (playerInput.currentControlScheme == "Gamepad")
+        {
+            lookX = playerInput.look.x * gamepadLookSensitivity * Time.fixedDeltaTime;
+            lookY = -playerInput.look.y * gamepadLookSensitivity * Time.fixedDeltaTime;
+        }
 
         // Combine mouse input and look input
         targetRotation.y += mouseX + lookX;  // Horizontal rotation (combined)

@@ -34,6 +34,7 @@ public class FingerTipsController : MonoBehaviour
     public bool useThisFingerTipToDetectDialogue = true; 
     public LightBeamFollow[] lightBeamFollow;
     public GameObject[] choiceBox;
+    public bool anyChoiceBoxActive=false;
 
     private void Start()
     {
@@ -115,7 +116,7 @@ public class FingerTipsController : MonoBehaviour
         else
         {
             inputAngle=0f;
-            velocity *= dampingFactor; // Apply damping
+            velocity *= dampingFactor; // Apply dampingh
             inputTimer += Time.fixedDeltaTime; // increment timer when no input
             caressing = false;
         }
@@ -146,6 +147,18 @@ public class FingerTipsController : MonoBehaviour
     private void DetectDialogueOption(bool c)
     {
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, 0.1f, LayerMask.GetMask("DialogueOption"));
+        for (int j = 0; j < choiceBox.Length; j++)
+        {
+            if (choiceBox[j] != null && choiceBox[j].activeInHierarchy)
+            {
+                anyChoiceBoxActive = true;
+                break;
+            }
+            else
+            {
+                anyChoiceBoxActive = false;
+            }
+        }
         foreach (var hitCollider in hitColliders)
         {
             string currentOption = hitCollider.gameObject.name;
@@ -161,12 +174,15 @@ public class FingerTipsController : MonoBehaviour
             
             cuddleDialogue.HoveringChoice(i);
             Debug.Log("Hovering choice: " + i);
-            for (int j = 0; j < lightBeamFollow.Length; j++)
+            if (anyChoiceBoxActive)
             {
-                if (choiceBox[j].activeSelf)
+                for (int j = 0; j < lightBeamFollow.Length; j++)
                 {
-                    lightBeamFollow[j].hovering = true;
-                    lightBeamFollow[j].ActivateLightBeam(i);
+                    if (lightBeamFollow[j] != null)
+                    {
+                        lightBeamFollow[j].hovering = true;
+                        lightBeamFollow[j].ActivateLightBeam(i);
+                    }
                 }
             }
 
@@ -179,10 +195,13 @@ public class FingerTipsController : MonoBehaviour
             if(cuddleDialogue.story.currentChoices.Count>0 && cuddleDialogue.currentChoiceIndex!=-1) Rumble.AddRumble("In Cuddle Zone");
 
         }
-        if (hitColliders.Length == 0){
+
+        // Fingertip isn't touching any option
+        if (hitColliders.Length == 0)
+        {
             for (int j = 0; j < lightBeamFollow.Length; j++)
             {
-                if (choiceBox[j].activeSelf)
+                if (lightBeamFollow[j] != null)
                 {
                     lightBeamFollow[j].hovering = false;
                 }
