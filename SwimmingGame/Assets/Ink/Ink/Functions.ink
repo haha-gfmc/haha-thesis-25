@@ -63,13 +63,13 @@ VAR world=0
 ~ pauseTutorial(true)
 ~ muffleNPCsVolume()
 ~ muffleSwimmingVolume()
-~ setDialogueBubble("standard")
-{
-    -world==1:
-        ~ activateBorder("floral",true)
-    -world==2:
-        ~ activateBorder("rave",true)
-}
+// ~ setDialogueBubble("standard")
+// {
+//     -world==1:
+//         ~ activateBorder("floral",true)
+//     -world==2:
+//         ~ activateBorder("rave",true)
+// }
 ->->
 
 === npcEnd ===
@@ -77,8 +77,8 @@ VAR world=0
 ~ continueSinging()
 ~ restoreNPCsVolume()
 ~ restoreSwimmingVolume()
-~ activateBorder("floral",false)
-~ activateBorder("rave",false)
+// ~ activateBorder("floral",false)
+// ~ activateBorder("rave",false)
 ->->
 
 

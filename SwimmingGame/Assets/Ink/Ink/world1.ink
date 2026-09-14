@@ -1052,30 +1052,41 @@ Teacher: What would you have said?
 // MC finds teacher at diner sitting. They start singing when MC gets nearby to invite conversation
 === teacherAtDiner ===
  -> npcStart1 ->
-Teacher: So you came.
-MC: I did.
+~ activateBorder("floral",true)
+Teacher: So you've come to find me. \\pauseWould you still like to...?
+MC: Yes. \\pauseShow me the way.
+~fadeOut(2)
 ~pause(4)
-Teacher: I'm surprised. \\pauseI thought I'd made a terrible impression.
-MC: It's okay. \\pauseI wanted...
-~pause(1)
-I want to get to know you better. #speed: 50
-~pause(2)
-Teacher: Me too.
-~pause(2)
-MC: So, this "entanglement".. # speed: slow
-Teacher: Yes?
+MC: By the way... about this, "entanglement"... # speed: 20
+Teacher: Yes? # speed: 20
 MC: Can you tell me more about it? #speed:fast
 ~pause(2)
-Teacher: Well...
+Teacher: Well... # speed: slow
 ~pause(4)
-Teacher: ...and that's it. 
-But also, I'm not entirely sure. \\pauseI've never really... 
-MC: You haven't gone all the way through.
+// Teacher: I'm surprised. \\pauseI thought I'd made a terrible impression.
+// MC: It's okay. \\pauseI wanted...
+// ~pause(1)
+// I want to get to know you better. #speed: 50
+// ~pause(2)
+// Teacher: Me too.
+// ~pause(2)
+// MC: So, this "entanglement".. # speed: slow
+// Teacher: Yes?
+// MC: Can you tell me more about it? #speed:fast
+// ~pause(2)
+// Teacher: Well...
+// ~pause(4)
+Teacher: ...and that's it, basically. 
+~fadeIn(2)
+But also, \\pausethat's not all. \\pauseI've just never really... 
 ~ pause(2)
+MC: You haven't gone all the way through.
+~ pause(3)
 Teacher: So... #speed:slow
 What do you want to do now?
 ~pause(2)
 MC: I think... I want to cut video here #speed: slow
+~ activateBorder("floral",false)
 
 // SHORTER VERSION
 

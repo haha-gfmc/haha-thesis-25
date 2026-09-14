@@ -10,6 +10,44 @@ VAR showcaseProgress=0
 // maybe something like... i've noticed this thing inside of me 
 // or sth growing out of me 
 
+=== trailer ===
+
+Teacher: So you've come to find me. \\pauseWould you still like to...?
+MC: Yes. \\pauseShow me the way.
+
+~pause(4)
+MC: By the way... about this, "entanglement"... # speed: 20
+Teacher: Yes? # speed: 20
+MC: Can you tell me more about it? #speed:fast
+~pause(2)
+Teacher: Well... # speed: slow
+~pause(4)
+// Teacher: I'm surprised. \\pauseI thought I'd made a terrible impression.
+// MC: It's okay. \\pauseI wanted...
+// ~pause(1)
+// I want to get to know you better. #speed: 50
+// ~pause(2)
+// Teacher: Me too.
+// ~pause(2)
+// MC: So, this "entanglement".. # speed: slow
+// Teacher: Yes?
+// MC: Can you tell me more about it? #speed:fast
+// ~pause(2)
+// Teacher: Well...
+// ~pause(4)
+Teacher: ...and that's it, basically. 
+
+But also, \\pausethat's not all. \\pauseI've just never really...
+~ pause(2)
+MC: You haven't gone all the way through.
+~ pause(3)
+Teacher: So... #speed:slow
+What do you want to do now?
+~pause(2)
+MC: I think... I want to cut video here #speed: slow
+
+-> END
+
 === intro01 ===
 ~ stopSinging()
 ~ forceTutorialPart(3)
