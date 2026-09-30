@@ -6715,7 +6715,7 @@ MonoBehaviour:
   decimation: 0
   smoothing: 0
   twist: 0
-  indexInSystem: 0
+  indexInSystem: 1
 --- !u!114 &799062952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8376,23 +8376,13 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
   controllers:
-  - {fileID: 1080465476}
   - {fileID: 1196926312}
   - {fileID: 1219571335}
   - {fileID: 799062960}
   - {fileID: 1866489267}
   - {fileID: 1884718011}
   - {fileID: 2018192059}
-  - {fileID: 95598348}
-  - {fileID: 1833346036}
-  - {fileID: 1837666031}
-  - {fileID: 1815472730}
   excitementLerpSpeed: 1
 --- !u!4 &1401455453
 Transform:
@@ -9754,7 +9744,7 @@ MonoBehaviour:
   decimation: 0
   smoothing: 0
   twist: 0
-  indexInSystem: 1
+  indexInSystem: 0
 --- !u!114 &1866489264
 MonoBehaviour:
   m_ObjectHideFlags: 0
