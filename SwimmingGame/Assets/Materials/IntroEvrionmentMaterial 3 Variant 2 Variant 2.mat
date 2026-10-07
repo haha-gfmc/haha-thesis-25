@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8746515398512462757
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 7
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -20,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: IntroEvrionmentMaterial 3 Variant 2
+  m_Name: IntroEvrionmentMaterial 3 Variant 2 Variant 2
   m_Shader: {fileID: -6465566751694194690, guid: 1aaa0114358523c4fae8f9c4da6f61e3,
     type: 3}
-  m_Parent: {fileID: 2100000, guid: 26b7267007a672344be034f659b6d590, type: 2}
+  m_Parent: {fileID: 2100000, guid: 827bd49897a851f45a371635c1ebd0d0, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -48,9 +35,22 @@ Material:
     - _CellDensity: 9.25
     - _Power: 1.32
     m_Colors:
-    - _Albedo: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 0.99215686}
+    - _Albedo: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 0.57254905}
     - _Emission: {r: 0.64779866, g: 0.030556459, b: 0.08422968, a: 0}
     - _NoiseTilling_Offset: {r: 3, g: 3, b: 0, a: 0}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _Tilling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
+--- !u!114 &2465063133034930310
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
