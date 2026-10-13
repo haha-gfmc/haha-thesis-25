@@ -7,17 +7,17 @@ public class Cuddle2_1Light : MonoBehaviour
     public Light directionalLight;
     public List<Color> colorList; // List of colors for the nightclub effect
     public float lightPulseInterval = 2f; // Interval for light sine wave
-    public float fogPulseInterval = 3f; // Interval for fog sine wave
+    //public float fogPulseInterval = 3f; // Interval for fog sine wave
     public float lightChangeInterval = 1f; // Interval for changing light color
-    public float fogChangeInterval = 1f; // Interval for changing fog color
-    public Color fogOffColor = Color.black;
+    //public float fogChangeInterval = 1f; // Interval for changing fog color
+    //public Color fogOffColor = Color.black;
     public Color lightOffColor = Color.black;
 
 
     private Color currentLightColor;
     private Color currentFogColor;
     private float lightPulseTimer = 0f;
-    private float fogPulseTimer = 0f;
+    //private float fogPulseTimer = 0f;
     private float lightChangeTimer = 0f;
     private float fogChangeTimer = 0f;
 
@@ -51,10 +51,12 @@ public class Cuddle2_1Light : MonoBehaviour
         }
 
         // Update fog pulse
+        /*
         fogPulseTimer += Time.deltaTime;
         float fogFrequency = (Mathf.PI * 2) / fogPulseInterval; // Frequency based on interval
         float fogIntensity = Mathf.Sin(fogPulseTimer * fogFrequency) * 0.5f + 0.5f; // Sine wave between 0 and 1
         RenderSettings.fogColor = Color.Lerp(fogOffColor, currentFogColor, fogIntensity);
+        
 
         // Change fog color at intervals
         fogChangeTimer += Time.deltaTime;
@@ -63,6 +65,7 @@ public class Cuddle2_1Light : MonoBehaviour
             fogChangeTimer = 0f;
             currentFogColor = GetRandomColor(currentFogColor);
         }
+        */
     }
 
     private Color GetRandomColor(Color excludeColor)

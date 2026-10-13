@@ -66,7 +66,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Chapter2/Main Act 2 - 1.unity
     guid: 086ba94bf60cf124b80a9851b598c75d
   - enabled: 1
-    path: Assets/Scenes/Chapter2/Cuddle 2 - 1.unity
+    path: Assets/Scenes/Chapter2/Old Cuddle 2 - 1.unity
     guid: 6000d9da83e66e74c8e8717d3fe561eb
   - enabled: 1
     path: Assets/Scenes/Chapter2/Naming.unity
