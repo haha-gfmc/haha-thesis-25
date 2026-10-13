@@ -43,8 +43,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Amplitude: 0.05
-    - _AngleOffsetSpeed: 2
+    - _Amplitude: 0.008
+    - _AngleOffsetSpeed: 3
     - _CellDensity: 9.25
     - _Power: 1.32
     m_Colors:

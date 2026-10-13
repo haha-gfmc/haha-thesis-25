@@ -27,6 +27,7 @@ public class ReceivingPoseController : MonoBehaviour
         public PoseDirection direction;
 
         [Header("Animation")]
+        public string startupState;
         public string transitionState;
         public string fullState;
 
@@ -51,6 +52,8 @@ public class ReceivingPoseController : MonoBehaviour
 
     [Header("Animation")]
     public TransitionStyle transitionStyle = TransitionStyle.StopMotion;
+
+    public float startupHoldTime = 0.1f;
 
     public float transitionHoldTime = 0.1f;
 
@@ -260,10 +263,27 @@ public class ReceivingPoseController : MonoBehaviour
             {
                 break;
             }
-            // Neutral -> Transition
+            // Neutral -> Startup
+            // Camera stays neutral.
+            PlayPose(targetPose.startupState);
+            yield return new WaitForSeconds(startupHoldTime);
+
+            // Player changed direction while the startup frame was being shown.
+            // Avoid showing the old transition, Full pose, or its camera.
+            if (desiredPose != targetDirection)
+            {
+                PlayPose(neutralState);
+                ShowCamera(neutralCamera);
+                currentPose = PoseDirection.Neutral;
+                yield return new WaitForSeconds(neutralHoldTime);
+                continue;
+            }
+
+            // Startup -> Transition
             // Camera stays neutral.
             PlayPose(targetPose.transitionState);
             yield return new WaitForSeconds(transitionHoldTime);
+
             // Player changed direction while the transition frame was being shown.
             // Avoid showing the old Full pose or its camera.
             if (desiredPose != targetDirection)
@@ -277,7 +297,7 @@ public class ReceivingPoseController : MonoBehaviour
                 continue;
             }
             // Transition -> Full
-            // Ca,=mera changes to the target pose's camera when the full pose is reached.
+            // Camera changes to the target pose's camera when the full pose is reached.
             PlayPose(targetPose.fullState);
             ShowCamera(targetPose.fullCamera);
             currentPose = targetDirection;
