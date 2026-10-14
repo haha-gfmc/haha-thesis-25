@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="EventFolder" id="{328ac789-8693-43e1-bc5f-58585090efd9}">
 		<property name="name">
 			<value>Kick Drum</value>

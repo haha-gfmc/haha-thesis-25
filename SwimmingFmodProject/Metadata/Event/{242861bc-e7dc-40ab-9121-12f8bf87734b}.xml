@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{242861bc-e7dc-40ab-9121-12f8bf87734b}">
 		<property name="name">
 			<value>Click Button</value>
@@ -87,8 +87,8 @@
 	<object class="Timeline" id="{27b51395-a5cc-4ad2-9ce0-e498fbb067c1}">
 		<relationship name="modules">
 			<destination>{958377d1-a6fc-4c78-a5eb-1a33dfe621f8}</destination>
-			<destination>{3fbf3001-d45a-489d-89c7-6ee454df379d}</destination>
 			<destination>{dbbcfef3-b820-4957-a800-dd0e835e1d22}</destination>
+			<destination>{3fbf3001-d45a-489d-89c7-6ee454df379d}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{b403a8f9-88d5-4102-acd7-959265742842}">

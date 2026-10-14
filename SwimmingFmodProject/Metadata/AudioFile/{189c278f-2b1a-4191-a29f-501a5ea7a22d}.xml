@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{189c278f-2b1a-4191-a29f-501a5ea7a22d}">
 		<property name="assetPath">
 			<value>SFX/Drones/Underwater Water Ambience Cave Deep Depth Rumble 01.ogg</value>

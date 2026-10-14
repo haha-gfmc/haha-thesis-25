@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="EncodableAsset" id="{35caa9a5-5e5e-4366-bc64-e1e947cbdf34}">
 		<property name="assetPath">
 			<value>SFX/Plucked Strings/</value>

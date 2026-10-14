@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
-using Cinemachine;
+using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.Rendering;
@@ -326,7 +326,7 @@ public class Swimmer : MonoBehaviour
     }
 
     void Move(){
-        Vector3 currentVelocity=new Vector3(body.velocity.x,body.velocity.y,body.velocity.z);
+        Vector3 currentVelocity=new Vector3(body.linearVelocity.x,body.linearVelocity.y,body.linearVelocity.z);
         Vector3 playerVelocity=currentVelocity;
 
         //Overriding rotation if a kickback just happened
@@ -464,7 +464,7 @@ public class Swimmer : MonoBehaviour
             Vector3 normal=hit.normal;
             Vector3 relativeVelocity;
             if(hit.otherCollider.TryGetComponent<Rigidbody>(out Rigidbody otherBody)){
-                relativeVelocity=otherBody.velocity;
+                relativeVelocity=otherBody.linearVelocity;
             }
             else{
                 relativeVelocity=Vector3.zero;
@@ -510,7 +510,7 @@ public class Swimmer : MonoBehaviour
                 Vector3 normal=hit.normal;
                 Vector3 relativeVelocity;
                 if(hit.otherCollider.TryGetComponent<Rigidbody>(out Rigidbody otherBody)){
-                    relativeVelocity=otherBody.velocity;
+                    relativeVelocity=otherBody.linearVelocity;
                 }
                 else{
                     relativeVelocity=Vector3.zero;
@@ -645,7 +645,7 @@ public class Swimmer : MonoBehaviour
         if(dashDirection!=Directions.NULL) prevDashDirection=dashDirection;
         dashDirection=Directions.NULL;
 
-        prevVelocity=body.velocity;
+        prevVelocity=body.linearVelocity;
 
         allHits.Clear();
 
@@ -716,7 +716,7 @@ public class Swimmer : MonoBehaviour
     //This function is for movement of player out of a collider without moving too fast
     //It doesn't move the player but it returns the Vector3 to move it by
     public Vector3 MoveOutOf(Collider other, Vector3 pos, Vector3 normal){
-        Vector3 prevVelocity=body.velocity;
+        Vector3 prevVelocity=body.linearVelocity;
 
         Vector3 dir=new Vector3();
         switch(capsule.direction){
@@ -760,7 +760,7 @@ public class Swimmer : MonoBehaviour
     private Vector3 CheckForWallAndKick(Vector3 direction){
         bool isKicking=false;
 
-        Vector3 prevVelocity=body.velocity;
+        Vector3 prevVelocity=body.linearVelocity;
 
         Vector3 dir=new Vector3();
         switch(capsule.direction){
@@ -869,7 +869,7 @@ public class Swimmer : MonoBehaviour
 
     public Vector3 GetVelocity()
     {
-        if(body!=null) return body.velocity;
+        if(body!=null) return body.linearVelocity;
         else return Vector3.zero;
     }
     

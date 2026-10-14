@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{c46af942-176e-4263-93b9-45fbc35f6888}">
 		<property name="name">
 			<value>TitleScreen_Kick</value>
@@ -61,8 +61,8 @@
 	<object class="MarkerTrack" id="{b8d14aef-6c20-4ca1-a1fe-6281de23d5c7}" />
 	<object class="GroupTrack" id="{65c91774-bf99-43aa-b416-d9efee7083d1}">
 		<relationship name="modules">
-			<destination>{5e05e0d9-04a0-421f-96e4-81be3c8b3b9e}</destination>
 			<destination>{9c0cde03-371f-4443-a0a5-f06bbe8b2e3a}</destination>
+			<destination>{5e05e0d9-04a0-421f-96e4-81be3c8b3b9e}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{8f6bc9a5-33bb-48b9-be02-8913622e4135}</destination>
@@ -78,8 +78,8 @@
 	</object>
 	<object class="Timeline" id="{06d511fd-b09a-4fab-84f5-99b667d4485c}">
 		<relationship name="modules">
-			<destination>{5e05e0d9-04a0-421f-96e4-81be3c8b3b9e}</destination>
 			<destination>{9c0cde03-371f-4443-a0a5-f06bbe8b2e3a}</destination>
+			<destination>{5e05e0d9-04a0-421f-96e4-81be3c8b3b9e}</destination>
 			<destination>{8cb6a442-54d6-4a1e-ab9a-d353ed7b2ac5}</destination>
 		</relationship>
 	</object>
@@ -100,17 +100,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{b01f8c7b-f1e8-41b2-80f3-fd843851169b}" />
-	<object class="EventSound" id="{5e05e0d9-04a0-421f-96e4-81be3c8b3b9e}">
-		<property name="start">
-			<value>1.5</value>
-		</property>
-		<property name="length">
-			<value>0.60000000000000009</value>
-		</property>
-		<relationship name="event">
-			<destination>{61ec749a-92dd-44c4-854e-ce97c3f43093}</destination>
-		</relationship>
-	</object>
 	<object class="EventSound" id="{9c0cde03-371f-4443-a0a5-f06bbe8b2e3a}">
 		<property name="start">
 			<value>0.60000000000000009</value>
@@ -120,6 +109,17 @@
 		</property>
 		<relationship name="event">
 			<destination>{25e920fd-d77a-4bce-ac87-b56e22ae66e3}</destination>
+		</relationship>
+	</object>
+	<object class="EventSound" id="{5e05e0d9-04a0-421f-96e4-81be3c8b3b9e}">
+		<property name="start">
+			<value>1.5</value>
+		</property>
+		<property name="length">
+			<value>0.60000000000000009</value>
+		</property>
+		<relationship name="event">
+			<destination>{61ec749a-92dd-44c4-854e-ce97c3f43093}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{8f6bc9a5-33bb-48b9-be02-8913622e4135}">

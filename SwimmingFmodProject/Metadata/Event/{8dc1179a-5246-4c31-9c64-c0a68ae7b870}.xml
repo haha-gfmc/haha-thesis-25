@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{8dc1179a-5246-4c31-9c64-c0a68ae7b870}">
 		<property name="name">
 			<value>C#5</value>
@@ -75,8 +75,8 @@
 	</object>
 	<object class="Timeline" id="{3107e02b-229e-4826-995b-73bd5028bbd1}">
 		<relationship name="modules">
-			<destination>{7ee66d74-9ff4-46b2-828a-61e9a75fa576}</destination>
 			<destination>{9460abf5-c992-41a7-a064-0ef53fc64640}</destination>
+			<destination>{7ee66d74-9ff4-46b2-828a-61e9a75fa576}</destination>
 		</relationship>
 		<relationship name="markers">
 			<destination>{052cee7f-5f8b-4c52-96b2-db1ff4277801}</destination>
@@ -280,29 +280,29 @@
 		</property>
 	</object>
 	<object class="AutomationCurve" id="{225fde19-a400-4457-9d11-3642af6c1f3a}">
+		<relationship name="automationPoints">
+			<destination>{017b6d22-fcfb-4894-b055-13e9816f0170}</destination>
+			<destination>{297b247b-5fef-4b69-8733-47178bb0c940}</destination>
+		</relationship>
 		<relationship name="parameter">
 			<destination>{02e26db9-1684-4efa-a21d-aa7bba293db2}</destination>
 		</relationship>
-		<relationship name="automationPoints">
-			<destination>{297b247b-5fef-4b69-8733-47178bb0c940}</destination>
-			<destination>{017b6d22-fcfb-4894-b055-13e9816f0170}</destination>
-		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{fba3f60a-ccb1-4355-8f27-cdda96e2f69a}" />
-	<object class="AutomationPoint" id="{297b247b-5fef-4b69-8733-47178bb0c940}">
-		<property name="position">
-			<value>0</value>
-		</property>
-		<property name="value">
-			<value>-80</value>
-		</property>
-	</object>
 	<object class="AutomationPoint" id="{017b6d22-fcfb-4894-b055-13e9816f0170}">
 		<property name="position">
 			<value>1</value>
 		</property>
 		<property name="value">
 			<value>0</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{297b247b-5fef-4b69-8733-47178bb0c940}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>-80</value>
 		</property>
 	</object>
 </objects>

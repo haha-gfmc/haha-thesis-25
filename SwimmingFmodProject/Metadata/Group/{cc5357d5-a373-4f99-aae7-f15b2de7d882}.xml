@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="MixerGroup" id="{cc5357d5-a373-4f99-aae7-f15b2de7d882}">
-		<property name="note" />
 		<property name="name">
 			<value>NPCs</value>
 		</property>
@@ -33,12 +32,12 @@
 	</object>
 	<object class="MixerBusPanner" id="{b24bdd3e-fd31-4d4f-82ab-161501cfb102}" />
 	<object class="AutomationCurve" id="{99585268-47ea-4e8e-9f80-bea74ccc1578}">
-		<relationship name="parameter">
-			<destination>{59256829-b477-4777-93d5-422ef9fe3471}</destination>
-		</relationship>
 		<relationship name="automationPoints">
 			<destination>{a5e8d1d1-dd73-435f-a8a7-9d6e2460bd6c}</destination>
 			<destination>{711ab1bc-e532-4d83-9b31-2a2135cc2b6f}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{59256829-b477-4777-93d5-422ef9fe3471}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{cabff4d0-90dd-4f0e-8799-fae5e49a873f}" />

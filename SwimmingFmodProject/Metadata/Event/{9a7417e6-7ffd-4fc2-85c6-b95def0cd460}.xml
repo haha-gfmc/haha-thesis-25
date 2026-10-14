@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{9a7417e6-7ffd-4fc2-85c6-b95def0cd460}">
 		<property name="name">
 			<value>D#5</value>
@@ -265,12 +265,12 @@
 		</property>
 	</object>
 	<object class="AutomationCurve" id="{c09fb2d4-37c3-4f35-933d-78b45a8dd650}">
-		<relationship name="parameter">
-			<destination>{02e26db9-1684-4efa-a21d-aa7bba293db2}</destination>
-		</relationship>
 		<relationship name="automationPoints">
 			<destination>{b444fc1f-242f-45e4-8b86-a46eb0849a78}</destination>
 			<destination>{0d59e511-1766-4f66-a668-da9ec30a3d9b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{02e26db9-1684-4efa-a21d-aa7bba293db2}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{557ae89a-53fc-4511-858b-f0fdac13397d}" />

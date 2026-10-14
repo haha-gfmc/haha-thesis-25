@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{d64848db-c227-40c3-b1d6-90871244da21}">
 		<property name="assetPath">
 			<value>Swimming/Swoosh/swoosh_stretchedAndReverbed-02.ogg</value>

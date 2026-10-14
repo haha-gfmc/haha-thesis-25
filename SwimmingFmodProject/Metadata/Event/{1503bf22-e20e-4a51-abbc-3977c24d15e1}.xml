@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{1503bf22-e20e-4a51-abbc-3977c24d15e1}">
 		<property name="name">
 			<value>Wipe With Note</value>

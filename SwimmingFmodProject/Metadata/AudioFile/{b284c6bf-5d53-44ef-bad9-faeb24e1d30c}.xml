@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{b284c6bf-5d53-44ef-bad9-faeb24e1d30c}">
 		<property name="assetPath">
 			<value>SFX/Plucked Strings/Bass Loop 3.mp3</value>

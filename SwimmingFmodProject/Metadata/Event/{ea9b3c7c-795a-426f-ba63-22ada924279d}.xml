@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{ea9b3c7c-795a-426f-ba63-22ada924279d}">
 		<property name="name">
 			<value>Daf</value>

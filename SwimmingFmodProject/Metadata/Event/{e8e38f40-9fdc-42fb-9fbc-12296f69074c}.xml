@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{e8e38f40-9fdc-42fb-9fbc-12296f69074c}">
 		<property name="name">
 			<value>Toy Car</value>
@@ -109,7 +109,6 @@
 		<property name="length">
 			<value>1.6000000000000001</value>
 		</property>
-		<property name="name" />
 		<relationship name="sounds">
 			<destination>{2e35c030-1575-4164-a501-37c3d5bc07e1}</destination>
 			<destination>{6d7c313d-2c12-4c8b-baa0-4b03aad5cf7b}</destination>

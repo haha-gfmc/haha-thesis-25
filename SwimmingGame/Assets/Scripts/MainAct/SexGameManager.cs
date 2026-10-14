@@ -56,7 +56,7 @@ public class SexGameManager : MonoBehaviour
     {
         // Calculate distances
         headToHeadDistance = Vector3.Distance(npcHead.position, playerHead.position);
-        playerBodyVelocity = playerBody.velocity.magnitude;
+        playerBodyVelocity = playerBody.linearVelocity.magnitude;
 
         // Get the mean distance from ropeMeanDistance
         float meanDistance = GetMeanDistance();

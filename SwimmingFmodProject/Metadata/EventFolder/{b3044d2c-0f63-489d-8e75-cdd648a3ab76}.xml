@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="EventFolder" id="{b3044d2c-0f63-489d-8e75-cdd648a3ab76}">
 		<property name="name">
 			<value>CoralNet</value>

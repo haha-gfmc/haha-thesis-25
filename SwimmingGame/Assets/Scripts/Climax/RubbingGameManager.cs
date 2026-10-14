@@ -79,8 +79,8 @@ public class RubbingGameManager : MonoBehaviour
     {
         // Calculate distances
         headToHeadDistance = Vector3.Distance(npcHead.position, playerHead.position);
-        playerBodyVelocity = playerBody != null ? playerBody.velocity.magnitude : 0f;
-        npcBodyVelocity = npcBody != null ? npcBody.velocity.magnitude : 0f;
+        playerBodyVelocity = playerBody != null ? playerBody.linearVelocity.magnitude : 0f;
+        npcBodyVelocity = npcBody != null ? npcBody.linearVelocity.magnitude : 0f;
 
         HandleBreathingAnimation();
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{7ab808d3-0c01-4ef8-932a-8005da69090d}">
 		<property name="name">
 			<value>Stab</value>
@@ -81,8 +81,8 @@
 	</object>
 	<object class="Timeline" id="{a56dd815-5f77-4efa-a115-62ec26ee8587}">
 		<relationship name="modules">
-			<destination>{ff532980-3fe0-4fc4-aad2-3ba454b2b299}</destination>
 			<destination>{e029f13c-5e8c-497e-aa7a-f51d62cb95af}</destination>
+			<destination>{ff532980-3fe0-4fc4-aad2-3ba454b2b299}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{9a06e638-e2fe-494b-bb48-c49480d7866a}">
@@ -109,7 +109,6 @@
 		<property name="length">
 			<value>1.4000000000000001</value>
 		</property>
-		<property name="name" />
 		<relationship name="sounds">
 			<destination>{dea1950f-4c15-41cd-b074-6c6bcbb8b6fd}</destination>
 			<destination>{aa37c9b7-8320-44a1-b712-93cfc46f4a52}</destination>
@@ -143,7 +142,6 @@
 		<property name="startOffset">
 			<value>5</value>
 		</property>
-		<property name="name" />
 		<relationship name="sounds">
 			<destination>{ecb5b52e-54e7-4007-a25a-53e901135c42}</destination>
 			<destination>{cb225795-78d1-4f7e-a338-15e19c5b1684}</destination>

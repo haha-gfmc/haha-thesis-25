@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{ca7ae238-9078-479a-b933-a8740515eeaf}">
 		<property name="name">
 			<value>Plastic</value>
@@ -90,9 +90,9 @@
 	</object>
 	<object class="Timeline" id="{8d656308-396b-4c3a-be4e-d3110dee1e17}">
 		<relationship name="modules">
+			<destination>{ac974f71-da2d-4584-a73f-47bfec47a5ae}</destination>
 			<destination>{98a0da73-8b7f-4e95-88d1-f5c7c7d1ad28}</destination>
 			<destination>{653f9e57-cbaa-47b4-a6ab-c2ea680e8b2d}</destination>
-			<destination>{ac974f71-da2d-4584-a73f-47bfec47a5ae}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{6bc1403c-3f59-4f3a-89ef-27e906a34701}">
@@ -119,7 +119,6 @@
 		<property name="length">
 			<value>0.75</value>
 		</property>
-		<property name="name" />
 		<relationship name="fadeOutCurve">
 			<destination>{bd26f2d5-576f-4b1f-8507-91ddaa0828d1}</destination>
 		</relationship>
@@ -205,7 +204,6 @@
 		<property name="startOffset">
 			<value>5</value>
 		</property>
-		<property name="name" />
 		<relationship name="sounds">
 			<destination>{b263e0a0-3283-47d7-a090-17326630f558}</destination>
 			<destination>{bd12b42f-dc4f-4e61-b8ab-f2a95b136637}</destination>

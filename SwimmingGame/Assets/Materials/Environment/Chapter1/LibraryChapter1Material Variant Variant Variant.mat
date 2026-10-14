@@ -8,18 +8,19 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: LibraryChapter1Material Variant Variant Variant
-  m_Shader: {fileID: -6465566751694194690, guid: 0d68c2931aaca894292f670d4e847707,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 0d68c2931aaca894292f670d4e847707, type: 3}
   m_Parent: {fileID: 2100000, guid: af4c3e40cb024364d84eacb3c8197910, type: 2}
   m_ModifiedSerializedProperties: 2
   m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _EMISSION
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -43,6 +44,7 @@ Material:
     - _BaseMapAlbedo: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
     - _RedAlbedo: {r: 0.4245283, g: 0.36645603, b: 0.36645603, a: 1}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!114 &1216449278193558465
 MonoBehaviour:
   m_ObjectHideFlags: 11
@@ -55,4 +57,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 7
+  version: 10

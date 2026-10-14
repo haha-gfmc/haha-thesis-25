@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{a3904ee9-e81a-4cf7-8212-1ac828bf08a8}">
 		<property name="assetPath">
 			<value>SFX/Drones/Underwater Water Ambience Boat Motor Idle 02.ogg</value>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{bb1ce7b3-fde1-489f-b92a-f85237a0a8d1}">
 		<property name="assetPath">
 			<value>SFX/Drones/Drone Production Element Imaging Science Fiction Rumble Solar Wind 02.ogg</value>

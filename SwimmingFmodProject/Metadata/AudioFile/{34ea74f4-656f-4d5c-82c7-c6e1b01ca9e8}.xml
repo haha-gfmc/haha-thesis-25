@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{34ea74f4-656f-4d5c-82c7-c6e1b01ca9e8}">
 		<property name="assetPath">
 			<value>SFX/Percussion Instruments/Melodic/Xylophone/xylophone-15.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>44.099998499999998</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>

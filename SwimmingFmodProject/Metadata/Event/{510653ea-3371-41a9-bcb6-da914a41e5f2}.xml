@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{510653ea-3371-41a9-bcb6-da914a41e5f2}">
 		<property name="name">
 			<value>Choke</value>
@@ -107,7 +107,6 @@
 		<property name="length">
 			<value>1.5</value>
 		</property>
-		<property name="name" />
 		<relationship name="sounds">
 			<destination>{adad2bb8-614c-4a4b-9643-1bb211d47a53}</destination>
 			<destination>{c89a153a-9608-48d7-9b9c-692b0adcfb21}</destination>
@@ -143,7 +142,6 @@
 		<property name="length">
 			<value>0.5</value>
 		</property>
-		<property name="name" />
 		<relationship name="sounds">
 			<destination>{f5f5c735-b43c-4bd6-8461-e29c2682367e}</destination>
 			<destination>{252a7d1e-0158-4725-bdff-6525eb7b9c06}</destination>
@@ -165,7 +163,6 @@
 		<property name="length">
 			<value>0.5</value>
 		</property>
-		<property name="name" />
 		<relationship name="sounds">
 			<destination>{6cc1dfcc-9418-4cbc-ac18-8d4e9428f21a}</destination>
 			<destination>{9f412087-26ce-4080-afcf-615f8a76282f}</destination>
