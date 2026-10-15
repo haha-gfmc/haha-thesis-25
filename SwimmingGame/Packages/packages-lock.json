@@ -1,10 +1,11 @@
 {
   "dependencies": {
     "com.fmod.fmod-for-unity.v204": {
-      "version": "file:C:/Users/mamem/Downloads/fmodstudio20400/package",
+      "version": "2.4.0",
       "depth": 0,
-      "source": "local",
-      "dependencies": {}
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
     },
     "com.inkle.ink-unity-integration": {
       "version": "https://github.com/inkle/ink-unity-integration.git#upm",
