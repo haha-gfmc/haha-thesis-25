@@ -53,8 +53,8 @@ Material:
     - _Fullscreen_DstColorBlend: 10
     - _Fullscreen_SrcAlphaBlend: 1
     - _Fullscreen_SrcColorBlend: 5
-    - _Magnification: -0
-    - _PulseTime: 0.05
+    - _Magnification: 0
+    - _PulseTime: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Size: 0

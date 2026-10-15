@@ -41,6 +41,8 @@ public class MigrationGenerator : MonoBehaviour
     [Tooltip("When npc num to max npc number is past this ratio, stop generating npcs forward in the path.")]
     public float maxNPCNumToMaxRatio=.5f;
 
+    public Transform migrantsParent;
+
     void Start()
     {
         scale=transform.lossyScale;
@@ -113,7 +115,9 @@ public class MigrationGenerator : MonoBehaviour
     void Generate(Transform t){
         npcNum+=1;
         Vector3 pos=Vector3.ClampMagnitude(new Vector3(Random.Range(-1f,1f),Random.Range(-1f,1f),Random.Range(-1f,1f)),1f)*scale.magnitude;
-        GameObject npc=Instantiate(npcPrefab,t.position+pos,npcPrefab.transform.rotation);
+        GameObject npc;
+        if(migrantsParent!=null) npc=Instantiate(npcPrefab,t.position+pos,npcPrefab.transform.rotation,migrantsParent);
+        else npc=Instantiate(npcPrefab,t.position+pos,npcPrefab.transform.rotation);
         MigrationNPC migrationNPC;
         if(npc.TryGetComponent<MigrationNPC>(out migrationNPC)) migrationNPC.path.transform.position=transform.position+pos;
         //npc.transform.position=pos;
