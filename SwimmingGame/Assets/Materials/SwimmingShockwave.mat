@@ -8,8 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SwimmingShockwave
-  m_Shader: {fileID: -6465566751694194690, guid: 7265187a50a4f7a4fbbc82ec59e31f1a,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 7265187a50a4f7a4fbbc82ec59e31f1a, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -54,8 +53,8 @@ Material:
     - _Fullscreen_DstColorBlend: 10
     - _Fullscreen_SrcAlphaBlend: 1
     - _Fullscreen_SrcColorBlend: 5
-    - _Magnification: 0
-    - _PulseTime: 0.5037189
+    - _Magnification: -0
+    - _PulseTime: 0.05
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Size: 0
@@ -63,6 +62,7 @@ Material:
     m_Colors:
     - _FocalPoint: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!114 &3088474233838644714
 MonoBehaviour:
   m_ObjectHideFlags: 11
