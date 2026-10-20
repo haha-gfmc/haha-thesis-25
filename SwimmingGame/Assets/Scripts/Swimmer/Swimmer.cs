@@ -4,7 +4,6 @@ using System.Security.Cryptography;
 using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEditor;
-using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Timeline;
 
