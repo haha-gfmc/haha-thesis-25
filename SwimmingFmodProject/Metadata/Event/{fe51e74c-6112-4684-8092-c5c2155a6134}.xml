@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{fe51e74c-6112-4684-8092-c5c2155a6134}">
 		<property name="name">
 			<value>AmbientSwimming</value>
@@ -301,12 +301,12 @@
 		</property>
 	</object>
 	<object class="AutomationCurve" id="{393b1ca2-c11e-460c-b577-f12fae4aece0}">
-		<relationship name="parameter">
-			<destination>{7a9701d7-125b-4204-b896-4f7fd979ce51}</destination>
-		</relationship>
 		<relationship name="automationPoints">
 			<destination>{53a72781-9997-43b5-9523-41d59fc03b37}</destination>
 			<destination>{b73897a6-d28c-426f-a8c4-3a00b3ce7899}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{7a9701d7-125b-4204-b896-4f7fd979ce51}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{4f4d4626-545d-4122-b7b6-2a5d43eb611f}" />

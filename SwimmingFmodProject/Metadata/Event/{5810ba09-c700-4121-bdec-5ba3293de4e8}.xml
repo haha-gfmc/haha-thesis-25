@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{5810ba09-c700-4121-bdec-5ba3293de4e8}">
 		<property name="name">
 			<value>Xylo</value>
@@ -102,7 +102,6 @@
 		<property name="startOffset">
 			<value>5</value>
 		</property>
-		<property name="name" />
 		<relationship name="sounds">
 			<destination>{8abcf596-4832-4a51-9c72-48a018b842c2}</destination>
 			<destination>{5294364e-9466-4bbd-a861-124c28342cc9}</destination>

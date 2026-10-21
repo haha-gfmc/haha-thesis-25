@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{7700ff12-be8c-4d71-898d-d3dc79ebd751}">
 		<property name="name">
 			<value>Climax End</value>
@@ -96,8 +96,8 @@
 	<object class="Timeline" id="{a14cf825-dbed-4b9c-b91d-4f841dfba6fb}">
 		<relationship name="modules">
 			<destination>{b5a509ce-b770-4e62-b167-bd8ae7b78643}</destination>
-			<destination>{d437a510-e67a-4ec7-a4b1-9821badb1b99}</destination>
 			<destination>{771b2d47-974c-49cd-a20f-3f9a75ce8577}</destination>
+			<destination>{d437a510-e67a-4ec7-a4b1-9821badb1b99}</destination>
 			<destination>{95ed638c-6b0a-40ed-957f-71615f152efc}</destination>
 		</relationship>
 	</object>

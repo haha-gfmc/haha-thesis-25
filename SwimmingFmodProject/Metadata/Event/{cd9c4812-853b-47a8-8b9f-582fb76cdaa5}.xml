@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{cd9c4812-853b-47a8-8b9f-582fb76cdaa5}">
 		<property name="name">
 			<value>Toy Accordion</value>
@@ -112,7 +112,6 @@
 		<property name="length">
 			<value>3.5</value>
 		</property>
-		<property name="name" />
 		<property name="looping">
 			<value>true</value>
 		</property>

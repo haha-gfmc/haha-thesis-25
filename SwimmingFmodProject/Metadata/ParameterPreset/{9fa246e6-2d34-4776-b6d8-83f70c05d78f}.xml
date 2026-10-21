@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="ParameterPreset" id="{9fa246e6-2d34-4776-b6d8-83f70c05d78f}">
 		<property name="name">
 			<value>Go To Outro</value>

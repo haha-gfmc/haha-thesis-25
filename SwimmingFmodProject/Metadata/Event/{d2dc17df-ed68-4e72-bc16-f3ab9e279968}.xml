@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{d2dc17df-ed68-4e72-bc16-f3ab9e279968}">
 		<property name="name">
 			<value>Toy Rattle</value>
@@ -96,7 +96,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{dcc31836-9647-40d0-b334-31eb50c5fc43}" />
 	<object class="MultiSound" id="{056acdbf-9f51-4b91-a0a9-f31376287721}">
-		<property name="name" />
 		<relationship name="sounds">
 			<destination>{407a5d04-a10d-4daf-a468-35288321a1d6}</destination>
 			<destination>{338095e7-f70a-46cb-a91e-130a505effda}</destination>

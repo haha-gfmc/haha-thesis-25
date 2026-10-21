@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{c2c45c1b-15c6-41c9-8a5f-659c73edf73b}">
 		<property name="name">
 			<value>FM Conclusion</value>
@@ -96,9 +96,9 @@
 	<object class="Timeline" id="{c9986627-90dd-434c-af43-800bbfc64f6f}">
 		<relationship name="modules">
 			<destination>{c7f6a229-689c-41dc-9f38-dc2fee5e575b}</destination>
-			<destination>{b376f8a3-73a9-4f82-8730-2e33532b3545}</destination>
 			<destination>{5d3a817a-880f-4742-8e5c-0ea96b682928}</destination>
 			<destination>{405bd7d2-6705-40c2-901a-274a812f60c8}</destination>
+			<destination>{b376f8a3-73a9-4f82-8730-2e33532b3545}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{31b75a25-85ae-4ae6-a8d4-f434e2ee858b}">

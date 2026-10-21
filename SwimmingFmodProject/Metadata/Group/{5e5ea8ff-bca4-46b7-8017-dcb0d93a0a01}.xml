@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="MixerGroup" id="{5e5ea8ff-bca4-46b7-8017-dcb0d93a0a01}">
 		<property name="name">
 			<value>CoralNet</value>

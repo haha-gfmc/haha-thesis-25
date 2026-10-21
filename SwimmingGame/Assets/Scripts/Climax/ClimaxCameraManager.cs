@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
-using Cinemachine;
+
 
 public class ClimaxCameraManager : MonoBehaviour
 {
-    public CinemachineVirtualCamera climaxCamera; 
+    public Unity.Cinemachine.CinemachineVirtualCamera climaxCamera; 
     public List<Transform> cameraPositions; // Reference points for camera positions
     public List<float> cameraHoldDurations; // Time to hold each camera position
     public List<float> cameraZooms;
@@ -80,8 +80,8 @@ public class ClimaxCameraManager : MonoBehaviour
             camTransform.rotation = Quaternion.Slerp(camTransform.rotation, targetPos.rotation, transitionSpeed * Time.unscaledDeltaTime);
 
             // Zoom in
-            CinemachineCameraOffset offset = climaxCamera.GetComponent<CinemachineCameraOffset>();
-            offset.m_Offset.z = Mathf.Lerp(offset.m_Offset.z, cameraZooms[currentPosIndex], cameraZoomSpeed * Time.unscaledDeltaTime);
+            Unity.Cinemachine.CinemachineCameraOffset offset = climaxCamera.GetComponent<Unity.Cinemachine.CinemachineCameraOffset>();
+            offset.Offset.z = Mathf.Lerp(offset.Offset.z, cameraZooms[currentPosIndex], cameraZoomSpeed * Time.unscaledDeltaTime);
 
             // Switch to next position after holdTimer completes
             if (holdTimer >= cameraHoldDurations[currentPosIndex])

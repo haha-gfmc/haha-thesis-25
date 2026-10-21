@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{2d9aa4dd-5d9a-499a-a66e-35247e57a0fe}">
 		<property name="name">
 			<value>Kickback</value>
@@ -86,9 +86,9 @@
 	</object>
 	<object class="Timeline" id="{bc7f5d9a-7a71-4ee5-9796-a14d88b176d2}">
 		<relationship name="modules">
-			<destination>{4de7ec97-1a1a-4844-b0eb-7ca553f12f98}</destination>
-			<destination>{cd91c642-5802-404f-9c37-412f2a323efe}</destination>
 			<destination>{566e2e53-ea0a-436e-87fa-b93a0fd52329}</destination>
+			<destination>{cd91c642-5802-404f-9c37-412f2a323efe}</destination>
+			<destination>{4de7ec97-1a1a-4844-b0eb-7ca553f12f98}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{f894a1a8-1263-45ab-a8b0-d06b95082581}">

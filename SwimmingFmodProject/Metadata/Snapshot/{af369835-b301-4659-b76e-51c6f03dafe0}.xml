@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Snapshot" id="{af369835-b301-4659-b76e-51c6f03dafe0}">
 		<property name="name">
 			<value>Trance-Mode</value>
@@ -28,9 +28,9 @@
 			<destination>{0159eae2-3be2-48ee-9d9b-8030ef4fe614}</destination>
 		</relationship>
 		<relationship name="snapshotTracks">
-			<destination>{f26fdda0-2582-4277-a52d-8961a01c2670}</destination>
 			<destination>{b9696baa-aa3b-4b00-bfb0-d48bd6426c57}</destination>
 			<destination>{33efa3c7-b91d-4400-ad9d-c29275870c5f}</destination>
+			<destination>{f26fdda0-2582-4277-a52d-8961a01c2670}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{1ad8f4ef-cbb0-4752-af2c-f5943e41b9c7}" />
@@ -70,11 +70,6 @@
 			<destination>{67bb92cd-da29-4a32-a4a2-19f83b829e13}</destination>
 		</relationship>
 	</object>
-	<object class="SnapshotTrack" id="{f26fdda0-2582-4277-a52d-8961a01c2670}">
-		<relationship name="mixerStrip">
-			<destination>{8aad12d0-6c71-45c9-969e-5f60cfc660ea}</destination>
-		</relationship>
-	</object>
 	<object class="SnapshotTrack" id="{b9696baa-aa3b-4b00-bfb0-d48bd6426c57}">
 		<relationship name="mixerStrip">
 			<destination>{0cbbad10-6158-4c0d-a851-60569f6a9ad4}</destination>
@@ -83,6 +78,11 @@
 	<object class="SnapshotTrack" id="{33efa3c7-b91d-4400-ad9d-c29275870c5f}">
 		<relationship name="mixerStrip">
 			<destination>{67bb92cd-da29-4a32-a4a2-19f83b829e13}</destination>
+		</relationship>
+	</object>
+	<object class="SnapshotTrack" id="{f26fdda0-2582-4277-a52d-8961a01c2670}">
+		<relationship name="mixerStrip">
+			<destination>{8aad12d0-6c71-45c9-969e-5f60cfc660ea}</destination>
 		</relationship>
 	</object>
 </objects>

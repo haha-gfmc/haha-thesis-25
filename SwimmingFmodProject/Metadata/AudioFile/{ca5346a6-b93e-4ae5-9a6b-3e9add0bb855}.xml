@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{ca5346a6-b93e-4ae5-9a6b-3e9add0bb855}">
 		<property name="assetPath">
 			<value>SFX/Percussion Instruments/Atonal/Drumset_Analog/reversedCymbal.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>44.099998499999998</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>

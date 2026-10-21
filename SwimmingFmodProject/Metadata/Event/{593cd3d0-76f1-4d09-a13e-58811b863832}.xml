@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{593cd3d0-76f1-4d09-a13e-58811b863832}">
 		<property name="name">
 			<value>Celesta</value>
@@ -81,8 +81,8 @@
 	</object>
 	<object class="Timeline" id="{ca2bc5d3-d17c-4cb1-ac04-f408ec2ceab3}">
 		<relationship name="modules">
-			<destination>{ae92d9ca-e951-42d7-9438-187145584b46}</destination>
 			<destination>{bf95f091-ded5-46e7-801c-79a046665983}</destination>
+			<destination>{ae92d9ca-e951-42d7-9438-187145584b46}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{ea60bddb-4fd1-41e5-bc29-08c3f190a029}">

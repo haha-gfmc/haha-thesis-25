@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9a5969691dba845877d0a52b6d9397, type: 3}
   m_Name: UnityGLTFSettings
   m_EditorClassIdentifier: 
-  packageVersion: 
+  packageVersion: 2.23.0
   shaderStrippingSettings:
     stripPassesFromAllShaders: 0
     stripPasses: 0
@@ -247,6 +247,8 @@ MonoBehaviour:
   - {fileID: -5241738835819772949}
   - {fileID: 5012528202696278448}
   - {fileID: -3882300564340305513}
+  - {fileID: 7710727795653375209}
+  - {fileID: 8387254967993519118}
   ExportPlugins:
   - {fileID: -4915661304435318179}
   - {fileID: -6768439730290630531}
@@ -418,4 +420,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984138db70144b97b48597182a21b46c, type: 3}
   m_Name: TextureTransformExport
   m_EditorClassIdentifier: 
+  enabled: 1
+--- !u!114 &7710727795653375209
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5d73111d7b6493da937accca1adfe6a, type: 3}
+  m_Name: WebpImport
+  m_EditorClassIdentifier: UnityGLTFScripts::UnityGLTF.Plugins.WebpImport
+  enabled: 1
+--- !u!114 &8387254967993519118
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de1f726221454139bfcce49d994d9d05, type: 3}
+  m_Name: ExrImport
+  m_EditorClassIdentifier: UnityGLTFScripts::UnityGLTF.Plugins.ExrImport
   enabled: 1

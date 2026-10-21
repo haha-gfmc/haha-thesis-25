@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{da983bb2-837a-4f68-bacf-3f1d4b9b8ed7}">
 		<property name="assetPath">
 			<value>Music/partyMusic/gentleLoop.ogg</value>
@@ -8,7 +8,7 @@
 			<value>true</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>44.099998499999998</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>

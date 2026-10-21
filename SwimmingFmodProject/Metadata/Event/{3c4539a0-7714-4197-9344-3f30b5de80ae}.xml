@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{3c4539a0-7714-4197-9344-3f30b5de80ae}">
 		<property name="name">
 			<value>FM Freaks</value>
@@ -109,7 +109,6 @@
 		<property name="startOffset">
 			<value>5</value>
 		</property>
-		<property name="name" />
 		<relationship name="sounds">
 			<destination>{8b7c495b-97d7-4147-82d0-11cd432bb9ab}</destination>
 			<destination>{faa15cd8-3502-40ad-ac09-534c35e058b4}</destination>
@@ -151,7 +150,6 @@
 		<property name="startOffset">
 			<value>7</value>
 		</property>
-		<property name="name" />
 		<relationship name="sounds">
 			<destination>{32ac628a-e27a-4d70-9ea2-06dcb603d7a7}</destination>
 			<destination>{2f6e61b1-c1ca-4ba4-9e20-eb9d09298bc1}</destination>

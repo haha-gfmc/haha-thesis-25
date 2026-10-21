@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="EncodableAsset" id="{7d42f2f0-0f60-4b22-85b8-683d25d68159}">
 		<property name="assetPath">
 			<value>SFX/Bubbles/</value>

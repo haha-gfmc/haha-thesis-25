@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{32c31cea-cba6-4fd8-abb4-2741961d629a}">
 		<property name="name">
 			<value>Cuddle2.2Music</value>
@@ -193,22 +193,22 @@
 	<object class="MixerBusPanner" id="{38296b4a-9d04-4e8c-ab90-d624010ea8bd}" />
 	<object class="MixerBusFader" id="{fd9f8cdc-2462-4fee-a717-1db762fff871}" />
 	<object class="AutomationCurve" id="{5ef3bc42-f7d2-4bae-ad66-c893bf1f9c7e}">
-		<relationship name="parameter">
-			<destination>{032338c5-d470-4b76-877d-51f93e188635}</destination>
-		</relationship>
 		<relationship name="automationPoints">
 			<destination>{696f9c9e-8dae-4770-8119-8e518dd665c4}</destination>
 			<destination>{36ce8a69-3060-4ec1-b334-f5b2f8b2cc59}</destination>
 		</relationship>
+		<relationship name="parameter">
+			<destination>{032338c5-d470-4b76-877d-51f93e188635}</destination>
+		</relationship>
 	</object>
 	<object class="AutomationCurve" id="{c2617f92-e086-46f1-a463-2c947106472c}">
-		<relationship name="parameter">
-			<destination>{0c485b50-bc63-4058-8c32-d70c184081c4}</destination>
-		</relationship>
 		<relationship name="automationPoints">
 			<destination>{8a5cee17-5f06-41dc-aa30-eda875245da5}</destination>
 			<destination>{bb27694e-11e1-4176-be8a-39a21d454e66}</destination>
 			<destination>{1a2b8e3f-1169-494f-acd2-0696b295ffe7}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{0c485b50-bc63-4058-8c32-d70c184081c4}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{49766faa-83de-43d2-9644-cf1a3b826c1c}" />

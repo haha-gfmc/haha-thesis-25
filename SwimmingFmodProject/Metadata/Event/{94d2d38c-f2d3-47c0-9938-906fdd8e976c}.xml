@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{94d2d38c-f2d3-47c0-9938-906fdd8e976c}">
 		<property name="name">
 			<value>Wipe With Note - Short</value>
@@ -86,9 +86,9 @@
 	</object>
 	<object class="Timeline" id="{38e0fc5e-13c3-4301-94fe-592f4414157f}">
 		<relationship name="modules">
+			<destination>{9ee3b183-5da6-4007-bb56-30e3b25ffe2a}</destination>
 			<destination>{b441e9e9-83f9-4778-ba4b-6efb867f1e08}</destination>
 			<destination>{a96b538f-22d7-4d94-9298-98ecd7e9ba58}</destination>
-			<destination>{9ee3b183-5da6-4007-bb56-30e3b25ffe2a}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{99aa03c4-3b91-453d-8502-fcadde828456}">

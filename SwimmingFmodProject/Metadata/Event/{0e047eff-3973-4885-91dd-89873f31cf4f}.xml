@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{0e047eff-3973-4885-91dd-89873f31cf4f}">
 		<property name="name">
 			<value>introNoise</value>
@@ -154,21 +154,13 @@
 		</relationship>
 	</object>
 	<object class="AutomationCurve" id="{0d022bf7-5077-42f6-af9e-7bd4209a526e}">
+		<relationship name="automationPoints">
+			<destination>{a48d5a92-7f62-48f8-a621-8036054165d3}</destination>
+			<destination>{0c5620be-cb09-447e-8313-fddfca4789c2}</destination>
+		</relationship>
 		<relationship name="parameter">
 			<destination>{e281ac28-cb8a-462c-9d60-a9ae38512267}</destination>
 		</relationship>
-		<relationship name="automationPoints">
-			<destination>{0c5620be-cb09-447e-8313-fddfca4789c2}</destination>
-			<destination>{a48d5a92-7f62-48f8-a621-8036054165d3}</destination>
-		</relationship>
-	</object>
-	<object class="AutomationPoint" id="{0c5620be-cb09-447e-8313-fddfca4789c2}">
-		<property name="position">
-			<value>0</value>
-		</property>
-		<property name="value">
-			<value>0</value>
-		</property>
 	</object>
 	<object class="AutomationPoint" id="{a48d5a92-7f62-48f8-a621-8036054165d3}">
 		<property name="position">
@@ -176,6 +168,14 @@
 		</property>
 		<property name="value">
 			<value>1</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{0c5620be-cb09-447e-8313-fddfca4789c2}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>0</value>
 		</property>
 	</object>
 </objects>

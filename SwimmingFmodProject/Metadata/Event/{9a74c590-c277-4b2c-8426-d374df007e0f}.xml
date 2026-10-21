@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{9a74c590-c277-4b2c-8426-d374df007e0f}">
 		<property name="name">
 			<value>bassLoop 2</value>
@@ -228,9 +228,9 @@
 			<value>2.0689583333333332</value>
 		</property>
 		<relationship name="modules">
+			<destination>{af050be9-5f46-4b37-9785-3b5d60e15ae9}</destination>
 			<destination>{dabaafa0-563a-4509-9ce9-827d119af357}</destination>
 			<destination>{59efe949-3991-460c-9da9-c4ed38a4682e}</destination>
-			<destination>{af050be9-5f46-4b37-9785-3b5d60e15ae9}</destination>
 			<destination>{4b82c99a-ab58-4254-bb4d-088470bfa8df}</destination>
 		</relationship>
 	</object>
@@ -249,8 +249,8 @@
 			<value>-4.5</value>
 		</property>
 		<relationship name="automators">
-			<destination>{3e0f8302-dce1-4b03-b621-c5f7fee3374b}</destination>
 			<destination>{8fb5f102-0e5d-464c-bc69-15c3395ca55b}</destination>
+			<destination>{3e0f8302-dce1-4b03-b621-c5f7fee3374b}</destination>
 		</relationship>
 	</object>
 	<object class="MultibandEqEffect" id="{cfa8d443-3425-4f41-b8b9-822a1a3d4060}">
@@ -327,14 +327,14 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{2c2b24a9-ab04-4365-af03-ab28eb8b6662}" />
-	<object class="Automator" id="{3e0f8302-dce1-4b03-b621-c5f7fee3374b}">
-		<property name="nameOfPropertyBeingAutomated">
-			<value>wetLevel</value>
-		</property>
-	</object>
 	<object class="Automator" id="{8fb5f102-0e5d-464c-bc69-15c3395ca55b}">
 		<property name="nameOfPropertyBeingAutomated">
 			<value>dryLevel</value>
+		</property>
+	</object>
+	<object class="Automator" id="{3e0f8302-dce1-4b03-b621-c5f7fee3374b}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>wetLevel</value>
 		</property>
 	</object>
 	<object class="Automator" id="{26da6b3f-fef9-490b-9414-eeb43f22fbe9}">

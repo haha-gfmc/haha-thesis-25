@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{59f775b4-b328-46be-b7ab-43827e5f1982}">
 		<property name="assetPath">
 			<value>Swimming/ambientSwimming.ogg</value>

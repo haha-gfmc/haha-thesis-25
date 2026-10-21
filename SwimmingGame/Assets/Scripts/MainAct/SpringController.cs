@@ -1,4 +1,4 @@
-using Cinemachine;
+
 using FMOD.Studio;
 using FMODUnity;
 using System.Collections;
@@ -13,7 +13,7 @@ public class SpringController : SexSpring
 {
     [Header("Game Objects")]
     public Camera playerCamera;
-    public CinemachineVirtualCamera virtualCamera;
+    public Unity.Cinemachine.CinemachineVirtualCamera virtualCamera;
     public Animator organAnimator;
 
     [Header("Camera Parameters")]
@@ -24,10 +24,10 @@ public class SpringController : SexSpring
     public float ZoomInCameraDistance;
     public float shakeAmplitude = 0.2f; 
     public float shakeFrequency=3f;
-    public NoiseSettings cameraNoiseSettings;
+    public Unity.Cinemachine.NoiseSettings cameraNoiseSettings;
     private float ogShakeAmplitude, ogShakeFrequency;
-    private NoiseSettings ogCameraNoiseSettings;
-    private CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin;
+    private Unity.Cinemachine.NoiseSettings ogCameraNoiseSettings;
+    private Unity.Cinemachine.CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin;
     public bool lockCamera;
 
     public bool canMove = true; // Flag to enable/disable movement
@@ -36,7 +36,7 @@ public class SpringController : SexSpring
     private bool isAligningWithCamera = false;
     private bool isShaking;
 
-    private Cinemachine3rdPersonFollow thirdPersonFollow;
+    private Unity.Cinemachine.Cinemachine3rdPersonFollow thirdPersonFollow;
     private Vector2 movementVector;
     private Vector3 initialCameraPosition;
     private int cameraDistance; // 0 zoom in, 1 default, 2 zoom out
@@ -51,14 +51,14 @@ public class SpringController : SexSpring
         SpringStart();
 
         playerInput = FindObjectOfType<PlayerInput>();
-        thirdPersonFollow = virtualCamera.GetCinemachineComponent<Cinemachine3rdPersonFollow>();
+        thirdPersonFollow = virtualCamera.GetCinemachineComponent<Unity.Cinemachine.Cinemachine3rdPersonFollow>();
 
         chargingInstance = RuntimeManager.CreateInstance("event:/Sex/Charge");
 
-        cinemachineBasicMultiChannelPerlin = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-        ogShakeAmplitude=cinemachineBasicMultiChannelPerlin.m_AmplitudeGain;
-        ogShakeFrequency=cinemachineBasicMultiChannelPerlin.m_FrequencyGain;
-        ogCameraNoiseSettings=cinemachineBasicMultiChannelPerlin.m_NoiseProfile;
+        cinemachineBasicMultiChannelPerlin = virtualCamera.GetCinemachineComponent<Unity.Cinemachine.CinemachineBasicMultiChannelPerlin>();
+        ogShakeAmplitude=cinemachineBasicMultiChannelPerlin.AmplitudeGain;
+        ogShakeFrequency=cinemachineBasicMultiChannelPerlin.FrequencyGain;
+        ogCameraNoiseSettings=cinemachineBasicMultiChannelPerlin.NoiseProfile;
     }
 
     private void Update()
@@ -199,12 +199,12 @@ public class SpringController : SexSpring
         }
     }
 
-    void InhaleCameraFeedback(float amplitude, float frequency, NoiseSettings noiseSettings)
+    void InhaleCameraFeedback(float amplitude, float frequency, Unity.Cinemachine.NoiseSettings noiseSettings)
     {
         // Shake and zoom in camera
-        cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = amplitude;
-        cinemachineBasicMultiChannelPerlin.m_FrequencyGain = frequency;
-        cinemachineBasicMultiChannelPerlin.m_NoiseProfile=noiseSettings;
+        cinemachineBasicMultiChannelPerlin.AmplitudeGain = amplitude;
+        cinemachineBasicMultiChannelPerlin.FrequencyGain = frequency;
+        cinemachineBasicMultiChannelPerlin.NoiseProfile=noiseSettings;
     }
 
     void LerpCameraDistance()

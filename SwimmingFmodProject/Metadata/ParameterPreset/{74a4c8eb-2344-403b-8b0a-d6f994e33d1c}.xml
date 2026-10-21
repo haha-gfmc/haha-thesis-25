@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="ParameterPreset" id="{74a4c8eb-2344-403b-8b0a-d6f994e33d1c}">
 		<property name="name">
 			<value>Loop 5</value>
@@ -18,11 +18,22 @@
 		<property name="initialValue">
 			<value>0</value>
 		</property>
-		<property name="seekSpeed">
-			<value>0.5</value>
-		</property>
 		<property name="isExposedRecursively">
 			<value>false</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{0244acd9-34b3-496e-be87-303ca408c9ec}</destination>
+		</relationship>
+	</object>
+	<object class="SeekModulator" id="{0244acd9-34b3-496e-be87-303ca408c9ec}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>cursorPosition</value>
+		</property>
+		<property name="clockSource">
+			<value>1</value>
+		</property>
+		<property name="speedAscending">
+			<value>0.5</value>
 		</property>
 	</object>
 </objects>

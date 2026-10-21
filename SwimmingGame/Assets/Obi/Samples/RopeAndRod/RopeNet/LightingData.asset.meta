@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cf9f2acc598e14d729c2405c2a5db748
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 112000000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 55579
+  packageName: Obi Rope
+  packageVersion: 7.2
+  assetPath: Assets/Obi/Samples/RopeAndRod/RopeNet/LightingData.asset
+  uploadId: 981592

@@ -103,6 +103,6 @@ public class RubbingTips : MonoBehaviour
 
 
         // Apply drag to gradually slow down the object
-        rb.velocity *= dragFactor;
+        rb.linearVelocity *= dragFactor;
     }
 }
