@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{c5cf77b7-a346-4dea-bf06-f2d9625cf16e}">
 		<property name="assetPath">
 			<value>Music/partyMusic/noise3.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>44.099998499999998</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>

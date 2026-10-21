@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{372c1cb9-aec0-492d-9ef3-38d3d4dfefe9}">
 		<property name="assetPath">
 			<value>SFX/Mouth Sounds/popping_small-05.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>44.099998499999998</value>
 		</property>
 		<property name="channelCount">
 			<value>1</value>

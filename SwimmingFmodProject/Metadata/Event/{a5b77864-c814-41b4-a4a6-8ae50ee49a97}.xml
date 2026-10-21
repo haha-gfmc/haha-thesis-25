@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{a5b77864-c814-41b4-a4a6-8ae50ee49a97}">
 		<property name="name">
 			<value>Triangle</value>

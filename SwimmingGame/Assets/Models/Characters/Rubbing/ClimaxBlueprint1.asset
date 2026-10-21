@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7e67b5626124d0db9886e6cd2aacff, type: 3}
+  m_Name: ClimaxBlueprint1
+  m_EditorClassIdentifier: Obi::Obi.ObiRopeBlueprint
+  m_Checksum: 0
+  m_Empty: 1
+  m_Edited: 0
+  m_ActiveParticleCount: 0
+  m_InitialActiveParticleCount: 0
+  _bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  positions: []
+  restPositions: []
+  restNormals: []
+  orientations: []
+  restOrientations: []
+  velocities: []
+  angularVelocities: []
+  invMasses: []
+  invRotationalMasses: []
+  filters: 
+  principalRadii: []
+  colors: []
+  points: 
+  edges: 
+  triangles: 
+  distanceConstraintsData:
+    batches: []
+  bendConstraintsData:
+    batches: []
+  skinConstraintsData:
+    batches: []
+  tetherConstraintsData:
+    batches: []
+  stretchShearConstraintsData:
+    batches: []
+  bendTwistConstraintsData:
+    batches: []
+  shapeMatchingConstraintsData:
+    batches: []
+  aerodynamicConstraintsData:
+    batches: []
+  chainConstraintsData:
+    batches: []
+  volumeConstraintsData:
+    batches: []
+  groups: []
+  path:
+    m_Names:
+    - control point
+    m_Points:
+      data:
+      - tangentMode: 0
+        inTangent: {x: -0.25, y: 0, z: 0}
+        position: {x: -1, y: 0, z: 0}
+        outTangent: {x: 0.25, y: 0, z: 0}
+    m_Normals:
+      data:
+      - {x: 0, y: 1, z: 0}
+    m_Colors:
+      data:
+      - {r: 1, g: 1, b: 1, a: 1}
+    m_Thickness:
+      data:
+      - 1
+    m_Masses:
+      data:
+      - 0.1
+    m_RotationalMasses:
+      data:
+      - 1
+    m_Filters:
+      data: 0200ffffi
+    m_Closed: 0
+    m_ArcLengthTable: []
+    m_TotalSplineLenght: 0
+    OnPathChanged:
+      m_PersistentCalls:
+        m_Calls: []
+    OnControlPointAdded:
+      m_PersistentCalls:
+        m_Calls: []
+    OnControlPointRemoved:
+      m_PersistentCalls:
+        m_Calls: []
+    OnControlPointRenamed:
+      m_PersistentCalls:
+        m_Calls: []
+  thickness: 0.1
+  resolution: 1
+  m_InterParticleDistance: 0
+  totalParticles: 0
+  m_RestLength: 0
+  deformableEdges: 
+  restLengths: []
+  pooledParticles: 100

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{b410c0fd-613e-4e45-b022-77882b8403d5}">
 		<property name="name">
 			<value>Tubular Bells</value>
@@ -81,8 +81,8 @@
 	</object>
 	<object class="Timeline" id="{0ef34778-5d01-4de3-b3a5-f30add547b61}">
 		<relationship name="modules">
-			<destination>{fbcbbbc8-02e4-4e4a-ae96-71bf22f16e1b}</destination>
 			<destination>{fc0fe9d1-56c5-4e5e-a979-2914357fc119}</destination>
+			<destination>{fbcbbbc8-02e4-4e4a-ae96-71bf22f16e1b}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{d48a824f-ab98-41a2-8eca-98fecb25a7d8}">

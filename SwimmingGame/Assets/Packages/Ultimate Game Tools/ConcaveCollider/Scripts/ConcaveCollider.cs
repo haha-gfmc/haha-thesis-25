@@ -28,12 +28,12 @@ public class ConcaveCollider : MonoBehaviour
                        public bool             NormalizeInputMesh          = false;
                        public bool             ForceNoMultithreading       = false;
 
-                       public PhysicMaterial   PhysMaterial                = null;
+                       public PhysicsMaterial   PhysMaterial                = null;
                        public bool             IsTrigger                   = false;
 
                        public GameObject[]     m_aGoHulls                  = null;
 
-    [SerializeField]   private PhysicMaterial  LastMaterial                = null;
+    [SerializeField]   private PhysicsMaterial  LastMaterial                = null;
     [SerializeField]   private bool            LastIsTrigger               = false;
 
     [SerializeField]   private int             LargestHullVertices         = 0;
@@ -130,7 +130,7 @@ public class ConcaveCollider : MonoBehaviour
 
         if(CreateMeshAssets)
         {
-            strMeshAssetPath = UnityEditor.EditorUtility.SaveFilePanelInProject("Save mesh asset", "mesh_" + gameObject.name + this.GetInstanceID().ToString() + ".asset", "asset", "Please enter a file name to save the mesh asset to");
+            strMeshAssetPath = UnityEditor.EditorUtility.SaveFilePanelInProject("Save mesh asset", "mesh_" + gameObject.name + this.GetEntityId().ToString() + ".asset", "asset", "Please enter a file name to save the mesh asset to");
 
             if(strMeshAssetPath.Length == 0)
             {

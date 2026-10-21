@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{b37890f9-a449-43e6-9688-867c510de272}">
 		<property name="assetPath">
 			<value>SFX/Percussion Instruments/Melodic/Kora/kora-02.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>44.099998499999998</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>

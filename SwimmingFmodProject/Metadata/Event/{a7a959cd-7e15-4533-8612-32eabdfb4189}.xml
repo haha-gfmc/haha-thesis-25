@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{a7a959cd-7e15-4533-8612-32eabdfb4189}">
 		<property name="name">
 			<value>Glockenspiel</value>
@@ -81,8 +81,8 @@
 	</object>
 	<object class="Timeline" id="{3da36145-95d3-4025-8ab3-ab5b8173f2e0}">
 		<relationship name="modules">
-			<destination>{fc3cca70-d335-4307-977d-3fd3424d429d}</destination>
 			<destination>{08a1b130-b356-4f35-8761-f0466c2ece21}</destination>
+			<destination>{fc3cca70-d335-4307-977d-3fd3424d429d}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{5ec6fe2a-342d-4043-8043-afee0c2352bd}">
@@ -112,7 +112,6 @@
 		<property name="startOffset">
 			<value>5</value>
 		</property>
-		<property name="name" />
 		<relationship name="sounds">
 			<destination>{8ce7719b-818d-41ea-ad75-e9aca43fc738}</destination>
 			<destination>{a20c744e-82cf-475a-97dc-c837a141f1a2}</destination>
@@ -154,7 +153,6 @@
 		<property name="startOffset">
 			<value>7</value>
 		</property>
-		<property name="name" />
 		<relationship name="sounds">
 			<destination>{03e22f1c-b999-4323-9b0f-cddedf3bc88e}</destination>
 			<destination>{95ce6f89-0d6f-46b8-9a41-2f1d3c1fefab}</destination>

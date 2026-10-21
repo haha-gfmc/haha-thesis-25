@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{876ff1e2-45ff-4ef0-a115-63fc35d9d8b2}">
 		<property name="assetPath">
 			<value>SFX/Drones/Drone Production Element Imaging Flange Square Wave Vortex 03.ogg</value>

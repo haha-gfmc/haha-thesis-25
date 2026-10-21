@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{dabf8946-5c9a-4f2a-915d-cd0a1facde99}">
 		<property name="assetPath">
 			<value>SFX/Ocean/170829__kevint1001__stormatsea.mp3</value>
@@ -8,7 +8,7 @@
 			<value>true</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>44.099998499999998</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>

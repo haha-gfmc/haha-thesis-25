@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{3e69c58d-684f-4e5a-9d4e-8f2c959b2fcd}">
 		<property name="assetPath">
 			<value>SFX/Bubbles/FXhome.com Under Water Sound 10.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>44.099998499999998</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>

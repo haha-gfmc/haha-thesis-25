@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{ced5c174-de7d-4a27-9a14-15c37373736b}">
 		<property name="name">
 			<value>FM Inquisitive</value>
@@ -86,8 +86,8 @@
 	</object>
 	<object class="Timeline" id="{597f3f1e-69cf-4bfd-a831-eef5f803652f}">
 		<relationship name="modules">
-			<destination>{a0935c4a-60ad-4ffd-a1c2-a5dfd084e31f}</destination>
 			<destination>{2502a229-0a3b-4b73-9900-53dde1aeeed6}</destination>
+			<destination>{a0935c4a-60ad-4ffd-a1c2-a5dfd084e31f}</destination>
 			<destination>{37020e1d-f97a-4bc6-9eab-575d8f308945}</destination>
 		</relationship>
 	</object>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{c8211f0d-bc73-4e94-b74a-b6ba3d047263}">
 		<property name="name">
 			<value>Drop</value>
@@ -89,9 +89,9 @@
 	</object>
 	<object class="Timeline" id="{63edd24c-e483-4461-8e1b-a2870446975f}">
 		<relationship name="modules">
+			<destination>{91671af5-fe1a-4f90-8921-337cc832f181}</destination>
 			<destination>{805f60c7-6123-4909-9c5d-a7fda9784fac}</destination>
 			<destination>{a221d389-5f35-4717-b9fa-315739ee6813}</destination>
-			<destination>{91671af5-fe1a-4f90-8921-337cc832f181}</destination>
 			<destination>{3d46ecbf-c6f1-4ee7-ba23-e87f05742e61}</destination>
 		</relationship>
 		<relationship name="markers">

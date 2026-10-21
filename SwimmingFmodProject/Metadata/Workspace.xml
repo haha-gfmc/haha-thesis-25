@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Workspace" id="{8170a559-66be-49da-ad6b-8417e458f1b1}">
+		<property name="builtBanksOutputDirectory">
+			<value>Build</value>
+		</property>
 		<relationship name="masterEventFolder">
 			<destination>{b21a5a1f-79de-4274-87a2-7540664a75db}</destination>
 		</relationship>
@@ -12,6 +15,9 @@
 		</relationship>
 		<relationship name="masterParameterPresetFolder">
 			<destination>{0e930ec8-4cfe-4af1-9ead-7b4a1eb9f84c}</destination>
+		</relationship>
+		<relationship name="masterCurvePresetFolder">
+			<destination>{51ca67e4-dc6e-4b44-b827-b0eec197ef5d}</destination>
 		</relationship>
 		<relationship name="masterBankFolder">
 			<destination>{b8cd2563-5539-4ad0-9def-fedae464a023}</destination>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{05a37c16-9801-4515-9b52-8dfc499d0531}">
 		<property name="assetPath">
 			<value>SFX/Drones/Drone Production Element Imaging Bed Pulsing Slow Bass 01.ogg</value>

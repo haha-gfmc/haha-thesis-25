@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 7
+  version: 10
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -22,8 +22,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: CollisionMask 1 Variant
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_Parent: {fileID: -876546973899608171, guid: e5df7621ce54da247817806dd8e4036c,
-    type: 3}
+  m_Parent: {fileID: -876546973899608171, guid: e5df7621ce54da247817806dd8e4036c, type: 3}
   m_ModifiedSerializedProperties: 16
   m_ValidKeywords:
   - _ALPHAPREMULTIPLY_ON
@@ -38,6 +37,7 @@ Material:
   disabledShaderPasses:
   - DepthOnly
   - SHADOWCASTER
+  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -52,3 +52,4 @@ Material:
     - _BaseColor: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 0.5529412}
     - _Color: {r: 0.9063317, g: 0.9063317, b: 0.9063317, a: 0.5529412}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

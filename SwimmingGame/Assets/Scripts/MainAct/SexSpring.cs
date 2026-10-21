@@ -46,7 +46,7 @@ public class SexSpring : MonoBehaviour
 
         originalScale = character.transform.localScale;
         characterRb = character.GetComponent<Rigidbody>();
-        characterRb.drag = drag;
+        characterRb.linearDamping = drag;
         characterRb.useGravity = false;
     }
 
@@ -146,7 +146,7 @@ public class SexSpring : MonoBehaviour
                 isMoving = true;
             }
             // Handle movement
-            if (isMoving && characterRb.velocity.magnitude > movementVelocityThreshold)
+            if (isMoving && characterRb.linearVelocity.magnitude > movementVelocityThreshold)
             {
                 Vector3 targetVelocity = moveDirection.normalized * movementMultiplier;
                 currentVelocity = Vector3.Lerp(currentVelocity, targetVelocity, Time.fixedDeltaTime * movementLerpSpeed);

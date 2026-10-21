@@ -9,8 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: FanCoralCluster.005_FBX_still Variant
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_Parent: {fileID: 9167699612685629799, guid: 2982b4b85c0c07c4887c0d335fcfee43,
-    type: 3}
+  m_Parent: {fileID: 9167699612685629799, guid: 2982b4b85c0c07c4887c0d335fcfee43, type: 3}
   m_ModifiedSerializedProperties: 2
   m_ValidKeywords:
   - _NORMALMAP
@@ -21,7 +20,8 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap:
     RenderType: Opaque
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -41,6 +41,7 @@ Material:
     - _Color: {r: 0.70165104, g: 0.517647, b: 1, a: 1}
     - _EmissionColor: {r: 0.2894288, g: 0.15686275, b: 0.38039216, a: 1}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!114 &947241787884726403
 MonoBehaviour:
   m_ObjectHideFlags: 11
@@ -53,4 +54,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 7
+  version: 10

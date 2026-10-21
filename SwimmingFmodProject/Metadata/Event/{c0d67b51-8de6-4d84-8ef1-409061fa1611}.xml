@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{c0d67b51-8de6-4d84-8ef1-409061fa1611}">
 		<property name="name">
 			<value>Xylophone</value>
@@ -81,8 +81,8 @@
 	</object>
 	<object class="Timeline" id="{ebff7e35-bb8e-43e9-8022-a504894cc698}">
 		<relationship name="modules">
-			<destination>{9e010016-fe6a-4e5a-b219-f2b85fec2c3e}</destination>
 			<destination>{a4b4d8ea-60d9-485d-94c0-daff1ede6d4b}</destination>
+			<destination>{9e010016-fe6a-4e5a-b219-f2b85fec2c3e}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{16e02683-2921-4baf-984c-3f172b7e2fa7}">

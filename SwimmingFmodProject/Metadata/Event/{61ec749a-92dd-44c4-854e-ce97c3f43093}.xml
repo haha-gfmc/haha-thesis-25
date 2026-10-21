@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{61ec749a-92dd-44c4-854e-ce97c3f43093}">
 		<property name="name">
 			<value>Kick</value>
@@ -104,10 +104,10 @@
 	</object>
 	<object class="Timeline" id="{21ec380c-e7ab-4ea7-8221-6b2876a211ba}">
 		<relationship name="modules">
+			<destination>{283b6d0e-484d-43e6-95d9-41771c866ff2}</destination>
+			<destination>{e539fef5-3adf-4d7d-a40a-695ed6a13dc9}</destination>
 			<destination>{09dbaea4-2834-4d09-b38a-f3b235c928eb}</destination>
 			<destination>{d515e2c1-a9ff-418c-8292-e25a721b4639}</destination>
-			<destination>{e539fef5-3adf-4d7d-a40a-695ed6a13dc9}</destination>
-			<destination>{283b6d0e-484d-43e6-95d9-41771c866ff2}</destination>
 			<destination>{e7b99382-7d84-43ec-a649-e57d9226f7c7}</destination>
 		</relationship>
 	</object>

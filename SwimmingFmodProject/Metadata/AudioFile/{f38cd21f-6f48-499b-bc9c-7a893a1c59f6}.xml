@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{f38cd21f-6f48-499b-bc9c-7a893a1c59f6}">
 		<property name="assetPath">
 			<value>SFX/Drones/Drone Production Element Imaging Music Constant Fluttering 02.ogg</value>

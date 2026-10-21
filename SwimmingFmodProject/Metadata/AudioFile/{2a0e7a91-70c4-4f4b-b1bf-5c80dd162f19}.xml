@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{2a0e7a91-70c4-4f4b-b1bf-5c80dd162f19}">
 		<property name="assetPath">
 			<value>SFX/Percussion Instruments/Atonal/Tambourine_Arab/tambourine2-01.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>44.099998499999998</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{3b730139-cdd5-46f8-bbc4-845cee8d978e}">
 		<property name="name">
 			<value>Metabell</value>
@@ -81,8 +81,8 @@
 	</object>
 	<object class="Timeline" id="{97613d55-3449-45fa-9924-04a453007b80}">
 		<relationship name="modules">
-			<destination>{f1625b06-53db-4e51-a8f9-b1e0abdcd413}</destination>
 			<destination>{cc298eb8-cb5f-4891-9236-4684fb87ed1d}</destination>
+			<destination>{f1625b06-53db-4e51-a8f9-b1e0abdcd413}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{9b8f3038-ed6b-4731-88b7-22aa0b48ad4c}">
@@ -112,7 +112,6 @@
 		<property name="startOffset">
 			<value>5</value>
 		</property>
-		<property name="name" />
 		<relationship name="sounds">
 			<destination>{662cb253-17dc-4661-930e-d39b44fdb66b}</destination>
 			<destination>{cb6682a4-b64c-4561-9b04-68c6af53d376}</destination>
@@ -154,7 +153,6 @@
 		<property name="startOffset">
 			<value>7</value>
 		</property>
-		<property name="name" />
 		<relationship name="sounds">
 			<destination>{0c751dc1-8d01-4703-942e-43371db7da77}</destination>
 			<destination>{220f9353-ca92-465d-a4c2-8a0938d50cee}</destination>

@@ -313,7 +313,7 @@ public class NPCOverworld : MonoBehaviour
 
             //Translation things
 
-            Vector3 currentVelocity=new Vector3(body.velocity.x,body.velocity.y,body.velocity.z);
+            Vector3 currentVelocity=new Vector3(body.linearVelocity.x,body.linearVelocity.y,body.linearVelocity.z);
             Vector3 velocity=currentVelocity;
 
             //Deceleration
@@ -344,7 +344,7 @@ public class NPCOverworld : MonoBehaviour
                     Vector3 normal=hit.normal;
                     Vector3 relativeVelocity;
                     if(hit.otherCollider.TryGetComponent<Rigidbody>(out Rigidbody otherBody)){
-                        relativeVelocity=otherBody.velocity;
+                        relativeVelocity=otherBody.linearVelocity;
                     }
                     else{
                         relativeVelocity=Vector3.zero;
@@ -537,7 +537,7 @@ public class NPCOverworld : MonoBehaviour
         }
         if(path.Length>0){
             targetPosition=path[pathIndex].transform.position;
-            targetRotation=Quaternion.LookRotation(targetPosition-body.transform.position);
+            if(targetPosition!=body.transform.position) targetRotation=Quaternion.LookRotation(targetPosition-body.transform.position);
         }
         for(int i=0;i<path.Length;i++){
             if(path[i].active){

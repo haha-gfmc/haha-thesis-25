@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{518dd896-6484-4be0-a2b2-0a37b785fdbd}">
 		<property name="name">
 			<value>Reyong Mysterious 2</value>
@@ -95,9 +95,9 @@
 	</object>
 	<object class="Timeline" id="{e79d06f4-fe93-42c1-8e92-993a443f669e}">
 		<relationship name="modules">
-			<destination>{d6416c3a-a5d8-4346-958f-dde46df14565}</destination>
 			<destination>{192d209a-0aa8-4053-bcac-ca77ff8e1abf}</destination>
 			<destination>{6c944fc2-fcb1-4c7a-aff5-8e603383fde6}</destination>
+			<destination>{d6416c3a-a5d8-4346-958f-dde46df14565}</destination>
 			<destination>{4a7a9c34-2ffd-42e9-8854-40febc077715}</destination>
 		</relationship>
 	</object>

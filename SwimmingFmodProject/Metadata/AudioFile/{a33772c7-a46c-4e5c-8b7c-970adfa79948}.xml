@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{a33772c7-a46c-4e5c-8b7c-970adfa79948}">
 		<property name="assetPath">
 			<value>SFX/Drones/Drone Production Element Imaging Horror Organ Constant Steady Bed 01.ogg</value>

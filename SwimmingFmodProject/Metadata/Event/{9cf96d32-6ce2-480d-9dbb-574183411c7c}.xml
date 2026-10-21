@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{9cf96d32-6ce2-480d-9dbb-574183411c7c}">
 		<property name="name">
 			<value>Esoteric</value>
@@ -99,10 +99,10 @@
 	</object>
 	<object class="Timeline" id="{a74c5acf-f01f-4d29-882b-d4aeb2cae270}">
 		<relationship name="modules">
-			<destination>{a0f22439-84bb-4971-b4bd-c007b30c7a42}</destination>
+			<destination>{41e1e15d-2afe-48d0-a21a-3adea3472268}</destination>
 			<destination>{88d1b8c5-6234-46f3-bfea-58772be2b1ba}</destination>
 			<destination>{2e3f57c7-c5a9-47a0-8f42-84fad2f339d2}</destination>
-			<destination>{41e1e15d-2afe-48d0-a21a-3adea3472268}</destination>
+			<destination>{a0f22439-84bb-4971-b4bd-c007b30c7a42}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{ad3603ed-d7da-4165-ab6b-c17d3c1389d3}">

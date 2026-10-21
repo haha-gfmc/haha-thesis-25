@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Cinemachine;
+
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Events;
@@ -29,7 +29,7 @@ public class Menu : MonoBehaviour
     public GameObject[] controls;
     [Tooltip("Overworld 0, mainact 1, climax 2, cuddle 3 -- Not currently using")]
     public int controlsIndex;
-    private CinemachineVirtualCamera playerCamera;
+    private Unity.Cinemachine.CinemachineVirtualCamera playerCamera;
     private Transform playerCameraRoot; // The target position and rotation for the player
     [HideInInspector]
     public CursorLockMode myLockState;
@@ -102,7 +102,7 @@ public class Menu : MonoBehaviour
     {
         playerInput = FindObjectOfType<PlayerInput>();
         GameIsPaused = false;
-        playerCamera = GameObject.Find("PlayerFollowCamera")?.GetComponent<CinemachineVirtualCamera>();
+        playerCamera = GameObject.Find("PlayerFollowCamera")?.GetComponent<Unity.Cinemachine.CinemachineVirtualCamera>();
         playerCameraRoot = GameObject.Find("PlayerCameraRoot")?.GetComponent<Transform>();
         //controls[controlsIndex].gameObject.SetActive(true);
 

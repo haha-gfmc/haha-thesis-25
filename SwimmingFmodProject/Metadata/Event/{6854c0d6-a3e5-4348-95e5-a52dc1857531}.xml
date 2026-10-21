@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{6854c0d6-a3e5-4348-95e5-a52dc1857531}">
 		<property name="name">
 			<value>Coralnet Metamorphosis</value>
@@ -96,9 +96,9 @@
 	</object>
 	<object class="Timeline" id="{2dce389b-db4d-44c6-9197-8668ae3f3dba}">
 		<relationship name="modules">
+			<destination>{e6a1453c-8395-4bff-b627-f238b1f24b5a}</destination>
 			<destination>{c9be3118-951d-43b8-8639-9760b6065b9a}</destination>
 			<destination>{bf118187-feb2-47a3-b873-84d6fa93d6a2}</destination>
-			<destination>{e6a1453c-8395-4bff-b627-f238b1f24b5a}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{8b67ed2b-87da-4fec-bdcc-466dcec38902}">

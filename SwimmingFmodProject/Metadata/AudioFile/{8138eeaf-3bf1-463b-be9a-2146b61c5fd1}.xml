@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{8138eeaf-3bf1-463b-be9a-2146b61c5fd1}">
 		<property name="assetPath">
 			<value>SFX/Percussion Instruments/Atonal/Drumset_Digital/drumMisc-02.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>44.099998499999998</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>

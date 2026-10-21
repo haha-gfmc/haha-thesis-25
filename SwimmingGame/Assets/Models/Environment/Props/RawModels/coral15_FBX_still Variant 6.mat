@@ -9,20 +9,20 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: coral15_FBX_still Variant 6
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_Parent: {fileID: -5902519513492816403, guid: 69df629c349c996498cc33f071676067,
-    type: 3}
+  m_Parent: {fileID: -5902519513492816403, guid: 69df629c349c996498cc33f071676067, type: 3}
   m_ModifiedSerializedProperties: 2
   m_ValidKeywords:
   - _EMISSION
   - _NORMALMAP
   m_InvalidKeywords: []
-  m_LightmapFlags: 0
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap:
     RenderType: Opaque
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -46,6 +46,7 @@ Material:
     - _Color: {r: 0.120418824, g: 0.2138645, b: 1, a: 1}
     - _EmissionColor: {r: 1.9042312, g: 3.3819249, b: 15.813397, a: 1}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!114 &5793088130490101266
 MonoBehaviour:
   m_ObjectHideFlags: 11
@@ -58,4 +59,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 7
+  version: 10

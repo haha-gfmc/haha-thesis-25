@@ -159,7 +159,7 @@ public class ConcaveColliderEditor : Editor
         EditorGUILayout.Space();
         
         PropIsTrigger.boolValue              = EditorGUILayout.Toggle     (new GUIContent("Is Trigger"),               PropIsTrigger.boolValue);
-        PropMaterial.objectReferenceValue    = EditorGUILayout.ObjectField(new GUIContent("Material"),                 PropMaterial.objectReferenceValue, typeof(PhysicMaterial), false);
+        PropMaterial.objectReferenceValue    = EditorGUILayout.ObjectField(new GUIContent("Material"),                 PropMaterial.objectReferenceValue, typeof(PhysicsMaterial), false);
 
         // Apply changes to the serializedProperty - always do this in the end of OnInspectorGUI.
 

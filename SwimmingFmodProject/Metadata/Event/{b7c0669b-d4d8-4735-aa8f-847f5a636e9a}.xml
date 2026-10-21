@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{b7c0669b-d4d8-4735-aa8f-847f5a636e9a}">
 		<property name="name">
 			<value>Arab Tambourine</value>

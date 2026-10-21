@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{a0689276-4140-4ffc-b4ad-7eaa07adfba9}">
 		<property name="name">
 			<value>G#4</value>
@@ -75,8 +75,8 @@
 	</object>
 	<object class="Timeline" id="{77a88e93-5199-4ff2-8995-5dd0bb8ac89e}">
 		<relationship name="modules">
-			<destination>{a66c41d8-5d17-4427-bdbd-7594ec97f67e}</destination>
 			<destination>{fe711f2e-618a-442e-8373-d45d197afa79}</destination>
+			<destination>{a66c41d8-5d17-4427-bdbd-7594ec97f67e}</destination>
 		</relationship>
 		<relationship name="markers">
 			<destination>{00197c05-f4fb-4481-9198-f191bf6f0c6f}</destination>
@@ -265,12 +265,12 @@
 		</property>
 	</object>
 	<object class="AutomationCurve" id="{7fbccb97-3f20-4018-a762-009d7ed8703f}">
-		<relationship name="parameter">
-			<destination>{02e26db9-1684-4efa-a21d-aa7bba293db2}</destination>
-		</relationship>
 		<relationship name="automationPoints">
 			<destination>{870ee0f6-4020-4fef-8569-34b39886dfde}</destination>
 			<destination>{bc9659fa-a6e6-49bb-a60f-e7098ad8e106}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{02e26db9-1684-4efa-a21d-aa7bba293db2}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{545a4bed-979f-44a2-9aee-a08b408eaca4}" />

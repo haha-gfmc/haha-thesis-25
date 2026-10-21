@@ -44,7 +44,7 @@ public class Ring : MonoBehaviour
             if(cooldownTimer>=cooldownTime){
                 Vector3 force=transform.up*boostIntensity;
                 Swimmer swimmer=other.gameObject.GetComponentInParent<Swimmer>();
-                if(Vector3.Angle(swimmer.GetComponent<Rigidbody>().velocity,transform.up)>=90){
+                if(Vector3.Angle(swimmer.GetComponent<Rigidbody>().linearVelocity,transform.up)>=90){
                     force=-force;
                 }
                 swimmer.Boost(force);

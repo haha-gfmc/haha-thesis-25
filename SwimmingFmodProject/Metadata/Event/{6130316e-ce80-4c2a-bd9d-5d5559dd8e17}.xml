@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.04.00">
 	<object class="Event" id="{6130316e-ce80-4c2a-bd9d-5d5559dd8e17}">
 		<property name="name">
 			<value>Popping Out</value>
