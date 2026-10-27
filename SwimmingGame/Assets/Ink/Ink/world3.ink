@@ -4,6 +4,7 @@ INCLUDE Functions.ink
 // beneathlings: people who refuse to entangle and evolve
 // tangle preventer: chastity cage they wear to make sure the organ doesn't come out
 // discurcenter: place where this chapter takes place/conference-like event 
+// drought: the big event in which a bunch of merpeople migrated to the surface, and now there's only a few of them left.
 
 === introCoralnet ===
 // grindr hookup vibes, intimate talk. can we meet soon?
@@ -105,7 +106,7 @@ NPC: Maybe your telepathy is just underdeveloped?
 
 === pressANPC2 ===
 NPC: Isn't this amazing? We don't have to risk entangling everytime we want to talk to each other anymore!
-MC: I don't think it was that bad. You have to really do it for a while before the organs--
+MC: I don't think it was that bad. You have to really do it for a while before the organs–
 NPC: Maybe for you.
 -> END
 
@@ -185,29 +186,29 @@ NPC1: What?!
 NPC2: I knew it. I always had a hunch.
 SP3: They have brainwashed our brethren into changing, but they cannot affect the rest of us, so they will use their nefarious alien technology to destroy the rest of us instead!
 SP3: (If those brethren of course were even brethren in the first place. They could have been aliens in disguise all along. But I digress...)
-NPC1: We-- We-- We can't let that happen!
+NPC1: We– We– We can't let that happen!
 NPC2: Someone has to do something!
 NPC3: More than just one! Several people must do something!
 NPC4: I am in complete agreement!
 SP3: Exactly. I am happy to hear it. 
 What I have been working on is special devices that will allow us to fight back against them. 
-Devices that will allow us to kill an alien instantly (I already have a working prototype), and a suit that will allow us to survive on the surface.
-// SILENCE
+Devices that will allow us to kill an alien instantly (I already have a working prototype), and a suit that will allow us to – temporarily – breathe on the surface.
+// pause
 NPC2: That sounds SCARY.
 NPC4: Would we really have to go there? Why can't you also invent automatons to do the killing for us?
 NPC1: Exactly! I had the same thought!
-SP3: That wouldn't be -- We don't have the time!
+SP3: That wouldn't be – We don't have the time!
 SP3: My friends, you have to be COURAGEOUS! We are facing extinction!!
 NPC1: Well, maybe you are.
 NPC3: I wouldn't say I quite consider you a friend..?
-SP3: It doesn't matter?! Do you all realize -- They will kill us! All of us! We have to destroy them first!
+SP3: It doesn't matter?! Do you all realize – They will kill us! All of us! We have to destroy them first!
 NPC3: I mean... Do we know that? I'm sure they'll forget all about us eventually, they probably already have!
 NPC1: Yes! That's what I was thinking. Why would they worry about little old us down here?
-NPC2: Of course, it would be nice to spread carnage and destruction but --
-SP3: You-- you don't understand! Can't you see?! We have to do this now! Or else.. or else...
-NPC1: I'm really not sitting well with the vibe you're currently giving out. Can we--?
+NPC2: Of course, it would be nice to spread carnage and destruction but –
+SP3: You– you don't understand! Can't you see?! We have to do this now! Or else.. or else...
+NPC1: I'm really not sitting well with the vibe you're currently giving out. Can we–?
 NPC3: Yes, that's a good idea. Come on everyone, let's all focus our psychic energy...
-SP3: Wh-- What? Wait, stop! You can't! I'm --
+SP3: Wh– What? Wait, stop! You can't! I'm –
 // SP3 is carried away by current
 -> END
 
@@ -233,7 +234,7 @@ What was that about?
 == SP3conferenceAftermath2 ==
 NPC: A device capable of killing someone instantly.. What would that even look like?
 MC: I don't know.
-NPC: Should such technology -- if it's even possible -- really be unleashed in the world in the first place?
+NPC: Should such technology – if it's even possible – really be unleashed in the world in the first place?
 +   [It's inevitable.]
     MC: Technology is not a matter of if, it's a when. Who are we to stand in its way?
     NPC: ...Yes, maybe you're right. I'm sure we were always meant to have these tangle preventers.
@@ -242,7 +243,7 @@ NPC: Should such technology -- if it's even possible -- really be unleashed in t
 +   [No.]
     MC: Of course not. What if the aliens get ahold of it?!
     NPC: You mean you believe in that stuff...?
-    MC: N--no, but, I mean, just like, um, a really bad person..?
+    MC: N–no, but, I mean, just like, um, a really bad person..?
     NPC: Yes. That would be very bad.
 +   [We need it.]
     MC: We have to fight back against the aliens. So if it's possible, we need to make it happen.
@@ -252,19 +253,120 @@ NPC: Should such technology -- if it's even possible -- really be unleashed in t
     MC: Sorry..
 - -> END
 
-//SP3 leaving aftermath talking to people
-    // but... planets are just a theory right? We've never seen them
+== SP3conferenceAftermath3 ==
+NPC: I mean, other planets, aliens who want to kill us, it's the stuff of make-believe. Right?
+MC: Totally. They're sick.
+NPC: It makes me think, should we even be wearing these devices knowing that they came from the same diseased mind? Why don't YOU wear one?
+MC: They um, haven't made a model that fits me. My organ comes out of my...
+NPC: Oh, please, spare the details! It makes me light-headed.
+Sick, I mean! Disgusted. Never again shall I partake.
+MC: I feel the same way.
+-> END
 
-// sp3 gets kicked out by current
+== SP3conferenceAftermath4 ==
+NPC: Dangerous ideas, that one... Do you agree?
+MC: Sure, but... what if it's true? What if the aliens do come for us?
+NPC: What if the water turned poisonous? What if my teeth disappeared? What if I woke up and my tail turned into feet? We can't worry about every random thing!
+MC: I think that last thing actually happened to someone I know..
+NPC: We have each other! And that's really all matters. If the aliens do eventually appear, we'll, uh.
+We'll figure something out, I'm sure.
+I don't wanna risk dying on the surface for that one's ideas. We don't even know if their breathing-devices work.
+MC: Totally. Yeah.
+-> END
 
-// aftermath of sp3 getting kicked out
+// just some random NPCs
+== conferenceNPC1 ==
+NPC: I recognize you, from Enkidu's party. 
+Didn't you go up to the surface with the rest of them?
++   [Briefly.]
+    MC: Sure, briefly.
+    It was unpleasant.
+    NPC: Ah, I'm sure. Glad to have you back! So you didn't see any of the aliens?
+    MC: Um, I didn't get a chance, no...
++   [No.]
+    MC: You know, not everyone who was at Enkidu's party went to the surface, that's actually a very harmful stereotype. Weren't YOU there?
+    NPC: Well, I was really just dragged by a friend, I'm not the kind that engages with that sort of things... 
+    But um, yeah, me neither.
+- -> END
 
-// back outside, coralnet, mysterious coralnet guy invites swimmer to meet somewhere. 
-// at conference, you'll recognize me..?
+== redHerring1 ==
+NPC: Were you listening to all that?
+MC: Oh, yeah. That was totally, um, crazy, right?
+NPC: Oh sure. 
+// PAUSE
+MC: But also, makes you think, right?
+NPC: Ha. You're cute. I guess so.
+MC: ..!
+// PAUSE
+NPC: What sort of thoughts –
+MC: So, have you listened to – 
+NPC: What was that?
+MC: Oh no, you first.
+NPC: It's ok. I was just filling space. What were you saying?
+MC: Ah... I was thinking, have you listened to anything interesting here..?
+NPC: Oh, yeah. There was this person speaking on coralnet and our gradual loss of oral tradition in post-drought society.
+MC: ...! So you're also into coralnet?
+NPC: Oh yeah, haha. Sure, you could say that.
+I actually just..
+MC: ..Yes?
+NPC: ...nevermind, haha.
+MC: What is it?
+NPC: Well, I found this lone coralnet somewhere around here, and I was chatting with this person... Anyway, it doesn't matter.
+MC: Were you.. Did you peruse it recently?
+NPC: Oh yeah, just now actually, haha.
+// PAUSE
+MC: Anyway, I have to get somewhere.
+NPC: Sure. I'll see you around.
+MC: Y–yeah, I... hope so.
+-> END
+
+// back outside, protagonist finds SP3 standing in front of the coralnet they want to use
+== SP3atEdge ==
+SP3: Yes, can I help you? I'm busy over here.
+MC: Were you...
+SP3: I'm sorry?
+MC: Do you... No, it can't be..
+SP3: WHAT?!
+MC: Were you using that coralnet just now?!
+// pause
+SP3: What? No.
+No one uses those anymore. Besides, I'm working on something way better than coralnet...
+// pause
+SP3: Oh, I see. I'll get out of your way.
+MC: Thanks... Um, by the way..
+SP3: Yes?
+MC: About what you were saying at discurcenter.. Do you really think the aliens will come and kill us all?
+SP3: You have to be really stupid to see how obvious that is.
+MC: ...
+That's a mean thing to say.
+SP3: Well, it's reality. I hope one day – soon – you will all wake up to it.
+SP3: Oh, and, I recognize you now.. You're that one with the deformation..?
+MC: ...Sure, yeah. Your tangle preventer doesn't fit my physionomy.
+SP3: And I apologize about that, truly. I will work on a prototype for you soon, very soon, as soon as I can find the time, but... the mission comes first.
+MC: Oh. Okay. Thanks, that's a relief.
+SP3: You're welcome. Can you close your eyes while I leave?
+MC: ...? Sure?
+// FADE OUT, SP3 DISAPPEARS, FADE IN
+-> END
 
 // swimmer finds sp3 at edge, having been shunned. they're ruminating
     // maybe they're standing right in front of the coralnet. swimmer thinks maybe it's them? but if u ask sp3 is like NOPE that's not me idc about coralnet >:( (maybe they even criticize the design/temporariness) and it's kind of clear it's not them (but also, maybe?)
     // MC can't press A to talk to anyone but maybe can with them
+    // maybe they already know each other, SP3 is like or u r the one with the deformity.. sorry, ill make your model soon.
+
+// back outside, coralnet, mysterious coralnet guy invites swimmer to meet somewhere. 
+// at conference, you'll recognize me..?
+
+== coralnet2 == 
+// YOUR ANSWER FROM INTRO
+> sure, yeah. sorry i wasn't checking these for a bit. meet me at the discurcenter.
+> you'll recognize me.
+// MEET at a specific place? can't think where exactly rn
+-> END
+
+
+
+
     
 // back at conference
 
