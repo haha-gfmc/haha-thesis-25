@@ -5,6 +5,7 @@ INCLUDE Functions.ink
 // tangle preventer: chastity cage they wear to make sure the organ doesn't come out
 // discurcenter: place where this chapter takes place/conference-like event 
 // drought: the big event in which a bunch of merpeople migrated to the surface, and now there's only a few of them left.
+// desert-ers: slur for people who left for the surface
 
 === introCoralnet ===
 // grindr hookup vibes, intimate talk. can we meet soon?
@@ -46,7 +47,7 @@ INCLUDE Functions.ink
 > i'm getting tired of the talk. let's meet up?
 > sorry, i didn't mean it that way. just talking like this is really nice. you're right about the coralnet.
 > would you  want to meet with me sometime?
-> Add an answer?
+Add an answer?
 +   [wanna meet up?]
     > wanna meet up still?
 +   [let's meet up!]
@@ -210,6 +211,11 @@ NPC1: I'm really not sitting well with the vibe you're currently giving out. Can
 NPC3: Yes, that's a good idea. Come on everyone, let's all focus our psychic energy...
 SP3: Wh– What? Wait, stop! You can't! I'm –
 // SP3 is carried away by current
+
+// Can this be broken up somehow?
+// It would be nice if SP3 gives somehow evidence of the aliens
+    // maybe based on the alien world from ch. 2? 
+    // maybe they can antagonize enkidu, they were a chief lieutenant of sth
 -> END
 
 == SP3conferenceAftermath1 ==
@@ -274,6 +280,8 @@ I don't wanna risk dying on the surface for that one's ideas. We don't even know
 MC: Totally. Yeah.
 -> END
 
+//Drowned NPC
+
 // just some random NPCs
 == conferenceNPC1 ==
 NPC: I recognize you, from Enkidu's party. 
@@ -320,10 +328,26 @@ NPC: Sure. I'll see you around.
 MC: Y–yeah, I... hope so.
 -> END
 
+== redHerring11 ==
+MC: So, you don't wear a tangle preventer, I noticed..
+NPC: Yeah. They're cramping my style.
+MC: That's cool.
+// pause 
+NPC: You also don't wear one.
+MC: Nope.
+NPC: Nice.
+MC: Yeah.
+-> END
+
 // back outside, protagonist finds SP3 standing in front of the coralnet they want to use
 == SP3atEdge ==
-SP3: Yes, can I help you? I'm busy over here.
-MC: Were you...
+// maybe it's easy to press A with SP3, as opposed to other characters
+SP3: AGH! How did you connect with me?!
+MC: I used your "A"..
+SP3: My.. Ugh, how do you  get it off?!
+MC: I haven't figured that out either..
+SP3: Ok, well, what do you want?
+MC: Um.. were you...
 SP3: I'm sorry?
 MC: Do you... No, it can't be..
 SP3: WHAT?!
@@ -336,7 +360,7 @@ SP3: Oh, I see. I'll get out of your way.
 MC: Thanks... Um, by the way..
 SP3: Yes?
 MC: About what you were saying at discurcenter.. Do you really think the aliens will come and kill us all?
-SP3: You have to be really stupid to see how obvious that is.
+SP3: You have to be really stupid to NOT see how obvious that is.
 MC: ...
 That's a mean thing to say.
 SP3: Well, it's reality. I hope one day – soon – you will all wake up to it.
@@ -346,13 +370,9 @@ SP3: And I apologize about that, truly. I will work on a prototype for you soon,
 MC: Oh. Okay. Thanks, that's a relief.
 SP3: You're welcome. Can you close your eyes while I leave?
 MC: ...? Sure?
-// FADE OUT, SP3 DISAPPEARS, FADE IN
+// closing eyes animation, SP3 DISAPPEARS, open eyes
 -> END
 
-// swimmer finds sp3 at edge, having been shunned. they're ruminating
-    // maybe they're standing right in front of the coralnet. swimmer thinks maybe it's them? but if u ask sp3 is like NOPE that's not me idc about coralnet >:( (maybe they even criticize the design/temporariness) and it's kind of clear it's not them (but also, maybe?)
-    // MC can't press A to talk to anyone but maybe can with them
-    // maybe they already know each other, SP3 is like or u r the one with the deformity.. sorry, ill make your model soon.
 
 // back outside, coralnet, mysterious coralnet guy invites swimmer to meet somewhere. 
 // at conference, you'll recognize me..?
@@ -362,18 +382,93 @@ MC: ...? Sure?
 > sure, yeah. sorry i wasn't checking these for a bit. meet me at the discurcenter.
 > you'll recognize me.
 // MEET at a specific place? can't think where exactly rn
--> END
-
-
+Add an answer?
++   [Okay!]
+    > okay! i'm excited to see you there!
++   [Sure.]
+    > sure, whatever. i may be around.
++   [I'll be there!]
+    > i'll be there!!!! on my way now!!
+- -> END
 
 
     
 // back at conference
 
+// what if:
+    // it would be cool if the discurcenter is totally different after u come back, like maybe ppl are fighting or something
+    // Coralnet crush gets them on a wild goose chase like "go to card center" and the person there is like "oh u just missed someone, go at this other place"
+
 // MC goes to meeting place but no one is there
+
+
 
 // MC meets red herring again but it's obvious it was never them
     // at this point, we're kinda setting up "ooh it was always SP3..." classic romcom trope, but i think it's interesting that we just never find out who (or maybe there's a totally random generic NPC who implies it's them and MC doesn't catch on it)
+    
+== redHerring2 ==
+NPC: What's going on?
+MC: N–nothing much..
+NPC: You seem nervous.
+MC: Oh, really? Um, I wasn't trying to be, haha.
+MC: It's just, I haven't done this in a while..
+NPC: Right.
+MC: But I'm glad we're meeting.
+NPC: Sure.
+// pause 
+MC: So, do you wanna go elsewhere..?
+NPC: What for?
+MC: Oh, just, umm, we could also just talk here! That's ok too!
+NPC: As opposed to..?
+MC: W–well, you know, what we talked about, on the coralnet..
+NPC: Oh, that was you?
+MC: Yeah... I thought it was obvious.
+// pause 
+MC: Are you.. disappointed?
+NPC: Oh no, sorry. Um, sure, I mean, we could talk more I guess...
+...But I usually prefer to keep those sort of things on the coralnet. Preserve the anonymity and everything. It's kind of the idea of the whole thing, actually.
+MC: But... didn't we say we would.. meet up?
+NPC: Huh? I don't think so.
+// pause
+NPC: Maybe it was someone else? You never know with these sort of things.
+MC: R–right.......
+NPC: You're the.. the person who was talking about recreational suffocation, right?
+MC: What?
+NPC: You know, holding your body up on the surface until you can't take it anymore, for physical pleasure.
+MC: You go back and forth...?!
+NPC: Well, you know, if you don't entangle it's perfectly safe, you can stay right on the edge. And the pleasure is something totally different...
+MC: I, uh, no, I don't, I don't think that was...
+MC: That wasn't me.
+// pause 
+MC: I should probably –
+NPC: Were you trying to entangle with me? Is that what's going on?
+MC: Well, no... I thought it was.. nevermind.
+// pause
+MC: But, since you ask..
++   [Would you be interested?]
+    MC: Would you.. be interested?
+    NPC: No, I just told you. I don't engage. I'm a beneathling.
+    I go up there for fun now and then but I don't actually want to change. That's sick.
+    // pause 
+    Sorry. I don't mean to judge.
+    MC: ...
+    NPC: I hope you can find whoever you were talking to.
++   [Nevermind.]
+    MC: Nevermind, it was just a misunderstanding. I apologize.
+    NPC: It's alright. No worries.
+    // pause
+    NPC: Well I hope you find.. whoever you were actually looking for.
+    MC: Um, yeah. Okay.
+- -> END
+
+== redHerring3 ==
+NPC: Were you able to find your coralnet person?
+MC: No. I think maybe I was just being pranked..
+NPC: That would be awful. I'm sorry if that's the case.
+// pause 
+MC: I think I'll go check back anyway, maybe they left another message.
+NPC: Sure, yeah, that's possible. Good luck.
+-> END
     
 // time passes?
 
@@ -383,30 +478,276 @@ MC: ...? Sure?
 
 // in there they see the crazy weapons
 
-// SP3 appears. they're surprised and "caught in the act" but they try to get MC to join their cause.
-    // maybe a funny point to make is that no one knows that the stuff SP3 has been carrying are weapons
+== SP3hideout1 ==
+// HATIM THOUGHTS: i feel like SP3's conspiracies are too general... it'd be better if somehow they were more specific/funny
+SP3: AGHH! Stop using my A!! 
+And.. WHAT ARE YOU DOING HERE?!
+MC: I just wandered in.. what is this place?
+SP3: It's none of your business! Get out of here!!
+MC: What? I'm free to be wherever I want to be.
+SP3: This is MY spot! You can't be here!
+MC: "Your" spot? What makes it yours? And how do you even enforce such a rule?
+SP3: AGHHHH Just get out!!!
+MC: I'm sorry, I.. I just came in here out of curiosity, but now I want to...
++   [Learn about the aliens.]
+    MC: Can you tell me more about the aliens?
+    SP3: ...Really?
+    You're not making fun of me?
+    MC: Seriously! It seems.. exactly that, serious. I want to know more.
+    SP3: Okay...
++   [Hang out.]
+    MC: Can we just hang out?
+    SP3: Hang out?
+    With... me?
+    MC: Sure.
+    SP3: Why?
+    MC: I don't know. We're both sort of outcasts?
+    SP3: The only reason I've been outcasted is because of my ideas! It wasn't always like this... but they know I'm right!! 
+    SP3: But... they're too cowardly. I don't know what to do anymore.
+    // pause
+    MC: Maybe you can tell me more about.. all this stuff?
+    SP3: I guess that change starts somewhere. Even if it's someone like you. Very well then. You'll be my first convert
+    MC: ...
++   [Entangle.]
+    MC: I'm just looking for someone to entangle with.
+    SP3: Are you.. you're kidding me?!
+    You realize, we're about to GO INTO WAR. And you're thinking about entanglement? To try and join the enemy camp?!?!
+    MC: Look, it's not that serious. I've done it a bunch of times and I tried going to the surface too and nothing happened.
+    SP3: For now!!!
+    There is so little we know about the entanglement, and just because it didn't do anything for you, it doesn't make me safe from it!
+    MC: Ok, fine, whatever. 
+    SP3: IT'S NOT WHATEVER!!!
+    SP3: For crying out loud, this is the most serious and important thing going on right now! If you don't get that...
+    I'll make you understand. Look around you. Do you think I'm just playing around here?!
+    MC: It kind of looks like it.
+    SP3: I am not. I'll explain everything to you. And then we'll see if you'll still want to entangle.
+    MC: .....Okay, sure.
+- //SP3 moves around the room to show you stuff
+SP3: Alright, look at this. It's a fragment of the ancient temple where Enkidu's parties go on.
+I'm sure you've noticed this, but the way the rock (if it even is rock) is built, the intricacy, the precision...
+We don't have any technology to build such structures! If this was made by our ancestors, how could we have lost that knowledge?
+Simple: it must have been an alien civilization.
+Enkidu, of course, led everyone up to the surface during the big Drought. From the temple of the civilization that we know nothing about. 
+Do you think that's a coincidence?!
++   [Probably.]
+    MC: Yeah..?
+    SP3: There is more, you'll see.
++   [No.]
+    MC: You make a point...
+    SP3: I'm glad to hear that. Now, come this way.
+- SP3: I found this broken bottle floating around while migrating. Inside, there was this flimsy material with different repeating symbols.
+Complete nonsense. Interesting, of course. Fascinating even. But how could a normal person come up with this?
+What do you think?
++   [Ridiculous.]
+    MC: I've met lots of very creative people. They could come up with this.
+    Besides, you still haven't said anything that proves that these people are from outer space, and not just the surface.
++   [Huh...]
+    MC: That really blows my mind. I don't know what to say.
+    Well, actually, there is one thing...
+    I mean, all this makes sense, but how do you know they're from outer space? Why couldn't they just be people.. from the surface?
+- SP3: Ok, first of all, people do not breathe air. That's simply not possible. We need water for proper brain development.
+These "people" must have totally foreign – alien – biology.
+MC: Okay...
+SP3: Now, take a look a this.
+// shows you the rocket launcher
+SP3: Do you have any idea what this might be?
+MC: ...No.
+SP3: Look inside. Do you see the way the inside is molded, perfectly shaped to host two persons next to each other in a seating position?
+MC: ..I guess so?
+SP3: Now check this out.
+// SP3 turns on the propulsion engine. It spouts out fire 
+MC: Wow! What is that?
+SP3: After some tinkering, I've come to understand it's some sort of mechanism that propels the machine forward at very high speeds. 
+So it's a machine that hosts up to 2 people for the sake of prompt long-distance traveling. In other words...
++   [Interstellar travel.]
+    MC: ...interstellar travel.
+    SP3: Exactly.
+    MC: Wow. This is insane, and I am now truly convinced. We have to show everyone!
+    SP3: Don't make fun of me.
+    MC: I'm not.
+    SP3: ...Are you?
+    MC: I still have a lingering question though: what makes you think they're going to try to kill us all?
++   [I don't know?]
+    MC: I don't know..? I don't see what this proves besides the fact that people on the surface have different technology. 
+    SP3: It's obviously what a civilization predicated on interstellar travel would've needed to build!
+    MC: But... what if they just wanted to go sort of far away in a short amount of time?
+    SP3: They could've "walked"!
+    // pause 
+    MC: I guess so.
+    // pause
+    MC: ...Anyway. Whether they're "aliens" or just people from the surface, it doesn't really matter. 
+    SP3: Yes it does! And they are aliens!
+    MC: Okay. Regardless. I guess the more important question is, how do you know they're gonna try to kill us?
+- SP3: That part is easy. At this point (without even accounting for pre-existing aliens) since the great Drought, their numbers surpass ours.
+So they are stronger, so they will kill us. It's the law of nature.
+MC: But... most of these people, they were our friends. They wouldn't just turn their backs, just like that.
+SP3: Think about it: would our friends have left us, while in possession of their full capacities? 
+Of course not! They're obviously brainwashed. So whether or not they "would" do it doesn't matter. They're not in charge anymore.
+MC: ...The people at Enkidu's party didn't seem brainwashed?
+SP3: Really?
++   [Really.]
+    MC: Really. They seemed genuine. They were excited about going there, they were craving new experiences, they...
+    SP3: But why? Where does the "craving" come from, without knowing what's waiting for them up there?
+    MC: I don't know.
+    SP3: Isn't it more realistic that some outsider entity PLACED the craving inside of them?
+    MC: ...I guess so.
++   [No.]
+    MC: No, you're right. They were acting as if they were in a trance. Like.. something, or somebody was controlling them.
+    I would be talking to them, but it would feel as if we're from completely different worlds.
+    SP3: Exactly. That sort of difference cannot be bridged.
+- SP3: And of course... there is the possibility that they will not attack. That they will leave us in peace.
+But that is simply not how nature works. And what if we develop a way to turn them back? That would be a threat to their civilization.
+So we have to take the first move. I wouldn't want to risk the alternative.
+// pause.
+Any thoughts?
++   [You're crazy.]
+    MC: You're fully insane. You need some sort of help.
+    MC: And what about these "weapons"? I haven't seen any of them?
++   [I'm convinced.]
+    MC: The truth now clearly appears to me. I will take up arms with you.
+    MC: Speaking of, what about those weapons you've been developing?
++   [I'm in-between.]
+    MC: I would say I'm neither fully convinced nor in total disagreement. I would need one more thing to nudge me a particular way.
+    MC: Now, I'm remembering you talking about weapons. Can I see those? Maybe that will be the deciding point.
+- SP3: They're all around you! Also, what I have strapped on my person currently.
+MC: And how do they work?
+SP3: It's very simple. I press this trigger right here...
+... and tiny projectiles fly over to the enemy, piercing and causing irreparable bodily harm. It uses the same technology as the propulsion device. 
+MC: Huh. So you've been using their tech.
+SP3: We must! It doesn't please me of course, but we cannot let ourselves be surpassed! We must level the field!
+MC: And the propulsion device..
+SP3: Ah, you've noticed! 
+It's pointed straight towards a tunnel going up to the surface, and when I have mobilized the masses, we will use it to rapidly launch and take them by surprise!
+MC: This.. goes up to the surface?
+// camera shifts towards the tunnel upwards and things get kinda blurry/mystical
+SP3: Yes! But this world is very deep under, it would take almost a full season to swim up there.
+MC: Huh...
+// earthquake starts to happen
+SP3: Huh. That's not good.
+MC: What is going on?!
+SP3: This happens sometimes. We should, um, leave. In case of a cave-in.
+// the exit has been caved in
+SP3: ...I'm not strong enough to move this. Can you help?
+MC: I.. I'm also not very good with telekinesis.
+SP3: That's a problem. Well, we can go into the other room. It should be sturdier.
+// SP3 moves a tiny rock, opening the path to the archives
+SP3: Okay. Follow me!
+-> END
 
-// MC is like "you're crazy."
+== SP3archives1 ==
+// SP3 seals the entrance
+MC: ..Is this really much better?
+SP3: I think so. The last time this happened, there weren't any rocks falling down here.
+// pause
+// the earthquake is less loud
+MC: And this phenomenon... It has been happening a lot recently?
+SP3: Yes, more frequently. One wonders...
+MC: You think...
+SP3: OF COURSE! IT'S THE ALIENS! THEY'RE ALREADY ATTACKING US!
+MC: Oh no...
+SP3: GAH! We must exit at once and inform everyone! We must launch ASAP!
+MC: Maybe we should wait for the shaking to stop..
+SP3: Right.
+// pause
+MC: So.. this room...
+SP3: Pay it no mind.
+MC: Huh? Why not?
+SP3: It's just a silly project of mine. Nothing to do with the mission.
+MC: It.. looks interesting.
+SP3: Do you really wish to know?
+MC: Sure. We don't have much else to do.
+// pause
+SP3: I've been... archiving.
+MC: Archiving?
+SP3: Yes. So far, the way we, people of the sea, have kept our history has been solely through oral memory. 
+There's the coralnet, of course, but its memory is limited and they, too, die.
+So... when we die, our memories die with us, and now, with so many of us gone, a lot of it is already permanently lost.
+MC: Why is that a problem? We've never needed to... record
+SP3: Well, look at the aliens, as an example. How could they come up with such advanced technology? A single person over a single lifetime couldn't have come up with all of it.
+I suspect that they had a way of recording -- the symbols I showed you earlier -- that allowed them to transmit over long periods of time...
+...can you imagine? Between people 10, 20 generations apart, who were never alive at the same time! 
+If they could build upon each others' knowledge, no wonder they came up with such wonderful technology!
+MC: Wonderful..?
+SP3: I mean, DEMONIC! But also, highly sophisticated, I must admit. And, I mean, also...
+MC: Yes?
+SP3: I think.. it's nice to have some sort of way to remember those who left us. Even after they've been brainwashed. Even after we ourselves are gone.
+MC: So, this room..?
+SP3: Taking inspiration from the aliens' symbols, I came up with a system to record information, and I've been transcribing everything I could about different brethren who have left for the surface.
+MC: Ah...
+SP3: I can... transmit the knowledge, so that you know how to read it.
+// telepathy
+SP3: There you go. Now you can go up to a transcription, and press A.
+// at some point during the convo the earthquake subsides
+-> END
 
-// there's someone else coming in?
-    // MC hears someone singing and they think it might be their secret pen pal?
-    // or SP3 is like "everyone is gonna think i'm crazy and truly shun me"
-    
-// SP3 moves a rock thru weak telepathy and they go into the archives and seal exit behind them
-
-// MC is like what is this, SP3 is like this is the archives, i'm keeping a memento of everybody i could find and recording their biography
+// MC reads some obituaries
 
 // you can talk about individual people?
     // maybe unnecessary, maybe u can just see and notice
     // one of them is the Ex
-    
-// SP3 and MC lowkey bond
-    // SP3 mentions that they gave everyone names, feeling insecure about the human-ness of it but sees the usefulness
-    // MC can choose to share name if they have one & want to
-    
-// they get horny and cuddle
-    // do u think.. what if...
-    // MC: there's something i do.. it doesn't have to be entanglement
+  
+
+== SP3archives2 ==
+MC: So...
+You gave them names.
+SP3: ...Yes. Another alien invention.
+I'm ashamed to admit it, but it is useful. Much more practical way to refer to a specific person -- and remember them by -- than "that one".
+MC: I..
++   [...also have a name.]
+    MC: I also have a name.
+    SP3: Oh?
+    MC: It's...
+    //MC tells their name 
+    SP3: That's... nice.
+    MC: Thanks. I don't know. I haven't used it since... the Drought.
+    SP3: I think it's okay to have one. If you'd like. Not everything that they create is necessarily... bad.
+    MC: Yeah. Maybe. 
+    Do you have one?
+    SP3: I haven't come up with one but... I'm thinking about it.
+    // pause
++   [...think that's nice.]
+    MC: It makes sense. I think.
+    SP3: Yes...
+    // pause
+- MC: I feel...
+SP3: Yes, me too.
+MC: But... we shouldn't.
+SP3: No.
+// pause 
+MC: Do you think it's always... bad?
+SP3: Well, certainly there are instances of those who have engaged in it and not further transformed, but there are really too many unknown factors to do it safely.
+// pause 
+SP3: I think.
+MC: So you've never --
+SP3: I have.
+But I'm sure that someone like you --
+MC: What does that mean?
+SP3: What?
+MC: "Someone like you". You keep saying that. What is it about me? Do you think I'm beneath you or something?
+SP3: N–no.. I just mean.. Someone more experienced.
+MC: Oh. I see.
+SP3: Which.. I mean, I don't judge you for having engaged, in the past.
+// pause 
+SP3: I'm sure you've done lots of things I wouldn't even... I couldn't even imagine.
+MC: Right.
+// pause
+MC: So... There is this thing..
+SP3: Yes?
+MC: I've done it a few times... It's not really entanglement.. But it feels nice.. in a way it's even better?
+// pause 
+Maybe we can try it together? It doesn't have to be anything else. Just some.. cuddling. 
+SP3: Do you really..
+MC: No organs. And you can keep your tangle preventer on.
+SP3: Okay.. sure. Let's try it.
+MC: Okay.
+-> END
+
+== SP3cuddle ==
+
+-> END
+
+// eventually, SP3 says another "someone like you" and MC gets mad
+    // what do you mean by that?! you keep saying it, what kind of person do you think I am?!
     
 // during cuddle, they unpack the attraction 
     // for MC it's like there was also someone i really cared about... (and they're maybe recorded here), for SP3 it's like the first time they're sharing their passion & not being made fun of
