@@ -686,6 +686,7 @@ SP3: There you go. Now you can go up to a transcription, and press A.
     // maybe unnecessary, maybe u can just see and notice
     // one of them is the Ex
   
+VAR talkedAboutEntanglementPositively=false
 
 == SP3archives2 ==
 MC: So...
@@ -743,68 +744,233 @@ MC: Okay.
 -> END
 
 == SP3cuddle ==
-
+// MC and SP3 are touching each other at the same time
+MC: Does this feel okay?
+SP3: Yes.
+SP3: What about you?
+MC: It's good
+// pause 
+MC: About your.. "archive".
+SP3: ...
+MC: I think it's nice. To.. care about something this much.
+That you... don't want to let go of the memory of them.
+SP3: That's not why I..
+Well.. It's complicated.
+MC: It's okay. I also...
+I think I know what it's like, to have someone leave and.. not being able to move on.
+SP3: I'm not like that.
+I think this is just.. my duty. We should be keeping records. It's.. necessary.
+...
+What about this.. person who left you?
+MC: ...We were together, then they left for the surface.
+But it's been several seasons. I shouldn't still be.. They shouldn't be in my head anymore.
+They're gone. They're on the surface. They're never coming back. There's other people to meet.
+SP3: Well, not that many anymore.
+// pause 
+MC: I just can't seem to get them out of my head.
+SP3: That's pathetic.
+MC: What?
+SP3: It's okay. I think... 
+Some people also see me as pathetic. Probably.
+But.. I can't bring myself to not care. It wouldn't be true.
+// pause
+SP3: This was actually.. the first time I've been able to share my work without being made fun of.
+Well. You did make fun of me.
+MC: I'm sorry...
+SP3: ...
+MC: I think...
++   [Your work matters.]
+    MC: Maybe people don't see it now, but what you're doing really matters.
+    I think it's important to keep the memory of those who are gone alive. 
+    SP3: ...
+    It's nice to hear someone recognize that.
+    Do you have anything like that? Something that you do that feels like it matters?
+    MC: ...
+    I-- I don't know. It's been kind of.. weird...
++   [It's okay to care.]
+    MC: It's okay to have something that you care about so much, that cannot be.. contained.
+    I think... 
+    I think I know what that's like.
+    SP3: What do you know about it?
++   [We're the same.]
+    MC: I think you and I are similar.
+    We're both... against current. So I think you're not the only one feeling this way.
+    SP3: How are you against current?
+    MC: ...
+- MC: There was... this person.
+MC: That I really cared about... We really.. or.. I think I really loved them.
+And then they left for the surface. And I feel like I haven't really been able to.. care about anything else, since.
+And it's been so many cycles. And I just can't get them out my mind.
+SP3: I think that's different.
+MC: What?
+SP3: I'm doing all this for the survival of our species. You're speaking of a lover spurn.
+// MC removes hand
+MC: ...
+SP3: You're pathetic.
+MC: .....
++   [You're pathetic.]
+    MC: You're the one who's pathetic. Reclusing here in your little hideout.
+    MC: I feel like you know, deep inside your heart, that none of this seahorseshit is true, and that you just want an excuse to feel superior over everyone else.
+    SP3: That's not true.
+    This matters. It's real. Open. Your. EYES.
+    // pause 
+    MC: I didn't mean to --
+    SP3: I'm sorry for calling you pathetic.
+    If you still wish to do so, you can tell me more about your.. ex-lover.
+    MC: I don't... I don't want to talk about them anymore.
+    I feel like they're all that's been on my mind, lately, so I.. well... actually.. them, and the entanglement.
++   [Fuck you.]
+    MC: Fuck you. I wasn't..
+    Of course I'm not saying we're the exact same. 
+    I was just trying to relate to your feelings and open up as well. You don't have to be so fucking dismissive about it.
+    You're not better than me just because.. 
+    ...
+    // pause
+    SP3: I apologize.
+    If you still wish to do so, you can tell me more about your.. ex-lover.
+    MC: I don't... I don't want to talk about them anymore.
+    MC: I feel like they're all that's been on my mind, lately, so I.. well... actually.. them, and the entanglement.
++   [You're right.]
+    MC: You're right. I really am. I...
+    I don't know how to... how.. how to NOT BE LIKE THIS ANYMORE!!!
+    MC: IT SUCKS!!!!
+    // pause
+    SP3: Have you...
+    Have you tried anything doing anything to... stop feeling this way?
+    MC: The entanglement.
+    SP3: Right.
+- MC: To be honest, I..
+I really miss it.
+SP3: ...
+MC: Which, I know it's bad, but it just felt.. so.. so...
+Just, like, nothing else.
+SP3: Did it.. make things better for you, though?
++   [Yes.]
+    MC: It.. helped.
+    At least, when I did it, I didn't think of them.
+    // pause 
+    For.. some of it, at least.
+    But those moments were still good. Better than anything else.
+    ~ talkedAboutEntanglementPositively=true
++   [No.]
+    MC: It made things worse. Now I just have a second subject of obsession.
+    And doing it with others just made me feel lonelier.
++   [I don't know.]
+    MC: I don't know. Maybe. Maybe not.
+    In some ways I wish I never even found out about it.
+- SP3: What about.. have you tried meeting other people? In contexts outside of entanglement?
+MC: I.. I have, and there were some nice people, but..
+I feel like.. the entanglement kind of... it ends up happening, and then it kind of makes things feel weird and then..
+I don't know. I can't help myself. Or maybe.. maybe I just can't connect with other people anymore.
+// pause 
+SP3: I also feel that way.
+// pause
+Still, I'm somewhat jealous.
+MC: What do you mean?
+{ talkedAboutEntanglementPositively:
+    SP3: I only really entangled a couple times. And it wasn't.. as good as you describe it.
+    SP3: But now, we both know the truth about it.
+- else:
+    SP3: I only really entangled a couple times. At least, you got to enjoy it a few more times, before..
+    SP3: Well, now we both know the truth about it.
+}
+MC: Right.
+// PAUSE
+SP3: Can I show you something?
+MC: Sure.
+// SP3's bra slips off, revealing nipples
+MC: ..how long have you had these?
+SP3: A few seasons. 
+MC: What are they, anyway?
+SP3: I'm not entirely sure. But I've seen others grow these. And soon enough, they would move to the surface.
+I.. I feel silly. I'm always advocating to fight back against the aliens, but I may be the most.. compromised of us all.
+I worry.
+MC: I think..
++   [Change is ok.]
+    MC: I think maybe.. Maybe it's just a proof that you're changing, and it doesn't have to be bad?
+    MC: Change always happens, one way or another. It doesn't necessarily mean you're going to the surface.
+    SP3: I don't know about that..
+    MC: Well, maybe you just have to believe it nevertheless. Otherwise..
+    SP3: ...
++   [It looks good.]
+    MC: I think it kind of looks nice on you.
+    SP3: What?
+    MC: It's cute.
+    // pause 
+    SP3: Do you really think so?
++   [Maybe it'll stop.]
+    MC: Maybe it'll just stop there.
+    SP3: ...
+    MC: I mean, we still don't know anything about it, right? And you said it's been a few seasons, already.
+    MC: Maybe it'll even fall off eventually. Maybe you just have to continue being careful and.. stop engaging in..
+    SP3: Perhaps.
+    // PAUSE
+MC: Wait, do you hear that?
 -> END
 
-// eventually, SP3 says another "someone like you" and MC gets mad
-    // what do you mean by that?! you keep saying it, what kind of person do you think I am?!
-    
-// during cuddle, they unpack the attraction 
-    // for MC it's like there was also someone i really cared about... (and they're maybe recorded here), for SP3 it's like the first time they're sharing their passion & not being made fun of
-    // MC misses entanglement so much (and their ex), it's all they can think about, but they know that it's wrong.
-    // SP3 never got to try it. they feel jealous that everyone else got to do it at least before
-    // SP3: anyway... 
-    // MAYBE: scene where the bra dramatically slips off.
-        // dramatic intimate moment, showing body
-        // SP3 then is like ive had this for a while.. is it weird?
-        // MC: maybe it's just a proof that you're changing... and it doesn't have to be bad?
-            // maybe actually i like this more cause it leads into the SP3's self-acceptance later?
-    
-// suddenly cuddle is interrupted by hearing someone sing.
-    // someone sings back 
-    // it's obvious they're doing foreplay
-    // SP3: you know everyone still does it tho... right? i may be an outcast but not that oblivious, i always hear it outside
-    // MC: ...huh?
-    // they try to be quiet and wait for it to end
-    // hearing it makes them even more horny
-    
-// organs come out and main act happens
+== SP3afterCuddle ==
+MC: It sounds like..
+// pause
+MC: They shouldn't be doing it.
+SP3: Yet they do.
+MC: You mean..
+SP3: You know everyone still does it, right? I may be an outcast, but I'm not that oblivious. It always happens right outside my cave, too.
+MC: ...huh.
+I really thought..
+What about the tangle preventers? Most people wear those.
+SP3: It makes them feel safe, I suppose.
+// pause 
+MC: We've been here a while.
+SP3: We should wait for them to finish. Before coming out.
+// pause
+SP3: It really sounds..
+MC: It's beautiful.
+SP3: Yes.
+// pause 
+// they move towards each other
+MC: We shouldn't --
+// SP3's preventer comes off
+-> END
+
+// main act happens
 
 // climax
-
-// post-sex, just standing around
-    // you can harmonize to talk, SP3 harmonizes back
-
-//  MC: "so... like... maybe we can do this again.. I dunno, or maybe not"
-    // MAYBE: SP3's bra has slipped off and we can see their nipples
-        // MC: what.. is that?
-        // SP3: it grew a little while ago... why, is it weird?
-            // or maybe actually it just grows right now
-            // or maybe this whole discussion happens before, maybe even during cuddle
-    // SP3: so this is what it's like... huh..
-    // their voice is cutting out 
     
-// SP3 brusquement interrupts the talking and leaves.
+// harmonize to talk, SP3 responds
+== SP3postEntanglement ==
+MC: So.. maybe we can.. do this again sometime.
+Or maybe not.
+// pause 
+MC: What's wrong?
+SP3: I-- m--.... po---- 
+MC: What?
+SP3: O-- - -- ------e -e-----
+MC: I don't receive you very well.. Is everything okay?
+// pause
+// an earthquake starts, much more fierce than the last
+MC: Ah!
+-> END
 
-// MC goes out to see everyone else launching to the surface
-    // it's beautiful and there's shimmering light coming out of the surface
-    // maybe no "launching platform"?
-    // or maybe there is one and MC is like "wait SP3 that's too rash!" but when they come out SP3 is just swimming, and discarded all their equipment
-        // problem (?) i want this place to be connected to edge, which i want to be below everything, but i also want it to be at the top so there's a direct passage to the surface
-            // what if it's actually fully like connected to surface? like u can touch it?
-            // and maybe it's a weird geological phenomenon where it's not actually that close to sea level..?
-        //... but maybe it's just not. i just like the idea of everyone else flooding into the room even tho they didn't really know about it.
-    // there's an earthquake that brings the water level down and destroys the launcher, divine intervention vibe
+// MC folds in on themselves,
+// screen fades OUT
+// screen fades back in, rubble everywhere, entrance is destroyed,
+
+// MC comes out to see SP3 looking towards the surface, which has supernaturally gotten VERY close to the cave's top, like you can reach out and touch it. it's beautiful and there's shimmering light coming out of the surface. the launcher is destroyed
+    // maybe there's  a part where we think the launcher is still working and SP3 is gonna use it and MC is like wait, no! but then SP3 tosses it away
+// SP3 doesn't look back and swims up. then, a stream of merpeople converge in and out the exit, dropping their tangle preventers behind.
+
+// suddenly, SP3 moves the 
+
         
 // evnetually people stop flooding in, and current starts pulling swimmer towards edge.
     // virgin is there waiting for you, and you swim together back to world 1. there's barely anyone else.
     
     
     
+    
+    
 // stuff to fit in at some point:
 
-
-// meeting red herring again. do they give the cold shoulder? do they talk explicitly about how it's not them?
 
 // virgin talk.
     // virgin judges everyone for being panicky. somehow even in entanglement-less world they're still above everyone. they're not wearing a chastity cage.
