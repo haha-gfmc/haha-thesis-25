@@ -7009,7 +7009,7 @@ MonoBehaviour:
     gravity: {x: 0, y: -9.81, z: 0}
     ambientWind: {x: 0, y: 0, z: 0}
     foamGravityScale: 1
-    damping: 0
+    damping: 0.404
     maxAnisotropy: 3
     sleepThreshold: 0.0005
     maxVelocity: 50
@@ -17685,7 +17685,7 @@ MonoBehaviour:
   _maxCompression: 0
   _bendConstraintsEnabled: 1
   _bendCompliance: 0.005
-  _maxBending: 0.014
+  _maxBending: 0.005
   _plasticYield: 0
   _plasticCreep: 0
 --- !u!1 &4416076693005291798
@@ -18419,7 +18419,7 @@ MonoBehaviour:
   _maxCompression: 0
   _bendConstraintsEnabled: 1
   _bendCompliance: 0.005
-  _maxBending: 0.014
+  _maxBending: 0.005
   _plasticYield: 0
   _plasticCreep: 0
 --- !u!1 &5136322198694534799
