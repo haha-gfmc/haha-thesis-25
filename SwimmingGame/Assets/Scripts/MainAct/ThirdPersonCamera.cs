@@ -24,7 +24,7 @@ public class ThirdPersonCamera : MonoBehaviour
         playerInput = FindObjectOfType<PlayerInput>();
     }
 
-    void Update()
+    void LateUpdate()
     {
         if (!cameraLocked)
         {
@@ -41,25 +41,25 @@ public class ThirdPersonCamera : MonoBehaviour
         // Get mouse input
         if (playerInput.currentControlScheme == "Keyboard&Mouse")
         {
-            mouseX = playerInput.rotation.x * keyboardMouseMouseSensitivity * Time.fixedDeltaTime;
-            mouseY = -playerInput.rotation.y * keyboardMouseMouseSensitivity * Time.fixedDeltaTime;
+            mouseX = playerInput.rotation.x * keyboardMouseMouseSensitivity * Time.deltaTime;
+            mouseY = -playerInput.rotation.y * keyboardMouseMouseSensitivity * Time.deltaTime;
         }
         else if (playerInput.currentControlScheme == "Gamepad")
         {
-            mouseX = playerInput.rotation.x * gamepadMouseSensitivity * Time.fixedDeltaTime;
-            mouseY = -playerInput.rotation.y * gamepadMouseSensitivity * Time.fixedDeltaTime;
+            mouseX = playerInput.rotation.x * gamepadMouseSensitivity * Time.deltaTime;
+            mouseY = -playerInput.rotation.y * gamepadMouseSensitivity * Time.deltaTime;
         }
 
         // Get look input
         if (playerInput.currentControlScheme == "Keyboard&Mouse")
         {
-            lookX = playerInput.look.x * keyboardMouseLookSensitivity * Time.fixedDeltaTime;
-            lookY = -playerInput.look.y * keyboardMouseLookSensitivity * Time.fixedDeltaTime;
+            lookX = playerInput.look.x * keyboardMouseLookSensitivity * Time.deltaTime;
+            lookY = -playerInput.look.y * keyboardMouseLookSensitivity * Time.deltaTime;
         }
         else if (playerInput.currentControlScheme == "Gamepad")
         {
-            lookX = playerInput.look.x * gamepadLookSensitivity * Time.fixedDeltaTime;
-            lookY = -playerInput.look.y * gamepadLookSensitivity * Time.fixedDeltaTime;
+            lookX = playerInput.look.x * gamepadLookSensitivity * Time.deltaTime;
+            lookY = -playerInput.look.y * gamepadLookSensitivity * Time.deltaTime;
         }
 
         // Combine mouse input and look input
