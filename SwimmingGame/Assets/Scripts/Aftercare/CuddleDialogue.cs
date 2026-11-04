@@ -71,7 +71,8 @@ public class CuddleDialogue : Dialogue
             currentChoiceIndex <= story.currentChoices.Count && currentChoiceIndex >= 0)
         {
             if(moving){
-                FindObjectOfType<MoveBody>().PickedChoice(currentChoiceIndex);
+                MoveBody moveBody=FindAnyObjectByType<MoveBody>();
+                if(moveBody!=null) moveBody.PickedChoice(currentChoiceIndex);
                 GameObject cb=choiceTextBoxes[choiceTextBoxes.Length-1];
                 choiceTextBoxes[choiceTextBoxes.Length-1]=choiceTextBoxes[currentChoiceIndex];
                 choiceTextBoxes[currentChoiceIndex]=cb;
@@ -114,8 +115,8 @@ public class CuddleDialogue : Dialogue
             }
         }
         else currentChoiceIndex=choiceIndex;
-        if(currentChoiceIndex!=prevChoiceIndex){
-            //caressTimer=0f;
+        if(currentChoiceIndex!=prevChoiceIndex && currentChoiceIndex>=0){
+            caressTimer=0f;
         }
         prevChoiceIndex=currentChoiceIndex;
         justHovered=true;
@@ -235,7 +236,10 @@ public class CuddleDialogue : Dialogue
             choiceRectScales[k]=choiceRects[k].localScale;
         }
 
-        FindObjectOfType<CuddleCameraManager>().shotIndex=currentViewIndex;
+        HideChoices();
+
+        CuddleCameraManager cuddleCameraManager=FindAnyObjectByType<CuddleCameraManager>();
+        if(cuddleCameraManager!=null) cuddleCameraManager.shotIndex=currentViewIndex;
 
         SetUpView();
     }

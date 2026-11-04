@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class ReceivingPoseController : MonoBehaviour
 {
+    private CuddleDialogue cuddleDialogue;
+
     public enum PoseDirection
     {
         Neutral,
@@ -72,6 +74,10 @@ public class ReceivingPoseController : MonoBehaviour
 
     private bool isTransitioning = false;
 
+    [Header("Dialogue")]
+    [Tooltip("Speed at which to pick the dialogue option afer picking a pose.")]
+    public float selectingSpeed=.1f;
+
 
     private void Awake()
     {
@@ -84,17 +90,32 @@ public class ReceivingPoseController : MonoBehaviour
 
     private void Start()
     {
+        cuddleDialogue=FindAnyObjectByType<CuddleDialogue>();
+
         PlayPose(neutralState);
         ShowCamera(neutralCamera);
 
         currentPose = PoseDirection.Neutral;
         desiredPose = PoseDirection.Neutral;
+
     }
 
 
     private void Update()
     {
         desiredPose = ReadDesiredPose();
+
+        int hoveringChoice=-1;
+        float selectingIntensity=selectingSpeed;
+        if(desiredPose==PoseDirection.Right) hoveringChoice=0;
+        if(desiredPose==PoseDirection.Up) hoveringChoice=1;
+        if(desiredPose==PoseDirection.Down) hoveringChoice=2;
+        if(desiredPose==PoseDirection.Left) hoveringChoice=3;
+        
+        if(hoveringChoice!=-1){
+            cuddleDialogue.HoveringChoice(hoveringChoice);
+            cuddleDialogue.SelectingChoice(hoveringChoice,selectingIntensity);
+        }
 
         if (!isTransitioning &&
             desiredPose != currentPose)
@@ -343,6 +364,15 @@ public class ReceivingPoseController : MonoBehaviour
                 continue;
             }
             pose.fullCamera.SetActive(pose.fullCamera == targetCamera);
+        }
+
+        if(neutralCamera == targetCamera) cuddleDialogue.ChangeView(0);
+        else
+        {
+            for (int i=0;i<poses.Count;i++)
+            {
+                if(poses[i].fullCamera == targetCamera) cuddleDialogue.ChangeView(i+2);
+            }
         }
     }
 

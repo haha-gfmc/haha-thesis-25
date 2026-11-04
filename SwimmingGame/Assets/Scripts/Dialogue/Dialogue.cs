@@ -224,13 +224,20 @@ public class Dialogue : MonoBehaviour
         interlocutorLineTMP = interlocutorTextBox.GetComponentInChildren<TMP_Text>();
         playerLineTMP = playerTextBox.GetComponentInChildren<TMP_Text>();
 
-        lineTMP = interlocutorLineTMP;
-        textBox = interlocutorTextBox;
+        if (talker == "MC")
+        {
+            textBox = playerTextBox;
+            lineTMP = playerLineTMP;
+        }else{
+            lineTMP = interlocutorLineTMP;
+            textBox = interlocutorTextBox;
+        }
 
         standardTextBox.SetActive(false);
         floralTextBox.SetActive(false);
         boneTextBox.SetActive(false);
 
+        SetupDialogueColor();
     }
 
     virtual public void DialogueAwake()
@@ -750,44 +757,7 @@ public class Dialogue : MonoBehaviour
             isAmbient = false;
         }
 
-        if (ContainsTag(story.TagsForContentAtPath(currentKnotName), "color"))
-        {
-            Image[] images = interlocutorTextBox.GetComponentsInChildren<Image>();
-            defaultTextBoxColor = images[0].color;
-            changedColor = true;
-            string tag = GetTag(story.TagsForContentAtPath(currentKnotName), "color");
-            Color newColor;
-            if (ColorUtility.TryParseHtmlString("#" + tag.Replace("color:", "").Trim(), out newColor))
-            {
-                foreach (Image image in images)
-                {
-                    newColor.a = image.color.a;
-                    image.color = newColor;
-                }
-            }
-        }
-        if (ContainsTag(story.TagsForContentAtPath(currentKnotName), "outline"))
-        {
-            Image[] images = interlocutorTextBox.GetComponentsInChildren<Image>();
-            string tag = GetTag(story.TagsForContentAtPath(currentKnotName), "outline");
-            Color newColor;
-            if (!changedColor)
-            {
-                defaultTextBoxColor = images[0].color;
-            }
-            changedColor = true;
-            if (ColorUtility.TryParseHtmlString("#" + tag.Replace("outline:", "").Trim(), out newColor))
-            {
-                foreach (Image image in images)
-                {
-                    if (image.gameObject.name == "Outline")
-                    {
-                        newColor.a = image.color.a;
-                        image.color = newColor;
-                    }
-                }
-            }
-        }
+        SetupDialogueColor();
         //if(!isAmbient) playerInput.SwitchMap("UI");
 
         if (swimmer != null) swimmer.StartedDialogue(isAmbient);
@@ -795,6 +765,50 @@ public class Dialogue : MonoBehaviour
         if (displayText == "" && !story.canContinue && story.currentChoices.Count <= 0)
         {
             EndDialogue();
+        }
+    }
+
+    public void SetupDialogueColor()
+    {
+        if(story!=null){
+            if (ContainsTag(story.TagsForContentAtPath(currentKnotName), "color"))
+            {
+                Image[] images = interlocutorTextBox.GetComponentsInChildren<Image>();
+                defaultTextBoxColor = images[0].color;
+                changedColor = true;
+                string tag = GetTag(story.TagsForContentAtPath(currentKnotName), "color");
+                Color newColor;
+                if (ColorUtility.TryParseHtmlString("#" + tag.Replace("color:", "").Trim(), out newColor))
+                {
+                    foreach (Image image in images)
+                    {
+                        newColor.a = image.color.a;
+                        image.color = newColor;
+                    }
+                }
+            }
+            if (ContainsTag(story.TagsForContentAtPath(currentKnotName), "outline"))
+            {
+                Image[] images = interlocutorTextBox.GetComponentsInChildren<Image>();
+                string tag = GetTag(story.TagsForContentAtPath(currentKnotName), "outline");
+                Color newColor;
+                if (!changedColor)
+                {
+                    defaultTextBoxColor = images[0].color;
+                }
+                changedColor = true;
+                if (ColorUtility.TryParseHtmlString("#" + tag.Replace("outline:", "").Trim(), out newColor))
+                {
+                    foreach (Image image in images)
+                    {
+                        if (image.gameObject.name == "Outline")
+                        {
+                            newColor.a = image.color.a;
+                            image.color = newColor;
+                        }
+                    }
+                }
+            }
         }
     }
 
