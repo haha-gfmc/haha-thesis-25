@@ -1,17 +1,30 @@
 INCLUDE Functions.ink
 
 //GLOSSARY:
+// SP3: the main love interest in this chapter, stands for "Sex Partner 3"
 // beneathlings: people who refuse to entangle and evolve
 // tangle preventer: chastity cage they wear to make sure the organ doesn't come out
 // discurcenter: place where this chapter takes place/conference-like event 
 // drought: the big event in which a bunch of merpeople migrated to the surface, and now there's only a few of them left.
 // desert-ers: slur for people who left for the surface
 
+// Hi Isabelle! Thank you for agreeing to do a review pass. This is the main script for chapter 3, which takes place directly after chapter 2, in which the protagonist (MC) attended Enkidu's party, everyone then left for the surface, and they were left behind.
+    // Comments are there to provide additional contexts, i suggest reading them, tho some of them are more like stray thoughts or other ideas
+    // Where i'm looking for feedback is: tone, feelings, what you think this chapter was about, length, language, anything confusing, and anything else.
+    // this is gonna be the final chapter besides a short epilogue
+    
+    // To leave some feedback is suggets copying and pasting the comment below:
+    
+    // ISABELLE COMMENT: [write comment here]
+    
+
+
 === introCoralnet ===
 // grindr hookup vibes, intimate talk. can we meet soon?
 // happens at edge
     // vibe is horny and sad. talking to someone DL.
 // it would be cool if this starts as giant textbox-less text (trailer style) and changing size & positions before fading to IRL
+// ISABELLE COMMENT: this is two people talking right? what if the coralnet had special symbols for when it's two people messaging? - okay wait I read more and it's like the orgy scene isn't it?
 > so, what would you want to do if we met up?
 > ahaha. that's probably not a good idea.
 > why not? we don't have to entangle.
@@ -40,13 +53,14 @@ INCLUDE Functions.ink
 > i like using the coralnet again. no one really uses it anymore.
 > you're nice.
 > maybe it'll come back next season? once this dircusing craze dies down.
+// ISABELLE COMMENT: I don't know what dircusing is 
 > what if we actually did meet up?
 > haha. yeah, maybe.
 > seriously. why don't we meet up?
 > been a while. do you still come around here? would you like to actually meet up sometime?
 > i'm getting tired of the talk. let's meet up?
 > sorry, i didn't mean it that way. just talking like this is really nice. you're right about the coralnet.
-> would you  want to meet with me sometime?
+> would you want to meet with me sometime?
 Add an answer?
 +   [wanna meet up?]
     > wanna meet up still?
@@ -54,6 +68,7 @@ Add an answer?
     > come on, let's meet up! i know you want to.
 +   [i want to meet you.]
     > it's getting too hard, i can't stand it anymore. i want to meet with you.
+    // ISABELLE COMMENT: can the player say no? what feels uniquely different about each of these options?
 // thoughts: can i include more foreshadowing about this world & what it's like?
     // can we include a way to physically recognize the pen pal? (but obscure and could be lots of people)
     // can we see some sorta visuals in the beginning? what could it look like? but also making it lazy
@@ -73,13 +88,16 @@ MC: I think I'm okay...
 NPC: You know, I spent a lot of time making these.
 MC: Um... None of them match my colors. Sorry.
 // tHOUGHTS: Maybe the badges are actually a thing that people wear?
+// ISABELLE COMMENT: it's a cool reference to like a stop light party  
 -> END
+
 
 === pressAGuru1 ===
 // conference guy presenting talking through pressing A
 NPC: Harmonizing! We all love doing it, right?
 It feels just "right", to sing a resonant note. Right?
 But isn't harmonizing what got us into this mess in the first place? It's what leads to the E-Act!
+// ISABELLE COMMENT: I wanna know more about the E act - I get a sense this character feels negatively about it.
 NPC1: They're right. I never thought of it that way.
 NPC2: But how will we communicate if we give up harmonizing as well? What will be left of us?
 NPC: Fear not! Harmonizing is just a catalyzer! We have always been able to communicate without it. 
@@ -95,6 +113,8 @@ Try it! Swim up to your neighbor, and press A!
 // the tutorial should probably say "maybe try again?" if u press A and it doesn't work.
 
 // how do we tell NPCs we can press A with? maybe the guru mentions that you can make the icon appear over you if you're down to chat?
+
+// the following dialogue is optional
 
 === pressANPC1 ===
 NPC: All this time, all we had to do was press A!
@@ -146,7 +166,9 @@ NPC: Oh, that's simple. Just use the arrow keys, then press X!
     NPC: Yes, just like that!
 - -> END
 
-// person presenting chastity cage
+// end of optional dialogue
+
+// to add: person presenting chastity cage
     // maybe actually better to make it different than SP3, for the sake of giving them less baggage., and make them seems  a bit less extremely outcast?
     // on the other hand could be good to establish them as inventor of things, so maybe not...
 
@@ -202,10 +224,12 @@ SP3: That wouldn't be – We don't have the time!
 SP3: My friends, you have to be COURAGEOUS! We are facing extinction!!
 NPC1: Well, maybe you are.
 NPC3: I wouldn't say I quite consider you a friend..?
+// ISABELLE COMMENT: so funny
 SP3: It doesn't matter?! Do you all realize – They will kill us! All of us! We have to destroy them first!
 NPC3: I mean... Do we know that? I'm sure they'll forget all about us eventually, they probably already have!
 NPC1: Yes! That's what I was thinking. Why would they worry about little old us down here?
 NPC2: Of course, it would be nice to spread carnage and destruction but –
+// ISABELLE COMMENT: made me laugh
 SP3: You– you don't understand! Can't you see?! We have to do this now! Or else.. or else...
 NPC1: I'm really not sitting well with the vibe you're currently giving out. Can we–?
 NPC3: Yes, that's a good idea. Come on everyone, let's all focus our psychic energy...
@@ -217,6 +241,8 @@ SP3: Wh– What? Wait, stop! You can't! I'm –
     // maybe based on the alien world from ch. 2? 
     // maybe they can antagonize enkidu, they were a chief lieutenant of sth
 -> END
+
+// the following dialogue is optional
 
 == SP3conferenceAftermath1 ==
 NPC: I noticed you didn't help us carry that nutjob away just now.
@@ -235,6 +261,7 @@ What was that about?
     MC: So you're thinking of going?
     NPC: Ha! Don't make me laugh. 
     It's disgusting that you would say that.
+// ISABELLE COMMENT: I really like this choice, what would it be like to add a third option that's like I agree with you for supressing  SP3's speech 
 - -> END
 
 == SP3conferenceAftermath2 ==
@@ -258,11 +285,13 @@ NPC: Should such technology – if it's even possible – really be unleashed in
     NPC: I don't think it's funny at all. Or a very useful experiment.
     MC: Sorry..
 - -> END
+// ISABELLE COMMENT: Another good choice moment, i like how each of them gives a clear way to express a strong opinion. I wonder what it would be like if the NPC gives a different piece of lore about the aliens or the deep dark ocean that is connected to the way you answered?
 
 == SP3conferenceAftermath3 ==
 NPC: I mean, other planets, aliens who want to kill us, it's the stuff of make-believe. Right?
 MC: Totally. They're sick.
 NPC: It makes me think, should we even be wearing these devices knowing that they came from the same diseased mind? Why don't YOU wear one?
+// ISABELLE COMMENT: Whose dieased mind?
 MC: They um, haven't made a model that fits me. My organ comes out of my...
 NPC: Oh, please, spare the details! It makes me light-headed.
 Sick, I mean! Disgusted. Never again shall I partake.
@@ -280,6 +309,8 @@ I don't wanna risk dying on the surface for that one's ideas. We don't even know
 MC: Totally. Yeah.
 -> END
 
+// ISABELLE COMMENT: I wonder if you can give each of these NPCs different characterization that makes it clear they are different people just from the text. When I read this I imagined all of these chunks are happening with the same character, and it could be cool to get a diversity of opinions about SP3 and to learn more about the NPCs you're talking to and the world through dialogue. Right now I'm mostly getting frantic + confused vibes from all of them.
+
 //Drowned NPC
 
 // just some random NPCs
@@ -296,6 +327,8 @@ Didn't you go up to the surface with the rest of them?
     NPC: Well, I was really just dragged by a friend, I'm not the kind that engages with that sort of things... 
     But um, yeah, me neither.
 - -> END
+
+// end of optional dialogue
 
 == redHerring1 ==
 NPC: Were you listening to all that?
@@ -345,6 +378,7 @@ MC: Yeah.
 SP3: AGH! How did you connect with me?!
 MC: I used your "A"..
 SP3: My.. Ugh, how do you  get it off?!
+// ISABELLE COMMENT: Good joke
 MC: I haven't figured that out either..
 SP3: Ok, well, what do you want?
 MC: Um.. were you...
@@ -370,6 +404,8 @@ SP3: And I apologize about that, truly. I will work on a prototype for you soon,
 MC: Oh. Okay. Thanks, that's a relief.
 SP3: You're welcome. Can you close your eyes while I leave?
 MC: ...? Sure?
+// ISABELLE COMMENT: close your eyes is a funny request haha
+// ISABELLE COMMENT: Does the MC want a tangle preventer?
 // closing eyes animation, SP3 DISAPPEARS, open eyes
 -> END
 
@@ -433,6 +469,7 @@ NPC: Huh? I don't think so.
 NPC: Maybe it was someone else? You never know with these sort of things.
 MC: R–right.......
 NPC: You're the.. the person who was talking about recreational suffocation, right?
+// ISABELLE COMMENT: laughed at that 
 MC: What?
 NPC: You know, holding your body up on the surface until you can't take it anymore, for physical pleasure.
 MC: You go back and forth...?!
@@ -488,6 +525,7 @@ MC: What? I'm free to be wherever I want to be.
 SP3: This is MY spot! You can't be here!
 MC: "Your" spot? What makes it yours? And how do you even enforce such a rule?
 SP3: AGHHHH Just get out!!!
+// ISABELLE COMMENT: Intense genius can be super cool to play with, have you thought of any of your favorite intense genius archetypes? Maybe you could study those for inspo on the alien theories so you can make them more specific. 
 MC: I'm sorry, I.. I just came in here out of curiosity, but now I want to...
 +   [Learn about the aliens.]
     MC: Can you tell me more about the aliens?
@@ -527,7 +565,10 @@ SP3: Alright, look at this. It's a fragment of the ancient temple where Enkidu's
 I'm sure you've noticed this, but the way the rock (if it even is rock) is built, the intricacy, the precision...
 We don't have any technology to build such structures! If this was made by our ancestors, how could we have lost that knowledge?
 Simple: it must have been an alien civilization.
+// ISABELLE COMMENT: I see what you mean about your note feeling like it isn't that specific. I have a bunch of questions: What makes archetecture feel alien? What kind of evidence would you want to see to believe aliens exist? What does it mean if you entangle with an alien? What does it mean to SP3 to entangle? 
 Enkidu, of course, led everyone up to the surface during the big Drought. From the temple of the civilization that we know nothing about. 
+
+// ISABELLE COMMENT: If you were the MC, what kind of questions would you ask SP3? What questions would you have about the aliens? What would it mean if this scene was a little more vulnerable + tender and the MC got to ask questions rather than just answering them?
 Do you think that's a coincidence?!
 +   [Probably.]
     MC: Yeah..?
@@ -550,6 +591,7 @@ These "people" must have totally foreign – alien – biology.
 MC: Okay...
 SP3: Now, take a look a this.
 // shows you the rocket launcher
+// ISABELLE COMMENT: obsessed with rocket launcher just being there
 SP3: Do you have any idea what this might be?
 MC: ...No.
 SP3: Look inside. Do you see the way the inside is molded, perfectly shaped to host two persons next to each other in a seating position?
@@ -598,6 +640,7 @@ SP3: Really?
 - SP3: And of course... there is the possibility that they will not attack. That they will leave us in peace.
 But that is simply not how nature works. And what if we develop a way to turn them back? That would be a threat to their civilization.
 So we have to take the first move. I wouldn't want to risk the alternative.
+// ISABELLE COMMENT: I wonder what it would be like if SP3 has a kind of test for deciding who they can trust, and as a player you can fail it and get less info about the world, or pass it and be rewarded with SP3's grand plan?
 // pause.
 Any thoughts?
 +   [You're crazy.]
@@ -667,6 +710,7 @@ SP3: Well, look at the aliens, as an example. How could they come up with such a
 I suspect that they had a way of recording -- the symbols I showed you earlier -- that allowed them to transmit over long periods of time...
 ...can you imagine? Between people 10, 20 generations apart, who were never alive at the same time! 
 If they could build upon each others' knowledge, no wonder they came up with such wonderful technology!
+// ISABELLE COMMENT: a beautiful way of looking at archives
 MC: Wonderful..?
 SP3: I mean, DEMONIC! But also, highly sophisticated, I must admit. And, I mean, also...
 MC: Yes?
@@ -750,32 +794,11 @@ SP3: Yes.
 SP3: What about you?
 MC: It's good
 // pause 
-MC: About your.. "archive".
-SP3: ...
-MC: I think it's nice. To.. care about something this much.
-That you... don't want to let go of the memory of them.
-SP3: That's not why I..
-Well.. It's complicated.
-MC: It's okay. I also...
-I think I know what it's like, to have someone leave and.. not being able to move on.
-SP3: I'm not like that.
-I think this is just.. my duty. We should be keeping records. It's.. necessary.
-...
-What about this.. person who left you?
-MC: ...We were together, then they left for the surface.
-But it's been several seasons. I shouldn't still be.. They shouldn't be in my head anymore.
-They're gone. They're on the surface. They're never coming back. There's other people to meet.
-SP3: Well, not that many anymore.
-// pause 
-MC: I just can't seem to get them out of my head.
-SP3: That's pathetic.
-MC: What?
-SP3: It's okay. I think... 
-Some people also see me as pathetic. Probably.
-But.. I can't bring myself to not care. It wouldn't be true.
-// pause
-SP3: This was actually.. the first time I've been able to share my work without being made fun of.
+SP3: It's strange.. this feeling.
+MC: What feeling?
+SP3: This is actually.. the first time I've been able to share my work without being made fun of.
 Well. You did make fun of me.
+// ISABELLE COMMENT: laughed a little
 MC: I'm sorry...
 SP3: ...
 MC: I think...
@@ -804,6 +827,7 @@ And it's been so many cycles. And I just can't get them out my mind.
 SP3: I think that's different.
 MC: What?
 SP3: I'm doing all this for the survival of our species. You're speaking of a lover spurn.
+// ISABELLE COMMENT: brutal
 // MC removes hand
 MC: ...
 SP3: You're pathetic.
@@ -811,6 +835,7 @@ MC: .....
 +   [You're pathetic.]
     MC: You're the one who's pathetic. Reclusing here in your little hideout.
     MC: I feel like you know, deep inside your heart, that none of this seahorseshit is true, and that you just want an excuse to feel superior over everyone else.
+    // ISABELLE COMMENT: seahorseshit is funny
     SP3: That's not true.
     This matters. It's real. Open. Your. EYES.
     // pause 
@@ -879,6 +904,7 @@ MC: Right.
 SP3: Can I show you something?
 MC: Sure.
 // SP3's bra slips off, revealing nipples
+// ISABELLE COMMENT: whoa nipple time
 MC: ..how long have you had these?
 SP3: A few seasons. 
 MC: What are they, anyway?
@@ -959,22 +985,70 @@ MC: Ah!
     // maybe there's  a part where we think the launcher is still working and SP3 is gonna use it and MC is like wait, no! but then SP3 tosses it away
 // SP3 doesn't look back and swims up. then, a stream of merpeople converge in and out the exit, dropping their tangle preventers behind.
 
-// suddenly, SP3 moves the 
-
         
 // evnetually people stop flooding in, and current starts pulling swimmer towards edge.
     // virgin is there waiting for you, and you swim together back to world 1. there's barely anyone else.
     
+// END OF CHAPTER 3
+
+// ISABELLE COMMENT: random ending thoughts - what if the virgin is entangling? what if SP3 and the mc get into the rocket launcher together? what if SP3 calls for people to take their tangle preventers off? what specifically is destroying the rocket launcher.
+    
+== virgin ==
+// they look even more holy and isolated than usual. there's a litteral glow around them?
+NPC: Are we still friends?
+MC: Of course we are. What is that supposed to mean?
+NPC: We just haven't chatted in a while.
+// pause 
+MC: Alright.
++   [Let's chat.]
+    MC: Let's make up for it.
+    -> chat ->
++   [I'm busy.]
+- -> npcEnd ->
+-> END
+= chat
+NPC: We haven't really spoken since the party.
+MC: Yeah..
+NPC: I heard you were enjoying yourself there at the end.
+MC: Well.. I wouldn't say all the way to the end.
+NPC: Any takeaways from all that?
++   [I don't like your tone.]
+    MC: I don't like the way you're speaking to me currently.
+    // pause 
+    NPC: I just asked a question.
+    MC: A very pointed and judgemental one, clearly.
+    NPC: Not necessarily.
+    // pause 
+    NPC: Okay, well.. How do you feel afer that whole thing?
++   [No more entanglement.]
+    MC: I'm never entangling again, that much is certain.
+    NPC: I've heard this before.
+    MC: This time I mean it more.
+    NPC: ..Alright.
++   [Entangle all the way.]
+    
+    // virgin judges everyone for being panicky. somehow even in entanglement-less world they're still above everyone. they're not wearing a chastity cage.
     
     
+    // NOT FINISHED
+->->
+
+// + can the protag change in some way? maybe become more vocal about wants or ask more questions
+// + can the beneathlings be more distinct, have their own personalities?
+// + can i show the mc's pity more 
+// + how do i have choice and let the player express themself more while keeping thoroughline
     
+   
+   
+   
+   
+   
     
 // stuff to fit in at some point:
 
 
-// virgin talk.
-    // virgin judges everyone for being panicky. somehow even in entanglement-less world they're still above everyone. they're not wearing a chastity cage.
-    // there's a litteral glow around them?
+
+
     
 // generic NPC from world 2 who's not like the others
     
