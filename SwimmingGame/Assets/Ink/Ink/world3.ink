@@ -171,6 +171,7 @@ NPC: Oh, that's simple. Just use the arrow keys, then press X!
 // to add: person presenting chastity cage
     // maybe actually better to make it different than SP3, for the sake of giving them less baggage., and make them seems  a bit less extremely outcast?
     // on the other hand could be good to establish them as inventor of things, so maybe not...
+    // HAN COMMENT: I kind of like the idea that no one knows who invented the chasity cage. And they just all went along with it. I think this would make the ppl in chapter 3 look more chaotic -- like none of them knows whats going on but they just trapped here and slowly going crazy. Having an inventor that created a trend or a device that everyone uses to me sounds like a leader or mastermind. Which i think would undermine the atmosphere.
 
 // meeting powerful psychic who controls currents
     // same as "Press A" NPC?
@@ -209,6 +210,7 @@ NPC1: What?!
 NPC2: I knew it. I always had a hunch.
 SP3: They have brainwashed our brethren into changing, but they cannot affect the rest of us, so they will use their nefarious alien technology to destroy the rest of us instead!
 SP3: (If those brethren of course were even brethren in the first place. They could have been aliens in disguise all along. But I digress...)
+    // HAN COMMENT: Maybe instead of declearing a war against ppl in the surface, SP3 propose a test on everyone in the conference to make sure there is no alien in disguise. And the test requires someone's blood or whatever, and people feel negative in doing that so they kicked sp3 out. Maybe to make the stake even higher SP3 can unwillingly do the test on one of the merpeople and kill them because the test says the subject is one of aliens.
 NPC1: We– We– We can't let that happen!
 NPC2: Someone has to do something!
 NPC3: More than just one! Several people must do something!
@@ -496,6 +498,7 @@ MC: But, since you ask..
     // pause
     NPC: Well I hope you find.. whoever you were actually looking for.
     MC: Um, yeah. Okay.
+    // HAN COMMENT: Maybe here NPC can be like: are you still down to try with me at the surface tho?
 - -> END
 
 == redHerring3 ==
@@ -517,6 +520,7 @@ NPC: Sure, yeah, that's possible. Good luck.
 
 == SP3hideout1 ==
 // HATIM THOUGHTS: i feel like SP3's conspiracies are too general... it'd be better if somehow they were more specific/funny
+// HAN THOUGHTS: what if sp3 is setting up a trap here so no intruders can come in but mc accidentally ruined it. Or something along the line so that there is a power dynamic between the 2 to make mc feel more sorry than angry at sp3 claiming a space. It could also make the atmosphere a bit more vulnerable.
 SP3: AGHH! Stop using my A!! 
 And.. WHAT ARE YOU DOING HERE?!
 MC: I just wandered in.. what is this place?
@@ -567,6 +571,8 @@ We don't have any technology to build such structures! If this was made by our a
 Simple: it must have been an alien civilization.
 // ISABELLE COMMENT: I see what you mean about your note feeling like it isn't that specific. I have a bunch of questions: What makes archetecture feel alien? What kind of evidence would you want to see to believe aliens exist? What does it mean if you entangle with an alien? What does it mean to SP3 to entangle? 
 Enkidu, of course, led everyone up to the surface during the big Drought. From the temple of the civilization that we know nothing about. 
+// HAN COMMENT: a thing could be sp3 discovered the temple rocks are making a sound that mesmerize people and that is what enkidu uses to convert everyone in the party. And the sound could be the club music in chapter 2 haha.
+// HAN COMMENT: mc could say something like "I was there!" and shares a bit of their lore as well.
 
 // ISABELLE COMMENT: If you were the MC, what kind of questions would you ask SP3? What questions would you have about the aliens? What would it mean if this scene was a little more vulnerable + tender and the MC got to ask questions rather than just answering them?
 Do you think that's a coincidence?!
@@ -595,6 +601,7 @@ SP3: Now, take a look a this.
 SP3: Do you have any idea what this might be?
 MC: ...No.
 SP3: Look inside. Do you see the way the inside is molded, perfectly shaped to host two persons next to each other in a seating position?
+// HAN COMMENT: what if there is a drown alien in the ship but both of mc and sp3 just thought thats not important.
 MC: ..I guess so?
 SP3: Now check this out.
 // SP3 turns on the propulsion engine. It spouts out fire 
@@ -641,6 +648,7 @@ SP3: Really?
 But that is simply not how nature works. And what if we develop a way to turn them back? That would be a threat to their civilization.
 So we have to take the first move. I wouldn't want to risk the alternative.
 // ISABELLE COMMENT: I wonder what it would be like if SP3 has a kind of test for deciding who they can trust, and as a player you can fail it and get less info about the world, or pass it and be rewarded with SP3's grand plan?
+// HAN COMMENT: again here maybe if we go with the sp3 testing idea sp3 could test mc and confirm they are not an alien. And mc could be the first person that yield a negative result. And this could be lore accurate because in the end mc is the only person that cannot evolve. And maybe sp3's biggest secrect is they are also tested positive...
 // pause.
 Any thoughts?
 +   [You're crazy.]
@@ -669,6 +677,7 @@ MC: Huh...
 SP3: Huh. That's not good.
 MC: What is going on?!
 SP3: This happens sometimes. We should, um, leave. In case of a cave-in.
+// HAN COMMENT: again if we go with the trap idea the trap failing could be mentioned here. Like sp3 would say the trap are meant for this kind of situations.
 // the exit has been caved in
 SP3: ...I'm not strong enough to move this. Can you help?
 MC: I.. I'm also not very good with telekinesis.
@@ -744,11 +753,13 @@ MC: I..
     MC: It's...
     //MC tells their name 
     SP3: That's... nice.
+    // HAN COMMENT: its more natural to me if sp3 is surprised and ask why here
     MC: Thanks. I don't know. I haven't used it since... the Drought.
     SP3: I think it's okay to have one. If you'd like. Not everything that they create is necessarily... bad.
     MC: Yeah. Maybe. 
     Do you have one?
     SP3: I haven't come up with one but... I'm thinking about it.
+    // HAN COMMENT: what if mc comes up with sp3's name here, using the same system
     // pause
 +   [...think that's nice.]
     MC: It makes sense. I think.
@@ -869,6 +880,7 @@ I really miss it.
 SP3: ...
 MC: Which, I know it's bad, but it just felt.. so.. so...
 Just, like, nothing else.
+// HAN COMMENT: What if there is less complete scentence and more "..." back and forth
 SP3: Did it.. make things better for you, though?
 +   [Yes.]
     MC: It.. helped.
