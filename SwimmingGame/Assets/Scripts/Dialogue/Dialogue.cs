@@ -36,7 +36,7 @@ public class Dialogue : MonoBehaviour
     public bool startStoryTrigger;
 
     public bool inDialogue = false;
-    private bool choicePicked = false;
+    [HideInInspector]public int choicePicked = -1;
 
     public NPCOverworld npcInterlocutor;
     private Swimmer swimmer;
@@ -362,13 +362,13 @@ public class Dialogue : MonoBehaviour
                 }
 
                 //Move on with picking
-                if (inDialogue && choicePicked && story.currentChoices.Count > 0 &&
-                    currentChoiceIndex <= story.currentChoices.Count && currentChoiceIndex >= 0)
+                if (inDialogue && choicePicked>=0 && story.currentChoices.Count > 0 &&
+                    choicePicked <= story.currentChoices.Count)
                 {
-                    story.ChooseChoiceIndex(currentChoiceIndex);
+                    story.ChooseChoiceIndex(choicePicked);
                     Continue();
                     HideChoices();
-                    choicePicked = false;
+                    choicePicked = -1;
                     currentChoiceIndex = -1;
                     if (story.currentChoices.Count == 0)
                     {
@@ -448,7 +448,7 @@ public class Dialogue : MonoBehaviour
     public void PickChoice(int choiceIndex)
     {
         currentChoiceIndex = choiceIndex;
-        choicePicked = true;
+        choicePicked = currentChoiceIndex;
         bubblesInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         singingTimer = 0f;
         Sound.PlayOneShotVolume("event:/Non-Diagetic SFX/Bubbles/Bubbles - Burst", 1f);

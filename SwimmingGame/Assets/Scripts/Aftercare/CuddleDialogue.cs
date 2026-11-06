@@ -73,10 +73,24 @@ public class CuddleDialogue : Dialogue
             if(moving){
                 MoveBody moveBody=FindAnyObjectByType<MoveBody>();
                 if(moveBody!=null) moveBody.PickedChoice(currentChoiceIndex);
-                GameObject cb=choiceTextBoxes[choiceTextBoxes.Length-1];
-                choiceTextBoxes[choiceTextBoxes.Length-1]=choiceTextBoxes[currentChoiceIndex];
-                choiceTextBoxes[currentChoiceIndex]=cb;
-                ChangeView(currentViewIndex);
+                ReceivingPoseController receivingPoseController=FindAnyObjectByType<ReceivingPoseController>();
+                if(receivingPoseController!=null) receivingPoseController.PickedChoice(currentChoiceIndex);
+                GameObject cb;
+                foreach(GameObject dialogueViewObject in views)
+                {
+                    DialogueView dialogueView=dialogueViewObject.GetComponent<DialogueView>();
+                    cb=dialogueView.choiceTextBoxes[dialogueView.choiceTextBoxes.Length-1];
+                    dialogueView.choiceTextBoxes[dialogueView.choiceTextBoxes.Length-1]=dialogueView.choiceTextBoxes[currentChoiceIndex];
+                    dialogueView.choiceTextBoxes[currentChoiceIndex]=cb;
+                }
+                // cb=choiceTextBoxes[choiceTextBoxes.Length-1];
+                // choiceTextBoxes[choiceTextBoxes.Length-1]=choiceTextBoxes[currentChoiceIndex];
+                // choiceTextBoxes[currentChoiceIndex]=cb;
+                choiceTMPs = new TMPro.TMP_Text[choiceTextBoxes.Length];
+                for (int i = 0; i < choiceTextBoxes.Length; i++)
+                {
+                    choiceTMPs[i] = choiceTextBoxes[i].GetComponentInChildren<TMPro.TMP_Text>();
+                }
             }
             PickChoice(currentChoiceIndex);
         }

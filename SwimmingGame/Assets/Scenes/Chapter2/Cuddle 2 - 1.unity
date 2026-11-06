@@ -5056,7 +5056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1986153374961182649, guid: bb5aab30e2bebfc47aa2562ffd6246c8, type: 3}
       propertyPath: moving
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1986153374961182649, guid: bb5aab30e2bebfc47aa2562ffd6246c8, type: 3}
       propertyPath: inkJSONAsset
@@ -5064,7 +5064,7 @@ PrefabInstance:
       objectReference: {fileID: 4900000, guid: e91984904f07a5e4a9e878a077ff19b1, type: 3}
     - target: {fileID: 1986153374961182649, guid: bb5aab30e2bebfc47aa2562ffd6246c8, type: 3}
       propertyPath: currentKnotName
-      value: EnkiduAftercareTest
+      value: EnkiduAftercare1
       objectReference: {fileID: 0}
     - target: {fileID: 1986153374961182649, guid: bb5aab30e2bebfc47aa2562ffd6246c8, type: 3}
       propertyPath: views.Array.size
@@ -7445,6 +7445,7 @@ MonoBehaviour:
   stickThreshold: 0.35
   directionHysteresis: 0.1
   selectingSpeed: 0.5
+  optionsIndex: 
 --- !u!1001 &1990943823
 PrefabInstance:
   m_ObjectHideFlags: 0

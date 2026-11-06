@@ -943,7 +943,7 @@ MC: I think..
     MC: Maybe it'll even fall off eventually. Maybe you just have to continue being careful and.. stop engaging in..
     SP3: Perhaps.
     // PAUSE
-MC: Wait, do you hear that?
+- MC: Wait, do you hear that?
 -> END
 
 == SP3afterCuddle ==
@@ -1043,7 +1043,7 @@ NPC: Any takeaways from all that?
     
     
     // NOT FINISHED
-->->
+- ->->
 
 // + can the protag change in some way? maybe become more vocal about wants or ask more questions
 // + can the beneathlings be more distinct, have their own personalities?

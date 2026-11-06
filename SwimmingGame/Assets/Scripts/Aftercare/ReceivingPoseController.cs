@@ -79,6 +79,11 @@ public class ReceivingPoseController : MonoBehaviour
     public float selectingSpeed=.1f;
 
 
+    public List<int> optionsIndex; //Index of choices assigned to each movement
+                        // 0 is right, 1 is up, 2 is left, 3 is down
+    private int lastPickedChoiceIndex;
+
+
     private void Awake()
     {
         if (playerInput == null)
@@ -98,6 +103,12 @@ public class ReceivingPoseController : MonoBehaviour
         currentPose = PoseDirection.Neutral;
         desiredPose = PoseDirection.Neutral;
 
+        optionsIndex=new List<int>();
+        optionsIndex.Add(0);
+        optionsIndex.Add(1);
+        optionsIndex.Add(2);
+        lastPickedChoiceIndex=3;
+
     }
 
 
@@ -113,8 +124,8 @@ public class ReceivingPoseController : MonoBehaviour
         if(desiredPose==PoseDirection.Left) hoveringChoice=3;
         
         if(hoveringChoice!=-1){
-            cuddleDialogue.HoveringChoice(hoveringChoice);
-            cuddleDialogue.SelectingChoice(hoveringChoice,selectingIntensity);
+            cuddleDialogue.HoveringChoice(optionsIndex.IndexOf(hoveringChoice));
+            cuddleDialogue.SelectingChoice(optionsIndex.IndexOf(hoveringChoice),selectingIntensity);
         }
 
         if (!isTransitioning &&
@@ -387,5 +398,11 @@ public class ReceivingPoseController : MonoBehaviour
             }
         }
         return null;
+    }
+
+    public void PickedChoice(int index){
+        optionsIndex.Insert(index,lastPickedChoiceIndex);
+        lastPickedChoiceIndex=optionsIndex[index+1];
+        optionsIndex.Remove(lastPickedChoiceIndex);
     }
 }
