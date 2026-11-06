@@ -13,7 +13,7 @@ public class SwimmerSound : Sound
     private EventInstance ambientSwimmingInstance;
     private EventInstance turningInstance;
 
-    private StudioEventEmitter ambience;
+    //private StudioEventEmitter ambience;
 
 
     public float strideVolume=1f;
@@ -35,7 +35,7 @@ public class SwimmerSound : Sound
     {
         ambientSwimmingInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Swimming/AmbientSwimming");
         turningInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Swimming/Turning");
-        ambience = GameObject.Find("Underwater Ambiance").GetComponent<StudioEventEmitter>();
+        //ambience = GameObject.Find("Underwater Ambiance").GetComponent<StudioEventEmitter>();
     }
 
     void Update()
