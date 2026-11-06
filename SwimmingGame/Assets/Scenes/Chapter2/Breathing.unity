@@ -4057,7 +4057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.27450982}
+  m_Color: {r: 0.7201257, g: 0.9000444, b: 1, a: 0.27450982}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4203,7 +4203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.27450982}
+  m_Color: {r: 0.7201257, g: 0.9000444, b: 1, a: 0.27450982}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -4373,7 +4373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.80784315, g: 0.92941177, b: 1, a: 0.81960785}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4439,10 +4439,12 @@ MonoBehaviour:
   imageOpacityLerpSpeed: 10
   lightIntensityLerpSpeed: 2
   auraTargetOpacity: 0.05
-  maxTimeBetweenBreaths: 3
+  maxTimeBetweenBreaths: 1
   maxBreathes: 10
   minimumBreathingVolume: 0.8
   waterEmergeSoundDelay: 1.25
+  breathingFov: 58
+  fovLerpSpeed: 1
 --- !u!1 &7945293079386894924
 GameObject:
   m_ObjectHideFlags: 0

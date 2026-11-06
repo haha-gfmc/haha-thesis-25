@@ -52,11 +52,19 @@ public class SwimmerBreathing : MonoBehaviour
     public float waterEmergeSoundDelay=3f;
     private float timer=0f;
     private bool emerged=false;
+    private Camera camera;
+    public float breathingFov=50f;
+    private float targetFov;
+    private float baseFov;
+    public float fovLerpSpeed=5f;
 
 
     void Start()
     {
-        playerInput=FindObjectOfType<PlayerInput>();
+        playerInput=FindAnyObjectByType<PlayerInput>();
+        camera=FindAnyObjectByType<Camera>();
+        baseFov=camera.fieldOfView;
+        targetFov=baseFov;
 
         singingDotRects=new RectTransform[singingDots.Length];
         for(int i=0;i<singingDots.Length;i++){
@@ -86,7 +94,7 @@ public class SwimmerBreathing : MonoBehaviour
             Sound.PlayOneShotVolume("event:/Overworld/Surface/Water Emerge",1f);
         }
 
-        if (canBreathe)
+        if (canBreathe && emerged)
         {
             if(playerInput.currentControlScheme=="Gamepad"){
                 inputNote=playerInput.singingNote;
@@ -143,10 +151,14 @@ public class SwimmerBreathing : MonoBehaviour
                 if(breathCounter==maxBreathes){
                     FindObjectOfType<LevelLoader>().LoadLevel();
                 }
+                targetFov=breathingFov;
             }else if(justBreathed && breathTimer>maxTimeBetweenBreaths && breathingVolume < minimumBreathingVolume)
             {
                 justBreathed=false;
+                targetFov=baseFov;
             }
+
+            camera.fieldOfView=Mathf.Lerp(camera.fieldOfView,targetFov,fovLerpSpeed*Time.deltaTime);
 
         }
     }
