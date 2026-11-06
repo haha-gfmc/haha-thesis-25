@@ -1,3 +1,5 @@
+using Unity.Hierarchy.Editor;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +13,10 @@ public class SwimmerBreathing : MonoBehaviour
     private Vector2 inputNote;
     private bool breathing;
     public float mouseSensitivity=2f;
+
+    public Light spotlight;
+    [Tooltip("Target intensity for spotlight when singing.")]
+    public float spotlightTargetIntensity=0.4f;
 
     [Header("UI Things")]
     [Tooltip("The dot that moves on the canvas to signify singing")]
@@ -32,6 +38,22 @@ public class SwimmerBreathing : MonoBehaviour
     [Tooltip("Target intensity for spotlight when singing.")]
     public float auraTargetOpacity=.05f;
 
+
+    [Header("Breathing")]
+    public float maxTimeBetweenBreaths=1f;
+    private float breathTimer=0f;
+
+    public int maxBreathes=10;
+    public float minimumBreathingVolume=.8f;
+    private bool justBreathed=false;
+    private int breathCounter=0;
+
+    [Header("Misc.")]
+    public float waterEmergeSoundDelay=3f;
+    private float timer=0f;
+    private bool emerged=false;
+
+
     void Start()
     {
         playerInput=FindObjectOfType<PlayerInput>();
@@ -50,10 +72,20 @@ public class SwimmerBreathing : MonoBehaviour
             maxOpacities[i]=c.a;
             image.color=new Color(c.r,c.g,c.b,0f);
         }
+
+        spotlightTargetIntensity=spotlight.intensity;
+        spotlight.intensity=0f;
     }
 
     void Update()
     {
+        timer+=Time.deltaTime;
+        if (!emerged && timer > waterEmergeSoundDelay)
+        {
+            emerged=true;
+            Sound.PlayOneShotVolume("event:/Overworld/Surface/Water Emerge",1f);
+        }
+
         if (canBreathe)
         {
             if(playerInput.currentControlScheme=="Gamepad"){
@@ -94,6 +126,27 @@ public class SwimmerBreathing : MonoBehaviour
             }
 
             float breathingVolume=breathingNotePosition.magnitude;
+
+            if(spotlight!=null){
+                spotlight.intensity=Mathf.Lerp(spotlight.intensity,spotlightTargetIntensity*targetOpacity*breathingVolume,lightIntensityLerpSpeed*Time.deltaTime);
+            }
+
+            breathTimer+=Time.deltaTime;
+
+            if (breathingVolume >= minimumBreathingVolume && breathTimer>=maxTimeBetweenBreaths && !justBreathed)
+            {
+                Sound.PlayOneShotVolume("event:/Overworld/Surface/Choke",1f);
+                breathTimer=0f;
+                justBreathed=true;
+                breathCounter+=1;
+                animator.SetTrigger("breath");
+                if(breathCounter==maxBreathes){
+                    FindObjectOfType<LevelLoader>().LoadLevel();
+                }
+            }else if(justBreathed && breathTimer>maxTimeBetweenBreaths && breathingVolume < minimumBreathingVolume)
+            {
+                justBreathed=false;
+            }
 
         }
     }
