@@ -57,6 +57,8 @@ public class SwimmerBreathing : MonoBehaviour
     private float targetFov;
     private float baseFov;
     public float fovLerpSpeed=5f;
+    public Vector3 cameraTargetPosition;
+    private Vector3 cameraOgPosition;
 
 
     void Start()
@@ -83,6 +85,8 @@ public class SwimmerBreathing : MonoBehaviour
 
         spotlightTargetIntensity=spotlight.intensity;
         spotlight.intensity=0f;
+
+        cameraOgPosition=camera.transform.position;
     }
 
     void Update()
@@ -160,6 +164,9 @@ public class SwimmerBreathing : MonoBehaviour
 
             camera.fieldOfView=Mathf.Lerp(camera.fieldOfView,targetFov,fovLerpSpeed*Time.deltaTime);
 
+            Vector3 currentCameraTargetPosition=Vector3.Lerp(cameraOgPosition,cameraTargetPosition,Mathf.Clamp((float)breathCounter/(float)maxBreathes,0f,1f));
+
+            camera.transform.position=Vector3.Lerp(camera.transform.position,currentCameraTargetPosition,Time.deltaTime*fovLerpSpeed);
         }
     }
 }
