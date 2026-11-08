@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 775ad4994fda946d1a5936c7e2dfc785, type: 3}
-  m_Name: MidPoint
+  m_Name: ControlPoint
   m_EditorClassIdentifier: 
   particleIndices: 6c000000i
   m_Blueprint: {fileID: 11400000}
@@ -4748,7 +4748,7 @@ MonoBehaviour:
     - Turnaround
     - MidGround2
     - Mid2
-    - MidPoint
+    - ControlPoint
     - StartPoint
     m_Points:
       data:
