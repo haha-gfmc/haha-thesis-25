@@ -54,6 +54,7 @@ public class TouchController : MonoBehaviour
     private Quaternion clampReferenceRotation = Quaternion.identity;
     private bool clampReferenceSet = false;
     public Vector3 handMoveVector;
+    public Vector3 cameraMovementVector;
 
     private void Awake()
     {
@@ -132,8 +133,11 @@ public class TouchController : MonoBehaviour
         }
 
         // lerp the character to the target position
+        Vector3 previousPosition = transform.position;
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.fixedDeltaTime);
-        handMoveVector = move;
+        handMoveVector = transform.position - previousPosition;
+        // record xz plane movement for the camera
+        cameraMovementVector += new Vector3(handMoveVector.x, 0, handMoveVector.z);
     }
 
     void Caressing()

@@ -821,8 +821,8 @@ Camera:
   m_GameObject: {fileID: 110604977}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.6784314, g: 0.21568628, b: 0.27450982, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2909,8 +2909,8 @@ Camera:
   m_GameObject: {fileID: 720839641}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.7176471, g: 0.43529412, b: 0.49411765, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -3768,8 +3768,8 @@ Camera:
   m_GameObject: {fileID: 931386780}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.6784314, g: 0.21568628, b: 0.27450982, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -5966,7 +5966,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549726890}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -7157,7 +7157,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 2104810466}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 45014e0f4be05a84d85884285d40b89d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7177,15 +7177,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 45014e0f4be05a84d85884285d40b89d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 45014e0f4be05a84d85884285d40b89d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 45014e0f4be05a84d85884285d40b89d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 45014e0f4be05a84d85884285d40b89d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7218,6 +7218,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2014885810}
   m_SourcePrefab: {fileID: 100100000, guid: 45014e0f4be05a84d85884285d40b89d, type: 3}
+--- !u!4 &1666589282 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 45014e0f4be05a84d85884285d40b89d, type: 3}
+  m_PrefabInstance: {fileID: 1666589281}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1670189601
 GameObject:
   m_ObjectHideFlags: 0
@@ -7469,8 +7474,8 @@ Camera:
   m_GameObject: {fileID: 1687620629}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.6784314, g: 0.21568629, b: 0.27450982, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -7573,7 +7578,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704420005}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -8233,8 +8238,8 @@ Camera:
   m_GameObject: {fileID: 1865069874}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.6784314, g: 0.21568628, b: 0.27450982, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -9623,6 +9628,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1751011125}
+  - {fileID: 1666589282}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2119504836
@@ -9757,7 +9763,6 @@ SceneRoots:
   - {fileID: 1992943170}
   - {fileID: 2104810466}
   - {fileID: 1936614215}
-  - {fileID: 1666589281}
   - {fileID: 171881701}
   - {fileID: 1076249766}
   - {fileID: 1712373031}
