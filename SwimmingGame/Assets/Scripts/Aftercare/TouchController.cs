@@ -71,11 +71,12 @@ public class TouchController : MonoBehaviour
         playerInput = FindObjectOfType<PlayerInput>();
         targetPosition = transform.position;
         initialPosition = transform.position;
+        clampCircleCenter = transform.position;
     }
 
 
 
-    private void FixedUpdate()
+    private void Update()
     {
         handMoveVector = Vector3.zero; 
         if (initialLerpDone && !enableCaress)
@@ -123,7 +124,7 @@ public class TouchController : MonoBehaviour
             moveXZ.y = -movementVector.y;
         }
         // calculate the target position based on input
-        Vector3 move = new Vector3(moveXZ.x, 0, moveXZ.y) * moveSpeed * Time.fixedDeltaTime;
+        Vector3 move = new Vector3(moveXZ.x, 0, moveXZ.y) * moveSpeed * Time.deltaTime;
         targetPosition = transform.position + move;
 
         // Constrain the target position within the bounding box
@@ -134,7 +135,7 @@ public class TouchController : MonoBehaviour
 
         // lerp the character to the target position
         Vector3 previousPosition = transform.position;
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.fixedDeltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
         handMoveVector = transform.position - previousPosition;
         // record xz plane movement for the camera
         cameraMovementVector += new Vector3(handMoveVector.x, 0, handMoveVector.z);
@@ -145,26 +146,21 @@ public class TouchController : MonoBehaviour
         float moveX = isUsingGamepad ? playerInput.rotation.x : playerInput.look.x;
         float moveY = isUsingGamepad ? -playerInput.rotation.y : -playerInput.look.y;
         // calculate the target position based on input
-        Vector3 move = new Vector3(moveX, 0, moveY) * caressSpeed * Time.fixedDeltaTime;
+        Vector3 move = new Vector3(moveX, 0, moveY) * caressSpeed * Time.deltaTime;
         targetPosition = ClampToBoundingCircle(transform.position + move);
         // lerp the character to the target position
-        transform.position = Vector3.Lerp(transform.position, targetPosition, caressLerpSpeed * Time.fixedDeltaTime);
+        transform.position = targetPosition;
     }
 
     Vector3 ClampToBoundingCircle(Vector3 target)
     {
-        if (handMoveVector.magnitude > 0.01f)
-        {
-            Debug.Log("Reset Caress Center");
-            clampCircleCenter = transform.position; 
-        }
-        else
-        {
-            Debug.Log("Same Caress Center");
-        }
+        // Previously it was checking the maginitude of handMovementVector every frame to determine if clampCircleCenter should be moved.
+        // This would be different result based on frame rate, so it works badly with Update().
+        // We need to use Update() instead of FixedUpdate() so that camera follow is smooth.
+        // Update the center of the bounding circle based on hand movement
+        clampCircleCenter += new Vector3(handMoveVector.x, 0f, handMoveVector.z);
         // Clamp the Hand's position to the bounding circle around the clampCircleCenter
         Vector3 direction = new Vector3(target.x - clampCircleCenter.x, 0, target.z - clampCircleCenter.z);
-        direction = direction.normalized;
         if (direction.magnitude > boundingCircleRadius)
         {
             direction = direction.normalized * boundingCircleRadius;
@@ -219,14 +215,14 @@ public class TouchController : MonoBehaviour
         {
             // set Y position to the top of the hit object
             float targetY = hit.point.y + yOffset;
-            transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, targetY, yLerpSpeed * Time.fixedDeltaTime), transform.position.z);
+            transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, targetY, yLerpSpeed * Time.deltaTime), transform.position.z);
             if (!lockRotation)
             {
                 // During startup: quickly lerp to the rotation offset relative to the initial rotation
                 if (!initialLerpDone)
                 {
                     Quaternion startupTarget = initialRotation * rotationOffset;
-                    transform.rotation = Quaternion.Lerp(transform.rotation, startupTarget, initialRotationLerpSpeed * Time.fixedDeltaTime);
+                    transform.rotation = Quaternion.Lerp(transform.rotation, startupTarget, initialRotationLerpSpeed * Time.deltaTime);
                     if (Quaternion.Angle(transform.rotation, startupTarget) < initialRotationAngleThreshold)
                     {
                         initialLerpDone = true;
@@ -249,7 +245,7 @@ public class TouchController : MonoBehaviour
                     // After startup: orient to surface normal + offsets, then smooth toward it
                     Quaternion targetRotation = Quaternion.FromToRotation(Vector3.up, hit.normal) * initialRotation * rotationOffset;
                     targetRotation = Quaternion.Lerp(Quaternion.identity, targetRotation, targetRotationDamp);
-                    Quaternion newRot = Quaternion.Lerp(transform.rotation, targetRotation, rotationDampFactor * Time.fixedDeltaTime);
+                    Quaternion newRot = Quaternion.Lerp(transform.rotation, targetRotation, rotationDampFactor * Time.deltaTime);
                     if (enableRotationClamp)
                     {
                         newRot = ClampRotation(newRot);
