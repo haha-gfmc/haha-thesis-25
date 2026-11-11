@@ -45407,8 +45407,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
   PivotOffset: {x: 0, y: 0, z: 0}
-  AmplitudeGain: 1
-  FrequencyGain: 3
+  AmplitudeGain: 2
+  FrequencyGain: 0.01
   m_NoiseOffsets: {x: 363.6801, y: -972.7333, z: -390.96582}
 --- !u!4 &7953237864620314606
 Transform:
