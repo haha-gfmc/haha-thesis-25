@@ -14160,7 +14160,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2366138342307150232}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5107d69c9572924d98e177b619355d8, type: 3}
   m_Name: 
@@ -49589,7 +49589,7 @@ MonoBehaviour:
   ropeB: {fileID: 378324302653529290}
   distanceText: {fileID: 0}
   proximityThreshold: 10
-  solver: {fileID: 0}
+  solver: {fileID: 231804592}
   meanDistance: 0
   elementOffset: 0
   ropeAStartPercentage: 30

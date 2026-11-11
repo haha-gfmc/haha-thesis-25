@@ -94,7 +94,7 @@ MonoBehaviour:
   master:
     m_OverrideState: 1
     m_Value:
-      <length>k__BackingField: 3
+      <length>k__BackingField: 2
       m_Loop: 0
       m_ZeroValue: 0
       m_Range: 1
@@ -115,15 +115,6 @@ MonoBehaviour:
           value: 0.8312235
           inSlope: -0.89984626
           outSlope: -0.89984626
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 0.72458047
-          value: 0.21940905
-          inSlope: 1
-          outSlope: 1
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
@@ -403,7 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
   m_Name: SplitToning
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   shadows:
     m_OverrideState: 1
     m_Value: {r: 0.05490196, g: 0.05490196, b: 0.05490196, a: 1}
@@ -412,7 +403,7 @@ MonoBehaviour:
     m_Value: {r: 0.89411765, g: 0.972549, b: 0.8960544, a: 1}
   balance:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: -2
 --- !u!114 &2571483045363921407
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -672,7 +663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 558a8e2b6826cf840aae193990ba9f2e, type: 3}
   m_Name: ShadowsMidtonesHighlights
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   shadows:
     m_OverrideState: 0
     m_Value: {x: 1, y: 1, z: 1, w: 0}
