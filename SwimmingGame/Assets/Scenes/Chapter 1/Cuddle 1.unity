@@ -15618,8 +15618,8 @@ MonoBehaviour:
   yOffset: -0.05
   moveXZ: {x: 0, y: 0}
   enableCaress: 0
-  caressSpeed: 10
-  caressLerpSpeed: 3
+  caressSpeed: 1
+  caressLerpSpeed: 1
   boundingCircleRadius: 0.05
   initialRotationLerpSpeed: 10
   initialRotationAngleThreshold: 0.1
@@ -15635,6 +15635,7 @@ MonoBehaviour:
   initialRotation: {x: 0, y: 0, z: 0, w: 0}
   boundingBox: {fileID: 678738186}
   handMoveVector: {x: 0, y: 0, z: 0}
+  cameraMovementVector: {x: 0, y: 0, z: 0}
 --- !u!4 &155969189375739478
 Transform:
   m_ObjectHideFlags: 0
@@ -32454,6 +32455,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.5019608
       objectReference: {fileID: 0}
+    - target: {fileID: 3780699827858224685, guid: bb5aab30e2bebfc47aa2562ffd6246c8, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920684964668888287, guid: bb5aab30e2bebfc47aa2562ffd6246c8, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 4929590238491211214, guid: bb5aab30e2bebfc47aa2562ffd6246c8, type: 3}
       propertyPath: m_Color.b
       value: 0.64705884
@@ -32581,6 +32590,10 @@ PrefabInstance:
     - target: {fileID: 5273444098597759046, guid: bb5aab30e2bebfc47aa2562ffd6246c8, type: 3}
       propertyPath: m_SizeDelta.y
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5458097681994279293, guid: bb5aab30e2bebfc47aa2562ffd6246c8, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 5896969285551294031, guid: bb5aab30e2bebfc47aa2562ffd6246c8, type: 3}
       propertyPath: m_AnchorMax.x
@@ -32834,6 +32847,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7907945636990790581, guid: bb5aab30e2bebfc47aa2562ffd6246c8, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 8202404564291772404, guid: bb5aab30e2bebfc47aa2562ffd6246c8, type: 3}
       propertyPath: m_Color.b
       value: 0.64705884
@@ -32845,6 +32862,10 @@ PrefabInstance:
     - target: {fileID: 8202404564291772404, guid: bb5aab30e2bebfc47aa2562ffd6246c8, type: 3}
       propertyPath: m_Color.r
       value: 0.5019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 8638579775778177380, guid: bb5aab30e2bebfc47aa2562ffd6246c8, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

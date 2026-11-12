@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 775ad4994fda946d1a5936c7e2dfc785, type: 3}
-  m_Name: End
+  m_Name: EndPoint
   m_EditorClassIdentifier: 
   particleIndices: 00000000i
   m_Blueprint: {fileID: 11400000}
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 775ad4994fda946d1a5936c7e2dfc785, type: 3}
-  m_Name: Mid
+  m_Name: MidControlPoint
   m_EditorClassIdentifier: 
   particleIndices: 6c000000i
   m_Blueprint: {fileID: 11400000}
@@ -4743,13 +4743,13 @@ MonoBehaviour:
   - {fileID: 4177663669856766532}
   path:
     m_Names:
-    - End
+    - EndPoint
     - MidGround1
     - Turnaround
     - MidGround2
     - Mid2
-    - Mid
-    - Start
+    - MidControlPoint
+    - StartPoint
     m_Points:
       data:
       - tangentMode: 0
@@ -5309,7 +5309,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 775ad4994fda946d1a5936c7e2dfc785, type: 3}
-  m_Name: Start
+  m_Name: StartPoint
   m_EditorClassIdentifier: 
   particleIndices: 6f000000i
   m_Blueprint: {fileID: 11400000}

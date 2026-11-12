@@ -70,7 +70,7 @@ public class ReceivingPoseController : MonoBehaviour
 
 
     private PoseDirection currentPose = PoseDirection.Neutral;
-    private PoseDirection desiredPose = PoseDirection.Neutral;
+    [HideInInspector] public PoseDirection desiredPose = PoseDirection.Neutral;
 
     private bool isTransitioning = false;
 

@@ -24,7 +24,7 @@ public class ThirdPersonCamera : MonoBehaviour
         playerInput = FindObjectOfType<PlayerInput>();
     }
 
-    void LateUpdate()
+    void Update()
     {
         if (!cameraLocked)
         {
