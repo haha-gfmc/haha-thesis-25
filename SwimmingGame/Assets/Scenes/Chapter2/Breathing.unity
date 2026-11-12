@@ -2813,23 +2813,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4248832797371346059, guid: d53f8c1bdf2268247bcd6f27401dc8e4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5613923213405212007, guid: d53f8c1bdf2268247bcd6f27401dc8e4, type: 3}
       propertyPath: m_text
-      value: "Use the \nRIGHT JOYSTICK to breathe.\n"
+      value: "Use the \nRIGHT JOYSTICK to take breaths.\n"
       objectReference: {fileID: 0}
     - target: {fileID: 5613923213405212007, guid: d53f8c1bdf2268247bcd6f27401dc8e4, type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
       value: 1801810542
       objectReference: {fileID: 0}
+    - target: {fileID: 6589931300875025770, guid: d53f8c1bdf2268247bcd6f27401dc8e4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6652880705389404621, guid: d53f8c1bdf2268247bcd6f27401dc8e4, type: 3}
       propertyPath: m_text
-      value: Press the LEFT<br>MOUSE BUTTON and drag to breathe.
+      value: Press the LEFT MOUSE BUTTON and drag to take breaths.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652880705389404621, guid: d53f8c1bdf2268247bcd6f27401dc8e4, type: 3}
+      propertyPath: m_margin.x
+      value: -113.09668
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652880705389404621, guid: d53f8c1bdf2268247bcd6f27401dc8e4, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
+    - target: {fileID: 7497483945096305932, guid: d53f8c1bdf2268247bcd6f27401dc8e4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1470.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7497483945096305932, guid: d53f8c1bdf2268247bcd6f27401dc8e4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 200.74
       objectReference: {fileID: 0}
     - target: {fileID: 7530128953034543365, guid: d53f8c1bdf2268247bcd6f27401dc8e4, type: 3}
       propertyPath: m_Name
       value: Tutorial - Surface Breathing
+      objectReference: {fileID: 0}
+    - target: {fileID: 7599912289825899196, guid: d53f8c1bdf2268247bcd6f27401dc8e4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8185304755336336396, guid: d53f8c1bdf2268247bcd6f27401dc8e4, type: 3}
       propertyPath: m_IsActive
