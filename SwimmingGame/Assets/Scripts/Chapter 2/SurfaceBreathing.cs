@@ -31,7 +31,7 @@ public class SurfaceBreathing : MonoBehaviour
         breathTimer+=Time.deltaTime;
         if(playerInput.movingForward && breathTimer>=maxTimeBetweenBreaths){
             swimmerAnimator.SetTrigger("breathe");
-            Sound.PlayOneShotVolume("event:/Overworld/Choke/Choke",1f);
+            Sound.PlayOneShotVolume("event:/Overworld/Surface/Choke",1f);
             breathTimer=0f;
             seaSurfaceAnimator.imageSpeed=fastAnimationSpeed;
             seaSurfaceAnimator2.imageSpeed=fastAnimationSpeed2;

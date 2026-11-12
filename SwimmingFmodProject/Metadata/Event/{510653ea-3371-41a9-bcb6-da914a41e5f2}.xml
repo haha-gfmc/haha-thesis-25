@@ -187,6 +187,9 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{ea8505ab-2c3d-4c12-9a86-b40ba90540e0}">
 		<relationship name="effects">
+			<destination>{5a672579-1e6a-48ae-94e4-2f461b4f19a0}</destination>
+			<destination>{b93aea90-2c64-490a-b622-72e3ebc14028}</destination>
+			<destination>{fa5201f9-cc88-4ef1-a24a-d1495d1f1031}</destination>
 			<destination>{c79a582d-6c80-4290-a788-338633d9382f}</destination>
 			<destination>{7dca6ab1-0cf8-4878-b44c-df359eea40d1}</destination>
 			<destination>{e8619ba5-b361-4d0c-8428-31a47bb8b483}</destination>
@@ -329,6 +332,24 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{b925bbcf-db7d-4641-aae8-82a255d45cce}" />
+	<object class="PitchShifterEffect" id="{5a672579-1e6a-48ae-94e4-2f461b4f19a0}">
+		<property name="pitch">
+			<value>0.899999976</value>
+		</property>
+	</object>
+	<object class="MultibandEqEffect" id="{b93aea90-2c64-490a-b622-72e3ebc14028}">
+		<property name="frequencyA">
+			<value>6000</value>
+		</property>
+		<property name="qualityA">
+			<value>0.634002209</value>
+		</property>
+	</object>
+	<object class="GainEffect" id="{fa5201f9-cc88-4ef1-a24a-d1495d1f1031}">
+		<property name="gain">
+			<value>6</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{c79a582d-6c80-4290-a788-338633d9382f}" />
 	<object class="DelayEffect" id="{7dca6ab1-0cf8-4878-b44c-df359eea40d1}">
 		<property name="delay">
