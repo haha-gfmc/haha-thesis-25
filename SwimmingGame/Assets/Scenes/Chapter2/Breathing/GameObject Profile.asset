@@ -121,16 +121,16 @@ MonoBehaviour:
   active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 1
   gaussianStart:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 3
   gaussianEnd:
     m_OverrideState: 1
-    m_Value: 94.3
+    m_Value: 5
   gaussianMaxRadius:
-    m_OverrideState: 0
-    m_Value: 0.841
+    m_OverrideState: 1
+    m_Value: 1.5
   highQualitySampling:
     m_OverrideState: 0
     m_Value: 0
@@ -139,10 +139,10 @@ MonoBehaviour:
     m_Value: 3.87
   aperture:
     m_OverrideState: 1
-    m_Value: 2.5
+    m_Value: 1
   focalLength:
     m_OverrideState: 1
-    m_Value: 38
+    m_Value: 72
   bladeCount:
     m_OverrideState: 0
     m_Value: 5
@@ -246,7 +246,7 @@ MonoBehaviour:
   master:
     m_OverrideState: 1
     m_Value:
-      <length>k__BackingField: 3
+      <length>k__BackingField: 4
       m_Loop: 0
       m_ZeroValue: 0
       m_Range: 1
@@ -263,8 +263,17 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.28650138
-          value: 0.6334778
+          time: 0.05797102
+          value: 0.10673654
+          inSlope: 4.6586747
+          outSlope: 4.6586747
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.23444162
+          value: 0.8136483
           inSlope: 1
           outSlope: 1
           tangentMode: 0

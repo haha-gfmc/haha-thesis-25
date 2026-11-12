@@ -38,6 +38,9 @@ public class SwimmerBreathing : MonoBehaviour
     [Tooltip("Target intensity for spotlight when singing.")]
     public float auraTargetOpacity=.05f;
 
+    public GameObject breathingWheel;
+    public GameObject chokingWheel;
+
 
     [Header("Breathing")]
     public float maxTimeBetweenBreaths=1f;
@@ -153,6 +156,8 @@ public class SwimmerBreathing : MonoBehaviour
                 breathCounter+=1;
                 animator.SetTrigger("breath");
                 if(breathCounter==maxBreathes){
+                    breathingWheel.SetActive(false);
+                    chokingWheel.SetActive(true);
                     FindObjectOfType<LevelLoader>().LoadLevel();
                 }
                 targetFov=breathingFov;
