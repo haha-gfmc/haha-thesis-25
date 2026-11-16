@@ -216,9 +216,8 @@ Enkidu: I'm using psychic power to recenter the party vibes!
 ~continueSinging()
 ~ setFMODGlobalParameter("npcSingingVolume",0.8)
 Enkidu: You are still not dancing!
-MC: I'm aware.
-Enkidu: Make that be different!!
-//ISABELLE could be a fun flirt moment for Enkidu?
+MC: I realize that..
+Enkidu: Change that!!
 ~changeStartKnot("EnkiduAtParty4")
 ~ switchObject("Roadblock 2",false)
 -> npcEnd ->
@@ -273,7 +272,7 @@ Enkidu: You are! There's a quiet melancholy about you! It's so different! I love
 -> npcStart2 ->
 ~continueSinging()
 ~ setFMODGlobalParameter("npcSingingVolume",0.8)
-Enkidu: Meet me later!
+Enkidu: Meet me later! I want to be alone with you.
 MC: Why? I mean, um. Where? #speed: fast
 Enkidu: You'll find me!
 ~ switchObject("Roadblock 4",false)
@@ -284,6 +283,7 @@ Enkidu: You'll find me!
 VAR talkedToEnkiduBeforeMainAct1=false
 VAR mcName=""
 VAR chosenName=false
+VAR saidNo=false
 
 === EnkiduBeforeMainAct1 ===
 # color: 2A3B5A
@@ -292,25 +292,33 @@ VAR chosenName=false
 {talkedToEnkiduBeforeMainAct1==false:
     ->chat->
 }
-Enkidu: {Let's do it.|Come on.|There is only one time.|I want to entangle with you.}
-// I feel like it starts a bit too abruptly? I feel like as experienced as enkidu they will do some starter just to make MC feel more comfortable like "you know what it means when we are here alone right" or some complements like "I might sound like a freak but I know I like you at the first glance, I just have to get it out"
-    //[RESOLVED?]
+Enkidu: {Let's do it.|Come on.|There is only the current moment.|I want us to entangle.}
 Now.
 +   [Yes!]
     MC: Don't we need to harmonize more first?
-    Enkidu: You don't need to when you're with me little minnow.
+    Enkidu: When you're with me, little minnow, you don't need to do anything.
     Enkidu: Just let it out.
     ~loadLevel("Main Act 2 - 1")
     MC: Oh... Oh!
     // Transition to Main Act
 +   [No!]
-    MC: No! Uhmm! Not yet! I'm not ready!
+    {
+        - saidNo:
+            MC: No!
+            Enkidu: ..so you are not interested?
+            MC: I..
+            I can't say no.
+            Just.. not quite yet. I need more time.
+            Enkidu: Very well.
+        - else: 
+            MC: No! Not.. right now. Maybe later?
+    }
     Enkidu: I will not be here forever...
-    {But take your time. I love that you're assertive.|But I will be for a bit more.|}
+    {But take your time. I love that you're in touch with your emotions.|But I will be for a bit more.|}
 --> npcEnd ->
 -> END
 = chat
-MC: Wow. It's so much quieter in here.
+MC: It's so much quieter in here.
 ~talkedToEnkiduBeforeMainAct1=true
 Enkidu: Do you like it?
 +   [Yes.]
@@ -321,7 +329,7 @@ Enkidu: I would like to do it with you.
 MC: Oh!
 Enkidu: Would you like to as well?
 MC: Y-yes.
-If that's not too forward.
+If that's not too forward. #speed: fast
 Enkidu: Sweetheart, I'm all about forwardness.
 ->->
 
@@ -355,17 +363,28 @@ Enkidu: I did.
 # color: 2A3B5A
 # outline: FFF383
 ~pause(3)
-MC: You stopped us there. 
+MC: You.. stopped us there. 
 Enkidu: I did.
 MC: Why?
 Enkidu: I wanted the moment to last longer.
 MC: Ah...
 I see.
-~pause(4)
-MC: To be honest...
-Enkidu: Yes?
-MC: I didn't think I was going to entangle ever again.
+~ pause(4)
 ~ finishTutorialPart(0)
+Enkidu: Are you relaxed?
++   [Yes.]
+    MC: ...yes.
+    Enkidu: I'm glad.
+    MC: Which is weird, because..
+    Enkidu: Yes?
+    
++   [No.]
+    MC: N-- not totally, no.
+    Enkidu: It's okay. We can work up to it.
+    What is blocking you?
+    MC: To be honest...
+- Enkidu: Yes?
+MC: I didn't think I was going to entangle ever again.
 Enkidu: And why is that?
 ->part1
 
@@ -376,27 +395,50 @@ Enkidu: And why is that?
     Enkidu: Why?
     MC: Well it's... kind of gross, isn't it?
     Enkidu: In what way?
-    MC: I don't know. The shape of the organs. And the residue. The writhing. It's... And yet --
-    Enkidu: And yet, it feels like nothing else. Doesn't it?
-    MC: ...Yeah. I was about to say something like that.
+    MC: I don't know. The shape of the organs. The writhing. And the residue, at the end. It's... And yet --
+    Enkidu: And yet, it feels like nothing else. 
+    Doesn't it?
+    ++  [Yes.]
+        MC: Yes, exactly. It's..
+        Enkidy: It's impossible to quit.
+    ++  [No.]
+        MC: Actually, no.
+        Enkidu: It doesn't?
+        MC: No. It feels.. strangely familiar.
+        Enkidu: As if it's something you were always meant to do.
+    -- MC: ...Yes. I was about to say.. the same thing, actually.
     ~feelingsCounter+=1
 *   [I was afraid.]
     MC: I was afraid.
     Enkidu: Of?
-    MC: I'm not sure. Well... of changes, I guess, happening to me. That I don't understand.
-    // Enkidu: And why is that bad?
-    // MC: Well, the changes could be irreversible.
-    // Enkidu: Why be afraid of something that feels so wonderful? Change is the most natural thing to happen to anything.
-    // MC: ...is it? 
-    MC: It felt so good, but also as if... as if I was standing at the precipice of something completely foreign.
-    Enkidu: And why is that bad?
-    MC: Uhm... the changes could be irreversible.
-    Enkidu: And?
-    MC: What if I don't like the changes?
-    //Enkidu: Yet it feels marvellous, doesn't it?
-    Enkidu: What if you love them?
-    MC: ...
-    I suppose I hadn't considered that.
+    ++  [Changing.]
+        MC: I was scared of changes, I guess, happening to me. That I don't.. understand.
+        MC: Entangling felt so good, but it felt also as if... as if I was standing at the precipice of something totally foreign.
+        Enkidu: And why is that bad?
+        MC: The changes could be.. irreversible.
+        Enkidu: And?
+        MC: What if I don't like them?
+        Enkidu: What if you love them?
+        ~ pause(2)
+    ++  [The desire.]
+        MC: Maybe my own.. desire.
+        It felt so huge. And that if I indulged in it.. that it would engulf me entirely.
+        Enkidu: And why is that bad?
+        MC: What if I never come out of it?
+        Enkidy: And then?
+        MC: I would become something.. I can't recognize anymore.
+        Enkidu: What if you become something you were always meant to be?
+        ~ pause(2)
+    ++  [The connection.]
+        MC: The connection between my entanglement partner and I. It felt.. too intense.
+        Like.. at some point, I didn't know where I began and where they ended. I could see through their eyes. I could move their organ as well.
+        Enkidu: And why is that bad?
+        MC: What if we got stuck that way?
+        Enkidu: And then?
+        MC: Then I'll never be just me again.
+        Enkidu: Do you like being just you?
+        ~ pause(2)
+    -- MC: I guess I hadn't considered that.
     // Enkidu: Why be scared of what feels good?
     // MC: ...
     // I don't know.
@@ -404,16 +446,16 @@ Enkidu: And why is that?
 *   [I was angry.]
     MC: I was angry.
     Enkidu: At?
-    MC: My last partner. And...
-    And the one before that, too.
+    MC: The person I last entangled with. And...
+    My ex-partner.
     Enkidu: Because they left you?
-    MC: Uh... I guess, yeah.
+    MC: Yes, exactly.
     Enkidu: And you're still here.
-    MC: Yeah. Wait, how did you know that they left me?
-    Enkidu: You have that air about you. Anyway...
-    Why blame the entanglement? It sounds like it's them that you're angry at. 
-    The act is just what it is. An act.
-    MC: Well... When you put it that way..
+    MC: Yes. Wait, how did you know that they left me?
+    Enkidu: Why blame the entanglement?
+    The act is just what it is. Something that we do.
+    It has nothing to do with the person who hurt you.
+    MC: That is.. true.
     ~feelingsCounter+=1
 - ->part2
 
@@ -423,24 +465,26 @@ Enkidu: And why is that?
         Enkidu: But there's more to it, isn't there?
         -> part1
     - else:
-        Enkidu: The way I see it -- if something feels this good, why resist it?
+        Enkidu: The way I see it...
+        If something feels this good, why resist it?
         ~ finishTutorialPart(1)
         -> part3
 }
 
 = part3
-Enkidu: You say you fear change. Yet, isn't it in our nature to go with the current?
+Enkidu: I know you fear change. Yet, isn't it in our nature to go with the current?
 MC: Huh.
 I guess so.
 Enkidu: You don't sound so convinced.
-MC: Well... There's still so much I don't understand.
+MC: Well... There's still so much we.. that I don't understand.
 Enkidu: Such as?
 MC: For example...
-Well, your name, for example.
+Well, your name, for one.
 Enkidu: What about it?
-+   [Why have one?]
++   [Why do you have it?]
     MC: What's the point of having one?
-    Enkidu: I suppose... I enjoy having something that is entirely mine, and I enjoy hearing it inside others' minds.
+    Enkidu: Hmm...
+    I enjoy having something that is entirely mine, and I enjoy hearing it inside the minds of others.
 +   [How did you pick it?]
     MC: How did you pick it?
     Enkidu: I liked the way it sounded.
@@ -450,14 +494,11 @@ MC: ...Oh!
 Hmm... Would I?
 +   [Yes.]
     MC: Yes, I think I'd like to try it.
-    // Naming section (the player can name the main character)
-    //At this point, transition to overworld?
     ~loadLevel("Naming")
     ~chosenName=true
 +   [No.]
     MC: No, I think I'm okay with not having one.
-    //At this point, transition to overworld?
-    Enkidu: That's perfectly fine. You should have it your way. And no one else's.
+    Enkidu: I understand. You should have it your way. And no one else's way.
     MC: Yeah. I agree.
     ~saveValue("mcName","")
     ~loadLevel("Foreplay 2")
@@ -474,13 +515,14 @@ Hmm... Would I?
 { mcName!="":
     Enkidu: {mcName}. Very... evocative.
     MC: Do you like it?
-    Enkidu: What matters is whether YOU like it, little minnow. {mcName}.
-    MC: Yeah.
+    Enkidu: What matters is whether YOU like it, little minnow. 
+    Enkidu: {mcName}.
+    MC: Yes.
+    ~ pause(2)
 }
-MC: Well...
-MC: What now?
+MC: Well... What now?
 Enkidu: Now...
-I'd like to introduce you to some friends.
+I'd like to introduce you to some of my friends.
 // A lot of NPCs enter. 
 // Transition to harmonizing/foreplay with everyone
 -> npcEnd ->

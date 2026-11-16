@@ -8,14 +8,6 @@ INCLUDE Functions.ink
 // drought: the big event in which a bunch of merpeople migrated to the surface, and now there's only a few of them left.
 // desert-ers: slur for people who left for the surface
 
-// Hi Isabelle! Thank you for agreeing to do a review pass. This is the main script for chapter 3, which takes place directly after chapter 2, in which the protagonist (MC) attended Enkidu's party, everyone then left for the surface, and they were left behind.
-    // Comments are there to provide additional contexts, i suggest reading them, tho some of them are more like stray thoughts or other ideas
-    // Where i'm looking for feedback is: tone, feelings, what you think this chapter was about, length, language, anything confusing, and anything else.
-    // this is gonna be the final chapter besides a short epilogue
-    
-    // To leave some feedback is suggets copying and pasting the comment below:
-    
-    // ISABELLE COMMENT: [write comment here]
     
 
 
@@ -24,7 +16,6 @@ INCLUDE Functions.ink
 // happens at edge
     // vibe is horny and sad. talking to someone DL.
 // it would be cool if this starts as giant textbox-less text (trailer style) and changing size & positions before fading to IRL
-// ISABELLE COMMENT: this is two people talking right? what if the coralnet had special symbols for when it's two people messaging? - okay wait I read more and it's like the orgy scene isn't it?
 > so, what would you want to do if we met up?
 > ahaha. that's probably not a good idea.
 > why not? we don't have to entangle.
@@ -35,25 +26,23 @@ INCLUDE Functions.ink
 // PAUSE
 > we could also just cuddle.
 > how big are you?
-> do you think you could completely cover my body with your limbs all around me til i couldn't see or feel anything else?
-> i'm pretty big yeah
+> do you think you could cover my whole body with your limbs all around me until i couldn't feel anything else?
+> i'm pretty big.. yeah
 > would you hold me so tight my ribs could crack?
-> careful...
+> careful
 > would you keep holding me, foregoing food and staying through the whole migration cycle, until our peers are back and we can act as if everything's the same?
 > yes. i would like to.
 > i want you to lightly brush my fins with yours.
 // at this point, screen lightens. return to reality.
 > what?
 > is that strange?
-> no, sorry. it just caught me off-guard.
+> no.. maybe not. it just caught me off-guard.
 > so?
 > i would try it, if you think that's enjoyable.
 > i think it's nice.
-> this is nice.
+> talking to you is nice.
 > i like using the coralnet again. no one really uses it anymore.
-> you're nice.
 > maybe it'll come back next season? once this dircusing craze dies down.
-// ISABELLE COMMENT: I don't know what dircusing is 
 > what if we actually did meet up?
 > haha. yeah, maybe.
 > seriously. why don't we meet up?
@@ -68,14 +57,11 @@ Add an answer?
     > come on, let's meet up! i know you want to.
 +   [i want to meet you.]
     > it's getting too hard, i can't stand it anymore. i want to meet with you.
-    // ISABELLE COMMENT: can the player say no? what feels uniquely different about each of these options?
 // thoughts: can i include more foreshadowing about this world & what it's like?
     // can we include a way to physically recognize the pen pal? (but obscure and could be lots of people)
     // can we see some sorta visuals in the beginning? what could it look like? but also making it lazy
 - -> END
 
-// inside, swimmer meets red herring. something makes them think it was them.
-    // red herring is kinda flirty but with plausible deniability
 
 === welcome ===
 // back inside, swimmer explores the conference. different people talk thru their various panels
@@ -88,7 +74,6 @@ MC: I think I'm okay...
 NPC: You know, I spent a lot of time making these.
 MC: Um... None of them match my colors. Sorry.
 // tHOUGHTS: Maybe the badges are actually a thing that people wear?
-// ISABELLE COMMENT: it's a cool reference to like a stop light party  
 -> END
 
 
@@ -100,21 +85,17 @@ But isn't harmonizing what got us into this mess in the first place? It's what l
 // ISABELLE COMMENT: I wanna know more about the E act - I get a sense this character feels negatively about it.
 NPC1: They're right. I never thought of it that way.
 NPC2: But how will we communicate if we give up harmonizing as well? What will be left of us?
-NPC: Fear not! Harmonizing is just a catalyzer! We have always been able to communicate without it. 
-NPC: I'm sure we can all think of a time when we were able to jump into someone else's head without sonic exercise. Am I right?
+NPC: Fear not! Harmonizing is just a catalyzer. We have always been able to communicate without it!
+NPC: I'm sure we can all think of a time when we were able to jump into someone else's head without any sonic exercise. Am I right?
 NPC3: There was this one time...
 NPC4: Yes, but how to reliably trigger it?
-NPC: There is a way! Through my developed psychic powers, I have found it. Whether I discovered or invented it is unclear, but it is not mine; it is everyone's.
+NPC: There is a way! Through my highly-developed psychic powers, I have found it.
 All you have to do is to press "A"!
 // would be funny if the tutorial that pops up says "actually, press X" if u r on keyboard. i thought it d be too corny to have the NPC say it
 Try it! Swim up to your neighbor, and press A!
 -> END
 
 // the tutorial should probably say "maybe try again?" if u press A and it doesn't work.
-
-// how do we tell NPCs we can press A with? maybe the guru mentions that you can make the icon appear over you if you're down to chat?
-
-// the following dialogue is optional
 
 === pressANPC1 ===
 NPC: All this time, all we had to do was press A!
@@ -136,13 +117,14 @@ NPC: To be honest, I've always found singing and harmonizing really crass. I'm g
 -> END
 
 === pressANPC4 ===
-NPC: Pressing A is so intuitive! And no more having to listen to just about anyone decides to open their mouth.
-MC: But what about consent? Isn't this worse because anyone can just press A on you?
-NPC: Have you noticed the little "A" floating above my head? If someone doesn't want to talk to you, they'll just make it disappear.
+NPC: Pressing A is so intuitive! And no more having to listen to just about anyone who decides to open their mouth.
+MC: But what about consent? Isn't this worse because anyone can just "press A" on you?
+NPC: Have you noticed the little "A" floating above my head? If I didn't want to talk to you, I'd just make it disappear.
 MC: Huh... How do I make one?
-NPC: What do you mean? You've had one this whole time?
+NPC: What do you mean? You've had one this whole time.
 MC: What?! How do I make it disappear?
-NPC: Well um... It's hard to explain, it would be like telling you how to swallow.
+NPC: Well it's... 
+It's hard to explain, it would be like explaining how to swallow.
 MC: Uh... I guess maybe I'll figure it out...
 NPC: Don't worry! I'm sure not that many people will want to talk to you anyway, you seem very unapproachable.
 MC: ...I've been working on it.
@@ -150,11 +132,11 @@ MC: ...I've been working on it.
 
 === pressAGuru2 ===
 NPC: So what do you think? Isn't it so much more convenient?
-MC: I don't know... It doesn't always work for me.
+MC: I don't know.. It doesn't always work for me.
 NPC: How so?
 MC: Well, I press A, but most times it's just that nothing happens.
 NPC: Hmm.. Curious. You probably just need more practice.
-MC: But also, what about picking choices?
+MC: But, also, what about picking choices? Wouldn't that still require singing and potential harmonization..?
 NPC: Oh, that's simple. Just use the arrow keys, then press X!
 // maybe make it so this NPC can't be sung to pick choices?
     // or maybe i can just check if the player sung... but that's kinda annoying
@@ -182,9 +164,9 @@ NPC: Oh, that's simple. Just use the arrow keys, then press X!
 SP3: You may know me as the inventor of the protection devices I see many of you are wearing around your necks.
 For those unfamiliar, the device stops the entanglement organ from coming out, allowing us to safely collude without the threat of unwanted... "development".
 NPC1: I love my tangle preventer! I was scared I had to live out as a hermit because I simply cannot get a hold of my compulsions. Even now I feel...
-NPC2: What I really like is when my organ is trying to come out and it pushes against the cage! It feels really nice, maybe even better than entanglement itself...it's okay to enjoy that, right?
+NPC2: What I really like is when my organ is trying to come out and it pushes against the cage! It feels really nice, maybe even better than the E-act itself...it's okay to enjoy that, right?
 SP3: Um. Anyway. I'm glad to see my invention helping so many of us.
-SP3: As we all know, entanglement leads to the bodily change which brainwashes our yesterday-siblings into leaving for the surface, which is why we all abstain.
+SP3: As we all know, entanglement leads to the bodily change that makes our yesterday-siblings yearn for the surface, which is why we all abstain.
 But, my fellow beneathlings. We cannot stop at prevention! There is more work to be done!
 NPC3: Yes, exactly!
 NPC4: We have to do more and more and more!
@@ -192,6 +174,7 @@ NPC2: ...but what exactly, again..?
 SP3: You see, the entanglement was only the first step. 
 Soon, the dry and traitorous will realize that we, the wet and strong-willed, will not accept the change.
 And what will they do then?
+// let's break off into small discussion groups
 NPC1: They will feel bad and come back!
 NPC3: But then, the current will reject them and they will dissolve into foam!
 NPC2: It would be nice if they came back...
@@ -200,41 +183,45 @@ But no. The reality is...
 THEY WILL EXTERMINATE US!
 NPC2: Those... those desert-ers!
 NPC4: But how?!
-SP3: I've figured it out. Have you ever wondered why this has all been going on in the first place?
-NPC1: I guess not really. But that's me, not one to linger.
+SP3: Have you ever wondered why all these changes have been taking place, in the first... place?
+NPC1: I guess not really. But that's just me, not one to linger.
 NPC3: I think they were born with a sick and deeply evil gene.
 NPC2: One of my friends said it had to do with the planets' alignment...
-SP3: That's exactly it! Planets!
-They are aliens from outer space!
+SP3: Yes! Planets! That's exactly it!
+The dry are aliens from outer space!
 NPC1: What?!
 NPC2: I knew it. I always had a hunch.
-SP3: They have brainwashed our brethren into changing, but they cannot affect the rest of us, so they will use their nefarious alien technology to destroy the rest of us instead!
-SP3: (If those brethren of course were even brethren in the first place. They could have been aliens in disguise all along. But I digress...)
+NPC3: Well, evidently. One could infer this very easily.
+SP3: They have brainwashed our brethren into changing, but they cannot affect the rest of us.
+So, they will use their nefarious alien technology to DESTROY THE REST OF US INSTEAD!!!
+SP3: (If those brethren of course were even that in the first place. They could have been aliens in disguise all along. But I digress...)
     // HAN COMMENT: Maybe instead of declearing a war against ppl in the surface, SP3 propose a test on everyone in the conference to make sure there is no alien in disguise. And the test requires someone's blood or whatever, and people feel negative in doing that so they kicked sp3 out. Maybe to make the stake even higher SP3 can unwillingly do the test on one of the merpeople and kill them because the test says the subject is one of aliens.
 NPC1: We– We– We can't let that happen!
 NPC2: Someone has to do something!
 NPC3: More than just one! Several people must do something!
 NPC4: I am in complete agreement!
-SP3: Exactly. I am happy to hear it. 
-What I have been working on is special devices that will allow us to fight back against them. 
+SP3: I'm happy to hear this. 
+I have been working on special, deadly devices, which will allow us to fight back against them. 
 Devices that will allow us to kill an alien instantly (I already have a working prototype), and a suit that will allow us to – temporarily – breathe on the surface.
 // pause
 NPC2: That sounds SCARY.
 NPC4: Would we really have to go there? Why can't you also invent automatons to do the killing for us?
 NPC1: Exactly! I had the same thought!
-SP3: That wouldn't be – We don't have the time!
-SP3: My friends, you have to be COURAGEOUS! We are facing extinction!!
-NPC1: Well, maybe you are.
+SP3: We don't have the time!
+SP3: My friends, you have to be COURAGEOUS! We are facing EXTINCTION!!
+NPC1: Speak for yourself.
 NPC3: I wouldn't say I quite consider you a friend..?
-// ISABELLE COMMENT: so funny
-SP3: It doesn't matter?! Do you all realize – They will kill us! All of us! We have to destroy them first!
-NPC3: I mean... Do we know that? I'm sure they'll forget all about us eventually, they probably already have!
+SP3: It doesn't matter!! 
+Do you all realize – They will kill us! All of us! We have to destroy them first!
+I'm not sure if I explained this really well--
+NPC3: I mean... I'm sure they'll forget all about us eventually. They probably already have!
 NPC1: Yes! That's what I was thinking. Why would they worry about little old us down here?
 NPC2: Of course, it would be nice to spread carnage and destruction but –
-// ISABELLE COMMENT: made me laugh
-SP3: You– you don't understand! Can't you see?! We have to do this now! Or else.. or else...
+SP3: You– you don't understand! CAN'T YOU SEE?! We have to do this now! Or else.. or else...
+// pause
 NPC1: I'm really not sitting well with the vibe you're currently giving out. Can we–?
-NPC3: Yes, that's a good idea. Come on everyone, let's all focus our psychic energy...
+SP3: Hear me out--
+NPC3: Yes, that is a good idea. Come on everyone, let's all focus our psychic energy...
 SP3: Wh– What? Wait, stop! You can't! I'm –
 // SP3 is carried away by current
 
@@ -246,23 +233,27 @@ SP3: Wh– What? Wait, stop! You can't! I'm –
 
 // the following dialogue is optional
 
+
 == SP3conferenceAftermath1 ==
-NPC: I noticed you didn't help us carry that nutjob away just now.
+NPC: I noticed you didn't help us carry that shelljob away just now.
 What was that about?
 +   [I'm not very strong.]
-    MC: I'm, um.. not very strong. psychically.
+    MC: I'm, um.. not very strong. Psychically.
     NPC: Aww.. I'm sure you'll get better soon!
     You really have to. You should work on it.
     MC: ...Okay.
 +   [They had a point.]
     MC: Well, I don't know, maybe they had sort of a point...?
     NPC: A point... like a spike? A knife? 
-    That would surprise me. Frail fish like that, I'm sure they've never been in a fight in their life.
+    That would surprise me. Frail fish like that, I'm sure they've never been in a fight in their life. That's why they have to build odd devices.
     We're protecting them from themself, really... They wouldn't last a second up there.
     Me, otherwise..
     MC: So you're thinking of going?
     NPC: Ha! Don't make me laugh. 
     It's disgusting that you would say that.
++   [I wish I could help.]
+    MC: I fully support the removal of the odd one, perhaps not physically this time. But at least emotionally.
+    NPC: That's a good first step. Your emotions will make your psychic powers fiercer.
 // ISABELLE COMMENT: I really like this choice, what would it be like to add a third option that's like I agree with you for supressing  SP3's speech 
 - -> END
 
@@ -1064,7 +1055,7 @@ NPC: Any takeaways from all that?
     
 // generic NPC from world 2 who's not like the others
     
-    
+// "let's break off into discussion groups" npc
 
 
 
