@@ -36,6 +36,7 @@ public class AnimatedImage : MonoBehaviour
         initialOpacity=image.color.a;
         pulseTimer=Random.Range(0f,pulsePeriod);
         initialScale=rect.localScale;
+        imageIndex=0;
     }
 
     void Update()

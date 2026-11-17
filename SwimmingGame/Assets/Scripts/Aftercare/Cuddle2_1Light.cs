@@ -5,6 +5,7 @@ using UnityEngine;
 public class Cuddle2_1Light : MonoBehaviour
 {
     public Light directionalLight;
+    public Light spotlight;
     public List<Color> colorList; // List of colors for the nightclub effect
     public float lightPulseInterval = 2f; // Interval for light sine wave
     //public float fogPulseInterval = 3f; // Interval for fog sine wave
@@ -34,21 +35,26 @@ public class Cuddle2_1Light : MonoBehaviour
     {
         
         //Update light pulse
+        lightPulseTimer += Time.deltaTime;
+        float lightFrequency = (Mathf.PI * 2) / lightPulseInterval; // Frequency based on interval
+        float lightIntensity = Mathf.Sin(lightPulseTimer * lightFrequency) * 0.5f + 0.5f; // Sine wave between 0 and 1
         if (directionalLight != null)
         {
-            lightPulseTimer += Time.deltaTime;
-            float lightFrequency = (Mathf.PI * 2) / lightPulseInterval; // Frequency based on interval
-            float lightIntensity = Mathf.Sin(lightPulseTimer * lightFrequency) * 0.5f + 0.5f; // Sine wave between 0 and 1
             directionalLight.color = Color.Lerp(lightOffColor, currentLightColor, lightIntensity);
-
-            // Change light color at intervals
-            lightChangeTimer += Time.deltaTime;
-            if (lightChangeTimer >= lightChangeInterval)
-            {
-                lightChangeTimer = 0f;
-                currentLightColor = GetRandomColor(currentLightColor);
-            }
         }
+        if (spotlight != null)
+        {
+            spotlight.color = Color.Lerp(lightOffColor, currentLightColor, lightIntensity);
+        }
+
+        // Change light color at intervals
+        lightChangeTimer += Time.deltaTime;
+        if (lightChangeTimer >= lightChangeInterval)
+        {
+            lightChangeTimer = 0f;
+            currentLightColor = GetRandomColor(currentLightColor);
+        }
+    
 
         // Update fog pulse
         /*

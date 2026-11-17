@@ -236,7 +236,7 @@ public class ReceivingPoseController : MonoBehaviour
             }
         }
 
-        if (input.y > 0f)
+        if (input.y < 0f)
         {
             return PoseDirection.Up;
         }

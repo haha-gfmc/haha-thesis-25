@@ -103,9 +103,9 @@ public class SwimmerCamera : MonoBehaviour
 
     void Start()
     {
-        playerInput=FindObjectOfType<PlayerInput>();
+        playerInput=FindAnyObjectByType<PlayerInput>();
         swimmer=GetComponent<Swimmer>();
-        profile=FindObjectOfType<Volume>().sharedProfile;
+        profile=FindAnyObjectByType<Volume>().sharedProfile;
         animator=GetComponentInChildren<Animator>();
         if(profile.TryGet<ChromaticAberration>(out chromaticAberration)){
             hasChromaticAberration=true;

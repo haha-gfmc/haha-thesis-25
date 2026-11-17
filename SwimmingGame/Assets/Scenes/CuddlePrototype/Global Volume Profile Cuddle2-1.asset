@@ -88,13 +88,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   type:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 9
   intensity:
     m_OverrideState: 1
-    m_Value: 0.403
+    m_Value: 0.438
   response:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.8
   texture:
     m_OverrideState: 0
@@ -111,10 +111,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf1aba9553839d41ae37dd52e9ebcce, type: 3}
   m_Name: MotionBlur
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   mode:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   quality:
     m_OverrideState: 0
     m_Value: 0
@@ -176,7 +176,7 @@ MonoBehaviour:
     m_Value: 24.4
   scatter:
     m_OverrideState: 1
-    m_Value: 0.754
+    m_Value: 0.805
   clamp:
     m_OverrideState: 0
     m_Value: 65472
@@ -539,7 +539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
   m_Name: ChromaticAberration
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   intensity:
     m_OverrideState: 1
     m_Value: 0.688
@@ -607,7 +607,7 @@ MonoBehaviour:
     m_Value: 5.6
   focalLength:
     m_OverrideState: 1
-    m_Value: 43
+    m_Value: 47
   bladeCount:
     m_OverrideState: 0
     m_Value: 5

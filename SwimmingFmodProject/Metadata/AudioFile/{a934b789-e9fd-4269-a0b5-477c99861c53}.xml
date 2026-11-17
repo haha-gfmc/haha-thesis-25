@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{a934b789-e9fd-4269-a0b5-477c99861c53}">
 		<property name="assetPath">
-			<value>SFX/Choking/drawn6.ogg</value>
+			<value>SFX/Surface/drawn6.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.099998499999998</value>

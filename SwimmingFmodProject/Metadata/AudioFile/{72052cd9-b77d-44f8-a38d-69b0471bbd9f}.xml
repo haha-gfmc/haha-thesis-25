@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.04.00">
 	<object class="AudioFile" id="{72052cd9-b77d-44f8-a38d-69b0471bbd9f}">
 		<property name="assetPath">
-			<value>SFX/Choking/short4.ogg</value>
+			<value>SFX/Surface/short4.ogg</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.099998499999998</value>
