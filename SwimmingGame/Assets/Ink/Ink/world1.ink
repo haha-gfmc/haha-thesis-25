@@ -855,7 +855,7 @@ Teacher: The entanglement. \\pauseYou were reading about it just now, right? Hav
     MC: How did you connect with me?
     Teacher: Oh! Sorry!! I must've startled you..
     Ah.. you were humming to yourself. I harmonized with you.
-    Sorry, I guess maybe you weren't fully aware. I know it's not usual to talk at these sort of places..
+    Sorry, I guess maybe you weren't fully aware. I know it's unusual to talk at these sort of places..
     ++  [It's fine.]
         MC: It's fine. Uhm..
         I guess I was engrossed. But it's nice to.. discuss, and stuff.
@@ -865,11 +865,11 @@ Teacher: The entanglement. \\pauseYou were reading about it just now, right? Hav
         Teacher: Oh! Yeah..
         ~awkwardnessLevel=awkwardnessLevel-1
     ++  [It's weird.]
-        MC: Yeah, I kind of prefer just quietly reading, right now.
+        MC: Yes, I prefer just quietly reading.
         Teacher: Ah...
         Um.. I'll leave you alone then.
-        MC: You were saying something, about this.. entanglement?
-        I guess I'm uh.. kind of curious
+        MC: But.. you were saying something, about this "entanglement"?
+        I guess I'm.. curious
         Teacher: Oh! Yeah.
         ~awkwardnessLevel=awkwardnessLevel+1
 +   [I haven't.]
@@ -1105,8 +1105,7 @@ Teacher: What would you have said?
     So what brings you here?
  -  else:
     Teacher: I'm surprised you've come after all.
-    MC: Yeah..
-    I think I am as well.
+    MC: I think I am as well.
     ~ pause(2)
 }
 Teacher: Can I share some food with you? They have really tasteful salmonds this season.
@@ -1133,7 +1132,7 @@ Teacher: Would that be bad? If I watched you?
     MC: I would actually like it.
     Teacher: Then I guess I do watch you a little bit.
 +   [Yes.]
-    MC: Yeah, kind of.
+    MC: Kind of.
     ~ pause(2)
     It's weird when you don't know someone like that.
     Teacher: Ah... I guess so.
@@ -1141,7 +1140,7 @@ Teacher: Would that be bad? If I watched you?
     Teacher: We do.
 - ~ pause(4)
 Teacher: Since you're not hungry.. Would you like to..
-MC: Yeah?
+MC: Yes?
 ~ changeDesire("<br>Follow <br>the library stranger.")
 ~ desireStep=4
 Teacher: Go somewhere with fewer people?
@@ -1390,7 +1389,7 @@ Teacher: How was that?
     ~ finishTutorialPart(2)
     MC: Good. \\pauseIt felt really good. \\pauseAll over my body.
     Teacher: Really?
-    MC: Yeah.
+    MC: Yes.
 +   [Weird.]
     ~ finishTutorialPart(2)
     MC: Kind of weird. \\pauseI'm not sure yet how I feel about it.
@@ -1416,7 +1415,7 @@ Teacher: How was that?
 Teacher: I really liked the way you felt.
 Teacher: And that climax... Did you expect it to just fall off like that?
 +   [Yeah.]
-    MC: It felt kind of natural.. to me. Like it was leading up to it? It made sense.
+    MC: It felt kind of natural.. to me. Like it was leading up to it. It made sense.
     Teacher: Maybe.
      MC: Yes.
 +   [No.]
@@ -1482,7 +1481,7 @@ Teacher: You sung about them, right? I think I read it on the coralnet, one time
     MC: Yes. It's kind of embarassing that you mention it.
     Teacher: Ah-- I didn't mean to.
     Teacher: I guess those things are anonymous for a reason.
-    MC: Yes. But yeah...
+    MC: Yes. But...
 -MC: We never did. It wasn't...
 ~ changeDialogueView(4)
 MC: I didn't know about it yet, back then. I think it was just starting to happen.
@@ -1490,7 +1489,7 @@ Teacher: Right.
 Teacher: Would you have liked to... with them?
 +   [Yes.]
     MC: Well, yes.
-    MC: I mean... yeah. Probably.
+    MC: I think... yes. Probably.
     MC: But there's really no point in thinking about it. At this point.
     Teacher: Right...
 +   [No.]

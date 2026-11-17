@@ -10,11 +10,6 @@ VAR talkedToVirgin=false
 
 // * IMPORTANT DIALOGUE *
 
-//You meet them at the smoking area.
-// establish: MC feelings after ch1, feelings about world 2
-// difference as opposed to prev world 2 parties,
-// virgin being disgusted by sex
-//    HMM this is probably too long, maybe could be broken up in more convos.. but fear played wont know that u can talk several times
 === virgin ===
 # color: ffae1e
 -> npcStart2 ->
@@ -23,9 +18,7 @@ VAR talkedToVirgin=false
 NPC: Friend.
 { 
     - talkedToVirgin:
-        NPC: Be careful in there.
-        // I feel like the virgin should just say ... here because of their disapproval
-        //[RESOLVED?] made it a bit more curt but don't wanna just end it
+        NPC: Be careful in there. Don't get eaten.
         MC: I will be.
     - else:
         -> chat ->
@@ -45,54 +38,64 @@ Care for a chat?
     -> END
 - NPC: How's your current?
 +   [Crowded.]
-    MC: Feels suffocating.
-    I can't swim a pace without bumping into others doing... whatever.
-    NPC: I know. At least here it's a bit calmer.
-    But you still can't escape that incessant thumping...
+    MC: It feels suffocating.
+    I can barely stroke a pace without bumping into others doing... those things.
+    NPC: I know what you mean. At least here it's a bit calmer.
+    But we still can't escape that incessant thumping...
     MC: Yeah. I had to get out of there.
+    NPC: You were there for a while, though.
+    MC: ...
+    What is that supposed to mean?
+    NPC: Nothing. Just a remark.
 +   [Cozy.]
-    MC: It feels as if I am enveloped in warmth and festivities.
+    MC: It feels as if I am enveloped in a wave of warmth and festivities.
     It's kind of nice. I don't have to be just me.
-    NPC: Really? 
-    Well. At least you're not spending all your time in the coralnet anymore.
-    MC: ...Sure.
-    There isn't any in this world anyway.
+    NPC: Seriously? 
+    ..well. At least you're not spending all your time in the coralnet anymore.
+    MC: ...
+    There isn't any in this world, anyway.
+    ~ pause(1)
     MC: I mean, it's also all kind of overwhelming. That's why I'm here now.
+    NPC: I see.
 +   [Liberating.]
     MC: It has a fresh, liberating taste. 
     I believe I could act however I want to here, and no one would care.
     NPC: What do you mean by that? Act like how?
     MC: Uhm... I don't know. I was just saying.
     NPC: No, really. What would you do here that you wouldn't do in other instances?
-    MC: I don't know! It's just... nevermind.
-    // I think MC might not be as honest at their feelings here
-    // I feel like a shy person would try to cover it up or try to act normal here because the virgin is definitely someone they feel less comfortable talking about sex and inner feelings with. Its like MC accidently opened up a bit and got disapproved so now they are pretending nothing happened
-    //[RESOLVED?]
+    MC: I don't know! It's just... gah, nevermind.
     NPC: ...
-    NPC: I know you think I'm judgemental.//ISABELLE could think through a slightly judgemental/tension point for the crowded option too, because both cozy and liberatng options have a moment of NPC being judgey 
+    NPC: I know you think I'm judgemental.
     MC: I wasn't saying that.
-    Besides, it's also a lot. I couldn't really bear it anymore so I had to come out here.
-    //ISABELLE this is a little repetitive if you choose the Crowded option
-- NPC: I see.
-I'm sure you've... seen a lot in there.
+    Besides, it's also a lot. I couldn't really bear it anymore, so I had to come out here.
+    NPC: I see.
+- NPC: I'm sure you've... seen a lot in there.
 MC: Yeah. There's a lot going on.
 NPC: I used to enjoy these parties. Really. But they've... perverted it. It's against current.
-MC: ...It's not that bad.
-NPC: So, \\pausehow have you been feeling? I know that last one you had relations with went away as well...
++   [I agree.]
+    MC: I agree, whole-heartedly. It disturbs me.
+    NPC: Yeah..
++   [It's not that bad.]
+    MC: ...it's not that bad. They're just having fun.
+    NPC: Uh-huh.
++   [I never liked the parties.]
+    MC: I never liked these parties. I don't think it's that different. 
+    I don't belong either way.
+    NPC: You're so dramatic.
+    MC: ...
+- NPC: So, \\pausehow have you been feeling? I know that last one you had.. relations with, they went away as well.
 +   [Fine.]
     MC: I'm fine. Really.
     NPC: Really?
     MC: Verily.
     NPC: You know...
     NPC: Just because both of your exes went to the surface...
-    MC: I wouldn't call that second one that. Ex. It was just an experiment. 
-    NPC ...in a row doesn't necessarily mean that it's a pattern. Lots of people nowadays are heading up there and...
+    MC: I wouldn't call that second one an ex. It was really nothing more than an experiment. 
+    NPC ...in a row, doesn't necessarily mean that it's a pattern. Lots of people nowadays are heading up there and...
     MC: I said it's fine!!! I don't think it's a pattern!!!
     I don't even need that sort of stuff anyway....!!!
-    // I think MC might be a bit more passive agressive here instead of being super up front and honest about their feelings
-    //[RESOLVED?]
     NPC: ....
-    If you put it that way.
+    If you say so.
 +   [Bad.]
     MC: Bad.
     NPC: Ah.
@@ -107,18 +110,18 @@ NPC: So, \\pausehow have you been feeling? I know that last one you had relation
     NPC: ...in a row doesn't necessarily mean that it's a pattern. Lots of people nowadays are heading up there and...
     MC: I-- I don't care! It's not about them!! #speed: fast
     ~pause(2)
-    NPC: Your feeling of loneliness is really worrying to me.
+    NPC: Your intense feeling of loneliness is very worrying to me.
     MC: I think you're making too big a deal out of it.
     NPC: Getting that attached to someone is unnatural. Perhaps you too are changing.
     MC: Aghhhh!!
-    NPC: It's okay. Maybe if you just eat leaner fish and incorporate more rock salt in your diet and --
-    MC: Can we sing of something different?
+    NPC: It'll be okay. Maybe if you just eat leaner fish and incorporate more rock salt in your diet and --
+    MC: Can we talk about something different?
     NPC: ....
     Fine.
 +   [Not gonna sing about it.]
     MC: I don't want to sing about it.
-    NPC: It doesn't necessarily mean to be a pattern, you know. Lots of people nowadays are going to the surface, and just because your two exes...
-    MC: I said I don't want to sing about it! Besides, I wouldn't even call that last one "my ex"..! #speed:fast
+    NPC: It doesn't necessarily need to be a pattern, you know. Lots of people nowadays are going to the surface, and just because your two exes...
+    MC: I said I don't want to sing about it! Besides,\\pause I wouldn't even call that last one "my ex"..! #speed:fast
     NPC: Burying things like this won't do you any good.
     MC: I'm not burying.
     NPC: Well, sure, except that you are.
@@ -131,51 +134,57 @@ NPC: So, \\pausehow have you been feeling? I know that last one you had relation
 - NPC: Anyway...
 Did you see that Enkidu person? What's their deal?
 The name? I've never needed one. Neither has anyone else I know. What makes them think they're so important?
-MC: Well it does make it easier to refer to them. This one and that one... It's not very clear.
+MC: Well, to be fair, it does make it easier to refer to them. This one and that one... It's never very clear.
+Not that I.. uh...
 NPC: I've never had any problems communicating who I'm talking about at any instance.
-MC: Sure, okay. But yeah, it's strange.
-Still. There's something kind of intriguing about them.
-NPC: Intriguing? Really?
-MC: ...
+MC: Sure, okay. But yes, it is strange.
+Still. There's something kind of..
++   [Intriguing.]
+    ...intriguing about them.
+    NPC: Intriguing? Really?
++   [Alluring.]
+    ...alluring about them.
+    NPC: Alluring? Really?
++   [Absorbing.]
+    MC: ...absorbing, about them.
+    NPC: Absorbing? Really?
+- MC: ...
 NPC: No, really. Say more?
 MC: I don't know. I guess I just wonder what it must be like to have that much attention put upon you.
-NPC: Must be asphyxiating. //im trying to think of a better word that also would make sense for a fish to say
-// haha i think this is fish vocab
+NPC: It must be asphyxiating.
 MC: I'm sure, yeah.
 ...
 Can I ask you a question?
 NPC: Sure.
 MC: Why do you hate the entanglement so much?
-NPC: Well, hate is a strong word. My emotions are always in balance.
+NPC: Hate is a strong word. My emotions are always in balance.
 MC: ...Right.
 NPC: Regardless. I just don't trust it. We never used to do it, so why now?
 MC: Yeah...
 And the whole deal with the surface...
-NPC: Well, I now think that part is fine with me. 
+NPC: Well, I've actually decided that that aspect is fine with me. 
 If people want to try their luck up there, it's none of my business. We're better off with less floaters around here anyway..
 MC: What does that even mean?
 NPC: Floaters. You know. Anyway.
-It's just the act itself... The way those two organs just come out... I wish I didn't know that I could grow one to be frank. I hope I don't.
-And the way they writhe and... Ugh! It nauseates me to even think about it.
+It's just the act itself... The way those two organs just come out... It makes me shiver.
+I wish I didn't know that I could grow one to be frank. I hope I never do.
+And the way they writhe and... Ugh! I'm nauseated to even think about it.
 MC: How do you even know the way they look?
 NPC: Are you kidding? Everyone has their organs out in there! It's repugnant.
 Anyway...
-What now? Do you want to take a stroll around the edge?
+What now? Would you care for a stroll around the edge?
 MC: Actually...
 I was thinking, maybe I'd go back in there for a bit.
 NPC: Really?
-MC: Yeah, I don't know. I guess I'm just curious to see if anything big happened. Maybe Enkidu dropped their vizor or something. Haha.
+MC: Yeah, I don't know. I guess I'm just curious to see if anything crazy happened. Maybe Enkidu dropped their vizor or something. Haha.
 NPC: That's not very funny.
 MC: ...
 NPC: Well, be careful in there please. 
-I know you've done "it" before but with all the other changes you never know what might happen this time. You still might get eaten.
-MC: People usually ask before it really doesn't happen that often.
+I know you've done "it" before, but with all the other changes, you never know what might happen this time. You still might get eaten.
+MC: People usually ask before initiating, it really doesn't happen that often.
 MC: And, besides, that's not why I'm going back in there.
 NPC: Right.
 MC: Right.
-
-    // Same here I think overall its good but MC might be more hiding their feelings? I feel like talking to the virgin is somewhat like how I used to talk to my straight friends in middle school and I was trying very hard to pretending to be nonchalant because I dont want to be seen as a freak? I feel like MC with the virgin has this kind of energy so maybe the expressions of feelings could be more subtle here?
-    //[RESOLVED?]
 ->->
 
 
@@ -540,7 +549,7 @@ NPC4: Transcendental!!!
 MC: Yes...
 ~ finishTutorialPart(0)
 ~ finishTutorialPart(1)
-And also...
+Enkidu: But what else?
 +   [Snug. #place: 1]
     NPC2: Snug?
 +   [Warm. #place: 3]
@@ -551,7 +560,7 @@ And also...
     NPC2: Serene?
 +   [Thrilling. #place: 5]
     NPC2: Thrilling?
-- MC: Yeah! Exactly...
+- MC: Yes! Exactly...
 ~ finishTutorialPart(2)
 NPC5: I've never felt this connected before...
 NPC3: There's nothing like it.
@@ -569,15 +578,15 @@ NPC3: To stop thinking about it.
 NPC1: It felt like it would always be that way.
 MC: It felt like no one was ever going to..
 +   [Understand me. #place: 3]
-    MC:...understand me again.
+    MC:...understand me, again.
 +   [Hold me. #place: 7]
-    MC:...hold me again.
+    MC:...hold me, again.
 +   [Love me. #place: 9]
-    MC:...love me again.
+    MC:...love me, again.
 - NPC5: But now, everyone's thoughts...
 NPC1:...feelings...
 Enkidu: Desires.
-MC:...are like my own.
+MC:...they are like my own.
 NPC4: There's no need to be..
 +   [Afraid. #place: 4]
 +   [Bitter. #place: 5]
@@ -647,7 +656,8 @@ NPC10: To be UP THERE. # speed:120 # stayonscreen # time:0.2
 MCSmall: I-- # notambient # stayonscreen
 ~clearScreen()
 ~pause(2)
-MC: Is this what life is like? On the surface?
+Enkidu: You're still afraid.
+MC: I am. Is this what life is like? On the surface?
 NPC4: I hear they do this everyday. 
 NPC1: Or maybe every other day.
 NPC2: I hear gravity makes it even better!
@@ -655,7 +665,7 @@ Enkidu: What is everyone the most excited to do on the surface?
 NPC1: I want to count stars! # ambient # speed:20 # stayonscreen # time:1.2
 NPC2: I want to cross a street! # speed:20 # stayonscreen # time:1.3
 NPC4: I want to eat a tree! # speed:20 # stayonscreen # time:1.2
-NPC5: I want to crochet! # speed:20 # stayonscreen # time:1.2
+NPC5: I want to do my taxes! # speed:20 # stayonscreen # time:1.2
 NPC3: I want to walk on clouds! # speed:20 # stayonscreen # time:1.3
 NPC11: I want to lick a fire! #notambient # speed:20 # stayonscreen # time:1.2
 ~clearScreen()
@@ -671,7 +681,7 @@ NPC7: We're together now. # speed:fast # stayonscreen # ambient # time:0.3
 NPC8: We're together now. # speed:fast # stayonscreen # time:0.3
 NPC9: We're together now. # notambient # speed:normal # stayonscreen # time:0.3
 ~clearScreen()
-Enkidu: Yes. You don't have to worry about what comes next.
+Enkidu: Yes. There is no need to worry about what may come next.
 NPC6: Focus on the now. # speed:fast # stayonscreen # ambient # time:0.3
 NPC9: Focus on the now. # speed:fast # stayonscreen # time:0.3
 NPC10: Focus on the now. # notambient # speed:normal # stayonscreen # time:0.3
@@ -680,7 +690,7 @@ NPC10: Focus on the now. # notambient # speed:normal # stayonscreen # time:0.3
 +   [Now! #place: 7]
 - ~clearScreen()
 MCSmall: Maybe...
-Maybe it will be okay...
+Maybe it will be okay.
 Up there...
 I want to...
 +   [Go. #place: 1]
@@ -734,11 +744,15 @@ NPC5: I want someone to hold my hand when we go.
 NPC2: I want to be in front!
 NPC3: We should go now.
 ~ loadLevel("")
+Enkidu: Are you still afraid?
 NPC4: Now! Now!
+MC: I'm not....
 NPC1: There's only now.
+MC: I want to be...
 NPC5: Let's go now!
+MC: With everyone.
 NPC2: Now! Now! Now!
-// maybe mention the tunnel here? 
+MC: I want to go to the surface.
 ->END
 
 //MC wakes up later. everyone is gone. they go to the center near the big tunnel to the surface and they find the janitor.
@@ -754,18 +768,18 @@ VAR talkedToJanitor=0
     They went to the surface?
     Janitor: Wasn't it what this was all about?
     MC: But they.. went without me.
-    Janitor: Weren't you snoozing back there?
+    Janitor: Did you wanna join them? It seemed like you were just snoozing back there.
     MC: ...
-    Janitor: Hey... they probably just didn't want to bother you.. I mean, the way is still open if you wanna join them. Just up that cone.
+    Janitor: Hey... they probably just didn't want to bother you. I mean, the way is still open if you wanna join them. Just up the cone.
     MC: I...
     I don't know.. if I'm ready.
-    Janitor: Well there's only one way to find out, isn't there?
+    Janitor: Well there's only one way to find out. Right?
     MC: But I'm -- what if --
     ...
     Janitor: Sounds like you've got a choice to make.
     MC: ...
     Janitor: Well, you ponder that. I've got to get back to it.
-    But.. feel free to sing to me more, if you need a sounding board. I'll be here.
+    But also.. feel free to sing to me more, if you wanna talk more. I wouldn't mind.
     ~talkedToJanitor=talkedToJanitor+1
 - talkedToJanitor==1:
     MC: What are you still doing here?
@@ -779,8 +793,8 @@ VAR talkedToJanitor=0
     MC: Is it really time for migration? I have the impression it usually takes longer than this.
     Janitor: Well, when you feel the call. You've gotta heed it, right?
     MC: I guess.
-    Janitor: All the others moving up also maybe sorta... steered the current a different way, maybe. 
-    Kind of a mood killer I suppose.
+    Janitor: All the others moving up also maybe, sorta... steered the current a different way. 
+    Kind of a mood killer I guess.
     MC: ...
     ~talkedToJanitor=talkedToJanitor+1
 - talkedToJanitor==3:
@@ -793,7 +807,7 @@ VAR talkedToJanitor=0
         -> npcEnd ->
         -> END
     +   [I'll stay & migrate.]
-        MC: I think I'll stay.
+        MC: I think I'll stay and migrate with the others.
         Janitor: You sure?
         MC: ...
         No.
@@ -811,15 +825,6 @@ VAR talkedToJanitor=0
 }
 -> npcEnd ->
 -> END
-
-// At this point, what if you can actually choose to try the surface or just migrate? :thinking:
-// I guess there'd be less emotional impact if you do the former
-
-
-// When you go to surface, MC can't breathe
-
-// Then migration
-
 
 
 
