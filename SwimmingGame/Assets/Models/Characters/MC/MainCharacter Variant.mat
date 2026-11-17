@@ -50,12 +50,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BumpScale: 0
-    - _Metallic: 0.607
-    - _Smoothness: 1
+    - _BumpScale: 1
+    - _Metallic: 0.299
+    - _Smoothness: 0.849
     - _SmoothnessTextureChannel: 1
     - _WorkflowMode: 1
     m_Colors:
+    - _BaseColor: {r: 0.5943396, g: 0.58934265, b: 0.55789423, a: 1}
+    - _Color: {r: 0.5943396, g: 0.58934265, b: 0.5578942, a: 1}
     - _SpecColor: {r: 0.49266234, g: 0.5647593, b: 0.59119487, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
