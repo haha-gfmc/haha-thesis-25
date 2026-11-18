@@ -49,7 +49,7 @@ Material:
     - _CellDensity: 9.25
     - _Power: 1.32
     m_Colors:
-    - _Albedo: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 0.99215686}
+    - _Albedo: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 0.79607844}
     - _Emission: {r: 0.64779866, g: 0.030556459, b: 0.08422968, a: 0}
     - _NoiseTilling_Offset: {r: 3, g: 3, b: 0, a: 0}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
