@@ -804,7 +804,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570386994636751141}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -827,7 +827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floatPeriod: 1
   offset: 0
-  floatIntensity: {x: 0, y: 0, z: 0.1}
+  floatIntensity: {x: 0, y: 0, z: 0.05}
   matchMusic: 1
   randomOffset: 1
 --- !u!114 &3944072782384963412
@@ -842,7 +842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aa592f009a75624c9391b128a94a8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatPeriod: 5
+  floatPeriod: 3
   offset: 0
   floatIntensity: {x: 0.1, y: 0, z: 0}
   matchMusic: 1
@@ -859,11 +859,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aa592f009a75624c9391b128a94a8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatPeriod: 4
+  floatPeriod: 1
   offset: 0
-  floatIntensity: {x: 0, y: 0.1, z: 0}
+  floatIntensity: {x: 0, y: 0.05, z: 0}
   matchMusic: 1
-  randomOffset: 1
+  randomOffset: 0
 --- !u!1 &1608022932990210595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,7 +1446,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015989413353555464}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1469,7 +1469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floatPeriod: 1
   offset: 0
-  floatIntensity: {x: 0, y: 0, z: 0.1}
+  floatIntensity: {x: 0, y: 0, z: 0.05}
   matchMusic: 1
   randomOffset: 1
 --- !u!114 &7225708537782624352
@@ -1486,7 +1486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floatPeriod: 3
   offset: 0
-  floatIntensity: {x: 0.05, y: 0, z: 0}
+  floatIntensity: {x: 0.1, y: 0, z: 0}
   matchMusic: 1
   randomOffset: 1
 --- !u!114 &4822287896915238294
@@ -1501,11 +1501,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aa592f009a75624c9391b128a94a8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatPeriod: 2
+  floatPeriod: 1
   offset: 0
   floatIntensity: {x: 0, y: 0.05, z: 0}
   matchMusic: 1
-  randomOffset: 1
+  randomOffset: 0
 --- !u!1 &2043025765509013870
 GameObject:
   m_ObjectHideFlags: 0
@@ -2238,7 +2238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floatPeriod: 1
   offset: 0
-  floatIntensity: {x: 0, y: 0, z: 0.01}
+  floatIntensity: {x: 0, y: 0, z: 0.1}
   matchMusic: 1
   randomOffset: 1
 --- !u!114 &7223199494683945345
@@ -2248,7 +2248,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3705391610135796366}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2aa592f009a75624c9391b128a94a8c0, type: 3}
   m_Name: 
@@ -2265,7 +2265,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3705391610135796366}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2aa592f009a75624c9391b128a94a8c0, type: 3}
   m_Name: 
@@ -4377,7 +4377,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6777879891835270423}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2aa592f009a75624c9391b128a94a8c0, type: 3}
   m_Name: 
