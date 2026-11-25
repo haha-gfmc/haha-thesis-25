@@ -1,5 +1,10 @@
 INCLUDE Functions.ink
 
+=== npcStart3 ===
+~world=3
+-> npcStart ->
+->->
+
 //GLOSSARY:
 // SP3: the main love interest in this chapter, stands for "Sex Partner 3"
 // beneathlings: people who refuse to entangle and evolve
@@ -996,8 +1001,22 @@ MC: Ah!
 
 // ISABELLE COMMENT: random ending thoughts - what if the virgin is entangling? what if SP3 and the mc get into the rocket launcher together? what if SP3 calls for people to take their tangle preventers off? what specifically is destroying the rocket launcher.
     
+VAR talkedToVirgin=false
+    
 == virgin ==
 // they look even more holy and isolated than usual. there's a litteral glow around them?
+# color: ffae1e
+-> npcStart3 ->
+{ 
+    - talkedToVirgin:
+        NPC: Be careful.
+        MC: I will be.
+    - else:
+        -> chat ->
+}
+-> npcEnd ->
+-> END
+= chat
 NPC: Are we still friends?
 MC: Of course we are. What is that supposed to mean?
 NPC: We just haven't chatted in a while.
@@ -1005,16 +1024,81 @@ NPC: We just haven't chatted in a while.
 MC: Alright.
 +   [Let's chat.]
     MC: Let's make up for it.
-    -> chat ->
 +   [I'm busy.]
-- -> npcEnd ->
--> END
-= chat
-NPC: We haven't really spoken since the party.
-MC: Yeah..
+    -> npcEnd ->
+    -> END
+- NPC: Strange world, isn't it?
+MC: I guess so.
+NPC: Lots of panic and paranoia. The current is shifting.
+MC: I think some of what people in there are saying is.. interesting.
+NPC: Well. At least it's better than the previous world.
+~pause(2)
+NPC: We haven't really spoken since then.
+MC: Yeah.. That is true.
 NPC: I heard you were enjoying yourself there at the end.
-MC: Well.. I wouldn't say all the way to the end.
-NPC: Any takeaways from all that?
++   [Not to the end.]
+    MC: I wouldn't say all the way to the end.
+    NPC: Hm.
+    So...
++   [What's that supposed to mean?]
+    MC: What's that supposed to mean?
+    NPC: Nothing. Just that some people talk.
+    MC: And what do they say?
+    NPC: That you were Enkidu's special guest.
+    MC: ...
+    Sure.
+    I don't think I really belonged though.
++   [Sure.]
+    MC: Sure.
+    NPC: So..
+-  NPC: What exactly happened in there?
++   [Embellish.]
+    MC: Well we.. had this really beautiful moment where we all felt connected.
+    And then, it just sort of came to an end. We parted ways. And that was that.
++   [Be honest.]
+    MC: I was having fun with all of them and eventually I drifted off and..
+    I woke up and they were gone.
+    Just like that.
++   [Don't talk about it.]
+    MC: There's not much to say.
+- NPC: Did you.. try to go to the surface as well?
++   [Yes.]
+    MC: Yes.
+    NPC: ...and?
+    ++  [I couldn't breathe.]
+        MC: My body just...
+        I guess it didn't change.. all the way. I couldn't breathe.
+        ~ pause(2)
+    ++  [I didn't like it.]
+        MC: It wasn't all it was made up to be.
+        NPC: Oh really? What was it like then?
+        MC: Um... Well I didn't see much.
+        NPC: So how did you know it wasn't all it was made up to be.
+        MC: Uh...
+        It just didn't feel right. Whatever.
+        ~pause(2)
+    ++  [I came back.]
+        MC: I decided to come back.
+        ~pause(2)
+        NPC: Why?
+        MC: I just did.
+        ~pause(2)
+        NPC: You don't wanna tell me anything else about what it was like?
+        MC: I thought you didn't care about that sort of thing.
+        ~pause(2)
+        NPC: Okay.
++   [No.]
+    MC: No.
+    ~pause(2)
+    NPC: I see.
++   [Deflect.]
+    MC: Does it matter?
+    ~pause(2)
+    NPC: I think it does.
+    MC: Well I'm here now.
+    NPC: I understand that.
+    ~pause(2)
+- NPC: So then, do you have any takeaways from all this then?
 +   [I don't like your tone.]
     MC: I don't like the way you're speaking to me currently.
     // pause 
@@ -1027,11 +1111,151 @@ NPC: Any takeaways from all that?
     MC: I'm never entangling again, that much is certain.
     NPC: I've heard this before.
     MC: This time I mean it more.
-    NPC: ..Alright.
+    NPC: Good. I'm glad.
+    So then, now that that's over...
 +   [Entangle all the way.]
-    
+    MC: Entangling is great and I'm never quitting it.
+    NPC: ...
+    MC: I wish I was entangling right now. It sucks that everyone here is suddenly so against it.
+    NPC: This isn't funny.
+    MC: I'm not joking.
+    NPC: ...
+    NPC: Can you just be serious?
+-NPC: How are you REALLY doing?
++   [Great.]
+    MC: I feel a total sense of clarity. It's amazing really.
+    NPC: Deflecting will get you nowhere.
+    ++  [Deflect more.]
+        MC: Seriously. I see now that I was being led astray by the desert-ers and that to be by myself is not so bad after all.
+        NPC: The "desert-ers"..
+        MC: Yeah, what about it?
+        NPC: Nothing. It's just kind of a silly word.
+        MC: ...
+        NPC: I feel like...
+        I don't think you're being honest with me. I think you're very sad because you were left behind. Again.
+        It's obvious.
+        ~ pause(2)
+        NPC: And what I dislike is that it feels like you care much more about the surfaceans than the rest of us.
+        Like you're so desperate to be with those who want nothing to do with you. With us.
+        We're still here. I'm still here. Does that matter to you?
+         MC: That's not what I meant..
+        NPC: What did you mean?
+    ++  [Be real.]
+        MC: I was abandoned by everybody else. How do you think that makes me feel?
+        NPC: What do you mean by "everybody else"?
+        MC: I mean..
+        NPC: I'm here now. Lots of us are. Do we not matter? Are the surfaceans somehow more... important?
+        Why do you care about those who don't care enough to stay?
++   [Empty.]
+    MC: I feel empty.
+    MC: I guess.. maybe for a moment there, it felt like things did make sense. For once.
+    MC: And now it's gone.
+    NPC: Like there's nothing else to look forward to?
+    MC: ...I guess so. Yeah.
+    NPC: What about the rest of us?
+    MC: What?
+    NPC: We're still here. Lots of us are. 
+    If there's nothing else for you to look forward to, what should the rest of us do? Just lie down and die?
+    MC: I don't understand what you're saying.
+    NPC: Why do you care so much about something that's clearly just not for you?
++   [Alone.]
+    MC: I feel all by myself.
+    Everyone left.
+    NPC: How do you think that makes me feel?
+    MC: What?
+    NPC: You said everyone left. Am I not part of everyone? What about everyone else in this world?
+    I'm here now. Lots of us are. Do we not matter? Are the surfaceans somehow more... important?
+    Why do you care about those who don't care enough to stay?
+- MC: I don't know! I don't know why I care.
+I don't even want to go to the surface.
+~ pause(2)
+NPC: What you need is a sense of purpose.
+MC: A.. what?
+NPC: It can't just be reading coralnet. There's none in this world anyway.
+MC: Actually, that's not true.
+NPC: Okay, well. You need something else. Something to do and look forward to. Something with a bigger meaning.
+MC: Aren't we... just supposed to go with the flow?
+NPC: "Supposed to"?
+MC: ...Yeah?
+NPC: Who's doing the supposing?
+MC: Um.. I don't know. Everyone?
+It's kind of just.. what we do, no?
+NPC: "Go with the flow"...
+I'm beginning to think that's not sustainable anymore.
+MC: Well, what about you?
+What's your sense of purpose?
+~pause(4)
+NPC: Anyway. Everyone else here is very panicky.
+They're kind of just reacting to their fear and having that bounce against each other. It's not healthy.
+I can understand feeling like you don't belong when people are acting so silly.
+MC: I noticed you're not wearing a tangle preventer.
+NPC: I don't need that silly accoutrement. I know my truth.
+Besides, I'm sure most preventer-wearers are really just indulging in some perverse denial-based titillation practice.
+MC: They're doing.. what?
+NPC: The tangle-preventers are preventing nothing at all. It's more like a replacement. A temporary one, too.
+MC: Is that bad?
+NPC: True purity is achieved in the head. It's about your mindset.
++   [How do I achieve it?]
+    MC: How do I achieve it?
+    NPC: You just need to shift your mind. 
+    Think no more of the entanglement, or the surface, or your ex. Find another point of focus.
+    MC: Okay, but what?
+    NPC: I can't choose that for you.
+    NPC: What do you like?
+    ++  [Coralnet.]
+        NPC: Maybe not that one.
+    ++  [Swimming.]
+        NPC: ...that's a start.
+    ++  [Harmonizing.]
+        NPC: That's good. 
+        Some, in this world, would have you believe harmonizing is the problem. That it is vile. But it is only because of their intentions.
+        The act itself is fine. It's how we've always communicated.
+        MC: ...Yeah. You just need to.. shift your mind.
+        NPC: Exactly.
++   [What's your purpose?]
+    MC: You didn't answer me earlier. What is your purpose?
+    ~ pause(2)
+    NPC: Perhaps it is... to lead the way. To show the example.
+    MC: ...which is?
+    NPC: That there is an entanglement-less path. That you can shift your mind if you just decide to.
+    MC: You make it sound easy.
+    NPC: I know it may not be so for everyone else. But I can prove that it is possible, by continuing to be.
+    MC: I noticed you have some followers.
+    NPC: ...pay them no mind.
+    ~ pause(2)
++   [Why are you like this?]
+    MC: Why are you like this?
+    NPC: Like what?
+    MC: So judgemental. It feels like you always need to feel above everyone else.
+    ~pause(2)
+    NPC: That is not true. I am not like that.
+    MC: It's just what I'm observing.
+    NPC: Well. I appreciate your honesty. But I too am only observing. So that is that.
+    MC: ...
+- MC: Okay.
+NPC: What will you do now?
+MC: Well.. There's someone I've actually been talking to, on the coralnet. And.. maybe I'll try to meet with them.
+NPC: Oh. Really? After everything we just talked about?
++   [It's not like that.]
+    MC: It's not like that! It's...
+    I just want to talk to them. It's nice. It's chill.
+    NPC: ...
++   [Mind your business.]
+    MC: I don't want to hear it. What I do is my business.
+    NPC: Wow. Okay then.
++   [Say nothing.]
+    MC: ...
+    NPC: Okay. Well.
+- NPC: I guess there's probably nothing I can say to dissuade you.
+NPC: Well. I still hope for you to be careful.
+I don't want you getting hurt anymore.
+MC: Okay then.
     // virgin judges everyone for being panicky. somehow even in entanglement-less world they're still above everyone. they're not wearing a chastity cage.
-    
+    // MC is sad because they were abandoned by everyone
+    // why weren't they woken?
+    // "you need a sense of purpose"
+    // what does that even mean? shouldn't we just go with the flow?
+    // virign: im beginning to think that that's not unsustainable
     
     // NOT FINISHED
 - ->->
